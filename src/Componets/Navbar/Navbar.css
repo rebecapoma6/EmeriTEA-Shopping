@@ -1,0 +1,42 @@
+/* Estilo para el formulario y la barra de navegación */
+.navbar {
+  background-color: #f3f4f6; /* Color de fondo */
+  padding: 15px; /* Espaciado interno */
+  border-radius: 8px; /* Borde redondeado */
+}
+
+/* Estilo para el campo de búsqueda */
+.form-control {
+  border: none; /* Sin borde */
+  border-radius: 30px; /* Borde redondeado */
+  padding: 10px; /* Espaciado interno */
+  background-color: #e5e7eb; /* Color de fondo del campo */
+  color: #000; /* Color del texto */
+  font-size: 16px; /* Tamaño del texto */
+}
+
+/* Estilo para el botón */
+.btn {
+  border: none; /* Sin borde */
+  border-radius: 30px; /* Borde redondeado */
+  padding: 10px 20px; /* Espaciado interno */
+  background-color: #3b82f6; /* Color de fondo del botón */
+  color: #fff; /* Color del texto */
+  font-size: 16px; /* Tamaño del texto */
+}
+
+/* Estilo para el botón al pasar el ratón por encima */
+.btn:hover {
+  background-color: #2563eb; /* Color de fondo al pasar el ratón por encima */
+  color: #fff; /* Color del texto al pasar el ratón por encima */
+}
+
+/* Estilo para el contenedor de la fila y las columnas */
+.row {
+  margin: 0; /* Sin márgenes */
+}
+
+/* Estilo para las columnas */
+.col {
+  padding: 0; /* Sin espaciado interno */
+}
