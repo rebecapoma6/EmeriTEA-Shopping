@@ -56,6 +56,15 @@
       "description": "xxx",
       "stock": "22",
       "id": 26
+    },
+    {
+      "name": "MANOLO",
+      "category": "POLOS",
+      "price": "25",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "TALLA M",
+      "stock": "5",
+      "id": 27
     }
   ]
 }
