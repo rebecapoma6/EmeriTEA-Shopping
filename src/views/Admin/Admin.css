@@ -1,0 +1,84 @@
+.modal-header {
+    text-align: center; /* Centra el texto */
+    background-color: blue; /* Color de fondo azul */
+    color: white; /* Texto en color blanco */
+    padding: 10px; /* Agrega un relleno alrededor del encabezado */
+}
+  /* Estilos para las imágenes */
+  .product-image {
+    width: 200px; /* El tamaño que desees */
+    height: 150px; /* El tamaño que desees */
+    object-fit: cover; /* Otra propiedad para controlar cómo se ajusta la imagen al tamaño */
+  }
+  
+  .jarra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+  }
+  
+  .jarra .modal-form {
+    width: 300px;
+    padding: 20px;
+  }
+  
+  .jarra label {
+    margin-bottom: 10px;
+  }
+  
+  .jarra input,
+  .jarra textarea {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .jarra .product-image {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .jarra button {
+    padding: 10px 20px;
+    background-color: blue;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .product-list > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+  }
+  
+  .product-list h2 {
+    margin-bottom: 10px;
+  }
+  
+  .product-list .product-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .product-list p {
+    margin-bottom: 5px;
+  }
+  
+  .product-list button {
+    margin-top: 10px;
+  }

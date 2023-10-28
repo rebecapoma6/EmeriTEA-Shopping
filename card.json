@@ -1,0 +1,61 @@
+{
+  "products": [
+    {
+      "name": "MARIA",
+      "category": "POMA",
+      "price": "15",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "hola",
+      "stock": "5",
+      "id": 20
+    },
+    {
+      "name": "POLOS",
+      "category": "POMA",
+      "price": "60",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "ccc",
+      "stock": "5",
+      "id": 21
+    },
+    {
+      "name": "sssss",
+      "category": "sssss",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "ssss",
+      "stock": "sss",
+      "id": 22
+    },
+    {
+      "name": "dolores",
+      "price": "25.",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "5",
+      "stock": "22",
+      "id": 23
+    },
+    {
+      "name": "xxxx",
+      "category": "poloa",
+      "price": "6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "id": 24
+    },
+    {
+      "name": "POLOS",
+      "category": "POLOS",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "xxx",
+      "stock": "5",
+      "id": 25
+    },
+    {
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "xxx",
+      "stock": "22",
+      "id": 26
+    }
+  ]
+}
