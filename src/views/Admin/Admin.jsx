@@ -232,10 +232,10 @@ const Admin = () => {
 
             {isEditModalOpen && selectedProductDetails && (
                 <Modal isOpen={isEditModalOpen} onOpenChange={closeEditModal} isDismissable={false}>
-                    <ModalContent>
-                        <ModalHeader>Edit Product</ModalHeader>
+                    <ModalContent className="formSection" >
+                        <ModalHeader >Edit Product</ModalHeader>
                         <ModalBody>
-                            <form>
+                            <form >
                                 <label htmlFor="productName">Name:</label>
                                 <input
                                     type="text"
@@ -279,8 +279,8 @@ const Admin = () => {
                             </form>
                         </ModalBody>
                         <ModalFooter>
-                            <Button color="danger" variant="light" onClick={closeEditModal}>Cerrar</Button>
-                            <Button color="primary" onClick={editProduct}>Guardar</Button>
+                            <Button className='btn-close' color="danger" variant="light" onClick={closeEditModal}>Cerrar</Button>
+                            <Button className='btn-save' color="primary" onClick={editProduct}>Guardar</Button>
                         </ModalFooter>
                     </ModalContent>
                 </Modal>

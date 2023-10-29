@@ -61,15 +61,6 @@
       "id": 28
     },
     {
-      "name": "BOTELLAS",
-      "category": "COLORES",
-      "price": "DDD",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "DDD",
-      "stock": "sss",
-      "id": 29
-    },
-    {
       "name": "señora monica",
       "category": "SSS",
       "price": "SSS",
@@ -79,7 +70,7 @@
       "id": 30
     },
     {
-      "name": "adriano",
+      "name": "Camiseta ",
       "category": "polos",
       "price": "25.6",
       "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
