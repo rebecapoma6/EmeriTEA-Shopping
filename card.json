@@ -77,6 +77,15 @@
       "description": "SSS",
       "stock": "22",
       "id": 30
+    },
+    {
+      "name": "adriano",
+      "category": "polos",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "polos",
+      "stock": "5",
+      "id": 31
     }
   ]
 }

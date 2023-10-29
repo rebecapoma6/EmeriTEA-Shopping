@@ -221,7 +221,7 @@ const Admin = () => {
                         <h2>{product.name}</h2>
                         <img src={product.image} alt={product.name} className="product-image" />
                         <p>Category: {product.category}</p>
-                        <p>Price: {product.price}</p>
+                        <p>Price: {product.price} €</p>
                         <p>Description: {product.description}</p>
                         <p>Stock: {product.stock}</p>
                         <Button onClick={() => deleteProduct(product.id)}>Delete</Button>
