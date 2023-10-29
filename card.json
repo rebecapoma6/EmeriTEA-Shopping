@@ -1,12 +1,12 @@
 {
   "products": [
     {
-      "name": "MARIA",
-      "category": "POMA",
-      "price": "15",
+      "name": "CAMISETA AZUL",
+      "category": "POLOS",
+      "price": "20",
       "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "hola",
-      "stock": "5",
+      "description": "MANGA LARGA",
+      "stock": "25",
       "id": 20
     },
     {
@@ -28,7 +28,7 @@
       "id": 22
     },
     {
-      "name": "dolores",
+      "name": "Dolores mariA",
       "price": "25.",
       "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
       "description": "5",
@@ -52,19 +52,31 @@
       "id": 25
     },
     {
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "xxx",
-      "stock": "22",
-      "id": 26
+      "name": "señora pomxxxxx",
+      "category": "sueteerxxxxx",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "vvvv",
+      "stock": "5",
+      "id": 28
     },
     {
-      "name": "MANOLO",
-      "category": "POLOS",
-      "price": "25",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "TALLA M",
-      "stock": "5",
-      "id": 27
+      "name": "BOTELLAS",
+      "category": "COLORES",
+      "price": "DDD",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "DDD",
+      "stock": "sss",
+      "id": 29
+    },
+    {
+      "name": "señora monica",
+      "category": "SSS",
+      "price": "SSS",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "SSS",
+      "stock": "22",
+      "id": 30
     }
   ]
 }

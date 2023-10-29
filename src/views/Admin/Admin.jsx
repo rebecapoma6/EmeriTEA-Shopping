@@ -35,9 +35,11 @@ const Admin = () => {
     };
 
     const openEditModal = (product) => {
-        setSelectedProductDetails(product);
         setIsEditModalOpen(true);
+       
+        setSelectedProductDetails(product);
     };
+
     const closeEditModal = () => {
         setIsEditModalOpen(false);
     };
@@ -64,41 +66,71 @@ const Admin = () => {
     };
 
     const deleteProduct = (id) => {
-        fetch(`http://localhost:3000/products/${id}`, {
-            method: 'DELETE',
-        })
-            .then(() => {
-                const updatedProducts = products.filter((product) => product.id !== id);
-                setProducts(updatedProducts);
-                Swal.fire('Success', 'Product deleted successfully', 'success');
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                Swal.fire('Error', 'Failed to delete product', 'error');
-            });
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: 'Esta acción eliminará el producto. ¿Deseas continuar?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, eliminar',
+            cancelButtonText: 'Cancelar',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:3000/products/${id}`, {
+                    method: 'DELETE',
+                })
+                    .then(() => {
+                        const updatedProducts = products.filter((product) => product.id !== id);
+                        setProducts(updatedProducts);
+                        Swal.fire('Éxito', 'Producto eliminado con éxito', 'success');
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        Swal.fire('Error', 'No se ha podido eliminar el producto', 'error');
+                    });
+            }
+        });
     };
 
     const editProduct = () => {
-        fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(selectedProductDetails),
-        })
+    Swal.fire({
+        title: '¿Estás seguro?',
+        text: 'Esta acción editará el producto. ¿Deseas continuar?',
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Sí, editar',
+        cancelButtonText: 'Cancelar',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(selectedProductDetails),
+            })
             .then((response) => {
                 if (response.ok) {
                     closeEditModal(); // Cierra el modal después de la edición
-                    Swal.fire('Success', 'Product edited successfully', 'success');
+                    setProducts(products.map(product =>
+                        product.id === selectedProductDetails.id ? selectedProductDetails : product
+                    ));
+                    Swal.fire('Éxito', 'Producto editado con éxito', 'success');
                 } else {
                     throw new Error('Failed to edit the product');
                 }
             })
             .catch((error) => {
                 console.error('Error:', error);
-                Swal.fire('Error', 'Failed to edit product', 'error');
+                Swal.fire('Error', 'No se ha podido editar el producto', 'error');
             });
-    };
+        }
+    });
+};
+
 
     useEffect(() => {
         fetch('http://localhost:3000/products')
@@ -109,8 +141,9 @@ const Admin = () => {
 
 
     return (
-        <> 
-        <h1>HOLA ADMIN</h1>
+        <>
+            <h1>HOLA ADMIN</h1>
+            <br />
             <Button className='modal-header' onClick={openAddModal}>Add Product</Button>
 
             <Modal isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={false}>
@@ -182,7 +215,6 @@ const Admin = () => {
                 </ModalContent>
             </Modal>
 
-
             <div className="product-list">
                 {products.map((product) => (
                     <div key={product.id}>
@@ -194,11 +226,65 @@ const Admin = () => {
                         <p>Stock: {product.stock}</p>
                         <Button onClick={() => deleteProduct(product.id)}>Delete</Button>
                         <Button onClick={() => openEditModal(product)}>Edit</Button>
-
                     </div>
                 ))}
             </div>
 
+            {isEditModalOpen && selectedProductDetails && (
+                <Modal isOpen={isEditModalOpen} onOpenChange={closeEditModal} isDismissable={false}>
+                    <ModalContent>
+                        <ModalHeader>Edit Product</ModalHeader>
+                        <ModalBody>
+                            <form>
+                                <label htmlFor="productName">Name:</label>
+                                <input
+                                    type="text"
+                                    value={selectedProductDetails.name}
+                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, name: e.target.value })}
+                                />
+                                {/* Agrega el resto de los campos para editar */}
+                                <label htmlFor="productCategory">Category:</label>
+                                <input
+                                    type="text"
+                                    value={selectedProductDetails.category}
+                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, category: e.target.value })}
+                                />
+
+                                <label htmlFor="productPrice">Price:</label>
+                                <input
+                                    type="text"
+                                    value={selectedProductDetails.price}
+                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, price: e.target.value })}
+                                />
+
+                                <label htmlFor="productImage">Image URL:</label>
+                                <input
+                                    type="text"
+                                    value={selectedProductDetails.image}
+                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, image: e.target.value })}
+                                />
+
+                                <label htmlFor="productDescription">Description:</label>
+                                <textarea
+                                    value={selectedProductDetails.description}
+                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, description: e.target.value })}
+                                ></textarea>
+
+                                <label htmlFor="productStock">Stock:</label>
+                                <input
+                                    type="text"
+                                    value={selectedProductDetails.stock}
+                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, stock: e.target.value })}
+                                />
+                            </form>
+                        </ModalBody>
+                        <ModalFooter>
+                            <Button color="danger" variant="light" onClick={closeEditModal}>Cerrar</Button>
+                            <Button color="primary" onClick={editProduct}>Guardar</Button>
+                        </ModalFooter>
+                    </ModalContent>
+                </Modal>
+            )}
 
         </>
     );
