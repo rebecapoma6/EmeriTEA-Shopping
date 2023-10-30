@@ -1,0 +1,70 @@
+.mainheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Header {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+    width: 80%;
+    height: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px ;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-section img {
+    width: 100px;
+      }
+  
+  .title {
+    color:  rgb(250, 167, 25);
+    /* font-family:; */
+    margin: 0;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .buttons button {
+    background-color: #0074B8;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .buttons button:hover {
+    background-color: #005C99;
+  }
+  .buttons button:first-child {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .buttons button:last-child {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .buttons button i {
+    vertical-align: middle;
+  }
+  .buttons button i.fa-user::before {
+    content: "\f007"; /* Código del icono de usuario de FontAwesome */
+  }
+  .buttons button i.fa-cart-shopping::before {
+    content: "\f07a"; /* Código del icono de carrito de compras de FontAwesome */
+  }
+  
+  
