@@ -26,6 +26,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './views/Login/Login';
 import Admin from './views/Admin/Admin';
 import Home from './Componets/Home/Home';
+import './index.css'
 
 const root = document.getElementById('root');
 const reactRoot = createRoot(root);

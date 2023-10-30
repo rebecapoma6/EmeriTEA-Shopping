@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 30px;
+    padding: 10px;
     width: 80%;
     height: auto;
     border-top-left-radius: 20px;
@@ -19,6 +19,7 @@
   .logo-section {
     display: flex;
     align-items: center;
+    margin-left: -80px;
   }
   
   .logo-section img {
@@ -32,9 +33,10 @@
   }
   
   .buttons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    margin-right: -100px;
   }
   .buttons button {
     background-color: #0074B8;
