@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/RobotoCondensed-VariableFont_wght.ttf') format('woff');
+    /* Asegúrate de reemplazar 'font.woff' con el nombre y la extensión correctos de tu archivo de fuente */
+  }
+  
+
 body{
     margin: 0;
+    /* font-family: 'Roboto'; */
 }

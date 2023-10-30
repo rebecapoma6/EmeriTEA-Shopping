@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('/fonts/PermanentMarker-Regular.ttf') format('woff');
+  /* Asegúrate de reemplazar 'font.woff' con el nombre y la extensión correctos de tu archivo de fuente */
+}
+
+
 .mainheader{
     display: flex;
     justify-content: center;
@@ -27,7 +34,8 @@
       }
   
   .title {
-    color:  rgb(250, 167, 25);
+    font-family: 'Permanent Marker';
+    color: #7AC7FF;
     /* font-family:; */
     margin: 0;
   }
