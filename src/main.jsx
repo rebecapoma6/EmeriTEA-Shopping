@@ -1,16 +1,21 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+// import {NextUIProvider} from '@nextui-org/react'
+import Login from './views/Login/Login';
+import Admin from './views/Admin/Admin';
 
+const root = document.getElementById('root');
+const reactRoot = createRoot(root);
 
-import './index.css'
-import Home from './Componets/Home/Home.jsx'
-
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+reactRoot.render(
   <React.StrictMode>
-  
-    <Home/>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/admin" element={<Admin />} />
+      </Routes>
+    </BrowserRouter>
+  </React.StrictMode>
+);
 
-
-  </React.StrictMode>,
-)

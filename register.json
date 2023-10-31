@@ -1,0 +1,128 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "role": 1
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "password": "securepass",
+      "role": 2
+    },
+    {
+      "email": "josefa@gmail.com",
+      "password": "123456",
+      "id": 3
+    },
+    {
+      "email": "maloni@gmail.com",
+      "password": "123456",
+      "id": 4
+    },
+    {
+      "email": "maloki@gmail.com",
+      "password": "1235",
+      "id": 5
+    },
+    {
+      "email": "jdf@gmail.com",
+      "password": "1234",
+      "id": 6
+    },
+    {
+      "email": "mima@gmail.com",
+      "password": "123456",
+      "id": 7
+    },
+    {
+      "email": "gggg@gmail.com",
+      "password": "123456",
+      "id": 8
+    },
+    {
+      "email": "elena1@gmail.com",
+      "password": "1252233",
+      "id": 9
+    },
+    {
+      "email": "ccccv@gmail.com",
+      "password": "123456",
+      "id": 10
+    },
+    {
+      "email": "ambo@gmail.com",
+      "password": "123",
+      "id": 11
+    },
+    {
+      "email": "cccc@gmail.com",
+      "password": "cccc12",
+      "id": 12
+    },
+    {
+      "email": "REBR@GMAIL.COM",
+      "password": "12343",
+      "id": 13
+    },
+    {
+      "email": "RE@GMAIL.COM",
+      "password": "123",
+      "id": 14
+    },
+    {
+      "email": "rbe@gmail.com",
+      "password": "123456",
+      "id": 15
+    },
+    {
+      "email": "rebeca@gmail.com",
+      "password": "12345",
+      "id": 16
+    },
+    {
+      "email": "rebev@gmail.com",
+      "password": "12345",
+      "id": 17
+    },
+    {
+      "email": "loja@gmail.com",
+      "password": "123456",
+      "id": 18
+    },
+    {
+      "email": "lore@gmail.com",
+      "password": "123564",
+      "id": 19
+    },
+    {
+      "email": "FDF@GMAIL.COM",
+      "password": "C233",
+      "id": 20
+    },
+    {
+      "email": "marco@gmail.com",
+      "password": "123456",
+      "id": 21
+    },
+    {
+      "email": "mate@gmail.com",
+      "password": "13356",
+      "id": 22
+    },
+    {
+      "email": "rebe@gmail.com",
+      "password": "1254",
+      "id": 23
+    },
+    {
+      "email": "DDDD@GMAIL.COM",
+      "password": "1236",
+      "id": 24
+    }
+  ]
+}
