@@ -1,78 +1,83 @@
-// import React, { useState, useEffect } from 'react';
-// import './Home.css'; 
+import React from "react";
+import Header from "../Header/header";
+import "./Home.css";
+import CustomNavbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
+// import Carousel  from "../Clothing/Clothing.jsx";
+// import Carouselc from "../Clothing/Clothing.jsx";
 
 
-// function Home () {
-//   const [products, setProducts] = useState([]);
-
-//   useEffect(() => {
-//     // Aquí debes realizar una solicitud a tu API o servidor para obtener la lista de productos.
-//     // Puedes utilizar fetch o axios para hacer la solicitud. A continuación, se muestra un ejemplo
-//     // de cómo obtener productos ficticios para propósitos de demostración.
-
-//     // Reemplaza esta parte con la solicitud real a tu API.
-//     fetch('/api/products') // Reemplaza '/api/products' con la URL correcta de tu API.
-//       .then((response) => response.json())
-//       .then((data) => setProducts(data)) // Establece los productos en el estado.
-//       .catch((error) => console.error('Error fetching products:', error));
-//   }, []);
-
-//   return (
-    
-//     <div>
-//       <h1>Nuestros Productos</h1>
-//       <ul>
-//         {products.map((product) => (
-//           <li key={product.id}>
-//             <img src={product.image} alt={product.description} />
-//             <h3>{product.description}</h3>
-//             <p>Precio: ${product.price}</p>
-//           </li>
-//         ))}
-//       </ul>
-//     </div>
-//   );
-// }
-
-// export default Home;
-
-import React, { useState, useEffect } from 'react';
-
-import Navbar from '../Navbar/Navbar';
-
-function Home () {
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    // Aquí debes realizar una solicitud a tu API o servidor para obtener la lista de productos.
-    // Puedes utilizar fetch o axios para hacer la solicitud. A continuación, se muestra un ejemplo
-    // de cómo obtener productos ficticios para propósitos de demostración.
-
-    // Reemplaza esta parte con la solicitud real a tu API.
-    fetch('/api/products') // Reemplaza '/api/products' con la URL correcta de tu API.
-      .then((response) => response.json())
-      .then((data) => setProducts(data)) // Establece los productos en el estado.
-      .catch((error) => console.error('Error fetching products:', error));
-  }, []);
-
+const Home = () => {
   return (
     <>
-      <Navbar />
-      <div>
-        <h1>Nuestros Productos</h1>
-        <ul>
-          {products.map((product) => (
-            <li key={product.id}>
-              <img src={product.image} alt={product.description} />
-              <h3>{product.description}</h3>
-              <p>Precio: ${product.price}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <div className="homeinitial">
+        <Header />
+
+        <CustomNavbar />
+        <div className="intro">
+          <h2>
+            Esta es una tienda solidaria que a sido creada por la asociacion
+            EmeriTEA, con fin de ayudar a las familias con personas con TEA.
+          </h2>
+        </div>
+        {/* <Carouselc/> */}
+
+        
+        
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+        <br />        <br />
+             
+         </div>
     </>
   );
-}
+};
 
 export default Home;
-

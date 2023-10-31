@@ -123,6 +123,26 @@
       "email": "DDDD@GMAIL.COM",
       "password": "1236",
       "id": 24
+    },
+    {
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "id": 25
+    },
+    {
+      "email": "rbece@gmail.com",
+      "password": "152245",
+      "id": 26
+    },
+    {
+      "email": "hfihgiu@gmail.com",
+      "password": "661633",
+      "id": 27
+    },
+    {
+      "email": "eoghrt@gmail.com",
+      "password": "48218",
+      "id": 28
     }
   ]
 }

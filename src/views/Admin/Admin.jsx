@@ -9,8 +9,7 @@ const Admin = () => {
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
     const [selectedProductDetails, setSelectedProductDetails] = useState(null);
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
-    const { isOpen: isDetailsOpen, onOpen: onDetailsOpen, onOpenChange: onDetailsOpenChange } = useDisclosure();
-
+   
     const [newProduct, setNewProduct] = useState({
         name: '',
         category: '',
