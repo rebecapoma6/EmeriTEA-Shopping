@@ -2,7 +2,9 @@ import React from "react";
 import Header from "../Header/header";
 import "./Home.css";
 import CustomNavbar from "../Navbar/Navbar";
-import CarouselSection from "../Clothing/Clothing";
+// import Carousel  from "../Clothing/Clothing.jsx";
+// import Carouselc from "../Clothing/Clothing.jsx";
+
 
 const Home = () => {
   return (
@@ -17,7 +19,7 @@ const Home = () => {
             EmeriTEA, con fin de ayudar a las familias con personas con TEA.
           </h2>
         </div>
-        
+        {/* <Carouselc/> */}
 
         
         

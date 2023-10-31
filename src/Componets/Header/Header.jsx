@@ -7,18 +7,33 @@ const Header = () => {
 
   return (
     <div className="mainheader">
-    <header className="Header">
-      <div className="logo-section">
-        <img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1698666190/logo_completo_oukgw0.png" alt="LogoEmeriatea" />
-      </div>
-      <div className="titulo">
-        <h1 className="title">EmeriTEA Market</h1>
-      </div>
-      <div className="buttons">
-                <button><i className="fa-solid fa-user"></i></button>
-                <button><i className="fa-solid fa-cart-shopping"></i></button>
-            </div>
-    </header>
+      <header className="Header">
+        {/* <div className="logo-section">
+          <img
+            src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1698666190/logo_completo_oukgw0.png"
+            alt="LogoEmeriatea"
+          />
+        </div> */}
+        <a href="/">
+          <div className="logo-section">
+            <img
+              src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1698666190/logo_completo_oukgw0.png"
+              alt="LogoEmeriatea"
+            />
+          </div>
+        </a>
+        <div className="titulo">
+          <h1 className="title">EmeriTEA Market</h1>
+        </div>
+        <div className="buttons">
+          <button>
+            <i className="fa-solid fa-user"></i>
+          </button>
+          <button>
+            <i className="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
+      </header>
     </div>
   );
 };
