@@ -40,29 +40,30 @@ const SignInSide = () => {
   };
 
   return (
-    <form onSubmit={handleLoginSubmit}>
-      <label>
-        Email:
+    <form className="login-form" onSubmit={handleLoginSubmit}>
+      <div className="form-group">
+        <label>Email:</label>
         <input
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
-      </label>
-      <label>
-        Password:
+      </div>
+      <div className="form-group">
+        <label>Password:</label>
         <input
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-      </label>
+      </div>
       <button type="submit">Sign In</button>
     </form>
   );
 };
+
 
 export default SignInSide;
 
