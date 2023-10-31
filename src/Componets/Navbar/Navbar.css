@@ -40,3 +40,82 @@
 .col {
   padding: 0; /* Sin espaciado interno */
 }
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+.navbar .logo {
+  margin-right: auto;
+}
+/* .navbar .buttons {
+  display: flex;
+  gap: 10px;
+} */
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons button {
+  background-color: #0074b8;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+  background-color: #005c99;
+}
+
+.buttons button:first-child,
+.buttons button:last-child {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.buttons button i {
+  vertical-align: middle;
+}
+
+.buttons button i.fa-user::before {
+  content: "\f007"; /* Código del icono de usuario de FontAwesome */
+}
+
+.buttons button i.fa-cart-shopping::before {
+  content: "\f07a"; /* Código del icono de carrito de compras de FontAwesome */
+}
+
+/* Estilos para dispositivos de pantalla pequeña, como teléfonos móviles */
+@media (max-width: 767px) {
+  .buttons {
+    /* justify-content: center;
+    flex-direction: column; */
+    justify-content: space-between; /* Mantenemos la misma alineación horizontal */
+    flex-direction: row; /* Mantenemos la dirección de fila */
+  }
+
+  .buttons button {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    width: 30px; /* Reducimos el ancho */
+    height: 30px; /* Reducimos la altura */
+    font-size: 16px; /* Reducimos el tamaño de fuente */
+  }
+
+  .buttons button:first-child,
+  .buttons button:last-child {
+    box-shadow: none;
+  }
+}
