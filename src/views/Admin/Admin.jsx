@@ -4,12 +4,11 @@ import Swal from 'sweetalert2';
 import './Admin.css';
 
 const Admin = () => {
-
     const [products, setProducts] = useState([]);
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
     const [selectedProductDetails, setSelectedProductDetails] = useState(null);
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
-   
+
     const [newProduct, setNewProduct] = useState({
         name: '',
         category: '',
@@ -17,16 +16,27 @@ const Admin = () => {
         image: '',
         description: '',
         stock: '',
-        id: '',
     });
 
     const handleInputChange = (field, value) => {
         setNewProduct({ ...newProduct, [field]: value });
     };
 
+    // Función para limpiar el formulario de agregar producto
+    const resetNewProductForm = () => {
+        setNewProduct({
+            name: '',
+            category: '',
+            price: '',
+            image: '',
+            description: '',
+            stock: '',
+        });
+    };
+
     const openAddModal = () => {
         onOpen();
-        setNewProduct({});
+        resetNewProductForm();
     };
 
     const closeAddModal = () => {
@@ -35,14 +45,12 @@ const Admin = () => {
 
     const openEditModal = (product) => {
         setIsEditModalOpen(true);
-       
         setSelectedProductDetails(product);
     };
 
     const closeEditModal = () => {
         setIsEditModalOpen(false);
     };
-
 
     const addProduct = () => {
         fetch('http://localhost:3000/products', {
@@ -52,7 +60,12 @@ const Admin = () => {
             },
             body: JSON.stringify(newProduct),
         })
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to add product');
+                }
+                return response.json();
+            })
             .then((data) => {
                 setProducts([...products, data]);
                 closeAddModal();
@@ -93,47 +106,50 @@ const Admin = () => {
     };
 
     const editProduct = () => {
-    Swal.fire({
-        title: '¿Estás seguro?',
-        text: 'Esta acción editará el producto. ¿Deseas continuar?',
-        icon: 'info',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Sí, editar',
-        cancelButtonText: 'Cancelar',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(selectedProductDetails),
-            })
-            .then((response) => {
-                if (response.ok) {
-                    closeEditModal(); // Cierra el modal después de la edición
-                    setProducts(products.map(product =>
-                        product.id === selectedProductDetails.id ? selectedProductDetails : product
-                    ));
-                    Swal.fire('Éxito', 'Producto editado con éxito', 'success');
-                } else {
-                    throw new Error('Failed to edit the product');
-                }
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                Swal.fire('Error', 'No se ha podido editar el producto', 'error');
-            });
-        }
-    });
-};
-
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: 'Esta acción editará el producto. ¿Deseas continuar?',
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, editar',
+            cancelButtonText: 'Cancelar',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(selectedProductDetails),
+                })
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error('Failed to edit the product');
+                        }
+                        closeEditModal(); // Cierra el modal después de la edición
+                        setProducts(products.map((product) =>
+                            product.id === selectedProductDetails.id ? selectedProductDetails : product
+                        ));
+                        Swal.fire('Éxito', 'Producto editado con éxito', 'success');
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        Swal.fire('Error', 'No se ha podido editar el producto', 'error');
+                    });
+            }
+        });
+    };
 
     useEffect(() => {
         fetch('http://localhost:3000/products')
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch products');
+                }
+                return response.json();
+            })
             .then((data) => setProducts(data))
             .catch((error) => console.error('Error:', error));
     }, []);

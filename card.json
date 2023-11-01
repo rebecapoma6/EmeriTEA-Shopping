@@ -10,30 +10,13 @@
       "id": 20
     },
     {
-      "name": "POLOS",
-      "category": "POMA",
-      "price": "60",
+      "name": "BOTELLAS",
+      "category": "ACCESORIES",
+      "price": "5",
       "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "ccc",
-      "stock": "5",
+      "description": "BOTELLA \nCON ANIMACION",
+      "stock": "7",
       "id": 21
-    },
-    {
-      "name": "sssss",
-      "category": "sssss",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "ssss",
-      "stock": "sss",
-      "id": 22
-    },
-    {
-      "name": "Dolores mariA",
-      "price": "25.",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "5",
-      "stock": "22",
-      "id": 23
     },
     {
       "name": "xxxx",
