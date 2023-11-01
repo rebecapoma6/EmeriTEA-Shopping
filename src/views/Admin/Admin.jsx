@@ -10,7 +10,7 @@ const Admin = () => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     const [newProduct, setNewProduct] = useState({
-        name: '',
+        name_administrador: '',
         category: '',
         price: '',
         image: '',
@@ -25,7 +25,7 @@ const Admin = () => {
     // Función para limpiar el formulario de agregar producto
     const resetNewProductForm = () => {
         setNewProduct({
-            name: '',
+            name_administrador: '',
             category: '',
             price: '',
             image: '',
@@ -171,7 +171,7 @@ const Admin = () => {
                             <input
                                 type="text"
                                 id="productName"
-                                value={newProduct.name}
+                                value={newProduct.name_administrador}
                                 onChange={(e) => handleInputChange('name', e.target.value)}
                             />
 
@@ -259,7 +259,7 @@ const Admin = () => {
                                 <input
                                     type="text"
                                     value={selectedProductDetails.name}
-                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, name: e.target.value })}
+                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, x: e.target.value })}
                                 />
 
                                 <label htmlFor="productCategory">Category:</label>
