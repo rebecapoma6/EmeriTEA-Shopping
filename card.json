@@ -27,7 +27,7 @@
     },
     {
       "name": "POLOS",
-      "category": "POLOS",
+      "category": "Accessories",
       "price": "25.6",
       "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
       "description": "xxx",
@@ -36,7 +36,7 @@
     },
     {
       "name": "señora pomxxxxx",
-      "category": "sueteerxxxxx",
+      "category": "Clothing",
       "price": "25.6",
       "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
       "description": "vvvv",
@@ -44,11 +44,11 @@
       "id": 28
     },
     {
-      "name": "señora monica",
-      "category": "SSS",
-      "price": "SSS",
+      "name": "Botellas Osos",
+      "category": "Botellas",
+      "price": "5",
       "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "SSS",
+      "description": "Botella de vidrio",
       "stock": "22",
       "id": 30
     },
@@ -60,6 +60,33 @@
       "description": "polos",
       "stock": "5",
       "id": 31
+    },
+    {
+      "name": "Botellas",
+      "category": "Accessories",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "holasasss",
+      "stock": "25",
+      "id": 32
+    },
+    {
+      "name": "POLOS",
+      "category": "Clothing",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "talla L",
+      "stock": "5",
+      "id": 33
+    },
+    {
+      "name": "Polo",
+      "category": "Accessories",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "talla Xl",
+      "stock": "22",
+      "id": 34
     }
   ]
 }
