@@ -2,124 +2,90 @@
   "products": [
     {
       "name": "CAMISETA AZUL",
-      "category": "POLOS",
-      "price": "20",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "MANGA LARGA",
-      "stock": "25",
-      "id": 20
+      "category": "Clothing",
+      "price": "20.00",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773924/20231029_172429_k77nqb.jpg",
+      "description": "Talla S M/L",
+      "stock": "15",
+      "id": 20,
+      "Name_product": "Camiseta Termica "
     },
     {
       "name": "xxxx",
-      "category": "poloa",
-      "price": "6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "id": 24
+      "category": "Accessories",
+      "price": "10.00",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773924/IMG_7017_o4j0dd.jpg",
+      "id": 24,
+      "Name_product": "Jabon",
+      "description": "Jabon de mano",
+      "stock": "150"
     },
     {
       "name": "POLOS",
       "category": "Accessories",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "xxx",
-      "stock": "5",
-      "id": 25
+      "price": "15.00",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773927/IMG_7034_apr3kd.jpg",
+      "description": "Gorra de sol",
+      "stock": "46",
+      "id": 25,
+      "Name_product": "Gorra"
     },
     {
       "name": "señora pomxxxxx",
-      "category": "Clothing",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "vvvv",
-      "stock": "5",
-      "id": 28
+      "category": "Accessories",
+      "price": "9.00",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698922934/IMG_7072._qndls5.jpg",
+      "description": "Bolsa de compra",
+      "stock": "115",
+      "id": 28,
+      "Name_product": "Bolsa de Tela"
     },
     {
       "name": "Botellas Osos",
-      "category": "Botellas",
-      "price": "5",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "Botella de vidrio",
-      "stock": "22",
-      "id": 30
+      "category": "Accessories",
+      "price": "5.00",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698922934/IMG_7064._y0fqmv.jpg",
+      "description": "Llavero",
+      "stock": "136",
+      "id": 30,
+      "Name_product": "Llavero"
     },
     {
       "name": "Camiseta ",
-      "category": "polos",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "polos",
-      "stock": "5",
-      "id": 31
+      "category": "Clothing",
+      "price": "10.00",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698922934/IMG_7040_sfasz2.jpg",
+      "description": "Talla M M/C",
+      "stock": "36",
+      "id": 31,
+      "Name_product": "Camiseta Algodon"
     },
     {
-      "name": "Botellas",
-      "category": "Accessories",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "holasasss",
-      "stock": "25",
+      "Name_product": "polos maria",
+      "category": "Clothing",
+      "price": "36.9",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "talla s",
+      "stock": "5",
       "id": 32
     },
     {
-      "name": "POLOS",
+      "Name_product": "Zapatilla",
       "category": "Clothing",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "talla L",
-      "stock": "5",
+      "price": "36.9",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1693212296/samples/shoe.jpg",
+      "description": "Talla 36",
+      "stock": "20",
       "id": 33
     },
     {
-      "name": "Polo",
-      "category": "Accessories",
-      "price": "25.6",
+      "Name_product": "POLOS",
+      "category": "Clothing",
+      "price": "10.99",
       "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "talla Xl",
-      "stock": "22",
+      "description": "talla S",
+      "stock": "25",
       "id": 34
-    },
-    {
-      "name_administrador": "",
-      "category": "Clothing",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "talla L",
-      "stock": "22",
-      "name": "POLOS",
-      "id": 35
-    },
-    {
-      "name_administrador": "",
-      "category": "Accessories",
-      "price": "36.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "rojo/ verde",
-      "stock": "5",
-      "name": "n",
-      "id": 36,
-      "x": "nn"
-    },
-    {
-      "name_administrador": "",
-      "category": "Clothing",
-      "price": "12.9",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "xs",
-      "stock": "3",
-      "name": "x",
-      "id": 37,
-      "x": "xx"
-    },
-    {
-      "Name_product": "Polo sintetico",
-      "category": "Clothing",
-      "price": "20.3",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "Talla Xs",
-      "stock": "20",
-      "id": 38,
-      "x": "Rebeca Pomac"
     }
   ]
 }

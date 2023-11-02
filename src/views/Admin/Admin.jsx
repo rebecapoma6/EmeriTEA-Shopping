@@ -53,29 +53,39 @@ const Admin = () => {
     };
 
     const addProduct = () => {
-        fetch('http://localhost:3000/products', {
+        const productData = {
+            Name_product: newProduct.Name_product,
+            category: newProduct.category,
+            price: newProduct.price,
+            image: newProduct.image,
+            description: newProduct.description,
+            stock: newProduct.stock,
+        };
+    
+        fetch(`http://localhost:3000/products`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(newProduct),
+            body: JSON.stringify(productData),
         })
-            .then((response) => {
-                if (!response.ok) {
-                    throw new Error('Failed to add product');
-                }
-                return response.json();
-            })
-            .then((data) => {
-                setProducts([...products, data]);
-                closeAddModal();
-                Swal.fire('Success', 'Product added successfully', 'success');
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                Swal.fire('Error', 'Failed to add product', 'error');
-            });
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('Failed to add product');
+            }
+            return response.json();
+        })
+        .then((data) => {
+            setProducts([...products, data]);
+            closeAddModal();
+            Swal.fire('Success', 'Product added successfully', 'success');
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            Swal.fire('Error', 'Failed to add product', 'error');
+        });
     };
+    
 
     const deleteProduct = (id) => {
         Swal.fire({
