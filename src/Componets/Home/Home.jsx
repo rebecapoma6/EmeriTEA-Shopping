@@ -17,6 +17,7 @@ const Home = () => {
             EmeriTEA, con fin de ayudar a las familias con personas con TEA.
           </h2>
         </div>
+    <CarrouselAcc/> 
     <CarrouselAcc/>
 
         
