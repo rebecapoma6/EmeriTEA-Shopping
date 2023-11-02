@@ -4,29 +4,39 @@ import Swal from 'sweetalert2';
 import './Admin.css';
 
 const Admin = () => {
-
     const [products, setProducts] = useState([]);
     const [isEditModalOpen, setIsEditModalOpen] = useState(false);
     const [selectedProductDetails, setSelectedProductDetails] = useState(null);
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
-   
+
     const [newProduct, setNewProduct] = useState({
-        name: '',
+        Name_product: '',
         category: '',
         price: '',
         image: '',
         description: '',
         stock: '',
-        id: '',
     });
 
     const handleInputChange = (field, value) => {
         setNewProduct({ ...newProduct, [field]: value });
     };
 
+    // Función para limpiar el formulario de agregar producto
+    const resetNewProductForm = () => {
+        setNewProduct({
+            Name_product: '',
+            category: '',
+            price: '',
+            image: '',
+            description: '',
+            stock: '',
+        });
+    };
+
     const openAddModal = () => {
         onOpen();
-        setNewProduct({});
+        resetNewProductForm();
     };
 
     const closeAddModal = () => {
@@ -35,14 +45,12 @@ const Admin = () => {
 
     const openEditModal = (product) => {
         setIsEditModalOpen(true);
-       
         setSelectedProductDetails(product);
     };
 
     const closeEditModal = () => {
         setIsEditModalOpen(false);
     };
-
 
     const addProduct = () => {
         fetch('http://localhost:3000/products', {
@@ -52,7 +60,12 @@ const Admin = () => {
             },
             body: JSON.stringify(newProduct),
         })
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to add product');
+                }
+                return response.json();
+            })
             .then((data) => {
                 setProducts([...products, data]);
                 closeAddModal();
@@ -93,47 +106,50 @@ const Admin = () => {
     };
 
     const editProduct = () => {
-    Swal.fire({
-        title: '¿Estás seguro?',
-        text: 'Esta acción editará el producto. ¿Deseas continuar?',
-        icon: 'info',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Sí, editar',
-        cancelButtonText: 'Cancelar',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(selectedProductDetails),
-            })
-            .then((response) => {
-                if (response.ok) {
-                    closeEditModal(); // Cierra el modal después de la edición
-                    setProducts(products.map(product =>
-                        product.id === selectedProductDetails.id ? selectedProductDetails : product
-                    ));
-                    Swal.fire('Éxito', 'Producto editado con éxito', 'success');
-                } else {
-                    throw new Error('Failed to edit the product');
-                }
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                Swal.fire('Error', 'No se ha podido editar el producto', 'error');
-            });
-        }
-    });
-};
-
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: 'Esta acción editará el producto. ¿Deseas continuar?',
+            icon: 'info',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, editar',
+            cancelButtonText: 'Cancelar',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(selectedProductDetails),
+                })
+                    .then((response) => {
+                        if (!response.ok) {
+                            throw new Error('Failed to edit the product');
+                        }
+                        closeEditModal(); // Cierra el modal después de la edición
+                        setProducts(products.map((product) =>
+                            product.id === selectedProductDetails.id ? selectedProductDetails : product
+                        ));
+                        Swal.fire('Éxito', 'Producto editado con éxito', 'success');
+                    })
+                    .catch((error) => {
+                        console.error('Error:', error);
+                        Swal.fire('Error', 'No se ha podido editar el producto', 'error');
+                    });
+            }
+        });
+    };
 
     useEffect(() => {
         fetch('http://localhost:3000/products')
-            .then((response) => response.json())
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch products');
+                }
+                return response.json();
+            })
             .then((data) => setProducts(data))
             .catch((error) => console.error('Error:', error));
     }, []);
@@ -141,83 +157,87 @@ const Admin = () => {
 
     return (
         <>
-            <h1>HOLA ADMIN</h1>
-            <br />
-            <Button className='modal-header' onClick={openAddModal}>Add Product</Button>
+        <h1>HOLA ADMIN</h1>
+        <br />
+        <Button className='modal-header' onClick={openAddModal}>Add Product</Button>
 
-            <Modal isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={false}>
-                <ModalContent className='jarra'>
-                    <>
-                        <ModalHeader className="flex flex-col gap-1">Add Product</ModalHeader>
-                        <ModalBody className="modal-form">
-                            <form>
-                                <label htmlFor="productName">Name:</label>
-                                <input
-                                    type="text"
-                                    id="productName"
-                                    value={newProduct.name}
-                                    onChange={(e) => handleInputChange('name', e.target.value)}
-                                />
+        <Modal isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={false}>
+            <ModalContent className='jarra'>
+                <>
+                    <ModalHeader className="flex flex-col gap-1">Add Product</ModalHeader>
+                    <ModalBody className="modal-form">
+                        <form>
+                            <label htmlFor="productName">Name:</label>
+                            <input
+                                type="text"
+                                id="productName"
+                                value={newProduct.Name_product}
+                                onChange={(e) => handleInputChange('Name_product', e.target.value)}
+                            />
 
-                                <label htmlFor="productCategory">Category:</label>
-                                <input
-                                    type="text"
-                                    id="productCategory"
-                                    value={newProduct.category}
-                                    onChange={(e) => handleInputChange('category', e.target.value)}
-                                />
+                            <label htmlFor="productCategory">Category:</label>
+                            <select
+                                id="productCategory"
+                                value={newProduct.category}
+                                onChange={(e) => handleInputChange('category', e.target.value)}
+                            >
+                                <option value="">Select a category</option>
+                                <option value="Accessories">Accessories</option>
+                                <option value="Clothing">Clothing</option>
+                            </select>
+                            <br />
 
-                                <label htmlFor="productPrice">Price:</label>
-                                <input
-                                    type="text"
-                                    id="productPrice"
-                                    value={newProduct.price}
-                                    onChange={(e) => handleInputChange('price', e.target.value)}
-                                />
+                            <label htmlFor="productPrice">Price:</label>
+                            <input
+                                type="text"
+                                id="productPrice"
+                                value={newProduct.price}
+                                onChange={(e) => handleInputChange('price', e.target.value)}
+                            />
 
-                                {newProduct.image && (
-                                    <img src={newProduct.image} alt="Product Image" className="product-image" />
-                                )}
-                                <label className="product-image" htmlFor="productImage">Image URL:</label>
-                                <input
-                                    type="text"
-                                    id="productImage"
-                                    value={newProduct.image}
-                                    onChange={(e) => handleInputChange('image', e.target.value)}
-                                />
+                            {newProduct.image && (
+                                <img src={newProduct.image} alt="Product Image" className="product-image" />
+                            )}
+                            <label className="product-image" htmlFor="productImage">Image URL:</label>
+                            <input
+                                type="text"
+                                id="productImage"
+                                value={newProduct.image}
+                                onChange={(e) => handleInputChange('image', e.target.value)}
+                            />
 
-                                <label htmlFor="productDescription">Description:</label>
-                                <textarea
-                                    id="productDescription"
-                                    value={newProduct.description}
-                                    onChange={(e) => handleInputChange('description', e.target.value)}
-                                ></textarea>
+                            <label htmlFor="productDescription">Description:</label>
+                            <textarea
+                                id="productDescription"
+                                value={newProduct.description}
+                                onChange={(e) => handleInputChange('description', e.target.value)}
+                            ></textarea>
 
-                                <label htmlFor="productStock">Stock:</label>
-                                <input
-                                    type="text"
-                                    id="productStock"
-                                    value={newProduct.stock}
-                                    onChange={(e) => handleInputChange('stock', e.target.value)}
-                                />
-                            </form>
-                        </ModalBody>
-                        <ModalFooter>
-                            <Button color="danger" variant="light" onClick={closeAddModal}>
-                                Close
-                            </Button>
-                            <Button color="primary" onClick={addProduct}>
-                                Add
-                            </Button>
-                        </ModalFooter>
-                    </>
-                </ModalContent>
-            </Modal>
+                            <label htmlFor="productStock">Stock:</label>
+                            <input
+                                type="text"
+                                id="productStock"
+                                value={newProduct.stock}
+                                onChange={(e) => handleInputChange('stock', e.target.value)}
+                            />
+                        </form>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="danger" variant="light" onClick={closeAddModal}>
+                            Close
+                        </Button>
+                        <Button color="primary" onClick={addProduct}>
+                            Add
+                        </Button>
+                    </ModalFooter>
+                </>
+            </ModalContent>
+        </Modal>
 
             <div className="product-list">
                 {products.map((product) => (
                     <div key={product.id}>
-                        <h2>{product.name}</h2>
+                        <h2>{product.Name_product}</h2>
                         <img src={product.image} alt={product.name} className="product-image" />
                         <p>Category: {product.category}</p>
                         <p>Price: {product.price} €</p>
@@ -238,16 +258,21 @@ const Admin = () => {
                                 <label htmlFor="productName">Name:</label>
                                 <input
                                     type="text"
-                                    value={selectedProductDetails.name}
-                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, name: e.target.value })}
+                                    value={selectedProductDetails.Name_product}
+                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, Name_product: e.target.value })}
                                 />
-                                {/* Agrega el resto de los campos para editar */}
+
                                 <label htmlFor="productCategory">Category:</label>
-                                <input
-                                    type="text"
+                                <select
                                     value={selectedProductDetails.category}
                                     onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, category: e.target.value })}
-                                />
+                                >
+                                    <option value="">Select a </option>
+                                    <option value="Accessories">Accessories</option>
+                                    <option value="Clothing">Clothing</option>
+                                </select>
+                                <br>
+                                </br>
 
                                 <label htmlFor="productPrice">Price:</label>
                                 <input
