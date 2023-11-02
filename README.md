@@ -69,7 +69,7 @@ Agradecemos las contribuciones de la comunidad. Si deseas contribuir, sigue los 
 
 | ![Rebeca Poma](https://avatars.githubusercontent.com/u/132651136?v=4&s=100) | ![Anthony Brayan](https://avatars.githubusercontent.com/u/119860615?s=100&v=4) | ![Celia Gil](https://avatars.githubusercontent.com/u/132609974?v=4&s=100) | ![Juan Lumbi](https://avatars.githubusercontent.com/u/132656487?v=4&s=100) | ![Francisco Manuel](https://avatars.githubusercontent.com/u/132567624?v=4&s=100) | ![Raúl Muñoz Rayo](https://avatars.githubusercontent.com/u/132655532?v=4&s=100) | ![Javier Serrano Caballero](https://avatars.githubusercontent.com/u/132766257?v=4&s=100) |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| [Rebeca Poma](https://github.com/rebecapoma6) | [Anthony Brayan](https://github.com/AnthonyBrayan) | [Celia Gil](https://github.com/CeliaGilPrieto) | [Juan Lumbi](https://github.com/juanlumbi) | [Francisco Manuel](https://github.com/franciscomanuelnietogarcia) | [Raúl Muñoz Rayo](https://github.com/raulmunozrayo) | [Javier Serrano Caballero](https://github.com/JaviSeC) |
+| [Rebeca Poma](https://github.com/rebecapoma6) | [Anthony Brayan](https://github.com/AnthonyBrayan) | [Celia Gil](https://github.com/CeliaGilPrieto) | [Juan Lumbí](https://github.com/juanlumbi) | [Francisco Manuel](https://github.com/franciscomanuelnietogarcia) | [Raúl Muñoz Rayo](https://github.com/raulmunozrayo) | [Javier Serrano Caballero](https://github.com/JaviSeC) |
 
 
 
