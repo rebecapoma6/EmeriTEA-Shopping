@@ -10,7 +10,7 @@ const Admin = () => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     const [newProduct, setNewProduct] = useState({
-        name_administrador: '',
+        Name_product: '',
         category: '',
         price: '',
         image: '',
@@ -25,7 +25,7 @@ const Admin = () => {
     // Función para limpiar el formulario de agregar producto
     const resetNewProductForm = () => {
         setNewProduct({
-            name_administrador: '',
+            Name_product: '',
             category: '',
             price: '',
             image: '',
@@ -171,8 +171,8 @@ const Admin = () => {
                             <input
                                 type="text"
                                 id="productName"
-                                value={newProduct.name_administrador}
-                                onChange={(e) => handleInputChange('name', e.target.value)}
+                                value={newProduct.Name_product}
+                                onChange={(e) => handleInputChange('Name_product', e.target.value)}
                             />
 
                             <label htmlFor="productCategory">Category:</label>
@@ -237,7 +237,7 @@ const Admin = () => {
             <div className="product-list">
                 {products.map((product) => (
                     <div key={product.id}>
-                        <h2>{product.name}</h2>
+                        <h2>{product.Name_product}</h2>
                         <img src={product.image} alt={product.name} className="product-image" />
                         <p>Category: {product.category}</p>
                         <p>Price: {product.price} €</p>
@@ -258,8 +258,8 @@ const Admin = () => {
                                 <label htmlFor="productName">Name:</label>
                                 <input
                                     type="text"
-                                    value={selectedProductDetails.name}
-                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, x: e.target.value })}
+                                    value={selectedProductDetails.Name_product}
+                                    onChange={(e) => setSelectedProductDetails({ ...selectedProductDetails, Name_product: e.target.value })}
                                 />
 
                                 <label htmlFor="productCategory">Category:</label>

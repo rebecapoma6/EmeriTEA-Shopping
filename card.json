@@ -10,15 +10,6 @@
       "id": 20
     },
     {
-      "name": "BOTELLAS",
-      "category": "ACCESORIES",
-      "price": "5",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "BOTELLA \nCON ANIMACION",
-      "stock": "7",
-      "id": 21
-    },
-    {
       "name": "xxxx",
       "category": "poloa",
       "price": "6",
@@ -87,6 +78,48 @@
       "description": "talla Xl",
       "stock": "22",
       "id": 34
+    },
+    {
+      "name_administrador": "",
+      "category": "Clothing",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "talla L",
+      "stock": "22",
+      "name": "POLOS",
+      "id": 35
+    },
+    {
+      "name_administrador": "",
+      "category": "Accessories",
+      "price": "36.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "rojo/ verde",
+      "stock": "5",
+      "name": "n",
+      "id": 36,
+      "x": "nn"
+    },
+    {
+      "name_administrador": "",
+      "category": "Clothing",
+      "price": "12.9",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "xs",
+      "stock": "3",
+      "name": "x",
+      "id": 37,
+      "x": "xx"
+    },
+    {
+      "Name_product": "Polo sintetico",
+      "category": "Clothing",
+      "price": "20.3",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "Talla Xs",
+      "stock": "20",
+      "id": 38,
+      "x": "Rebeca Pomac"
     }
   ]
 }
