@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from '@nextui-org/react';
 import Swal from 'sweetalert2';
+// import ProductCard from './ProductCard';
 import './Admin.css';
+import ProductCard from '../../Componets/Card/Card';
 
 const Admin = () => {
     const [products, setProducts] = useState([]);
@@ -242,22 +244,18 @@ const Admin = () => {
                     </ModalFooter>
                 </>
             </ModalContent>
-        </Modal>
+        </Modal>          
 
-            <div className="product-list">
-                {products.map((product) => (
-                    <div key={product.id}>
-                        <h2>{product.Name_product}</h2>
-                        <img src={product.image} alt={product.name} className="product-image" />
-                        <p>Category: {product.category}</p>
-                        <p>Price: {product.price} €</p>
-                        <p>Description: {product.description}</p>
-                        <p>Stock: {product.stock}</p>
-                        <Button onClick={() => deleteProduct(product.id)}>Delete</Button>
-                        <Button onClick={() => openEditModal(product)}>Edit</Button>
-                    </div>
-                ))}
-            </div>
+<div className="product-list">
+            {products.map((product) => (
+                <ProductCard
+                    key={product.id}
+                    product={product}
+                    deleteProduct={deleteProduct}
+                    openEditModal={openEditModal}
+                />
+            ))}
+        </div>
 
             {isEditModalOpen && selectedProductDetails && (
                 <Modal isOpen={isEditModalOpen} onOpenChange={closeEditModal} isDismissable={false}>

@@ -43,7 +43,7 @@
 
 .jarra button {
     padding: 10px 20px;
-    background-color: blue;
+    background-color: rgb(255, 106, 0);
     color: white;
     border: none;
     cursor: pointer;
@@ -63,7 +63,7 @@
     padding: 10px;
     border: 1px solid rgb(0, 0, 0);
     border-radius: 15px;
-    background: rgb(174, 197, 240);
+    background: rgb(38, 181, 40);
 }
 
 .product-list h2 {
@@ -115,11 +115,11 @@
     height: 100px;
 }
 
-/* .formSection .buttonContainer {
+.formSection .buttonContainer {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-} */
+}
 
 .btn-close,
 .btn-save {
