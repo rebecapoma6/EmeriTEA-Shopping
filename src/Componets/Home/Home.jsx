@@ -88,6 +88,7 @@ import "./Home.css";
 import CustomNavbar from "../Navbar/Navbar";
 import Accessories from "../Accesories/Accesories";
 import Clothing from "../Clothing/Clothing"; // Asegúrate de utilizar la ruta correcta para el componente de Clothing
+import Footer from "../Footer/Footer";
 
 const Home = () => {
   return (
@@ -103,6 +104,8 @@ const Home = () => {
         </div>
         <Accessories />
         <Clothing />
+        <br /><br />
+        <Footer/>
       </div>
     </>
   );
