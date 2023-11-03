@@ -48,6 +48,24 @@
       "description": "iii",
       "stock": "5",
       "id": 36
+    },
+    {
+      "Name_product": "prenda 1",
+      "category": "Clothing",
+      "price": "25",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773930/IMG_7045_kberem.jpg",
+      "description": "prenda camiseta tecnica",
+      "stock": "10",
+      "id": 37
+    },
+    {
+      "Name_product": "prenda 2",
+      "category": "Clothing",
+      "price": "30",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773924/20231029_172429_k77nqb.jpg",
+      "description": "camiseta de algodón",
+      "stock": "9",
+      "id": 38
     }
   ]
 }

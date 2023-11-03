@@ -1,13 +1,16 @@
-import React from 'react';
-import Clothing from '../../Componets/Clothing/Clothing';
-
+// import React from "react";
+import Clothing from "../../Componets/Clothing/Clothing";
+import Header from "../../Componets/Header/header";
+import Footer from "../../Componets/Footer/Footer";
+import CustomNavbar from "../../Componets/Navbar/Navbar";
 
 const RopaView = () => {
   return (
     <div>
-      <h1>Vista que utiliza Clothing</h1>
+      <Header />
+      <CustomNavbar/>
       <Clothing />
-      {/* Puedes utilizar Clothing en este componente */}
+      <Footer />
     </div>
   );
 };

@@ -3,6 +3,8 @@ import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDi
 import Swal from 'sweetalert2';
 import './Admin.css';
 import ProductCard from '../../Componets/Card/Card';
+import Header from '../../Componets/Header/header';
+import Footer from '../../Componets/Footer/Footer';
 
 const Admin = () => {
     const [products, setProducts] = useState([]);
@@ -168,7 +170,8 @@ const Admin = () => {
 
     return (
         <>
-        <div className='addInitial'>
+       
+        <div className='addInitial'> <Header/>
         <div className='add-header'>
         <h1>AÑADIR PRODUCTOS</h1>
         </div>
@@ -326,7 +329,7 @@ const Admin = () => {
                         </ModalFooter>
                     </ModalContent>
                 </Modal>
-            )}
+            )}<Footer/>
             </div>
 
         </>

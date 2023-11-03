@@ -1,16 +1,18 @@
-import React from 'react';
-import Accessories from '../../Componets/Accesories/Accesories';
-
+import React from "react";
+import Accessories from "../../Componets/Accesories/Accesories";
+import Header from "../../Componets/Header/header";
+import Footer from "../../Componets/Footer/Footer";
+import CustomNavbar from "../../Componets/Navbar/Navbar";
 
 const AccessorieView = () => {
   return (
     <div>
-      {/* <h1>Esta es una vista que utiliza Accessories</h1> */}
+      <Header />
+      <CustomNavbar/>
       <Accessories />
-      {/* Puedes utilizar Accessories en este componente */}
+      <Footer />
     </div>
   );
 };
 
 export default AccessorieView;
-
