@@ -6,6 +6,7 @@ import { Stack, Button } from '@mui/material'; // Importa Stack y Button desde M
 import Typography from '@mui/material/Typography';
 import "./Card.css";
 
+
 const ProductCard = ({ product, deleteProduct, openEditModal }) => {
     return (
         <Card sx={{ maxWidth: 345 }}>

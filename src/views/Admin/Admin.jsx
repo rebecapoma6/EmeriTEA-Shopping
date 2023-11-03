@@ -259,7 +259,7 @@ const Admin = () => {
             </div>
         </Modal>          
 
-<div className="product-list">
+        <div className="product-list">
             {products.map((product) => (
                 <ProductCard
                     key={product.id}
