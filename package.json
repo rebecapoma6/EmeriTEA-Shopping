@@ -15,15 +15,19 @@
     "@mui/material": "^5.14.15",
     "@nextui-org/modal": "^2.0.23",
     "@nextui-org/react": "^2.1.13",
+    "@nextui-org/system": "^2.0.10",
+    "@nextui-org/theme": "^2.1.9",
     "bootstrap": "^5.3.2",
     "font-awesome": "^4.7.0",
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
+    "react-cookies": "^0.1.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0",
     "sweetalert2": "^11.6.13",
-    "swiper": "^11.0.3"
+    "swiper": "^11.0.3",
+    "universal-cookie": "^6.1.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
