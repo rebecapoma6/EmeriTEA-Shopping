@@ -15,11 +15,11 @@ reactRoot.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} /> {/* Agrega una nueva ruta para Home */}
+        <Route path="/" element={<Home />} /> 
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<Admin />} />
-        <Route path="/category-accesories" element={<AccessorieView />} /> {/* Ruta para Accessories */}
-        <Route path="/category-clothing" element={<RopaView/>} /> {/* Ruta para Clothing */}
+        <Route path="/category-accesories" element={<AccessorieView />} />
+        <Route path="/category-clothing" element={<RopaView/>} /> 
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
