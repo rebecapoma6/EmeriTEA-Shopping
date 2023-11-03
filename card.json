@@ -1,82 +1,53 @@
 {
   "products": [
     {
-      "name": "CAMISETA AZUL",
-      "category": "POLOS",
-      "price": "20",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "MANGA LARGA",
-      "stock": "25",
-      "id": 20
-    },
-    {
-      "name": "POLOS",
-      "category": "POMA",
-      "price": "60",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "ccc",
-      "stock": "5",
-      "id": 21
-    },
-    {
-      "name": "sssss",
-      "category": "sssss",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "ssss",
-      "stock": "sss",
-      "id": 22
-    },
-    {
-      "name": "Dolores mariA",
-      "price": "25.",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "5",
-      "stock": "22",
-      "id": 23
-    },
-    {
       "name": "xxxx",
-      "category": "poloa",
-      "price": "6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "id": 24
+      "category": "Accessories",
+      "price": "10.00",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773924/IMG_7017_o4j0dd.jpg",
+      "id": 24,
+      "Name_product": "Jabon",
+      "description": "Jabon de mano",
+      "stock": "150"
     },
     {
       "name": "POLOS",
-      "category": "POLOS",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "xxx",
-      "stock": "5",
-      "id": 25
+      "category": "Accessories",
+      "price": "15.00",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773927/IMG_7034_apr3kd.jpg",
+      "description": "Gorra de sol",
+      "stock": "46",
+      "id": 25,
+      "Name_product": "Gorra"
     },
     {
       "name": "señora pomxxxxx",
-      "category": "sueteerxxxxx",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "vvvv",
-      "stock": "5",
-      "id": 28
+      "category": "Accessories",
+      "price": "9.00",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698922934/IMG_7072._qndls5.jpg",
+      "description": "Bolsa de compra",
+      "stock": "115",
+      "id": 28,
+      "Name_product": "Bolsa de Tela"
     },
     {
-      "name": "señora monica",
-      "category": "SSS",
-      "price": "SSS",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
-      "description": "SSS",
-      "stock": "22",
-      "id": 30
+      "name": "Botellas Osos",
+      "category": "Accessories",
+      "price": "5.00",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698922934/IMG_7064._y0fqmv.jpg",
+      "description": "Llavero",
+      "stock": "136",
+      "id": 30,
+      "Name_product": "Llavero"
     },
     {
-      "name": "Camiseta ",
-      "category": "polos",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "polos",
+      "Name_product": "javi",
+      "category": "Accessories",
+      "price": "25.9",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1693212296/samples/shoe.jpg",
+      "description": "iii",
       "stock": "5",
-      "id": 31
+      "id": 36
     }
   ]
 }

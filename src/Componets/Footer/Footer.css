@@ -1,0 +1,77 @@
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Container-Footer {
+  /* background-color: #EDEDED; */
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius:20px ;
+  border-bottom-right-radius: 20px ;
+}
+
+.Politicas {
+  background-color: #ededed;
+  width: 85%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.Redes {
+  height: 45px;
+  background-color: #ededed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-left-radius:10px ;
+  border-bottom-right-radius: 10px ;
+}
+
+.industrias {
+  background-color: #081526;
+  width: 20%;
+  height: 30px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.Copyright {
+  background-color: #007da0;
+  font-size: 19px;
+  width: 25%;
+  height: 30px;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Correo {
+  background-color: #081526;
+  width: 20%;
+  height: 30px;
+  font-size: 18px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* justify-content: space-evenly; */
+}

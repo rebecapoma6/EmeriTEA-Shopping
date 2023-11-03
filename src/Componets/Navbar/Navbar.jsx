@@ -9,7 +9,7 @@ const CustomNavbar = () => {
         <a href="https://emeritea.com/quienes-somos/" target="_blank" rel="noopener noreferrer">Quiénes Somos</a>
         <Link to="/donaciones">Donaciones</Link>
         <div className="dropdown">
-          <Link to="/productos" className="dropbtn">Productos</Link>
+          <Link to="" className="dropbtn">Productos</Link>
           <div className="dropdown-content">
             <Link to="/category-accesories">Accesorios</Link>
             <Link to="/category-clothing">Prendas</Link>

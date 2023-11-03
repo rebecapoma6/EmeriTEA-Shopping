@@ -8,6 +8,7 @@ import './index.css';
 import AccessorieView from './views/AccesoriesViews/AccesoriesViews';
 import RopaView from './views/ClothingViews/ClothingViews';
 
+
 const root = document.getElementById('root');
 const reactRoot = createRoot(root);
 
