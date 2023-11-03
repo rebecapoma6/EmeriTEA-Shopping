@@ -12,7 +12,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
             <CardMedia
                 component="img"
                 alt={product.Name_product}
-                height="340"               
+                height="300"               
                 image={product.image}
             />
             <CardContent>

@@ -1,16 +1,6 @@
 {
   "products": [
     {
-      "name": "CAMISETA AZUL",
-      "category": "Clothing",
-      "price": "20.00",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773924/20231029_172429_k77nqb.jpg",
-      "description": "Talla S M/L",
-      "stock": "15",
-      "id": 20,
-      "Name_product": "Camiseta Termica "
-    },
-    {
       "name": "xxxx",
       "category": "Accessories",
       "price": "10.00",
@@ -51,41 +41,13 @@
       "Name_product": "Llavero"
     },
     {
-      "name": "Camiseta ",
-      "category": "Clothing",
-      "price": "10.00",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698922934/IMG_7040_sfasz2.jpg",
-      "description": "Talla M M/C",
-      "stock": "36",
-      "id": 31,
-      "Name_product": "Camiseta Algodon"
-    },
-    {
-      "Name_product": "polos maria",
-      "category": "Clothing",
-      "price": "36.9",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "talla s",
-      "stock": "5",
-      "id": 32
-    },
-    {
-      "Name_product": "Zapatilla",
-      "category": "Clothing",
-      "price": "36.9",
+      "Name_product": "javi",
+      "category": "Accessories",
+      "price": "25.9",
       "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1693212296/samples/shoe.jpg",
-      "description": "Talla 36",
-      "stock": "20",
-      "id": 33
-    },
-    {
-      "Name_product": "POLOS",
-      "category": "Clothing",
-      "price": "10.99",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "talla S",
-      "stock": "25",
-      "id": 34
+      "description": "iii",
+      "stock": "5",
+      "id": 36
     }
   ]
 }

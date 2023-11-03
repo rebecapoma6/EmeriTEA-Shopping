@@ -168,6 +168,7 @@ const Admin = () => {
 
     return (
         <>
+        <div className='addInitial'>
         <div className='add-header'>
         <h1>AÑADIR PRODUCTOS</h1>
         </div>
@@ -326,6 +327,7 @@ const Admin = () => {
                     </ModalContent>
                 </Modal>
             )}
+            </div>
 
         </>
     );
