@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from '@nextui-org/react';
 import Swal from 'sweetalert2';
-// import ProductCard from './ProductCard';
 import './Admin.css';
 import ProductCard from '../../Componets/Card/Card';
 
@@ -169,16 +168,20 @@ const Admin = () => {
 
     return (
         <>
-        <h1>HOLA ADMIN</h1>
+        <div className='add-header'>
+        <h1>AÑADIR PRODUCTOS</h1>
+        </div>
+        
         <br />
         <Button className='modal-header' onClick={openAddModal}>Add Product</Button>
 
         <Modal isOpen={isOpen} onOpenChange={onOpenChange} isDismissable={false}>
-            <ModalContent className='jarra'>
+            <div class="centered-form">
+            <ModalContent className='add-form'>
                 <>
                     <ModalHeader className="flex flex-col gap-1">Add Product</ModalHeader>
-                    <ModalBody className="modal-form">
-                        <form>
+                    <ModalBody>
+                        <form class="add-2">
                             <label htmlFor="productName">Name:</label>
                             <input
                                 type="text"
@@ -206,10 +209,9 @@ const Admin = () => {
                                 value={newProduct.price}
                                 onChange={(e) => handleInputChange('price', e.target.value)}
                             />
+                            <br></br>
 
-                            {newProduct.image && (
-                                <img src={newProduct.image} alt="Product Image" className="product-image" />
-                            )}
+                            
                             <label className="product-image" htmlFor="productImage">Image URL:</label>
                             <input
                                 type="text"
@@ -217,6 +219,10 @@ const Admin = () => {
                                 value={newProduct.image}
                                 onChange={(e) => handleInputChange('image', e.target.value)}
                             />
+                            {newProduct.image && (
+                                <img src={newProduct.image} alt="Product Image" className="product-image" />
+                            )}
+                            <br></br>
 
                             <label htmlFor="productDescription">Description:</label>
                             <textarea
@@ -224,6 +230,8 @@ const Admin = () => {
                                 value={newProduct.description}
                                 onChange={(e) => handleInputChange('description', e.target.value)}
                             ></textarea>
+
+                            <br></br>
 
                             <label htmlFor="productStock">Stock:</label>
                             <input
@@ -244,6 +252,7 @@ const Admin = () => {
                     </ModalFooter>
                 </>
             </ModalContent>
+            </div>
         </Modal>          
 
 <div className="product-list">
