@@ -35,7 +35,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 30px;
+    font-size: 50px;
+    margin-bottom: 20px;
 
 }
 
@@ -112,7 +113,6 @@
   width: 1235.35px;
   height: 100px;
   margin-left: 9.3%;
-  /* margin-right: ; */
-  margin-top: 20px;
+    margin-top: 20px;
 
 }

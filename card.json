@@ -75,6 +75,24 @@
       "description": "bolivares",
       "stock": "0.5",
       "id": 39
+    },
+    {
+      "Name_product": "prenda 4",
+      "category": "Clothing",
+      "price": "146425",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773930/IMG_7045_kberem.jpg",
+      "description": "dfvbdb",
+      "stock": "1",
+      "id": 40
+    },
+    {
+      "Name_product": "prenda 5",
+      "category": "Clothing",
+      "price": "1223",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773930/IMG_7045_kberem.jpg",
+      "description": "svdav",
+      "stock": "dfgb",
+      "id": 41
     }
   ]
 }
