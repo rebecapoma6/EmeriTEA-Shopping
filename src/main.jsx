@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Login from './views/Login/Login';
-import Home from './Componets/Home/Home';
+import Home from './views/Home/Home';
 import './index.css';
 import AccessorieView from './views/AccesoriesViews/AccesoriesViews';
 import RopaView from './views/ClothingViews/ClothingViews';
