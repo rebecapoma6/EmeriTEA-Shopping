@@ -49,7 +49,7 @@ const Clothing = () => {
                     <option value="XL">XL</option>
                   </select>
 
-                  <div className="comprarycarrito">
+                  <div className="carrito">
                     <button>🛒</button>
                   </div>
                 </div>
