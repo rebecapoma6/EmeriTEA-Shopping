@@ -5,14 +5,13 @@
     padding-right: 10px; */
   }
 
-  .swiper {
+  /* .swiper {
     width: 1235.35px;
     height: 350px;
-  }
+  } */
 
 
-.swiper-slide {
-  color: black;
+/* .swiper-slide {
   font-size: 20px;
   background: #ffffff;
   display: flex;
@@ -21,15 +20,15 @@
   align-items: center;
   border-right: 8px #EDEDED solid;
   
-}
+} */
 
 
-.swiper-slide img {
+/* .swiper-slide img {
     display: block;
     width: 70%;
     height: 70%;
     object-fit: cover;
-  }
+  } */
 
 
   .description{
@@ -38,12 +37,6 @@
     /* align-items: center; */
     /* margin-bottom: 5px; */
 }
-
-
-
-
-
-
 
 .nombre {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -56,41 +49,12 @@
     margin-bottom: 10px;
 }
 
-.comprarycarrito {
+.carrito {
     width:auto ;
   display: flex;
   margin-bottom: 5px;
 
 }
-
-.comprarycarrito button {
-  width: auto;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  border: 2px #0084CE solid;
-  border-radius: 20px;
-  color:#0084CE ;
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .Prendas {
   width: 1235.35px;
@@ -102,6 +66,8 @@
   justify-content: center;
   align-items: center;
   font-size: 50px;
+  margin-bottom: 20px !important;
+  margin-top: 20px;
 }
 
 .tallaje {

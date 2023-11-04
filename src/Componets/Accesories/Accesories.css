@@ -4,28 +4,6 @@
     /* Asegúrate de reemplazar 'font.woff' con el nombre y la extensión correctos de tu archivo de fuente */
   }
   
-/* html,
-  body {
-    position: relative;
-    height: 100%;
-  }
-   */
-/* body {
-    background: #eee;
-    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
-    color: #000;
-    margin: 0;
-    padding: 0;
-  } */
-
-.container-swiper {
-  width: 100%;
-  /* background-color: rgb(196, 189, 189); */
-  /* padding-left: 10px;
-  padding-right: 10px; */
-}
-
 .Accesorios{
     width: 1235.35px;
     height: 100px;
@@ -37,8 +15,17 @@
     align-items: center;
     font-size: 50px;
     margin-bottom: 20px;
+    margin-top: 20px;
 
 }
+
+.container-swiper {
+  width: 100%;
+  /* background-color: rgb(196, 189, 189); */
+  /* padding-left: 10px;
+  padding-right: 10px; */
+}
+
 
 .swiper {
   width: 1235.35px;
@@ -46,7 +33,7 @@
 }
 
 .swiper-slide {
-  color: black;
+  color: rgb(207, 204, 204);
   font-size: 20px;
   background: #ffffff;
   display: flex;
@@ -72,26 +59,23 @@
 }
 
 .nombre {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto'!important;
     
 }
 
 .precio {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto'!important;
     color: #0084CE;
-    margin-bottom: 10px;
 }
 
-.comprarycarrito {
+.carrito {
     width:auto ;
   display: flex;
-  margin-bottom: 5px;
+  /* gap: 10px; */
 
 }
 
-.comprarycarrito button {
-  width: auto;
-  height: 20px;
+.carrito button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,20 +83,6 @@
   border: 2px #0084CE solid;
   border-radius: 20px;
   color:#0084CE ;
-  
+  font-size: 20px;
 }
 
-
-.accesorios-title{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  background-color: #0084CE;
-  width: 1235.35px;
-  height: 100px;
-  margin-left: 9.3%;
-    margin-top: 20px;
-
-}

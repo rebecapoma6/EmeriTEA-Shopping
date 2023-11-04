@@ -13,9 +13,9 @@ const Footer = () => {
       <div className="Redes">
 
         <div className="industrias">
-        <i class="fa-brands fa-facebook-f"></i>
-        <i class="fa-brands fa-twitter"></i>
-        <i class="fa-brands fa-youtube"></i>
+        <i className="fa-brands fa-facebook-f"></i>
+        <i className="fa-brands fa-twitter"></i>
+        <i className="fa-brands fa-youtube"></i>
         </div>
 
         <div className="Copyright">Copyright © 2019 EmeriTEA</div>
