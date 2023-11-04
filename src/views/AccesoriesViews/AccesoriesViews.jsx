@@ -6,11 +6,13 @@ import CustomNavbar from "../../Componets/Navbar/Navbar";
 
 const AccessorieView = () => {
   return (
+    <div className="homeinitial">
     <div>
       <Header />
       <CustomNavbar/>
       <Accessories />
       <Footer />
+    </div>
     </div>
   );
 };

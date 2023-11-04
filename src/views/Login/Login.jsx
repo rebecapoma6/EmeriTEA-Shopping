@@ -117,7 +117,8 @@ const SignInSide = () => {
 
   return (
     <form className="login-form" onSubmit={handleLoginSubmit}>
-      <div className="form-group">
+      <div className="forms">
+        <div className="form-group">
         <label>Email:</label>
         <input
           type="email"
@@ -135,7 +136,12 @@ const SignInSide = () => {
           required
         />
       </div>
-      <button type="submit">Sign In</button>
+      </div>
+      
+      <div> 
+     <button className="button-ingresar" type="submit">Entrar</button>
+     </div>
+    
     </form>
   );
 };

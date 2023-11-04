@@ -233,6 +233,26 @@
       "email": "johndoe@example.com",
       "password": "password123",
       "id": 46
+    },
+    {
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "id": 47
+    },
+    {
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "id": 48
+    },
+    {
+      "email": "janesmith@example.com",
+      "password": "securepass",
+      "id": 49
+    },
+    {
+      "email": "janesmith@example.com",
+      "password": "securepass",
+      "id": 50
     }
   ]
 }

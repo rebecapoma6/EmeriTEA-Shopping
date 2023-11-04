@@ -171,7 +171,9 @@ const Admin = () => {
     return (
         <>
        
-        <div className='addInitial'> <Header/>
+        <div className='addInitial'> 
+        <Header/>
+        
         <div className='add-header'>
         <h1>AÑADIR PRODUCTOS</h1>
         </div>

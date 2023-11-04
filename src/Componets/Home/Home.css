@@ -4,6 +4,7 @@
     background-repeat: repeat;
     font-family: 'Roboto';
     letter-spacing: 1px;
+    margin: 0;
 /* padding: 0 10%; */
     /* display: flex; */
     /* justify-content: center; */
@@ -19,5 +20,6 @@
     background-color: #EDEDED;
     color: rgb(3, 3, 95);
     padding: 10px;
-    margin-left: 141.5px
+    margin-left: 141.5px;
+    /* margin-bottom: 20px; */
 }

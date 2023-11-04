@@ -12,12 +12,14 @@
     align-items: center;
     justify-content: center;
     height: 100px;
-    background: rgb(99, 193, 234);
+    width: 1235.35px;
+    background:#0084CE;
+margin-left: 9.3%;
 }
 
 .add-header h1 {
     margin: 0;
-    color: antiquewhite;
+    color: rgb(255, 255, 255);
     font-size: 24px;
 }
 
@@ -26,8 +28,8 @@
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: rgb(99, 193, 234);
-    color: black;
+    background-color:#0084CE;
+    color: rgb(255, 255, 255);
     border: none;
     cursor: pointer;
     font-size: 16px;
@@ -100,7 +102,11 @@
     /* color: black; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     /* margin-bottom: 20px; */
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    align-items: center;
+    /* justify-content: center; */
 }
 
 .product-list h2 {
@@ -136,7 +142,7 @@
     justify-content: center;
     align-items: center;
     background-color: white;
-    border: 2px #0084ce solid;
+    border: 2px #0084 solid;
     border-radius: 15px;
     color:#0084CE ;
     cursor: pointer;

@@ -1,0 +1,17 @@
+/* Estilos adicionales para el selector de tallas */
+.tallaje {
+    width: auto;
+    height: 25px;
+justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 0 1px; /* Ajustar el padding según tu diseño */
+    border: 2px #0084CE solid;
+    border-radius: 20px;
+    color: rgb(163, 162, 162);
+    background: white;
+    font-size: 14px; /* Tamaño de fuente según tu diseño */
+    cursor: pointer;
+    outline: none; /* Eliminar el borde al hacer clic */
+  }
+  

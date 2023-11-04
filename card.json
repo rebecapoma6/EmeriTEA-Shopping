@@ -66,6 +66,15 @@
       "description": "camiseta de algodón",
       "stock": "9",
       "id": 38
+    },
+    {
+      "Name_product": "prenda 3",
+      "category": "Clothing",
+      "price": "200000000000000000000000",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773924/20231029_172429_k77nqb.jpg",
+      "description": "bolivares",
+      "stock": "0.5",
+      "id": 39
     }
   ]
 }
