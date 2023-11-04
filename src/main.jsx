@@ -8,6 +8,7 @@ import AccessorieView from './views/AccesoriesViews/AccesoriesViews';
 import RopaView from './views/ClothingViews/ClothingViews';
 import ViewAdmin from './views/AdminView/AdminView';
 import ViewDonations from './views/DonationsView/DonationsView';
+import ViewLocation from './views/LocationView/LocationView';
 
 
 const root = document.getElementById('root');
@@ -21,6 +22,7 @@ reactRoot.render(
         <Route path="/login" element={<Login />} />
         <Route path="/admin" element={<ViewAdmin />} />
         <Route path="/donaciones" element={<ViewDonations />} />
+        <Route path="/Location" element={<ViewLocation />} />
         <Route path="/category-accesories" element={<AccessorieView />} />
         <Route path="/category-clothing" element={<RopaView/>} /> 
       </Routes>

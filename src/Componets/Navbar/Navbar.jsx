@@ -16,7 +16,7 @@ const CustomNavbar = () => {
           </div>
         </div>
         <Link to="https://emeritea.com/jornadas-y-eventos/" target="_blank" rel="noopener noreferrer">Eventos</Link>
-        <Link to="/ubicacion">Ubicación</Link>
+        <Link to="/location">Ubicación</Link>
       </div>
     </div>
   );
