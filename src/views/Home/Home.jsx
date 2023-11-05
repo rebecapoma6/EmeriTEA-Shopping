@@ -5,6 +5,7 @@ import CustomNavbar from "../../Componets/Navbar/Navbar";
 import Accessories from "../../Componets/Accesories/Accesories";
 import Clothing from "../../Componets/Clothing/Clothing"; // Asegúrate de utilizar la ruta correcta para el componente de Clothing
 import Footer from "../../Componets/Footer/Footer";
+import Solidary from "../../Componets/Solidary/Solidary";
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Home = () => {
         </div>
          <Clothing />
          <Accessories />
+         <Solidary/>
         <br /><br />
         </div>
         <Footer/>

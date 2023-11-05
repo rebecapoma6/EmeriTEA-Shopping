@@ -9,6 +9,7 @@ import RopaView from './views/ClothingViews/ClothingViews';
 import ViewAdmin from './views/AdminView/AdminView';
 import ViewDonations from './views/DonationsView/DonationsView';
 import ViewLocation from './views/LocationView/LocationView';
+import SolidaryView from './views/SolidaryView/SolidaryView';
 
 
 const root = document.getElementById('root');
@@ -25,6 +26,8 @@ reactRoot.render(
         <Route path="/Location" element={<ViewLocation />} />
         <Route path="/category-accesories" element={<AccessorieView />} />
         <Route path="/category-clothing" element={<RopaView/>} /> 
+        <Route path="/Solidary" element={<SolidaryView/>} /> 
+
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

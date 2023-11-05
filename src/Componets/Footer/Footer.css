@@ -1,8 +1,8 @@
-footer{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .Container-Footer {
@@ -13,8 +13,8 @@ footer{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-bottom-left-radius:20px ;
-  border-bottom-right-radius: 20px ;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .Politicas {
@@ -28,6 +28,12 @@ footer{
   border-top-left-radius: 20px;
 }
 
+.Politicas a {
+  text-decoration: none;
+  color: #081526;
+  font-size: 19px;
+}
+
 .Redes {
   height: 45px;
   background-color: #ededed;
@@ -35,8 +41,8 @@ footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom-left-radius:10px ;
-  border-bottom-right-radius: 10px ;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 .industrias {
@@ -51,6 +57,23 @@ footer{
   justify-content: space-evenly;
 }
 
+.industrias a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.i1:hover {
+  color: rgb(37, 89, 200);
+}
+
+.i2:hover {
+  color: #1D9BF0;
+}
+
+.i3:hover {
+  color: #FF0000;
+}
+
 .Copyright {
   background-color: #007da0;
   font-size: 19px;
@@ -61,6 +84,7 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
+  text-decoration: none;
 }
 
 .Correo {
@@ -74,5 +98,4 @@ footer{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* justify-content: space-evenly; */
 }

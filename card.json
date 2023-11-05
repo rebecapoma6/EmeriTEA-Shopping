@@ -80,6 +80,15 @@
       "description": "Pulsera color azul ",
       "stock": "4",
       "id": 9
+    },
+    {
+      "Name_product": "Imán por detrás",
+      "category": "Accessories",
+      "price": "30",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7022_ahj80b_1_-removebg-preview_virgkz.png",
+      "description": "Imán por la parte de atrás",
+      "stock": "4",
+      "id": 10
     }
   ]
 }
