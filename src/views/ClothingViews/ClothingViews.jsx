@@ -7,12 +7,15 @@ import CustomNavbar from "../../Componets/Navbar/Navbar";
 const RopaView = () => {
   return (
     <div className="homeinitial">
-    <div>
-      <Header />
-      <CustomNavbar/>
-      <Clothing />
-      <Footer />
-    </div></div>
+      {/* <div> */}
+        <Header />
+        <CustomNavbar />
+        <div className="container-gris">
+          <Clothing />
+        </div>
+        <Footer />
+      {/* </div> */}
+    </div>
   );
 };
 

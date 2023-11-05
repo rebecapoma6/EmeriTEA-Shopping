@@ -10,7 +10,9 @@ const AccessorieView = () => {
     <div>
       <Header />
       <CustomNavbar/>
+      <div className="container-gris">
       <Accessories />
+      </div>
       <Footer />
     </div>
     </div>

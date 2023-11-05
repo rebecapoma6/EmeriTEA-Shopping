@@ -283,6 +283,21 @@
       "email": "janesmith@example.com",
       "password": "securepass",
       "id": 56
+    },
+    {
+      "email": "janesmith@example.com",
+      "password": "securepass",
+      "id": 57
+    },
+    {
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "id": 58
+    },
+    {
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "id": 59
     }
   ]
 }

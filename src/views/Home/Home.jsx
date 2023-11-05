@@ -10,8 +10,11 @@ const Home = () => {
   return (
     <>
       <div className="homeinitial">
-        <Header />
-        <CustomNavbar />
+      
+        <Header /> 
+     
+        <CustomNavbar />  
+          <div className="container-gris">
         <div className="intro">
           <h2>
             Esta es una tienda solidaria que ha sido creada por la asociación
@@ -21,7 +24,9 @@ const Home = () => {
          <Clothing />
          <Accessories />
         <br /><br />
+        </div>
         <Footer/>
+        
       </div>
     </>
   );
