@@ -89,6 +89,15 @@
       "description": "Imán por la parte de atrásvgcfnvmbhmgbhvfgbfcjcjfctfcfcvjygvkgvkhgvghvkguhfviunvuargfuahfñuhsdoiñvsbiduijsurhóoingisodkfowekntiogrjvd",
       "stock": "4",
       "id": 10
+    },
+    {
+      "Name_product": "Prenda 5",
+      "category": "Clothing",
+      "price": "8",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
+      "description": "Prenda 5",
+      "stock": "9",
+      "id": 11
     }
   ]
 }

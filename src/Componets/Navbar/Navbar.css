@@ -43,6 +43,7 @@ text-decoration: none;
 .navbar .dropdown {
   position: relative;
   display: inline-block;
+  /* z-index: 1; */
 }
 
 .navbar .dropdown-content {

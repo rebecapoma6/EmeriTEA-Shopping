@@ -29,10 +29,10 @@
   align-items: center;
   width: 80%;
   height: 70px;
-  background-color: #ededed;
+  /* background-color: #ededed; */
   color: rgb(3, 3, 95);
-  padding: 10px;
-  margin-left: 141.5px;
-  /* margin-bottom: 20px; */
+  /* padding: 10px; */
+  /* margin-left: 141.5px; */
+  margin-top: 20px;
 }
 
