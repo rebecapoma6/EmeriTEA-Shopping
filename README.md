@@ -6,12 +6,7 @@ Welcome to our EmeriTEA online shop, where our aim is to reach as many people as
 In EmeriTEA Shopping we give you the opportunity to collaborate with the association thanks to the sale of a wide variety of products made in the association, where all the benefits of their sale will go entirely to the association. 
 
 ## Screenshots 📷
-<img src="https://res.cloudinary.com/dqc0wvttr/image/upload/v1697711255/Login.Desktop_wgooei.jpg" width="200" heigth="50">
-<img src="https://res.cloudinary.com/dqc0wvttr/image/upload/v1697711255/VistaAdmin-Desktop_emvoyi.jpg" width="200" heigth="50">
-<img src="https://res.cloudinary.com/dqc0wvttr/image/upload/v1697711255/Adm-Desktop_rv4orf.jpg" width="200" heigth="50">
-<img src="https://res.cloudinary.com/dqc0wvttr/image/upload/v1697711255/Login.Desktop_wgooei.jpg" width="200" heigth="50">
-<img src="https://res.cloudinary.com/dqc0wvttr/image/upload/v1697711255/Info-Relax_dwrtrd.jpg" width="200" heigth="50">
-<img src="https://res.cloudinary.com/dqc0wvttr/image/upload/v1697711255/favoritos-subscribe_ambbyt.jpg" width="200" heigth="50">
+<img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699356664/image_1_d7zxbv.png" width="200" heigth="50">
 
 ## Stacks 🖥️
 ● Visual Studio Code <br>
@@ -77,7 +72,7 @@ Each of them fulfills a specific purpose in the development of your web applicat
 
 ## Tests ☑️
 
-The Testing Library is an essential library in our 'Sound of Silence' project. This library is used to write and run tests that ensure our web application runs smoothly and meets quality standards. With Testing Library, we can simulate users' interaction with the application and verify that all components and functions respond correctly, thus providing an optimal user experience.
+
 
 ## Test Screenshot ✔️
 
