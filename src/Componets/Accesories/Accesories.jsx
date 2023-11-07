@@ -265,7 +265,7 @@ const Accesories = () => {
   return (
     <div className="container-swiper">
       <div className="Accesorios">Accesorios</div>
-      <div className="mySwiper">
+      <div className="mySwiperd">
         <Swiper
           slidesPerView={4}
           navigation={true}
@@ -279,6 +279,7 @@ const Accesories = () => {
                 <div className="description">
                   <div className="nombre">{product.Name_product}</div>
                   <div className="precio">{product.price} €</div>
+                  
                   <div className="carrito">
                  <button>🛒</button>
                   </div>

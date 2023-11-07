@@ -4,9 +4,11 @@
     align-items: center;
     justify-content: center;
     height: 100px;
-    width: 1235.35px;
+    /* width: 1235.35px; */
+    width: 80%;
     background:#0084CE;
-margin-left: 9.3%;
+/* margin-left: 9.3%; */
+padding: 0 10px;
 }
 
 .add-header h1 {
