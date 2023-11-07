@@ -11,7 +11,7 @@
     },
     {
       "Name_product": "Camiseta Técnica RojiBlanca",
-      "category": "Clothing",
+      "category": "Accessories",
       "price": "17",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188505/IMG_7040_jf77d9_1_-removebg-preview_vnww6x.png",
       "description": "Camiseta Técnica Blanca",
@@ -84,11 +84,20 @@
     {
       "Name_product": "Imán por detrás",
       "category": "Accessories",
-      "price": "30",
+      "price": "3000",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7022_ahj80b_1_-removebg-preview_virgkz.png",
-      "description": "Imán por la parte de atrás",
+      "description": "Imán por la parte de atrásvgcfnvmbhmgbhvfgbfcjcjfctfcfcvjygvkgvkhgvghvkguhfviunvuargfuahfñuhsdoiñvsbiduijsurhóoingisodkfowekntiogrjvd",
       "stock": "4",
       "id": 10
+    },
+    {
+      "Name_product": "Prenda 5",
+      "category": "Clothing",
+      "price": "8",
+      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
+      "description": "Prenda 5",
+      "stock": "9",
+      "id": 11
     }
   ]
 }
