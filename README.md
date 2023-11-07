@@ -49,7 +49,19 @@ Each of them fulfills a specific purpose in the development of your web applicat
 <a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
 <a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>  
 <a href="https://www.figma.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" /></a>  
-<a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>  
+<a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>
+<a href="https://learn.microsoft.com/es-es/dotnet/csharp/tour-of-csharp/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699350399/C_zdol40.png" alt="C#" height="50" /></a>
+<a href="https://www.microsoft.com/es-es/sql-server/sql-server-downloads" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SQL_SERVER_vhzlzo.png" alt="SQL SERVER" height="50" /></a>
+<a href="https://code.visualstudio.com/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353985/VISUAL_AZULITO_jgfldr.png" alt="VISUAL STUDIO CODE" height="50" /></a>
+<a href="https://visualstudio.microsoft.com/es/downloads/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/VISUAL_MORADITO_egwm8n.png" alt="VISUAL STUDIO CODE 2020" height="50" /></a>
+<a href="https://sweetalert2.github.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SWEETALERT_jmo7vw.png" alt="VISUAL STUDIO CODE 2020" height="50" /></a>
+<a href="https://swagger.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SWAGGER_t3tmhl.png" alt="SWAGGER" height="50" /></a>
+<a href="https://trello.com/home" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/TRELLO_1_zyoau4.png" alt="TRELLO" height="50" /></a>
+<a href="https://github.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354303/GITHUB_fkv5hy.png" alt="GITHUB" height="50" /></a>
+<a href="https://jwt.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353959/JWT_fu0k4s.png" alt="JWT" height="50" /></a>
+<a href="https://www.juannicolas.eu/cors-que-es-y-como-funciona/#:~:text=Cuando%20hablamos%20de%20CORS%20(Cross,est%C3%A1%20alojado%20en%20otro%20origen." target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353930/CORS_go1ava.png" alt="CORS" height="50" /></a>
+<a href="https://getbootstrap.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353734/BOOTSTRAP_sxlttx.png" alt="BOOTSTRAP" height="50" /></a>
+<a href="https://cloud.google.com/icons?hl=es" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354282/GOOGLE_CLOUD_gxzcqu.jpg" alt="GOOGLE CLOUD" height="50" /></a>
 </div>
 
 ## Methodology 📚
@@ -68,7 +80,6 @@ Each of them fulfills a specific purpose in the development of your web applicat
 The Testing Library is an essential library in our 'Sound of Silence' project. This library is used to write and run tests that ensure our web application runs smoothly and meets quality standards. With Testing Library, we can simulate users' interaction with the application and verify that all components and functions respond correctly, thus providing an optimal user experience.
 
 ## Test Screenshot ✔️
-![Testing](https://github.com/laurabarrerogonzalez/Sound-of-Silence/assets/132656487/8e8fc89e-e311-4417-8aeb-ab823443a42e)
 
 ## Installation Process ⬆️
 
