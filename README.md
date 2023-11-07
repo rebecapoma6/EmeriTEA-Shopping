@@ -1,4 +1,4 @@
-# Sound of Silence                                              
+# EmeriTEA-Shopping                                              
 ![](https://res.cloudinary.com/dqc0wvttr/image/upload/v1695634508/Captura_de_pantalla_2023-09-23_215716_nqz4vb-removebg-preview_lwpq0u.png)
 
 ## Project Description 🚀
@@ -72,7 +72,7 @@ The Testing Library is an essential library in our 'Sound of Silence' project. T
 
 ## Installation Process ⬆️
 
-1. Clone the GitHub repository: https://github.com/laurabarrerogonzalez/Sound-of-Silence.git
+1. Clone the GitHub repository: https://github.com/rebecapoma6/EmeriTEA-Shopping.git
 2. Open the file using Visual Studio Code.
 3. Open the terminal in Visual Studio Code.
 4. Install the following command: **npm i.**
