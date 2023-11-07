@@ -45,7 +45,7 @@
     /* display: flex; */
     /* justify-content: space-between; */
     /* align-items: center; */
-    margin-right: -100px;
+    margin-right: -200px;
   }
   .buttons button {
     background-color: #0074B8;
@@ -80,21 +80,41 @@
   
   
 
-  @media (max-width: 360px) {
-    .mainheader {
-      flex-direction: column;
-    }
+
    
-    .logo-section {
-      margin-left: 0;
-    }
-   
-    .titulo {
-      text-align: center;
-    }
-   
-    .buttons {
-      margin-right: 0;
-    }
-   }
-   
+@media (max-width: 420px) {
+  .Header {
+    width: 80%; /* Reducir aún más el ancho para pantallas más pequeñas */
+  }
+
+  .logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -35px;
+  }
+
+  .logo-section img {
+    width: 70px; 
+  }
+
+  .title {
+   display: none;
+  }
+
+.buttons{
+  margin: 0;
+  margin-right: -60px;
+}
+
+  .buttons button {
+    width: 40px;
+    height: 40px; /* Reducir el tamaño del icono para dispositivos más pequeños */
+  }
+
+  .formularios{
+  /* background-color: yellowgreen; */
+  /* width: auto;
+  height: auto; */
+  }
+}

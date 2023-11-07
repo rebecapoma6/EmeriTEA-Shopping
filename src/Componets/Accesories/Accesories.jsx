@@ -279,6 +279,7 @@ const Accesories = () => {
                 <div className="description">
                   <div className="nombre">{product.Name_product}</div>
                   <div className="precio">{product.price} €</div>
+                  
                   <div className="carrito">
                  <button>🛒</button>
                   </div>

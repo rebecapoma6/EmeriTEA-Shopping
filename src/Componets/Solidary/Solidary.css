@@ -102,11 +102,61 @@
   transition: background 0.3s ease;
 }
 
-
-
-
 .textContainer button:hover {
   background-color: #ffffff; /* Cambia el color al pasar el ratón */
   color: #081526;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 1); /* Cambia la sombra al pasar el ratón */
+}
+
+@media (max-width: 420px) and (min-height: 932px) {
+  .solidary {
+    width: 100%;
+  }
+
+  .solidary-title {
+    width: 90%;
+    font-size: 13px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+  }
+
+  .blueContainer {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+  }
+
+  .textContainer {
+    height:auto;
+    font-size: 15px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  .textContainer button {
+    width: 80%;
+    height: auto;
+  }
+
+  .imageContainer .image1 {
+    display: none;
+    /* flex: none; */
+  }
+  .imageContainer .image4 {
+    display: none;
+    /* flex: none; */
+  }
+
+ .imageContainer .image2{
+margin-right: -70px;
+margin-top: -30px;
+ }
+ .imageContainer .image3{
+  margin-left: -70px;
+  margin-top: -120px;
+   }
 }

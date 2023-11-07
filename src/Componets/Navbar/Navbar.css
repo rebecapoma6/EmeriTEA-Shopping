@@ -108,3 +108,38 @@ text-decoration: none;
   background-color: #ddd;
 }
 
+
+
+@media (max-width: 420px) {
+.mainnavbar{
+  width: 100%;
+}
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    /* flex-direction: column; */
+    /* margin-bottom: 190px; */
+  }
+
+  .navbar div {
+    width: auto;
+    font-size:10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+  }
+
+  .navbar .dropdown {
+    display: block;
+  }
+
+  .navbar .dropdown-content,
+  .navbar .dropdown-content2 {
+    width: 100%; 
+font-size: 20px;
+  }
+}

@@ -16,11 +16,8 @@ function Mapa() {
       <div className="ubicacion">
         <div className="map-container">
           <div className="ubicacion-text">
-            <h1>Encuéntranos en ➡️ </h1>
-            <p>
-              {/* <strong>¿Dónde Estamos?:</strong>  */}
-              Travesía Luis Álvarez Lencero, 6 06800 Mérida, Badajoz.
-            </p>
+            <h1>Encuéntranos en ⬇️ </h1>
+            <p>Travesía Luis Álvarez Lencero, 6 06800 Mérida, Badajoz.</p>
           </div>
 
           <div className="Mapa">
@@ -30,10 +27,10 @@ function Mapa() {
               style={{
                 height: "60vh",
                 width: "100%",
-                  marginTop: "10%",
+                marginTop: "10%",
                 //   marginLeft: "25%",
                 //   marginRight: "25%",
-                  marginBottom: "10%",
+                marginBottom: "10%",
               }}
             >
               <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
