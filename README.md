@@ -82,7 +82,7 @@ The Testing Library is an essential library in our 'Sound of Silence' project. T
 
 
 ## Next Steps 🔜
-Coming soon, we will continue developing the Full Stack project with the repository https://github.com/laurabarrerogonzalez/Sound-of-Silence.git. The goal is to be able to work with both this Front-end repository and the Back-end repository, creating a large network of soothing sounds, reaching as many people as possible and providing an enriching and satisfying experience and helping them to unwind.
+Coming soon, we will continue developing the Full Stack project with the repository https://github.com/rebecapoma6/EmeriTEA-Shopping.git The goal is to be able to work with both this Front-end repository and the Back-end repository, creating a large network of soothing sounds, reaching as many people as possible and providing an enriching and satisfying experience and helping them to unwind.
 
 ## Authors 👨‍💻👩‍💻
 
