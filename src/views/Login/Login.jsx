@@ -1,7 +1,6 @@
 // import React, { useState } from "react";
 // import Swal from "sweetalert2";
 // import { useNavigate } from "react-router-dom";
-// import "./Login.css";
 
 // const SignInSide = () => {
 //   const [email, setEmail] = useState("");
@@ -11,7 +10,7 @@
 //   const handleLoginSubmit = async (e) => {
 //     e.preventDefault();
 
-//     const apiUrl = "http://localhost:3001/users"; // URL de tu API local
+//     const apiUrl = "http://localhost:3001/users"; // URL de tu API para iniciar sesión
 
 //     const data = {
 //       email,
@@ -28,20 +27,39 @@
 //       });
 
 //       if (response.ok) {
-//         // Si el inicio de sesión es exitoso, redirige a la vista Admin
-//         navigate("/Admin");
+//         const responseData = await response.json();
+//         const userRole = responseData.role;
+//         const token = responseData.token;
+
+//         // Establecer cookie con el token y una expiración de 30 minutos
+//         setCookie("jwtToken", token, 30);
+
+//         if (userRole === 1) {
+//           // Redirigir a la vista de administrador ("Admin")
+//           navigate("/Admin");
+//         } else {
+//           Swal.fire("Error", "Usuario no autorizado", "error");
+//         }
 //       } else {
-//         Swal.fire("Error", "Invalid credentials", "error");
+//         Swal.fire("Error", "Credenciales incorrectas", "error");
 //       }
 //     } catch (error) {
 //       console.error("Error:", error);
-//       Swal.fire("Error", "An error occurred while signing in.", "error");
+//       Swal.fire("Error", "Ocurrió un error al iniciar sesión", "error");
 //     }
 //   };
 
+//   // Función para establecer la cookie
+//   function setCookie(cname, cvalue, minutes) {
+//     const d = new Date();
+//     d.setTime(d.getTime() + minutes * 60 * 1000); // Calcula la fecha de expiración en milisegundos
+//     const expires = "expires=" + d.toUTCString();
+//     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+//   }
+
 //   return (
-//     <form className="login-form" onSubmit={handleLoginSubmit}>
-//       <div className="form-group">
+//     <form onSubmit={handleLoginSubmit}>
+//       <div>
 //         <label>Email:</label>
 //         <input
 //           type="email"
@@ -50,8 +68,8 @@
 //           required
 //         />
 //       </div>
-//       <div className="form-group">
-//         <label>Password:</label>
+//       <div>
+//         <label>Contraseña:</label>
 //         <input
 //           type="password"
 //           value={password}
@@ -59,13 +77,15 @@
 //           required
 //         />
 //       </div>
-//       <button type="submit">Sign In</button>
+//       <button type="submit">Iniciar Sesión</button>
 //     </form>
 //   );
 // };
 
-
 // export default SignInSide;
+
+
+
 
 import React, { useState } from "react";
 import Swal from "sweetalert2";
@@ -80,7 +100,7 @@ const SignInSide = () => {
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
 
-    const apiUrl = "http://localhost:3001/users"; // URL de tu API local
+    const apiUrl = "http://localhost:3001/users"; // URL de tu API para iniciar sesión
 
     const data = {
       email,
@@ -100,25 +120,31 @@ const SignInSide = () => {
         const responseData = await response.json();
         const token = responseData.token;
 
-        // Guardar token en cookies
-        document.cookie = `jwtToken=${token}; max-age=${30 * 24 * 60 * 60}; path=/`;
+        // Establecer cookie con el token y una expiración de 30 minutos
+        setCookie("jwtToken", token, 30);
 
-        // Redirigir a la vista de Admin después de iniciar sesión correctamente
+        // Redirigir a la vista de administrador ("Admin")
         navigate("/Admin");
       } else {
-        Swal.fire("Error", "Invalid credentials", "error");
+        Swal.fire("Error", "Credenciales incorrectas", "error");
       }
     } catch (error) {
       console.error("Error:", error);
-      Swal.fire("Error", "An error occurred while signing in.", "error");
+      Swal.fire("Error", "Ocurrió un error al iniciar sesión", "error");
     }
   };
 
+  // Función para establecer la cookie
+  function setCookie(cname, cvalue, minutes) {
+    const d = new Date();
+    d.setTime(d.getTime() + minutes * 60 * 1000); // Calcula la fecha de expiración en milisegundos
+    const expires = "expires=" + d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  }
 
   return (
-    <form className="login-form" onSubmit={handleLoginSubmit}>
-      <div className="forms">
-        <div className="form-group">
+    <form onSubmit={handleLoginSubmit}>
+      <div>
         <label>Email:</label>
         <input
           type="email"
@@ -127,8 +153,8 @@ const SignInSide = () => {
           required
         />
       </div>
-      <div className="form-group">
-        <label>Password:</label>
+      <div>
+        <label>Contraseña:</label>
         <input
           type="password"
           value={password}
@@ -136,18 +162,12 @@ const SignInSide = () => {
           required
         />
       </div>
-      </div>
-      
-      <div> 
-     <button className="button-ingresar" type="submit">Entrar</button>
-     </div>
-    
+      <button className="button-ingresar" type="submit">Iniciar Sesión</button>
     </form>
   );
 };
 
 export default SignInSide;
-
 
 
 

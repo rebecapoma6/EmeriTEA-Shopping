@@ -176,7 +176,9 @@ const Admin = () => {
       })
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error:", error));
-  }, []);
+  }, 
+  
+  []);
 
   return (
     <>
