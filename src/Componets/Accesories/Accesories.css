@@ -3,9 +3,22 @@
     src: url('/fonts/RobotoCondensed-VariableFont_wght.ttf') format('woff');
     /* Asegúrate de reemplazar 'font.woff' con el nombre y la extensión correctos de tu archivo de fuente */
   }
+
   
+.container-swiper {
+  width: 100%;
+  /* background-color: rgb(196, 189, 189); */
+  /* padding-left: 10px;
+  padding-right: 10px; */
+}
+  
+  .mySwiperd{
+width: 100%;
+  }
+
 .Accesorios{
-    width: 1235.35px;
+    /* width: 1235.35px; */
+    width: 100%;
     height: 100px;
     background-color: #007da0;
     /* margin: 0 9.3%; */
@@ -19,16 +32,11 @@
 
 }
 
-.container-swiper {
-  width: 100%;
-  /* background-color: rgb(196, 189, 189); */
-  /* padding-left: 10px;
-  padding-right: 10px; */
-}
 
 
 .swiper {
-  width: 1235.35px;
+  /* width: 1235.35px; */
+  width: 100%;
   height: 350px;
 }
 

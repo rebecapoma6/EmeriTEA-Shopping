@@ -14,7 +14,6 @@ const ViewLocation = () => {
           <Header/>  
           <CustomNavbar />
           <div className="container-gris">
-          {/* <Location/> */}
           <Mapa/>      
           </div>
           <Footer/>
