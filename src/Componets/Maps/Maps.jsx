@@ -22,7 +22,7 @@ function Mapa() {
             Badajoz.
           </p>
         </div>
-
+        
         <div className="Mapa">
        
           <MapContainer
