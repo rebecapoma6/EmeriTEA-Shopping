@@ -10,15 +10,6 @@
       "id": 1
     },
     {
-      "Name_product": "Camiseta Técnica RojiBlanca",
-      "category": "Accessories",
-      "price": "17",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188505/IMG_7040_jf77d9_1_-removebg-preview_vnww6x.png",
-      "description": "Camiseta Técnica Blanca",
-      "stock": "15",
-      "id": 2
-    },
-    {
       "Name_product": "Camiseta Tecnica Azul Espalda",
       "category": "Clothing",
       "price": "25",

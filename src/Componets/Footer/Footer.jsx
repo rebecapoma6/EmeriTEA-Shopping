@@ -28,7 +28,8 @@ const Footer = () => {
               <i className="fa-brands fa-youtube"></i>
             </a>
             <a href="https://twitter.com/emeritea_" className="i2" target="_blank"  rel="noreferrer">
-              <i className="fa-brands fa-twitter"></i>
+              {/* <i className="fa-brands fa-twitter"></i> */}
+              <img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1699375763/iconoTwitter-removebg-preview_xs4zbx.png" alt="twitter" className="twtf"/>
             </a>
                    
           </div>
