@@ -71,7 +71,7 @@ const Admin = () => {
       stock: newProduct.stock,
     };
 
-    fetch(`http://localhost:3000/products`, {
+    fetch(`http://localhost:4001/products`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

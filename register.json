@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "John Doe",
-      "email": "johndoe@example.com",
-      "password": "password123",
-      "token": "fake_token_for_user_1"
-    },
-    {
       "id": 2,
       "name": "Jane Smith",
       "email": "janesmith@example.com",
@@ -58,6 +51,41 @@
       "email": "emerite1@gmail.com",
       "password": "123456",
       "id": 11
+    },
+    {
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "id": 12
+    },
+    {
+      "email": "johndoe@example.com",
+      "password": "password123",
+      "id": 13
+    },
+    {
+      "email": "johndoe@example.co",
+      "password": "password123",
+      "id": 14
+    },
+    {
+      "email": "janesmith@example.com",
+      "password": "securepass",
+      "id": 15
+    },
+    {
+      "email": "s@gmail.com",
+      "password": "123",
+      "id": 16
+    },
+    {
+      "email": "janesmith@example.com",
+      "password": "securepass",
+      "id": 17
+    },
+    {
+      "email": "s@gmail.com",
+      "password": "1",
+      "id": 18
     }
   ]
 }
