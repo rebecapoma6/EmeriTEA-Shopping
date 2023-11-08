@@ -24,4 +24,18 @@
   .instructions ol {
     color: #333;
   }
+
+  @media (max-width: 420px) {
+    .donation-container {
+      padding: 10px;
+      flex-direction: column;
+    }
+  
+    .donation-container img {
+      max-height: auto; /* Permite que la imagen se ajuste automáticamente en altura */
+      max-width: 100%; /* La imagen se ajustará al ancho del contenedor */
+      margin-right: 0;
+    }
+  }
+  
   
