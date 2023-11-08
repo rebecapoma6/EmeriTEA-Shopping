@@ -6,6 +6,7 @@
 
 .container-swiper {
   width: 100%;
+
   /* background-color: rgb(196, 189, 189); */
   /* padding-left: 10px;
   padding-right: 10px; */
@@ -28,6 +29,7 @@
   font-size: 50px;
   margin-bottom: 20px;
   margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .swiper {
@@ -72,10 +74,6 @@
   color: #0084ce;
 }
 
-.carrito {
-
-}
-
 .carrito button {
   display: flex;
   justify-content: center;
@@ -85,15 +83,11 @@
   border-radius: 20px;
   color: #0084ce;
   font-size: 20px;
+  cursor: pointer;
 }
 
-@media  (max-width: 420px){
-
-  .Accesorios{
+@media (max-width: 420px) {
+  .Accesorios {
     height: 60px;
-
   }
-
 }
-  
-

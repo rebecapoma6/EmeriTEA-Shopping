@@ -100,7 +100,27 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
+
+.twtf{
+  width: 35px;
+  height: 30px;
+  filter: invert(100%); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* blur(1px) */
+}
+
+.i2:hover{
+   background-color: #ededed;
+   /* background-color: wheat; */
+  }
+
+  .twtf:hover{
+filter: none;
+  }
 
 @media  (max-width: 420px) {
   .Container-Footer{
@@ -153,4 +173,5 @@ footer {
   width: 100%;
   border-radius: 0;
 }
+
   }

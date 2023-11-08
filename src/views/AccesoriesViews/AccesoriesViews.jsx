@@ -3,6 +3,7 @@ import Accessories from "../../Componets/Accesories/Accesories";
 import Header from "../../Componets/Header/Header";
 import Footer from "../../Componets/Footer/Footer";
 import CustomNavbar from "../../Componets/Navbar/Navbar";
+import Stock from "../../Componets/stock/stockprendas";
 
 const AccessorieView = () => {
   return (
@@ -11,7 +12,8 @@ const AccessorieView = () => {
       <Header />
       <CustomNavbar/>
       <div className="container-gris">
-      <Accessories />
+      {/* <Accessories /> */}
+      <Stock/>
       </div>
       <Footer />
     </div>
