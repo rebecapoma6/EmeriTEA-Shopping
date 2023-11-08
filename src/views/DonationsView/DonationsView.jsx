@@ -10,6 +10,7 @@ const ViewDonations = () => {
       <div className="addInitial">
           <Header/>
           <CustomNavbar />
+          {/* <div className="container-gris"> */}
           <Donations/>
           <Footer/>
       </div>

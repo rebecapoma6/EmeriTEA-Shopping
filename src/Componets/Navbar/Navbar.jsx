@@ -24,7 +24,7 @@ const CustomNavbar = () => {
           </Link>
 
           <div className="dropdown-content2">
-            <Link to="">Haz Tu Donación!</Link>
+            <Link to="/donaciones">Haz Tu Donación!</Link>
             <Link to="">Haz tu regalo Solidario!</Link>
           </div>
         </div>
