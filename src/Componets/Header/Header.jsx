@@ -33,6 +33,11 @@ const Header = () => {
         <div className="titulo">
           <h1 className="title">EmeriTEA Market</h1>
         </div>
+        <div className="formularios">
+          
+          {showSignIn && <SignInSide />}
+          {/* Muestra SignInSide si showSignIn es true */}
+        </div>
         <div className="buttons">
           <button onClick={toggleSignIn}>
             <i className="fa-solid fa-user"></i>
@@ -42,11 +47,6 @@ const Header = () => {
           </button>
         </div>
 
-        <div className="formularios">
-          
-          {showSignIn && <SignInSide />}
-          {/* Muestra SignInSide si showSignIn es true */}
-        </div>
       </header>
     </div>
   );
