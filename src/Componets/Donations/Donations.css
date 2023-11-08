@@ -1,0 +1,27 @@
+.donation-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Agregamos un efecto de sombra */
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .donation-container img {
+    max-height: 500px;
+    margin-right: 20px;
+  }
+  
+  .instructions {
+    flex: 1;
+  }
+  
+  .instructions h2 {
+    color: #3498db;
+  }
+  
+  .instructions p,
+  .instructions ol {
+    color: #333;
+  }
+  
