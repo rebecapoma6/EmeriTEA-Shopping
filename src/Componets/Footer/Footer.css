@@ -1,93 +1,156 @@
-.footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1px 11px; 
-  border-radius: 0 0 20px 20px; /* Agregar bordes inferiores con radio de 20px */
-  max-width: 90%; /* Cambiar el valor a 80% del ancho deseado */
-  margin: 0 auto; /* Centra el elemento horizontalmente */
-}
-
-.footer-content {
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 20px;
+  width: 100%;
 }
 
-
-
-.footer-left {
-  flex: 1;
-  margin-bottom: 10%;
-}
-
-.footer-right {
-  flex: 1;
-  text-align: right;
-  margin-bottom: 10%; /* Agregar margen superior del 10% */
-}
-
-.footer-logo img {
-  max-width: 100px;
+.Container-Footer {
+  /* background-color: #EDEDED; */
+  width: 80%;
+  /* padding: 0 10px; */
   height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
-.footer-links ul,
-.footer-legal ol,
-.footer-social ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.Politicas {
+  background-color: #ededed;
+  width: 85%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
-.footer-links li,
-.footer-legal li,
-.footer-social li {
-  margin-bottom: 10px;
-}
-
-.footer-links a,
-.footer-legal a,
-.footer-social a {
+.Politicas a {
   text-decoration: none;
-  color: #fff;
+  color: #081526;
+  font-size: 19px;
 }
 
-.footer-legal a {
-  color: #fff;
+.Redes {
+   background-color: #ededed;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
-.footer-legal a:hover {
-  text-decoration: underline;
+.industrias {
+  background-color: #081526;
+  width: 20%;
+  height: 30px;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.footer-social i {
-  font-size: 24px;
-  margin-right: 10px;
+.industrias a {
+  text-decoration: none;
+  color: #ffffff;
 }
 
-/* Media queries para la responsividad */
-@media (max-width: 768px) {
-  .footer-content {
-    flex-direction: column;
-    text-align: center;
+.i1:hover {
+  color: rgb(37, 89, 200);
+}
+
+.i2:hover {
+  color: #1D9BF0;
+}
+
+.i3:hover {
+  color: #FF0000;
+}
+
+.Copyright {
+  background-color: #007da0;
+  font-size: 19px;
+  width: 25%;
+  height: 30px;
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.Correo {
+  background-color: #081526;
+  width: 20%;
+  height: 30px;
+  font-size: 18px;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media  (max-width: 420px) {
+  .Container-Footer{
+    width: 100%;
   }
 
-  .footer-logo img {
-    margin-bottom: 20px;
-  }
-
-  .footer-links ul,
-  .footer-legal ol,
-  .footer-social ul {
+  .Politicas{
+    width:90% ;
     display: flex;
     flex-direction: row;
-  }
+    align-items: center;
+    justify-content: space-between;
 
-  .footer-links li,
-  .footer-legal li,
-  .footer-social li {
-    margin: 0 10px;
-  }
+    }
+
+    .Politicas a {
+      font-size: 13px;
+    width: 33%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+    }
+
+.Politicas a:nth-child(2){
+  border-left: 1px #081526 solid;
+  border-right: 1px #081526 solid;
 }
+
+.Redes{
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.industrias{
+  width: 100%;
+  border-radius: 0;
+}
+.Copyright{
+  font-size: 17px;
+  width: 100%;
+  border-radius: 0;
+}
+.Correo{
+  font-size: 18px;
+  width: 100%;
+  border-radius: 0;
+}
+  }

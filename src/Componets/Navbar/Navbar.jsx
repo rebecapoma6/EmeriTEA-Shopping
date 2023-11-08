@@ -1,52 +1,61 @@
-
-import React from 'react';
-import './Navbar.css'; 
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 const CustomNavbar = () => {
   return (
     <div className="mainnavbar">
-    <div className="navbar">
-      <a href="https://emeritea.com/quienes-somos/" target="_blank">Quiénes Somos</a>
-      <a href="#donaciones">Donaciones</a>
-      <div className="dropdown">
-        <a href="#productos" className="dropbtn">Productos</a>
+      <div className="navbar">
+        <div>
+          <a
+            href="https://emeritea.com/quienes-somos/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Quiénes Somos
+          </a>
+        </div>
+
+        {/* <Link to="/donaciones">Donaciones</Link> */}
+
+        <div className="dropdown">
+          <Link to="" className="dropbtn">
+            Donaciones
+          </Link>
+
+          <div className="dropdown-content2">
+            <Link to="">Haz Tu Donación!</Link>
+            <Link to="">Haz tu regalo Solidario!</Link>
+          </div>
+        </div>
+
+        <div className="dropdown">
+          <Link to="" className="dropbtn">
+            Productos
+          </Link>
+
           <div className="dropdown-content">
-          <a href="#categoria-camisetas">Camisetas</a>
-          <a href="#categoria-accesorios">Accesorios</a>
+            <Link to="/category-accesories">Accesorios</Link>
+            <Link to="/category-clothing">Prendas</Link>
+          </div>
+        </div>
+
+        <div>
+          <Link
+            to="https://emeritea.com/jornadas-y-eventos/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Eventos
+          </Link>
+        </div>
+
+        <div>
+          <Link to="/location">Ubicación</Link>
         </div>
       </div>
-      <a href="#eventos">Eventos</a>
-      <a href="#ubicacion">Ubicación</a>
-    </div>
     </div>
   );
 };
 
 export default CustomNavbar;
-
-
-
-
-
-// import React from 'react';
-// import './Navbar.css'; 
-
-// const CustomNavbar = () => {
-//   return (
-//     <div className="navbar">
-//       <a href="#quienes-somos">Quiénes Somos</a>
-//       <a href="#donaciones">Donaciones</a>
-//       <div className="dropdown">
-//         <a href="#productos" className="dropbtn">Productos</a>
-//         <div className="dropdown-content">
-//           <a href="#categoria-camisetas">Camisetas</a>
-//           <a href="#categoria-accesorios">Accesorios</a>
-//         </div>
-//       </div>
-//       <a href="#eventos">Eventos</a>
-//       <a href="#ubicacion">Ubicación</a>
-//     </div>
-//   );
-// };
-
-// export default CustomNavbar;

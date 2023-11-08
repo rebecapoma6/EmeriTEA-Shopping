@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/RobotoCondensed-VariableFont_wght.ttf") format("woff");
+  /* Asegúrate de reemplazar 'font.woff' con el nombre y la extensión correctos de tu archivo de fuente */
+}
+
+.container-swiper {
+  width: 100%;
+  /* background-color: rgb(196, 189, 189); */
+  /* padding-left: 10px;
+  padding-right: 10px; */
+}
+
+.mySwiperd {
+  width: 100%;
+}
+
+.Accesorios {
+  /* width: 1235.35px; */
+  width: 100%;
+  height: 100px;
+  background-color: #007da0;
+  /* margin: 0 9.3%; */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.swiper {
+  /* width: 1235.35px; */
+  width: 100%;
+  height: 350px;
+}
+
+.swiper-slide {
+  color: rgb(207, 204, 204);
+  font-size: 20px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 8px #ededed solid;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  /* align-items: center; */
+  /* margin-bottom: 5px; */
+}
+
+.nombre {
+  font-family: "Roboto" !important;
+}
+
+.precio {
+  font-family: "Roboto" !important;
+  color: #0084ce;
+}
+
+.carrito {
+
+}
+
+.carrito button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: white; */
+  border: 2px #0084ce solid;
+  border-radius: 20px;
+  color: #0084ce;
+  font-size: 20px;
+}
+
+@media  (max-width: 420px){
+
+  .Accesorios{
+    height: 60px;
+
+  }
+
+}
+  
+
