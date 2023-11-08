@@ -1,5 +1,5 @@
 # EmeriTEA-Shopping                                              
-![](https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699348285/toseozbbon8ni9jq03ys.png)
+<p align="center"><img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699348285/toseozbbon8ni9jq03ys.png" width="150" heigth="50" justify-content="center"></p>
 
 ## Project Description 🚀
 Welcome to our EmeriTEA online shop, where our aim is to reach as many people as possible who are willing to do their bit for the association. 
