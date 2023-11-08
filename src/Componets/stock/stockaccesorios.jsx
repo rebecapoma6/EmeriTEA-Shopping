@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./stockprendas.css";
+import "./stockaccesorios.css";
 
-const Stockprendas = () => {
+const Stockaccesorios = () => {
   const [accessories, setAccessories] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/products?category=Clothing")
+    fetch("http://localhost:3000/products?category=Accessories")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch accessories");
@@ -20,7 +20,7 @@ const Stockprendas = () => {
 
   return (
     <>
-          <div className="Prendas">Prendas</div>
+          <div className="Accesorios">Accesorios</div>
 
       <div className="product-list">
         
@@ -41,4 +41,4 @@ const Stockprendas = () => {
   );
 };
 
-export default Stockprendas;
+export default Stockaccesorios;
