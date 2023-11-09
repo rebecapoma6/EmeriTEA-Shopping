@@ -58,6 +58,11 @@
       "email": "emerite1@gmail.com",
       "password": "123456",
       "id": 11
+    },
+    {
+      "email": "rebe123@gmail.com",
+      "password": "123456",
+      "id": 12
     }
   ]
 }

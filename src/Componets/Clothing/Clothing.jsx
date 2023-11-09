@@ -4,11 +4,15 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import "./Clothing.css";
 
-const Clothing = () => {
-  const [products, setProducts] = useState([]);
+
+//const Clothing = () => {
+
+const Clothing = ({ handleAddToCart }) => {
+
+  const [products, setProducts] = useState([]); 
+
 
   useEffect(() => {
     fetch("http://localhost:3000/products?category=Clothing")
@@ -21,6 +25,8 @@ const Clothing = () => {
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error:", error));
   }, []);
+
+  
 
   return (
     <div className="container-swiper">
@@ -50,8 +56,9 @@ const Clothing = () => {
                   </select>
 
                   <div className="carrito">
-                    <button>🛒</button>
+                    {/* <button>🛒</button> */} <button onClick={() => handleAddToCart(product)}>🛒</button>
                   </div>
+     
                 </div>
               </div>
             </SwiperSlide>

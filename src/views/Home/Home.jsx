@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../../Componets/Header/header";
 import "./Home.css";
 import CustomNavbar from "../../Componets/Navbar/Navbar";
 import Accessories from "../../Componets/Accesories/Accesories";
@@ -7,12 +6,13 @@ import Clothing from "../../Componets/Clothing/Clothing"; // Asegúrate de utili
 import Footer from "../../Componets/Footer/Footer";
 import Solidary from "../../Componets/Solidary/Solidary";
 import ScrollButton from "../../Componets/Scroll/Scroll";
+import Header from "../../Componets/Header/Header";
 
 const Home = () => {
   return (
     <>
       <div className="homeinitial">
-        <Header />
+        <Header/>
         <CustomNavbar />
         <div className="container-gris">
           <div className="intro">

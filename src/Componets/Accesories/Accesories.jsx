@@ -245,8 +245,12 @@ import "swiper/css/navigation";
 
 import './Accesories.css'; // Asegúrate de ajustar esta importación si tus estilos están en otro archivo
 
-const Accesories = () => {
+const Accesories = ({ handleAddToCart }) => {
   const [accessories, setAccessories] = useState([]);
+  const [cartItems, setCartItems] = useState([]); // Estado para los elementos del carrito
+  //const { cartItems, addToCart } = useCart();
+
+  
 
   useEffect(() => {
     fetch('http://localhost:3000/products?category=Accessories')
@@ -262,6 +266,7 @@ const Accesories = () => {
       .catch((error) => console.error('Error:', error));
   }, []);
 
+ 
   return (
     <div className="container-swiper">
       <div className="Accesorios">Accesorios</div>
@@ -280,7 +285,10 @@ const Accesories = () => {
                   <div className="nombre">{product.Name_product}</div>
                   <div className="precio">{product.price} €</div>
                   <div className="carrito">
-                 <button>🛒</button>
+                 {/* <button>🛒</button> */}
+                 <button onClick={() => handleAddToCart(product)}>Agregar al carrito</button>
+
+    
                   </div>
                 </div>
               </div>
