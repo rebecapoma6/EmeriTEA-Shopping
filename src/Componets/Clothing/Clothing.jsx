@@ -31,12 +31,13 @@ const Clothing = ({ handleAddToCart }) => {
   return (
     <div className="container-swiper">
       <div className="Prendas">Prendas</div>
+
       <div className="mySwiper">
         <Swiper
           slidesPerView={4}
           navigation={true}
           modules={[Pagination, Navigation]}
-          className="mySwiper"
+          // className="mySwiper"
         >
           {products.map((product) => (
             <SwiperSlide key={product.id}>
@@ -46,6 +47,7 @@ const Clothing = ({ handleAddToCart }) => {
                   <div className="nombre">{product.Name_product}</div>
                   <div className="precio">{product.price} €</div>
 
+                  <div className="botones-card">
                   <select className="tallaje">
                     <option value="">Seleccione Talla</option>
                     <option value="XS">XS</option>
@@ -61,6 +63,7 @@ const Clothing = ({ handleAddToCart }) => {
      
                 </div>
               </div>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>
@@ -70,3 +73,4 @@ const Clothing = ({ handleAddToCart }) => {
 };
 
 export default Clothing;
+

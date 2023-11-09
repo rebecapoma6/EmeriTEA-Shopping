@@ -1,34 +1,40 @@
 @font-face {
-    font-family: 'Roboto';
-    src: url('/fonts/RobotoCondensed-VariableFont_wght.ttf') format('woff');
-    /* Asegúrate de reemplazar 'font.woff' con el nombre y la extensión correctos de tu archivo de fuente */
-  }
-  
-.Accesorios{
-    width: 1235.35px;
-    height: 100px;
-    background-color: #007da0;
-    /* margin: 0 9.3%; */
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 50px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-
+  font-family: "Roboto";
+  src: url("/fonts/RobotoCondensed-VariableFont_wght.ttf") format("woff");
+  /* Asegúrate de reemplazar 'font.woff' con el nombre y la extensión correctos de tu archivo de fuente */
 }
 
 .container-swiper {
   width: 100%;
+
   /* background-color: rgb(196, 189, 189); */
   /* padding-left: 10px;
   padding-right: 10px; */
 }
 
+.mySwiperd {
+  width: 100%;
+}
+
+.Accesorios {
+  /* width: 1235.35px; */
+  width: 100%;
+  height: 100px;
+  background-color: #007da0;
+  /* margin: 0 9.3%; */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
 
 .swiper {
-  width: 1235.35px;
+  /* width: 1235.35px; */
+  width: 100%;
   height: 350px;
 }
 
@@ -40,8 +46,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-right: 8px #EDEDED solid;
-  
+  border-right: 8px #ededed solid;
 }
 
 .swiper-slide img {
@@ -51,38 +56,38 @@
   object-fit: cover;
 }
 
-.description{
-    text-align: center;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* margin-bottom: 5px; */
+.description {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  /* align-items: center; */
+  /* margin-bottom: 5px; */
 }
 
 .nombre {
-    font-family: 'Roboto'!important;
-    
+  font-family: "Roboto" !important;
 }
 
 .precio {
-    font-family: 'Roboto'!important;
-    color: #0084CE;
-}
-
-.carrito {
-    width:auto ;
-  display: flex;
-  /* gap: 10px; */
-
+  font-family: "Roboto" !important;
+  color: #0084ce;
 }
 
 .carrito button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
-  border: 2px #0084CE solid;
+  /* background-color: white; */
+  border: 2px #0084ce solid;
   border-radius: 20px;
-  color:#0084CE ;
+  color: #0084ce;
   font-size: 20px;
+  cursor: pointer;
 }
 
+@media (max-width: 420px) {
+  .Accesorios {
+    height: 60px;
+  }
+}

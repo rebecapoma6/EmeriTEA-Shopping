@@ -38,10 +38,16 @@ const ScrollButton = () => {
   };
 
   return (
-    <div className={`scrollButtonWrapper ${isFixed ? 'relative' : ''}`}>
+    // <div className={`scrollButtonWrapper ${isFixed ? 'relative' : ''}`}>
+    //   <button className="scrollToTopBtn" onClick={scrollToPosition}>
+    //   ⬆
+    //   </button>
+    // </div>
+      <div className={`scrollButtonWrapper ${isFixed ? 'relative' : ''}`}>
       <button className="scrollToTopBtn" onClick={scrollToPosition}>
-      ⬆
+      <img src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1699445878/boton_scroll_poyfcs.png" alt="Botonscroll" />
       </button>
+     
     </div>
   );
 };

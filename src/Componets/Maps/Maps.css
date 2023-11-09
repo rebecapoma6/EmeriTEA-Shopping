@@ -1,12 +1,21 @@
 .ubicacion {
   background-color: #ededed;
   /* background-color:  #7AC7FF; */
-  width: 1235.35px;
-  /* width: 100%; */
+  /* width: 1235.35px; */
+  width: 100%;
   /* height: auto; */
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.map-container{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* padding: 0 10px; */
 }
 
 .ubicacion-text {
@@ -21,6 +30,19 @@
 }
 
 .Mapa {
-  padding: 14px;
+  /* padding: 14px; */
   width: 50%;
+}
+
+
+@media (max-width:420px){
+  .ubicacion-text{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 24px;
+  }
+  
+  .Mapa{
+    width: 100%;
+  }
 }
