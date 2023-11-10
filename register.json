@@ -1,20 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "John Doe",
-      "email": "johndoe@example.com",
-      "password": "password123",
-      "token": "fake_token_for_user_1"
-    },
-    {
-      "id": 2,
-      "name": "Jane Smith",
-      "email": "janesmith@example.com",
-      "password": "securepass",
-      "token": "fake_token_for_user_2"
-    },
-    {
       "email": "johndoe@example.com",
       "password": "password123",
       "id": 3
@@ -23,6 +9,7 @@
       "email": "REBECA1@GMAIL.COM",
       "password": "123456",
       "id": 4
+<<<<<<< HEAD
     },
     {
       "email": "rebebe@gmail.com",
@@ -103,6 +90,8 @@
       "email": "ssss@gmail.com",
       "password": "ccccc",
       "id": 20
+=======
+>>>>>>> Anthony
     }
   ]
 }
