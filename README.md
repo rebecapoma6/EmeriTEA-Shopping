@@ -1,4 +1,4 @@
-# EmeriTEA-Shopping                                              
+# EmeriTEA-front-end                                             
 <p align="center"><img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699348285/toseozbbon8ni9jq03ys.png" width="150" heigth="50" justify-content="center"></p>
 
 ## Project Description 🚀
