@@ -176,66 +176,6 @@
 
 
 
-
-
-
-
-
-
-// import React, { useState, useEffect } from 'react';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// // import 'swiper/swiper-bundle.min.css';
-// import './Accesories.css';
-
-// const Accesories = () => {
-//   const [accessories, setAccessories] = useState([]);
-
-//   useEffect(() => {
-//     fetch('http://localhost:3000/products?category=Accessories')
-//       .then((response) => {
-//         if (!response.ok) {
-//           throw new Error('Failed to fetch accessories');
-//         }
-//         return response.json();
-//       })
-//       .then((data) => {
-//         setAccessories(data);
-//       })
-//       .catch((error) => console.error('Error:', error));
-//   }, []);
-
-//   return (
-//     <>
-//       <div className="accesorios-title">
-//         <h1>Accesorios</h1>
-//       </div>
-//       <div className="container-swiper">
-//         <div className="Prendas">Prendas</div>
-//         <Swiper slidesPerView={4} navigation={true} className="mySwiper">
-//           {accessories.map((product) => (
-//             <SwiperSlide key={product.id}>
-//               <img src={product.image} alt={product.name} />
-//               <div className="description">
-//                 <div className="nombre">{product.Name_product}</div>
-//                 <div className="precio">{product.price} €</div>
-//                 <div className="comprarycarrito">
-//                   <button>Comprar</button>
-//                   <button>🛒</button>
-//                 </div>
-//               </div>
-//             </SwiperSlide>
-//           ))}
-//         </Swiper>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Accesories;
-
-
-
-
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from "swiper/modules";
@@ -265,7 +205,7 @@ const Accesories = () => {
   return (
     <div className="container-swiper">
       <div className="Accesorios">Accesorios</div>
-      <div className="mySwiper">
+      <div className="mySwiperd">
         <Swiper
           slidesPerView={4}
           navigation={true}
@@ -279,6 +219,7 @@ const Accesories = () => {
                 <div className="description">
                   <div className="nombre">{product.Name_product}</div>
                   <div className="precio">{product.price} €</div>
+                  
                   <div className="carrito">
                  <button>🛒</button>
                   </div>

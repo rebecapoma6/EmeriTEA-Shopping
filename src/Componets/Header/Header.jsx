@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css"; // Importa el archivo CSS
-import SignInSide from '../../views/Login/Login'; // Ajusta la ruta según la estructura de tu proyecto
+import SignInSide from "../../views/Login/Login"; // Ajusta la ruta según la estructura de tu proyecto
 import Shopping from "../Shopping/Shopping";
 
 const Header = () => {
@@ -22,7 +22,6 @@ const Header = () => {
   return (
     <div className="mainheader">
       <header className="Header">
-       
         <a href="/">
           <div className="logo-section">
             <img
@@ -34,12 +33,19 @@ const Header = () => {
         <div className="titulo">
           <h1 className="title">EmeriTEA Market</h1>
         </div>
-        <div className="buttons">
-          <button onClick={toggleSignIn}><i className="fa-solid fa-user"></i></button>
-          <button onClick={toggleShopping}><i className="fa-solid fa-cart-shopping"></i></button>
+        <div className="formularios">
+          
+          {showSignIn && <SignInSide />}
+          {/* Muestra SignInSide si showSignIn es true */}
         </div>
-        {showSignIn && <SignInSide />} {/* Muestra SignInSide si showSignIn es true */}
-      
+        <div className="buttons">
+          <button onClick={toggleSignIn}>
+            <i className="fa-solid fa-user"></i>
+          </button>
+          <button onClick={toggleShopping}>
+            <i className="fa-solid fa-cart-shopping"></i>
+          </button>
+        </div>
 
       </header>
     </div>
@@ -47,7 +53,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-

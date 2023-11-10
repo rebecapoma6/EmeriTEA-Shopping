@@ -1,13 +1,6 @@
 {
   "users": [
     {
-      "id": 2,
-      "name": "Jane Smith",
-      "email": "janesmith@example.com",
-      "password": "securepass",
-      "token": "fake_token_for_user_2"
-    },
-    {
       "email": "johndoe@example.com",
       "password": "password123",
       "id": 3
@@ -16,76 +9,6 @@
       "email": "REBECA1@GMAIL.COM",
       "password": "123456",
       "id": 4
-    },
-    {
-      "email": "rebebe@gmail.com",
-      "password": "12364",
-      "id": 5
-    },
-    {
-      "email": "REBECA1@GMAIL.COM",
-      "password": "123456",
-      "id": 6
-    },
-    {
-      "email": "emerite1@gmail.com",
-      "password": "123456",
-      "id": 7
-    },
-    {
-      "email": "emerite1@gmail.com",
-      "password": "123456",
-      "id": 8
-    },
-    {
-      "email": "rebeca@gmail.com",
-      "password": "123456",
-      "id": 9
-    },
-    {
-      "email": "rebeca@gmail.com",
-      "password": "123456",
-      "id": 10
-    },
-    {
-      "email": "emerite1@gmail.com",
-      "password": "123456",
-      "id": 11
-    },
-    {
-      "email": "johndoe@example.com",
-      "password": "password123",
-      "id": 12
-    },
-    {
-      "email": "johndoe@example.com",
-      "password": "password123",
-      "id": 13
-    },
-    {
-      "email": "johndoe@example.co",
-      "password": "password123",
-      "id": 14
-    },
-    {
-      "email": "janesmith@example.com",
-      "password": "securepass",
-      "id": 15
-    },
-    {
-      "email": "s@gmail.com",
-      "password": "123",
-      "id": 16
-    },
-    {
-      "email": "janesmith@example.com",
-      "password": "securepass",
-      "id": 17
-    },
-    {
-      "email": "s@gmail.com",
-      "password": "1",
-      "id": 18
     }
   ]
 }

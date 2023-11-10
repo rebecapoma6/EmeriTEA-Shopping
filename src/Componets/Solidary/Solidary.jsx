@@ -1,5 +1,4 @@
 import "./Solidary.css";
-// import React from "react";
 
 const Solidary = () => {
   return (
