@@ -2,18 +2,19 @@
   "products": [
     {
       "Name_product": "Camiseta Tecnica Azul",
-      "category": "Clothing",
-      "price": "20",
+      "Id_Category": "2",
+      "Price": "20",
       "Image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
       "Description": "Camiseta Técnica Azul Cielo",
       "Size": "L",
       "stock": "10",
+      "Id_Administrador": "10",
       "Id_Product": 1
     },
     {
       "Name_product": "Camiseta Tecnica Azul Espalda",
-      "category": "Clothing",
-      "price": "25",
+      "Id_Category": "2",
+      "Price": "25",
       "Image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188505/IMG_7049_wyi4hn_3_-removebg-preview_a52h8m.png",
       "Description": "Camiseta de espalda",
       "Size": "L",
@@ -22,28 +23,28 @@
     },
     {
       "Name_product": "Gorra Azul ",
-      "category": "Clothing",
-      "price": "20",
+      "Id_Category": "2",
+      "Price": "20",
       "Image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188504/IMG_7034_apr3kd_1_-removebg-preview_bdl1fm.png",
       "Description": "Gorra Color Azul Rey",
       "stock": "14",
-      "Size": "s",
+      "Size": "",
       "Id_Product": 4
     },
     {
       "Name_product": "Gorra Parte de atras",
-      "category": "Clothing",
-      "price": "22",
+      "Id_Category": "2",
+      "Price": "22",
       "Image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7031_pehh8w_1_-removebg-preview_giqcxw.png",
       "Description": "Gorra Azul Rey",
       "stock": "5",
-      "Size": "s",
+      "Size": "",
       "Id_Product": 5
     },
     {
       "Name_product": "Bolsa de la Compra",
-      "category": "Accessories",
-      "price": "10",
+      "Id_Category": "1",
+      "Price": "10",
       "Image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7072._eyjdta_1_-removebg-preview_zt0ues.png",
       "Description": "Bolsa Color azul",
       "stock": "8",
@@ -52,48 +53,54 @@
     },
     {
       "Name_product": "Llavero Azul TEA",
-      "category": "Accessories",
-      "price": "5",
+      "Id_Category": "1",
+      "Price": "5",
       "Image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7058._nb0z2u_1_-removebg-preview_werd0w.png",
       "Description": "Llavero color Azul rey ",
       "stock": "10",
+      "Size": "5x5",
       "Id_Product": 7
     },
     {
       "Name_product": "Jabón Artesanal Azul Claro",
-      "category": "Accessories",
-      "price": "7",
+      "Id_Category": "1",
+      "Price": "7",
       "Image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7016_xcyakf_1_-removebg-preview_jomse0.png",
       "Description": "Jabón Artesanal Azul Claro tamaño promedio",
       "stock": "14",
+      "Size": "5x5",
       "Id_Product": 8
     },
     {
       "Name_product": "Pulsera Familia TEA",
-      "category": "Accessories",
-      "price": "6",
+      "Id_Category": "1",
+      "Price": "6",
       "Image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773938/IMG-20231029-WA0098_pfxyej.jpg",
       "Description": "Pulsera color azul ",
       "stock": "4",
+      "Size": "5x5",
       "Id_Product": 9
     },
     {
       "Name_product": "Imán por detrás",
-      "category": "Accessories",
-      "price": "3000",
+      "Id_Category": "1",
+      "Price": "3000",
       "Image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7022_ahj80b_1_-removebg-preview_virgkz.png",
       "Description": "Imán por la parte de atrásvgcfnvmbhmgbhvfgbfcjcjfctfcfcvjygvkgvkhgvghvkguhfviunvuargfuahfñuhsdoiñvsbId_Productuijsurhóoingisodkfowekntiogrjvd",
       "stock": "4",
+      "Size": "5x5",
       "Id_Product": 10
     },
     {
       "Name_product": "Prenda 5",
-      "category": "Clothing",
-      "price": "8",
+      "Id_Category": "2",
+      "Price": "8",
       "Image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
       "Description": "Prenda 5",
       "stock": "9",
+      "Size": "5x5",
       "Id_Product": 11
     }
   ]
+  
 }

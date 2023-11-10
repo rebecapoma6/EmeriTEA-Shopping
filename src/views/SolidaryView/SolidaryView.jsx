@@ -1,16 +1,15 @@
 import React from "react";
-// import Accessories from "../../Componets/Accesories/Accesories";
-import Header from "../../Componets/Header/header";
 import CustomNavbar from "../../Componets/Navbar/Navbar";
 import Footer from "../../Componets/Footer/Footer";
 import Solidary from "../../Componets/Solidary/Solidary"
+import Header from "../../Componets/Header/Header";
 
 
 const SolidaryView = () => {
   return (
     <div className="homeinitial">
     <div>
-      <Header />
+      <Header/>
       <CustomNavbar/>
       <div className="container-gris">
       <Solidary/>

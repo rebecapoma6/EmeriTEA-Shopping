@@ -4,11 +4,16 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import "./Clothing.css";
+import ProductCard from "../../Componets/Card/Card";
 
-const Clothing = () => {
-  const [products, setProducts] = useState([]);
+
+const Clothing = ({ addToCart }) => {
+
+
+
+  const [products, setProducts] = useState([]); 
+
 
   useEffect(() => {
     fetch("http://localhost:3000/products?category=Clothing")
@@ -21,6 +26,8 @@ const Clothing = () => {
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error:", error));
   }, []);
+
+  
 
   return (
     <div className="container-swiper">
@@ -38,22 +45,25 @@ const Clothing = () => {
               <div className="swiper-slide">
                 <img src={product.image} alt={product.name} />
                 <div className="description">
-                  <div className="nombre">{product.Name_product}</div>
-                  <div className="precio">{product.price} €</div>
+                  <div className="nombre">Nombre :{product.Name_product}</div>
+                  <div className="precio">Precio :{product.price} €</div>
+                  <div className="description">Descripcion :{product.descripton} </div>
+                  <div className="size">Tamaño :{product.size} </div>
 
                   <div className="botones-card">
-                  <select className="tallaje">
+                  {/* <select className="tallaje">
                     <option value="">Seleccione Talla</option>
                     <option value="XS">XS</option>
                     <option value="S">S</option>
                     <option value="M">M</option>
                     <option value="L">L</option>
                     <option value="XL">XL</option>
-                  </select>
+                  </select> */}
 
                   <div className="carrito">
-                    <button>🛒</button>
+                    <button onClick={() => addToCart(someProduct)}>Add to Cart 🛒</button>
                   </div>
+     
                 </div>
               </div>
               </div>

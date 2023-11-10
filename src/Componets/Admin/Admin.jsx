@@ -20,11 +20,12 @@ const Admin = () => {
 
   const [newProduct, setNewProduct] = useState({
     Name_product: "",
-    category: "",
-    price: "",
-    image: "",
-    description: "",
+    Id_Category: "",
+    Price: "",
+    Image: "",
+    Description: "",
     stock: "",
+    Size: "",
   });
 
   const handleInputChange = (field, value) => {
@@ -35,11 +36,12 @@ const Admin = () => {
   const resetNewProductForm = () => {
     setNewProduct({
       Name_product: "",
-      category: "",
-      price: "",
-      image: "",
-      description: "",
+      Id_Category: "",
+      Price: "",
+      Image: "",
+      Description: "",
       stock: "",
+      Size: "",
     });
   };
 
@@ -64,14 +66,15 @@ const Admin = () => {
   const addProduct = () => {
     const productData = {
       Name_product: newProduct.Name_product,
-      category: newProduct.category,
-      price: newProduct.price,
-      image: newProduct.image,
-      description: newProduct.description,
+      Id_Category: newProduct.Id_Category,
+      Price: newProduct.Price,
+      Image: newProduct.Image,
+      Description: newProduct.Description,
       stock: newProduct.stock,
+      Size: newProduct.Size,
     };
 
-    fetch(`http://localhost:4001/products`, {
+    fetch(`http://localhost:3000/products`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -80,7 +83,9 @@ const Admin = () => {
     })
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Failed to add product");
+          return response.json().then((err) => {
+            throw new Error(err.message);
+          });
         }
         return response.json();
       })
@@ -176,13 +181,11 @@ const Admin = () => {
       })
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error:", error));
-  }, 
-  
-  []);
+  },[]);
 
   return (
     <>
-    
+
       <div className="add-header">
         <h1>AÑADIR PRODUCTOS</h1>
       </div>
@@ -215,17 +218,17 @@ const Admin = () => {
                   }
                 />
 
-                <label htmlFor="productCategory">Category:</label>
+                <label htmlFor="productId_Category">Id_Category:</label>
                 <select
-                  id="productCategory"
-                  value={newProduct.category}
+                  id="productId_Category"
+                  value={newProduct.Id_Category}
                   onChange={(e) =>
-                    handleInputChange("category", e.target.value)
+                    handleInputChange("Id_Category", e.target.value)
                   }
                 >
-                  <option value="">Select a category</option>
-                  <option value="Accessories">Accessories</option>
-                  <option value="Clothing">Clothing</option>
+                  <option value="">Select a Id_Category</option>
+                  <option value="1">Accessories</option>
+                  <option value="2">Clothing</option>
                 </select>
                 <br />
 
@@ -233,25 +236,25 @@ const Admin = () => {
                 <input
                   type="text"
                   id="productPrice"
-                  value={newProduct.price}
-                  onChange={(e) => handleInputChange("price", e.target.value)}
+                  value={newProduct.Price}
+                  onChange={(e) => handleInputChange("Price", e.target.value)}
                 />
                 <br></br>
 
-                <label className="product-image" htmlFor="productImage">
+                <label className="product-Image" htmlFor="productImage">
                   Image URL:
                 </label>
                 <input
                   type="text"
                   id="productImage"
-                  value={newProduct.image}
-                  onChange={(e) => handleInputChange("image", e.target.value)}
+                  value={newProduct.Image}
+                  onChange={(e) => handleInputChange("Image", e.target.value)}
                 />
-                {newProduct.image && (
+                {newProduct.Image && (
                   <img
-                    src={newProduct.image}
+                    src={newProduct.Image}
                     alt="Product Image"
-                    className="product-image"
+                    className="product-Image"
                   />
                 )}
                 <br></br>
@@ -259,9 +262,9 @@ const Admin = () => {
                 <label htmlFor="productDescription">Description:</label>
                 <textarea
                   id="productDescription"
-                  value={newProduct.description}
+                  value={newProduct.Description}
                   onChange={(e) =>
-                    handleInputChange("description", e.target.value)
+                    handleInputChange("Description", e.target.value)
                   }
                 ></textarea>
 
@@ -274,7 +277,17 @@ const Admin = () => {
                   value={newProduct.stock}
                   onChange={(e) => handleInputChange("stock", e.target.value)}
                 />
+                <br></br>
+                <label htmlFor="productSizeDetails">Size:</label>
+                <input
+                  type="text"
+                  id="productSizeDetails"
+                  value={newProduct.Size}
+                  onChange={(e) => handleInputChange("Size", e.target.value)}
+                />
               </form>
+
+
             </ModalBody>
             <ModalFooter>
               <Button color="danger" variant="light" onClick={closeAddModal}>
@@ -291,7 +304,7 @@ const Admin = () => {
       <div className="product-list">
         {products.map((product) => (
           <ProductCard
-            key={product.id}
+            key={product.Id_Product}
             product={product}
             deleteProduct={deleteProduct}
             openEditModal={openEditModal}
@@ -323,30 +336,30 @@ const Admin = () => {
                     }
                   />
 
-                  <label htmlFor="productCategory">Category:</label>
+                  <label htmlFor="productId_Category">Id_Category:</label>
                   <select
-                    value={selectedProductDetails.category}
+                    value={selectedProductDetails.Id_Category}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        category: e.target.value,
+                        Id_Category: e.target.value,
                       })
                     }
                   >
                     <option value="">Select a </option>
-                    <option value="Accessories">Accessories</option>
-                    <option value="Clothing">Clothing</option>
+                    <option value="1">Accessories</option>
+                    <option value="2">Clothing</option>
                   </select>
                   <br></br>
 
                   <label htmlFor="productPrice">Price:</label>
                   <input
                     type="text"
-                    value={selectedProductDetails.price}
+                    value={selectedProductDetails.Price}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        price: e.target.value,
+                        Price: e.target.value,
                       })
                     }
                   />
@@ -354,22 +367,22 @@ const Admin = () => {
                   <label htmlFor="productImage">Image URL:</label>
                   <input
                     type="text"
-                    value={selectedProductDetails.image}
+                    value={selectedProductDetails.Image}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        image: e.target.value,
+                        Image: e.target.value,
                       })
                     }
                   />
 
                   <label htmlFor="productDescription">Description:</label>
                   <textarea
-                    value={selectedProductDetails.description}
+                    value={selectedProductDetails.Description}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        description: e.target.value,
+                        Description: e.target.value,
                       })
                     }
                   ></textarea>
@@ -385,6 +398,19 @@ const Admin = () => {
                       })
                     }
                   />
+
+                  <label htmlFor="productSizeDetails">Size :</label>
+                  <input
+                    type="text"
+                    value={selectedProductDetails.Size}
+                    onChange={(e) =>
+                      setSelectedProductDetails({
+                        ...selectedProductDetails,
+                        Size: e.target.value,
+                      })
+                    }
+                  />
+
                 </form>
               </ModalBody>
               <ModalFooter>
