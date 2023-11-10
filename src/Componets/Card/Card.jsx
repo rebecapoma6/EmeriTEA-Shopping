@@ -89,7 +89,7 @@
 //         </Typography>
 
 //         <div className="unids">
-        
+
 //           <Typography
 //             variant="body2"
 //             color="text.secondary"
@@ -104,9 +104,9 @@
 //         </div>
 
 //         <div className="actionButtons">
-            
+
 //           <Button className="actionButtonD"
-           
+
 //            onClick={() => deleteProduct(product.id)}
 //         //    variant="contained " 
 //            >
@@ -137,7 +137,7 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-import { Stack, Button } from "@mui/material";
+import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
 import "./Card.css"; // Importa el archivo CSS con los estilos
 
@@ -184,11 +184,15 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           <Typography variant="body2" color="text.secondary">
             <strong>Stock:</strong> {product.stock}
           </Typography>
+
+
+
         </div>
 
         {/* Añade el campo para los detalles de tamaño */}
+
         <Typography variant="body2" color="text.secondary">
-          <strong>SizeEEE:</strong> {product.size}
+          <strong>Size:</strong> {product.size}
         </Typography>
 
         <div className="actionButtons">

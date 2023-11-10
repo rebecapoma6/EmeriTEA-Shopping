@@ -33,6 +33,16 @@ const Stockprendas = () => {
             />
             <p>Name: {product.Name_product}</p>
             <p>Price: {product.price} €</p>
+            <p>Descripcion: {product.description} </p>
+            {/* <p>Talla: {product.size} </p> */}
+            <select className="tallaje">
+                    <option value="">Seleccione Talla</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                  </select>
             <button>🛒</button>
           </div>
         ))}

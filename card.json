@@ -35,6 +35,8 @@
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7031_pehh8w_1_-removebg-preview_giqcxw.png",
       "description": "Gorra Azul Rey",
       "stock": "5",
+      "size": "XS",
+      "showSize": true,
       "id": 5
     },
     {
@@ -78,7 +80,7 @@
       "category": "Accessories",
       "price": "3000",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7022_ahj80b_1_-removebg-preview_virgkz.png",
-      "description": "Imán por la parte de atrásvgcfnvmbhmgbhvfgbfcjcjfctfcfcvjygvkgvkhgvghvkguhfviunvuargfuahfñuhsdoiñvsbiduijsurhóoingisodkfowekntiogrjvd",
+      "description": "Imán por la parte",
       "stock": "4",
       "id": 10
     },
@@ -100,6 +102,87 @@
       "stock": "25",
       "size": "MEDIUM 25*2",
       "id": 12
+    },
+    {
+      "Name_product": "dolores",
+      "category": "",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "fffff",
+      "stock": "2555",
+      "size": "25",
+      "id": 13
+    },
+    {
+      "Name_product": "REBECA",
+      "category": "Clothing",
+      "price": "36.9",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "COLOR AZUL",
+      "stock": "10",
+      "size": "M",
+      "id": 14
+    },
+    {
+      "Name_product": "dolores",
+      "category": "Accessories",
+      "price": "25",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "dddd",
+      "stock": "2",
+      "size": "xl",
+      "id": 16
+    },
+    {
+      "Name_product": "REbeca Poa",
+      "category": "Clothing",
+      "price": "25.4",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1693212296/samples/shoe.jpg",
+      "description": "2222",
+      "stock": "5",
+      "size": "",
+      "id": 17
+    },
+    {
+      "Name_product": "POLOS",
+      "category": "Clothing",
+      "price": "30",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "xxxx",
+      "stock": "10",
+      "size": "",
+      "id": 18
+    },
+    {
+      "Name_product": "POLO PRUEBA",
+      "category": "Clothing",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "ssssss",
+      "stock": "25",
+      "size": "",
+      "id": 19
+    },
+    {
+      "Name_product": "POMA POLOS",
+      "category": "Clothing",
+      "price": "12.9",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "ABCDE",
+      "stock": "3",
+      "size": "M",
+      "showSize": true,
+      "id": 21
+    },
+    {
+      "Name_product": "ANTHONYO",
+      "category": "Accessories",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1693212296/samples/shoe.jpg",
+      "description": "ZAPATILLA",
+      "stock": "3",
+      "size": "",
+      "id": 22
     }
   ]
 }
