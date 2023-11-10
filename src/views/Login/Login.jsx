@@ -8,31 +8,6 @@ const SignInSide = () => {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  // const handleLoginSubmit = async (e) => {
-  //   e.preventDefault();
-   
-  //   try {
-  //     // const response = await fetch('http://localhost:3001/users');
-  //     const response = await fetch('https://localhost:7032/AdministradorControlle/Login');
-      
-  //     if (response.ok) {
-  //       const data = await response.json();
-  //       const user = data.find(user => user.email === email && user.password === password);
-  
-  //       if (user) {
-  //         navigate("/Admin");
-  //       } else {
-  //         Swal.fire("Error", "Credenciales incorrectas", "error");
-  //       }
-  //     } else {
-  //       Swal.fire("Error", "Ocurrió un error al iniciar sesión", "error");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error:", error);
-  //     Swal.fire("Error", "Ocurrió un error al iniciar sesión", "error");
-  //   }
-  // };
-  
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     
