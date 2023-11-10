@@ -1,30 +1,34 @@
 import React, { useState, useEffect } from "react";
 import "./stockprendas.css";
 
-const Stockprendas = () => {
-  const [accessories, setAccessories] = useState([]);
+const Stockprendas = ({ addToCart }) => {
+  const [products, setProducts] = useState([]);
+  const [selectedSize, setSelectedSize] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:3000/products?category=Clothing")
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Failed to fetch accessories");
+          throw new Error("Failed to fetch products");
         }
         return response.json();
       })
       .then((data) => {
-        setAccessories(data);
+        setProducts(data);
       })
       .catch((error) => console.error("Error:", error));
   }, []);
 
+  const handleSizeChange = (size) => {
+    setSelectedSize(size);
+  };
+
   return (
     <>
-          <div className="Prendas">Prendas</div>
+      <div className="Prendas">Prendas</div>
 
       <div className="product-list">
-        
-        {accessories.map((product) => (
+        {products.map((product) => (
           <div key={product.id}>
             <img
               src={product.image}
@@ -34,16 +38,21 @@ const Stockprendas = () => {
             <p>Name: {product.Name_product}</p>
             <p>Price: {product.price} €</p>
             <p>Descripcion: {product.description} </p>
-            {/* <p>Talla: {product.size} </p> */}
-            <select className="tallaje">
-                    <option value="">Seleccione Talla</option>
-                    <option value="XS">XS</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                  </select>
-            <button>🛒</button>
+            <select
+              className="tallaje"
+              value={selectedSize}
+              onChange={(e) => handleSizeChange(e.target.value)}
+            >
+              <option value="">Seleccione Talla</option>
+              <option value="XS">XS</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+              <option value="XL">XL</option>
+            </select>
+            <button onClick={() => addToCart({ ...product, size: selectedSize })}>
+              🛒
+            </button>
           </div>
         ))}
       </div>
@@ -52,3 +61,4 @@ const Stockprendas = () => {
 };
 
 export default Stockprendas;
+
