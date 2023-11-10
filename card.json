@@ -25,7 +25,8 @@
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188504/IMG_7034_apr3kd_1_-removebg-preview_bdl1fm.png",
       "description": "Gorra Color Azul Rey",
       "stock": "14",
-      "id": 4
+      "id": 4,
+      "size": "Talla S"
     },
     {
       "Name_product": "Gorra Parte de atras",
@@ -89,6 +90,16 @@
       "description": "Prenda 5",
       "stock": "9",
       "id": 11
+    },
+    {
+      "Name_product": "MARIA",
+      "category": "Clothing",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "color Negro",
+      "stock": "25",
+      "size": "MEDIUM 25*2",
+      "id": 12
     }
   ]
 }

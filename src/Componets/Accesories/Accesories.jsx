@@ -182,10 +182,9 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import './Accesories.css'; // Asegúrate de ajustar esta importación si tus estilos están en otro archivo
 
-const Accesories = ({ handleAddToCart }) => {
+const Accessories = ({ addToCart }) => {
   const [accessories, setAccessories] = useState([]);
   const [cartItems, setCartItems] = useState([]); // Estado para los elementos del carrito
   //const { cartItems, addToCart } = useCart();
@@ -224,10 +223,12 @@ const Accesories = ({ handleAddToCart }) => {
                 <div className="description">
                   <div className="nombre">{product.Name_product}</div>
                   <div className="precio">{product.price} €</div>
+                  <div className="description">{product.descripton} </div>
+                  <div className="size">{product.size} </div>
                   
                   <div className="carrito">
-                 {/* <button>🛒</button> */}
-                 <button onClick={() => handleAddToCart(product)}>Agregar al carrito</button>
+                 {/* <button>🛒</button> */} <button onClick={() => addToCart(product)}> 🛒</button>
+                 
 
     
                   </div>
@@ -241,4 +242,4 @@ const Accesories = ({ handleAddToCart }) => {
   );
 };
 
-export default Accesories;
+export default Accessories;

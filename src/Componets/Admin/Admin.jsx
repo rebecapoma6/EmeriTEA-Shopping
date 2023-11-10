@@ -25,6 +25,7 @@ const Admin = () => {
     image: "",
     description: "",
     stock: "",
+    size: "",
   });
 
   const handleInputChange = (field, value) => {
@@ -40,6 +41,7 @@ const Admin = () => {
       image: "",
       description: "",
       stock: "",
+      size: "",
     });
   };
 
@@ -69,6 +71,7 @@ const Admin = () => {
       image: newProduct.image,
       description: newProduct.description,
       stock: newProduct.stock,
+      size: newProduct.size,
     };
 
     fetch(`http://localhost:3000/products`, {
@@ -176,13 +179,13 @@ const Admin = () => {
       })
       .then((data) => setProducts(data))
       .catch((error) => console.error("Error:", error));
-  }, 
-  
-  []);
+  },
+
+    []);
 
   return (
     <>
-    
+
       <div className="add-header">
         <h1>AÑADIR PRODUCTOS</h1>
       </div>
@@ -274,7 +277,17 @@ const Admin = () => {
                   value={newProduct.stock}
                   onChange={(e) => handleInputChange("stock", e.target.value)}
                 />
+                <br></br>
+                <label htmlFor="productSizeDetails">Size:</label>
+                <input
+                  type="text"
+                  id="productSizeDetails"
+                  value={newProduct.size}
+                  onChange={(e) => handleInputChange("size", e.target.value)}
+                />
               </form>
+
+
             </ModalBody>
             <ModalFooter>
               <Button color="danger" variant="light" onClick={closeAddModal}>
@@ -385,6 +398,19 @@ const Admin = () => {
                       })
                     }
                   />
+
+                  <label htmlFor="productSizeDetails">Size :</label>
+                  <input
+                    type="text"
+                    value={selectedProductDetails.size}
+                    onChange={(e) =>
+                      setSelectedProductDetails({
+                        ...selectedProductDetails,
+                        size: e.target.value,
+                      })
+                    }
+                  />
+
                 </form>
               </ModalBody>
               <ModalFooter>
