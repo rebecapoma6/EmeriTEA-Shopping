@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
-} from "@nextui-org/react";
+import {Modal,ModalContent,ModalHeader,ModalBody,ModalFooter,Button,useDisclosure,} from "@nextui-org/react";
 import Swal from "sweetalert2";
 import "./Admin.css";
 import ProductCard from "../../Componets/Card/Card";
@@ -17,6 +9,7 @@ const Admin = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [selectedProductDetails, setSelectedProductDetails] = useState(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [showEditSize, setShowEditSize] = useState(false);
 
   const [newProduct, setNewProduct] = useState({
     Name_product: "",
@@ -25,14 +18,17 @@ const Admin = () => {
     Image: "",
     Description: "",
     stock: "",
-    Size: "",
+    showSize: false,
+    size: "",
   });
 
   const handleInputChange = (field, value) => {
-    setNewProduct({ ...newProduct, [field]: value });
+    setNewProduct((prevProduct) => {
+      const updatedProduct = { ...prevProduct, [field]: value };
+      return updatedProduct;
+    });
   };
 
-  // Función para limpiar el formulario de agregar producto
   const resetNewProductForm = () => {
     setNewProduct({
       Name_product: "",
@@ -41,7 +37,8 @@ const Admin = () => {
       Image: "",
       Description: "",
       stock: "",
-      Size: "",
+      showSize: false,
+      size: "",
     });
   };
 
@@ -57,6 +54,7 @@ const Admin = () => {
   const openEditModal = (product) => {
     setIsEditModalOpen(true);
     setSelectedProductDetails(product);
+    setShowEditSize(product.category === "Clothing");
   };
 
   const closeEditModal = () => {
@@ -92,6 +90,7 @@ const Admin = () => {
       .then((data) => {
         setProducts([...products, data]);
         closeAddModal();
+        resetNewProductForm();
         Swal.fire("Success", "Product added successfully", "success");
       })
       .catch((error) => {
@@ -142,22 +141,33 @@ const Admin = () => {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
+        const editedProductData = {
+          Name_product: selectedProductDetails.Name_product,
+          category: selectedProductDetails.category,
+          price: selectedProductDetails.price,
+          image: selectedProductDetails.image,
+          description: selectedProductDetails.description,
+          stock: selectedProductDetails.stock,
+          size: showEditSize ? selectedProductDetails.size : "",
+          showSize: showEditSize,
+        };
+
         fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify(selectedProductDetails),
+          body: JSON.stringify(editedProductData),
         })
           .then((response) => {
             if (!response.ok) {
               throw new Error("Failed to edit the product");
             }
-            closeEditModal(); // Cierra el modal después de la edición
+            closeEditModal();
             setProducts(
               products.map((product) =>
                 product.id === selectedProductDetails.id
-                  ? selectedProductDetails
+                  ? editedProductData
                   : product
               )
             );
@@ -220,17 +230,34 @@ const Admin = () => {
 
                 <label htmlFor="productId_Category">Id_Category:</label>
                 <select
-                  id="productId_Category"
-                  value={newProduct.Id_Category}
-                  onChange={(e) =>
-                    handleInputChange("Id_Category", e.target.value)
-                  }
+                  id="productCategory"
+                  value={newProduct.category}
+                  onChange={(e) => {
+                    handleInputChange("category", e.target.value);
+                    if (e.target.value === "Clothing") {
+                      handleInputChange("showSize", true);
+                    } else {
+                      handleInputChange("showSize", false);
+                    }
+                  }}
                 >
                   <option value="">Select a Id_Category</option>
                   <option value="1">Accessories</option>
                   <option value="2">Clothing</option>
                 </select>
                 <br />
+
+                {newProduct.showSize && (
+                  <>
+                    <label htmlFor="productSizeDetails">Size:</label>
+                    <input
+                      type="text"
+                      id="productSizeDetails"
+                      value={newProduct.size}
+                      onChange={(e) => handleInputChange("size", e.target.value)}
+                    />
+                  </>
+                )}
 
                 <label htmlFor="productPrice">Price:</label>
                 <input
@@ -399,18 +426,19 @@ const Admin = () => {
                     }
                   />
 
-                  <label htmlFor="productSizeDetails">Size :</label>
+                  <label htmlFor="productSizeDetails">Size:</label>
                   <input
                     type="text"
-                    value={selectedProductDetails.Size}
+                    id="productSizeDetails"
+                    value={selectedProductDetails.size}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
                         Size: e.target.value,
                       })
                     }
+                    style={{ display: showEditSize ? "block" : "none" }}
                   />
-
                 </form>
               </ModalBody>
               <ModalFooter>

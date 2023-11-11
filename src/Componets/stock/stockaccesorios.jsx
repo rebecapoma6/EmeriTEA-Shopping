@@ -33,6 +33,7 @@ const Stockaccesorios = () => {
             />
             <p>Name: {product.Name_product}</p>
             <p>Price: {product.price} €</p>
+            <p>Descripcion: {product.description} </p>
             <button>🛒</button>
           </div>
         ))}
