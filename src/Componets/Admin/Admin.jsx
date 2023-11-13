@@ -42,7 +42,6 @@ const Admin = () => {
     });
   };
 
-
   const resetNewProductForm = () => {
     setNewProduct({
       Name_product: "",
@@ -248,12 +247,12 @@ const Admin = () => {
                   }
                 />
 
-                <label htmlFor="productId_Category">Category:</label>
+                <label htmlFor="productCategory">Category:</label>
                 <select
-                  id="productId_Category"
-                  value={newProduct.Id_Category}
+                  id="productCategory"
+                  value={newProduct.category}
                   onChange={(e) => {
-                    handleInputChange("Id_Category", e.target.value);
+                    handleInputChange("category", e.target.value);
                     if (e.target.value === "Clothing") {
                       handleInputChange("showSize", true);
                     } else {
@@ -261,7 +260,7 @@ const Admin = () => {
                     }
                   }}
                 >
-                  <option value="">Select a Category</option>
+                  <option value="">Select a category</option>
                   <option value="Accessories">Accessories</option>
                   <option value="Clothing">Clothing</option>
                 </select>
@@ -291,24 +290,24 @@ const Admin = () => {
                   type="text"
                   id="productPrice"
                   value={newProduct.Price}
-                  onChange={(e) => handleInputChange("Price", e.target.value)}
+                  onChange={(e) => handleInputChange("price", e.target.value)}
                 />
                 <br></br>
 
-                <label className="product-Image" htmlFor="productImage">
+                <label className="product-image" htmlFor="productImage">
                   Image URL:
                 </label>
                 <input
                   type="text"
                   id="productImage"
                   value={newProduct.Image}
-                  onChange={(e) => handleInputChange("Image", e.target.value)}
+                  onChange={(e) => handleInputChange("image", e.target.value)}
                 />
                 {newProduct.Image && (
                   <img
                     src={newProduct.Image}
                     alt="Product Image"
-                    className="product-Image"
+                    className="product-image"
                   />
                 )}
                 <br></br>
@@ -383,7 +382,7 @@ const Admin = () => {
                     }
                   />
 
-                  <label htmlFor="productId_Category">Category:</label>
+                  <label htmlFor="productCategory">Category:</label>
                   <select
                     value={selectedProductDetails.Id_Category}
                     onChange={(e) =>
@@ -448,26 +447,26 @@ const Admin = () => {
 
                   <label htmlFor="productSizeDetails">Talla:</label>
                   {selectedProductDetails && (
-                    <select           
-                    id="productSizeDetails"
-                    value={selectedProductDetails.size && selectedProductDetails.size.length > 0 ? selectedProductDetails.size[0] : ""}
-                    onChange={(e) =>
-                      setSelectedProductDetails({
-                        ...selectedProductDetails,
-                        size: [e.target.value],
-                      })
-                    }
-                  >
-                    <option value="">Selecciona una talla</option>
-                    <option value="XS">XS</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
+                    <select
+                      id="productSizeDetails"
+                      value={selectedProductDetails.size && selectedProductDetails.size.length > 0 ? selectedProductDetails.size[0] : ""}
+                      onChange={(e) =>
+                        setSelectedProductDetails({
+                          ...selectedProductDetails,
+                          size: [e.target.value],
+                        })
+                      }
+                    >
+                      <option value="">Selecciona una talla</option>
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
                     </select>
                   )}
+                  
                 </form>
-                
               </ModalBody>
               <ModalFooter>
                 <Button
