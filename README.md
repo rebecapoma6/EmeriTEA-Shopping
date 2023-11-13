@@ -93,15 +93,25 @@ Each of them fulfills a specific purpose in the development of your web applicat
 
 ## Test Screenshot ✔️
 
-## Installation Process ⬆️
 
-1. Clone the GitHub repository: https://github.com/rebecapoma6/EmeriTEA-Shopping.git
-2. Open the file using Visual Studio Code.
-3. Open the terminal in Visual Studio Code.
-4. Install the following command: **npm i.**
-5. Once the component installations are complete, in a new terminal, run **npm run dev**. Open the **localhost**: that appears.
-6. In a new terminal, run the command **json-server --watch cards.json**. Open the **localhost**: that appears.
-7. Now you can view not only the static Front-end web page but also add, modify, and delete the content of the cards through the Fake API.
+## Instrucciones de Instalación💡
+
+1. Clona el repositorio desde GitHub:
+   ```bash
+   git clone https://github.com/tu-usuario/eCommerce-TEA-Merida.git
+   ```
+2. Accede al directorio del frontend:
+
+   ```bash
+   cd eCommerce-TEA-Merida/frontend
+   ```
+3. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+4. Configura las variables de entorno:
+   - Crea un archivo `.env` en el directorio del frontend si es necesario y define las variables de entorno, como las URL del servidor backend, si es necesario.
 
 
 ## Next Steps 🔜
