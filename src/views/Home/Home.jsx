@@ -17,9 +17,8 @@ const Home = ({ addToCart }) => {
         <div className="container-gris">
           <div className="intro">
             <h2>
-              Esta es una tienda solidaria que ha sido creada por la asociación
-              EmeriTEA, con el fin de ayudar a las familias con personas con
-              TEA.
+              Emeritea Asociación. 
+              <br />Colabora con la compra de cualquier articulo de esta pagina y ayudanos a hacer visible lo invisible.
             </h2>
           </div>
           <Clothing addToCart={addToCart} />

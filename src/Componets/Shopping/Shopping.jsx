@@ -1,5 +1,8 @@
 import React from 'react';
 import './shopping.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 const ShoppingCart = ({ cart, removeFromCart }) => {
  const calculateSubtotal = (product) => {
@@ -14,17 +17,17 @@ const ShoppingCart = ({ cart, removeFromCart }) => {
    <div className="shopping-cart">
      <h2>Carrito de Compras</h2>
      <table>
-       <thead>
-         <tr>
-           <th>Imagen</th>
-           <th>Nombre del Producto</th>
-           <th>Precio</th>
-           <th>Talla</th>
-           <th>Cantidad</th>
-           <th>Subtotal</th>
-           <th>Eliminar</th>
-         </tr>
-       </thead>
+     <thead className="mi-tabla-cabecera">
+  <tr>
+    <th></th>
+    <th>Producto</th>
+    <th>Precio</th>
+    <th>Talla</th>
+    <th>Cantidad</th>
+    <th>Subtotal</th>
+    <th>Eliminar</th>
+  </tr>
+</thead>
        <tbody>
          {cart.map((product) => (
            <tr key={product.id}>
@@ -35,7 +38,10 @@ const ShoppingCart = ({ cart, removeFromCart }) => {
              <td>{product.quantity}</td>
              <td>{calculateSubtotal(product)} €</td>
              <td>
-               <button onClick={() => removeFromCart(product.id)}>Eliminar</button>
+               {/* <button onClick={() => removeFromCart(product.id)}>Eliminar</button> */}
+               <button onClick={() => removeFromCart(product.id)}>
+    <FontAwesomeIcon icon={faTrashAlt} />
+  </button>
              </td>
            </tr>
          ))}
