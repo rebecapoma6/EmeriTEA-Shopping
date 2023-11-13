@@ -2,8 +2,11 @@
 <p align="center"><img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699348285/toseozbbon8ni9jq03ys.png" width="150" heigth="50" justify-content="center"></p>
 
 ## Project Description 🚀
-Welcome to our EmeriTEA online shop, where our aim is to reach as many people as possible who are willing to do their bit for the association. 
-In EmeriTEA Shopping we give you the opportunity to collaborate with the association thanks to the sale of a wide variety of products made in the association, where all the benefits of their sale will go entirely to the association. 
+Welcome to our EmeriTEA online shop, is a user interface designed for the eCommerce platform, which makes it easier for families of people with Autism Spectrum Disorder (ASD) to sell products.
+
+The platform is divided into two main categories: apparel, which includes: t-shirts and hats, and accessories, which includes: magnets, fabric backpacks, loop key chains (autism), fabric bracelets and soaps. This interface offers a personalised and accessible shopping experience, specifically designed to meet the needs of this user group.
+
+In addition, the API of this frontend is designed to be accessible to the general public. This allows any browser user to visualise the products offered by the organisation. The main objective of this platform is to foster collaboration and financial support through the purchases made by users on the platform.
 
 ## Screenshots 📷
 <img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699356664/image_1_d7zxbv.png" width="200" heigth="50">
