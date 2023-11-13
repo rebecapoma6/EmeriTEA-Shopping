@@ -32,8 +32,8 @@ In addition, the API of this frontend is designed to be accessible to the genera
 ● Swiper (JavaScript library): A JavaScript library that facilitates the creation of image carousels and other content elements on the website, enhancing the user experience.  
 ● Nex UI: A React UI library that allows you to build sites and applications quickly and easily.  
 
-## Requisitos Previos 🔜
-Asegúrate de tener Node.js instalado en tu sistema antes de continuar.
+## Prerequisites 🔜
+Make sure you have Node.js installed on your system before proceeding.
 
 ## Libraries 📚
 Libraries are sets of prewritten code that are used to perform specific tasks or add functionality to an application or website. These libraries save developers time and effort as they can use existing code instead of writing it from scratch. In your project "EmeriTEA Shopping", you mentioned that you are using various technologies and tools, including libraries. Here are some of the libraries you mentioned in your project:
@@ -94,33 +94,33 @@ Each of them fulfills a specific purpose in the development of your web applicat
 ## Test Screenshot ✔️
 
 
-## Instrucciones de Instalación💡
+## Installation Instructions💡
 
-1. Clona el repositorio desde GitHub:
-   ```bash
+1. Clone the repository from GitHub:
+   ````bash
    git clone https://github.com/tu-usuario/eCommerce-TEA-Merida.git
    ```
-2. Accede al directorio del frontend:
+2. Access the frontend directory:
 
-   ```bash
+   ````bash
    cd eCommerce-TEA-Merida/frontend
    ```
-3. Instala las dependencias:
+3. Install the dependencies:
 
-   ```bash
+   ````bash
    npm install
    ```
-4. Configura las variables de entorno:
-   - Crea un archivo `.env` en el directorio del frontend si es necesario y define las variables de entorno, como las URL del servidor backend, si es necesario.
+4. Set the environment variables:
+   - Create an `.env` file in the frontend directory if necessary and set environment variables, such as backend server URLs, if needed.
 
 
-## Instrucciones de Uso ✍🏻
+## Instructions for Use ✍🏻
 
-1. Inicializa la aplicación:
-   ```bash
+1. Initialise the application:
+   ````bash
    npm start
    ```
-2. Abre tu navegador y accede a `http://localhost:3000` para utilizar la aplicación.
+2. Open your browser and go to `http://localhost:3000` to use the application.
 
 ## Next Steps 🔜
 
