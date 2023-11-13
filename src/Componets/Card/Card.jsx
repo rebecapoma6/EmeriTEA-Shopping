@@ -128,11 +128,6 @@
 
 // export default ProductCard;
 
-
-
-
-
-
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -185,8 +180,6 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
             <strong>Stock:</strong> {product.stock}
           </Typography>
 
-
-
         </div>
 
         {/* Añade el campo para los detalles de tamaño */}
@@ -203,7 +196,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
             Delete
           </Button>
 
-          <Button className="actionButtonE" onClick={() => openEditModal(product)}>
+          <Button className="actionButtonE" onClick={() => openEditModal(product.Id_Productd)}>
             Edit
           </Button>
         </div>

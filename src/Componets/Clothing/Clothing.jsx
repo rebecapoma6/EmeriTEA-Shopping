@@ -112,7 +112,7 @@ const Clothing = ({ addToCart }) => {
           modules={[Pagination, Navigation]}
         >
           {products.map((product) => (
-            <SwiperSlide key={product.id}>
+            <SwiperSlide key={product.Id_Product}>
               <div className="swiper-slide">
                 <img src={product.image} alt={product.name} />
                 <div className="description">
