@@ -16,6 +16,7 @@
 .container-gris {
   /* width: 1030.67px; */
   width: 1235.35px;
+  /* height:auto ; */
   /* margin-left: 9.3%; */
   /* width: 80%; */
   /* margin-left: 10%;
@@ -31,6 +32,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* text-align: center; */
+  /* align-items: center; */
   width: 80%;
   height: 70px;
   /* background-color: #ededed; */
@@ -38,83 +41,13 @@
   /* padding: 10px; */
   /* margin-left: 141.5px; */
   margin-top: 20px;
+  /* margin-bottom: 10px; */
 }
 
-/* @keyframes show {
-  from{
-    opacity: 0;
-  
-    transform: scale(0.25);
-  }
-
-  to{
-    opacity: 1;
-
-    transform: scale(1);
-
-  }
-} */
-
-/* .imgc{
-  view-timeline-name: --image;
-  view-timeline-axis: block;
-
-  animation-timeline: --image ;
-  animation-name: show;
-
-
-  animation-range: entry 25% cover 30% ;
-  animation-fill-mode: both;
-} */
 /* 
-imgc {
-  width: 100%;
-  height: auto;
-  animation: show 2s ease-in-out; 
-} */
-
 .comp {
-  /* width: auto; */
   width: 100%;
-}
-/* 
-.clothing-container,
-.accessories-container,
-.solidary-container {
-  transition: opacity 0.5s ease;
-  opacity: 1;
-  width: 100%;
-}
-
-.clothing-container:not(:focus),
-.accessories-container:not(:focus),
-.solidary-container:not(:focus) {
-  opacity: 1;
-  width: 80%;
 } */
-
-/* Estilos CSS para controlar la opacidad de los componentes al hacer scroll */
-.clothing-container,
-.accessories-container,
-.solidary-container {
-  transition: opacity 0.5s ease; /* Agrega una transición suave para la propiedad de opacidad */
-  opacity: 1; /* Establece la opacidad inicial a 1 (completamente visible) */
-  width: 100%;
-}
-
-/* Cambia la opacidad de los elementos según la posición de scroll */
-.clothing-container:not(:focus),
-.accessories-container:not(:focus),
-.solidary-container:not(:focus) {
-  opacity: calc(0.5 - 0.2 * (var(--scroll-percentage, 0) / 100));
-  /* Ajusta el valor 0.2 según lo fuerte que desees que sea la transición */
-  width: calc(80% + 20% * (var(--scroll-percentage, 0) / 100));
-  /* Ajusta el valor 20% según lo fuerte que desees que sea la transición */
-  min-width: 80%; /* Garantiza que el ancho mínimo sea 80% */
-}
-
-/* Otros estilos que puedan ser necesarios para los contenedores de los componentes */
-/* ... */
 
 
 @media (max-width: 420px) {

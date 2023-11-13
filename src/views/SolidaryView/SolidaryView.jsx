@@ -3,20 +3,21 @@ import React from "react";
 import Header from "../../Componets/Header/header";
 import CustomNavbar from "../../Componets/Navbar/Navbar";
 import Footer from "../../Componets/Footer/Footer";
-import Solidary from "../../Componets/Solidary/Solidary"
+// import Solidary from "../../Componets/Solidary/Solidary"
+import Solidarycomp from "../../Componets/solidarycomp/solidarycomp";
 
 
 const SolidaryView = () => {
   return (
     <div className="homeinitial">
-    <div>
+    
       <Header />
       <CustomNavbar/>
       <div className="container-gris">
-      <Solidary/>
+      <Solidarycomp/>
       </div>
       <Footer />
-    </div>
+    
     </div>
   );
 };
