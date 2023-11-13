@@ -147,7 +147,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
       <CardMedia
         alt={product.Name_product}
         className="cardMedia"
-        image={product.image}
+        image={product.Image}
       />
 
       <CardContent className="CardContent">
@@ -160,7 +160,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           color="text.secondary"
           className="productCategory"
         >
-          <strong>Category:</strong> {product.category}
+          <strong>Category:</strong> {product.Id_Category}
         </Typography>
 
         <Typography
@@ -168,7 +168,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           color="text.secondary"
           className="productDescription"
         >
-          <strong>Description:</strong> {product.description}
+          <strong>Description:</strong> {product.Description}
         </Typography>
 
         <div className="unids">
@@ -177,7 +177,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
             color="text.secondary"
             className="productPrice"
           >
-            <strong>Price:</strong> {product.price}
+            <strong>Price:</strong> {product.Price}
             <strong>€</strong>
           </Typography>
 
@@ -197,10 +197,10 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
         
         <Typography variant="body2" color="text.secondary">
   <strong>Size:</strong>{" "}
-  {Array.isArray(product.size) && product.size.length > 0 ? (
-    <span>{product.size.join(", ")}</span>
+  {Array.isArray(product.Size) && product.Size.length > 0 ? (
+    <span>{product.Size.join(", ")}</span>
   ) : (
-    <span>{product.size}</span>
+    <span>{product.Size}</span>
   )}
 </Typography>
 
@@ -211,7 +211,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
         <div className="actionButtons">
           <Button
             className="actionButtonD"
-            onClick={() => deleteProduct(product.id)}
+            onClick={() => deleteProduct(product.Id_Product)}
           >
             Delete
           </Button>
