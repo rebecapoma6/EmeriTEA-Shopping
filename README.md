@@ -33,6 +33,8 @@ React: A JavaScript library for creating interactive user interfaces.
 Bootstrap: A front-end design framework that provides ready-to-use styling and components.
 Jest: A JavaScript testing framework to make sure your code works correctly.
 Testing Library: A library used to write tests and perform user testing on web applications.
+Swiper (JavaScript library): A JavaScript library that facilitates the creation of image carousels and other content elements on the website, improving the user experience.
+Nex UI: It is a React UI library that allows you to build sites and applications quickly and easily.
 
 Each of them fulfills a specific purpose in the development of your web application. If you have additional questions about how to use these libraries or need more details about any of them, don't hesitate to ask.
 
