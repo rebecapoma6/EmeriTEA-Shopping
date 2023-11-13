@@ -32,7 +32,7 @@ In addition, the API of this frontend is designed to be accessible to the genera
 ● Swiper (JavaScript library): A JavaScript library that facilitates the creation of image carousels and other content elements on the website, enhancing the user experience.  
 ● Nex UI: A React UI library that allows you to build sites and applications quickly and easily.  
 
-## Prerequisites 🔜
+## Pre-requisites 🔜
 Make sure you have Node.js installed on your system before proceeding.
 
 ## Libraries 📚
