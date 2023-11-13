@@ -7,6 +7,10 @@
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
       "description": "Camiseta Técnica Azul Cielo",
       "stock": "10",
+      "size": [
+        "S"
+      ],
+      "showSize": true,
       "id": 1
     },
     {
@@ -15,7 +19,11 @@
       "price": "25",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188505/IMG_7049_wyi4hn_3_-removebg-preview_a52h8m.png",
       "description": "Camiseta de espalda",
-      "stock": "11",
+      "stock": "15",
+      "size": [
+        "M"
+      ],
+      "showSize": true,
       "id": 3
     },
     {
@@ -25,6 +33,10 @@
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188504/IMG_7034_apr3kd_1_-removebg-preview_bdl1fm.png",
       "description": "Gorra Color Azul Rey",
       "stock": "14",
+      "size": [
+        "M"
+      ],
+      "showSize": true,
       "id": 4
     },
     {
@@ -34,6 +46,8 @@
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7031_pehh8w_1_-removebg-preview_giqcxw.png",
       "description": "Gorra Azul Rey",
       "stock": "5",
+      "size": "XS",
+      "showSize": true,
       "id": 5
     },
     {
@@ -61,6 +75,8 @@
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7016_xcyakf_1_-removebg-preview_jomse0.png",
       "description": "Jabón Artesanal Azul Claro tamaño promedio",
       "stock": "14",
+      "size": [],
+      "showSize": false,
       "id": 8
     },
     {
@@ -77,7 +93,7 @@
       "category": "Accessories",
       "price": "3000",
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7022_ahj80b_1_-removebg-preview_virgkz.png",
-      "description": "Imán por la parte de atrásvgcfnvmbhmgbhvfgbfcjcjfctfcfcvjygvkgvkhgvghvkguhfviunvuargfuahfñuhsdoiñvsbiduijsurhóoingisodkfowekntiogrjvd",
+      "description": "Imán por la parte",
       "stock": "4",
       "id": 10
     },
@@ -88,7 +104,35 @@
       "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
       "description": "Prenda 5",
       "stock": "9",
+      "size": [
+        "M"
+      ],
+      "showSize": true,
       "id": 11
+    },
+    {
+      "Name_product": "MARIA",
+      "category": "Clothing",
+      "price": "25.6",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "color Negro",
+      "stock": "25",
+      "size": [
+        "L"
+      ],
+      "showSize": true,
+      "id": 12
+    },
+    {
+      "Name_product": "PRUEBA 11",
+      "category": "Accessories",
+      "price": "25.7",
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "AAAA",
+      "stock": "25",
+      "size": [],
+      "showSize": false,
+      "id": 13
     }
   ]
 }

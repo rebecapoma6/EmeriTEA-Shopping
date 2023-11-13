@@ -1,21 +1,20 @@
-// import React from "react";
-import Clothing from "../../Componets/Clothing/Clothing";
-import Stock from "../../Componets/stock/stockprendas";
-import Header from "../../Componets/Header/header";
+import React from "react";
 import Footer from "../../Componets/Footer/Footer";
+import Header from "../../Componets/Header/Header";
 import CustomNavbar from "../../Componets/Navbar/Navbar";
+import Stockprendas from "../../Componets/stock/stockprendas";
 
-const RopaView = () => {
+const RopaView = ({ addToCart }) => {
   return (
     <div className="homeinitial">
       {/* <div> */}
-        <Header />
-        <CustomNavbar />
-        <div className="container-gris">
-          <Clothing />
-          {/* <Stock/> */}
-        </div>
-        <Footer />
+      <Header />
+      <CustomNavbar />
+      <div className="container-gris">
+        {/* <Clothing /> */}
+        <Stockprendas addToCart={addToCart}/>
+      </div>
+      <Footer />
       {/* </div> */}
     </div>
   );

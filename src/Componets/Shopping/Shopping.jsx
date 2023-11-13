@@ -1,12 +1,50 @@
 import React from 'react';
+import './shopping.css';
 
-const Shopping = () => {
-    return (
-        <div>
-            <h1>Hola Tienda</h1>
-            {/* Aquí podrías agregar más contenido para la vista de Shopping */}
-        </div>
-    );
-}
+const ShoppingCart = ({ cart, removeFromCart }) => {
+ const calculateSubtotal = (product) => {
+   return product.price * product.quantity;
+ };
 
-export default Shopping;
+ const calculateTotal = () => {
+   return cart.reduce((total, product) => total + calculateSubtotal(product), 0);
+ };
+
+ return (
+   <div className="shopping-cart">
+     <h2>Carrito de Compras</h2>
+     <table>
+       <thead>
+         <tr>
+           <th>Imagen</th>
+           <th>Nombre del Producto</th>
+           <th>Precio</th>
+           <th>Talla</th>
+           <th>Cantidad</th>
+           <th>Subtotal</th>
+           <th>Eliminar</th>
+         </tr>
+       </thead>
+       <tbody>
+         {cart.map((product) => (
+           <tr key={product.id}>
+             <td><img className="product-imagecart" src={product.image} alt={product.Name_product} /></td>
+             <td>{product.Name_product}</td>
+             <td>{product.price} €</td>
+             <td>{product.size}</td>
+             <td>{product.quantity}</td>
+             <td>{calculateSubtotal(product)} €</td>
+             <td>
+               <button onClick={() => removeFromCart(product.id)}>Eliminar</button>
+             </td>
+           </tr>
+         ))}
+       </tbody>
+     </table>
+     <p>Total: {calculateTotal()} €</p>
+   </div>
+ );
+};
+
+export default ShoppingCart;
+
