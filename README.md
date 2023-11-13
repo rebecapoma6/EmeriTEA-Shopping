@@ -26,14 +26,28 @@ In addition, the API of this frontend is designed to be accessible to the genera
 ● Slack <br>
 ● Zoom
 
+## Technologies used 💻
+● React.js: Is a powerful JavaScript library for building interactive and efficient user interfaces.  
+● Bootstrap (or your choice of CSS framework): Used to ensure responsive design and adaptability to different screen sizes.  
+● Swiper (JavaScript library): A JavaScript library that facilitates the creation of image carousels and other content elements on the website, enhancing the user experience.  
+● Nex UI: A React UI library that allows you to build sites and applications quickly and easily.  
+
+## Requisitos Previos 🔜
+Asegúrate de tener Node.js instalado en tu sistema antes de continuar.
+
 ## Libraries 📚
 Libraries are sets of prewritten code that are used to perform specific tasks or add functionality to an application or website. These libraries save developers time and effort as they can use existing code instead of writing it from scratch. In your project "EmeriTEA Shopping", you mentioned that you are using various technologies and tools, including libraries. Here are some of the libraries you mentioned in your project:
 
 React: A JavaScript library for creating interactive user interfaces.
+
 Bootstrap: A front-end design framework that provides ready-to-use styling and components.
+
 Jest: A JavaScript testing framework to make sure your code works correctly.
+
 Testing Library: A library used to write tests and perform user testing on web applications.
+
 Swiper (JavaScript library): A JavaScript library that facilitates the creation of image carousels and other content elements on the website, improving the user experience.
+
 Nex UI: It is a React UI library that allows you to build sites and applications quickly and easily.
 
 Each of them fulfills a specific purpose in the development of your web application. If you have additional questions about how to use these libraries or need more details about any of them, don't hesitate to ask.
@@ -76,8 +90,6 @@ Each of them fulfills a specific purpose in the development of your web applicat
 + The branch methodology allows us to work collaboratively and maintain an organized and efficient workflow. Furthermore, working in branches allows us to work freely without conflicting with the work of other team members. Additionally, it provides us with greater control and a record or history of the various changes being made. On the other hand, for added security when merging codes from different branches, we have implemented security rules on GitHub where it is necessary to create a pull request prior to the merge.
 
 ## Tests ☑️
-
-
 
 ## Test Screenshot ✔️
 
