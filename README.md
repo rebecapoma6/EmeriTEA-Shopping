@@ -24,7 +24,7 @@ In EmeriTEA Shopping we give you the opportunity to collaborate with the associa
 ● Zoom
 
 ## Libraries 📚
-Libraries are sets of prewritten code that are used to perform specific tasks or add functionality to an application or website. These libraries save developers time and effort as they can use existing code instead of writing it from scratch. In your project "Sound of Silence", you mentioned that you are using various technologies and tools, including libraries. Here are some of the libraries you mentioned in your project:
+Libraries are sets of prewritten code that are used to perform specific tasks or add functionality to an application or website. These libraries save developers time and effort as they can use existing code instead of writing it from scratch. In your project "EmeriTEA Shopping", you mentioned that you are using various technologies and tools, including libraries. Here are some of the libraries you mentioned in your project:
 
 React: A JavaScript library for creating interactive user interfaces.
 Bootstrap: A front-end design framework that provides ready-to-use styling and components.
