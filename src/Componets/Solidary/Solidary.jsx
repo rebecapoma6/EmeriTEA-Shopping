@@ -1,4 +1,5 @@
 import "./Solidary.css";
+import { Link } from "react-router-dom";
 
 const Solidary = () => {
   return (
@@ -10,7 +11,6 @@ const Solidary = () => {
       {/* <div className="container-blue"></div> */}
 
       <div className="blueContainer">
-
         <div className="imageContainer">
           <img
             src="https://res.cloudinary.com/dq2tfglqq/image/upload/v1698307535/56395180_2288360644737492_4027331803428683776_o_ubonnv.jpg"
@@ -29,7 +29,9 @@ const Solidary = () => {
             Haz tu regalo personalizado para eventos, fiestas, bodas,
             cumpleaños, etc...!
           </h2>
-          <button>Más información aquí!</button>
+          <Link to="/Solidary">
+            <button>Más información aquí!</button>
+          </Link>
         </div>
 
         <div className="imageContainer">
