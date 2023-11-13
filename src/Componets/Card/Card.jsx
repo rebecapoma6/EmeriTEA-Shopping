@@ -191,9 +191,22 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
 
         {/* Añade el campo para los detalles de tamaño */}
 
-        <Typography variant="body2" color="text.secondary">
+        {/* <Typography variant="body2" color="text.secondary">
           <strong>Size:</strong> {product.size}
-        </Typography>
+        </Typography> */}
+        
+        <Typography variant="body2" color="text.secondary">
+  <strong>Size:</strong>{" "}
+  {Array.isArray(product.size) && product.size.length > 0 ? (
+    <span>{product.size.join(", ")}</span>
+  ) : (
+    <span>{product.size}</span>
+  )}
+</Typography>
+
+
+
+
 
         <div className="actionButtons">
           <Button

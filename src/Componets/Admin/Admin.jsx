@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {Modal,ModalContent,ModalHeader,ModalBody,ModalFooter,Button,useDisclosure,} from "@nextui-org/react";
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, } from "@nextui-org/react";
 import Swal from "sweetalert2";
 import "./Admin.css";
 import ProductCard from "../../Componets/Card/Card";
@@ -19,8 +19,9 @@ const Admin = () => {
     description: "",
     stock: "",
     showSize: false,
-    size: "",
+    size: ["", "", "", "", ""], // Inicializa el array con las tallas vacías
   });
+
 
   const handleInputChange = (field, value) => {
     setNewProduct((prevProduct) => {
@@ -28,6 +29,19 @@ const Admin = () => {
       return updatedProduct;
     });
   };
+
+  const handleSizeChange = (index, value) => {
+    setNewProduct((prevProduct) => {
+      const updatedSizes = [...prevProduct.size];
+      updatedSizes[index] = value;
+
+      return {
+        ...prevProduct,
+        size: updatedSizes,
+      };
+    });
+  };
+
 
   const resetNewProductForm = () => {
     setNewProduct({
@@ -38,7 +52,7 @@ const Admin = () => {
       description: "",
       stock: "",
       showSize: false,
-      size: "",
+      size: ["", "", "", "", ""],
     });
   };
 
@@ -52,9 +66,13 @@ const Admin = () => {
   };
 
   const openEditModal = (product) => {
-    setIsEditModalOpen(true);
-    setSelectedProductDetails(product);
-    setShowEditSize(product.category === "Clothing");
+    if (product && product.id) {
+      setIsEditModalOpen(true);
+      setSelectedProductDetails(product);
+      setShowEditSize(product.category === "Clothing");
+    } else {
+      console.error("Error: No se puede abrir el modal de edición, falta el ID del producto.");
+    }
   };
 
   const closeEditModal = () => {
@@ -69,7 +87,7 @@ const Admin = () => {
       image: newProduct.image,
       description: newProduct.description,
       stock: newProduct.stock,
-      size: newProduct.size,
+      sizes: newProduct.size,
     };
 
     fetch(`http://localhost:3000/products`, {
@@ -128,6 +146,7 @@ const Admin = () => {
   };
 
   const editProduct = () => {
+
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción editará el producto. ¿Deseas continuar?",
@@ -137,16 +156,18 @@ const Admin = () => {
       cancelButtonColor: "#d33",
       confirmButtonText: "Sí, editar",
       cancelButtonText: "Cancelar",
+
     }).then((result) => {
       if (result.isConfirmed) {
         const editedProductData = {
+
           Name_product: selectedProductDetails.Name_product,
           category: selectedProductDetails.category,
           price: selectedProductDetails.price,
           image: selectedProductDetails.image,
           description: selectedProductDetails.description,
           stock: selectedProductDetails.stock,
-          size: showEditSize ? selectedProductDetails.size : "",
+          size: showEditSize ? selectedProductDetails.size : [], // Incluye el array de tallas si showEditSize es true
           showSize: showEditSize,
         };
 
@@ -162,10 +183,10 @@ const Admin = () => {
               throw new Error("Failed to edit the product");
             }
             closeEditModal();
-            setProducts(
-              products.map((product) =>
+            setProducts((prevProducts) =>
+              prevProducts.map((product) =>
                 product.id === selectedProductDetails.id
-                  ? editedProductData
+                  ? { ...product, ...editedProductData }
                   : product
               )
             );
@@ -248,15 +269,22 @@ const Admin = () => {
 
                 {newProduct.showSize && (
                   <>
-                    <label htmlFor="productSizeDetails">Size:</label>
-                    <input
-                      type="text"
-                      id="productSizeDetails"
+                    <label htmlFor="productSize">Size:</label>
+                    <select
+                      id="productSize"
                       value={newProduct.size}
                       onChange={(e) => handleInputChange("size", e.target.value)}
-                    />
+                    >
+                      <option value="">Select a size</option>
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                    </select>
                   </>
                 )}
+
 
                 <label htmlFor="productPrice">Price:</label>
                 <input
@@ -418,21 +446,26 @@ const Admin = () => {
                     }
                   />
 
-                  <label htmlFor="productSizeDetails">Size:</label>
-                  <input
-                    type="text"
-                    id="productSizeDetails"
-                    value={selectedProductDetails.size}
-                    onChange={(e) =>
-                      setSelectedProductDetails({
-                        ...selectedProductDetails,
-                        size: e.target.value,
-                      })
-                    }
-                    style={{ display: showEditSize ? "block" : "none" }}
-                  />
-
-
+                  <label htmlFor="productSizeDetails">Talla:</label>
+                  {selectedProductDetails && (
+                    <select
+                      id="productSizeDetails"
+                      value={selectedProductDetails.size && selectedProductDetails.size.length > 0 ? selectedProductDetails.size[0] : ""}
+                      onChange={(e) =>
+                        setSelectedProductDetails({
+                          ...selectedProductDetails,
+                          size: [e.target.value],
+                        })
+                      }
+                    >
+                      <option value="">Selecciona una talla</option>
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                    </select>
+                  )}
 
                 </form>
               </ModalBody>

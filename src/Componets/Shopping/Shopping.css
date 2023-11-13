@@ -1,3 +1,8 @@
 .shopping-cart{
     background: white;
 }
+
+.product-imagecart{
+    width: 50px;
+    height: auto;
+}
