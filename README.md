@@ -1,4 +1,4 @@
-# EmeriTEA-front-end                                             
+                                         
 <p align="center"><img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699348285/toseozbbon8ni9jq03ys.png" width="150" heigth="50" justify-content="center"></p>
 
 ## Project Description 🚀
@@ -76,6 +76,16 @@ Each of them fulfills a specific purpose in the development of your web applicat
 <a href="https://www.juannicolas.eu/cors-que-es-y-como-funciona/#:~:text=Cuando%20hablamos%20de%20CORS%20(Cross,est%C3%A1%20alojado%20en%20otro%20origen." target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353930/CORS_go1ava.png" alt="CORS" height="50" /></a>
 <a href="https://getbootstrap.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353734/BOOTSTRAP_sxlttx.png" alt="BOOTSTRAP" height="50" /></a>
 <a href="https://cloud.google.com/icons?hl=es" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354282/GOOGLE_CLOUD_gxzcqu.jpg" alt="GOOGLE CLOUD" height="50" /></a>
+<a href="https://emotion.sh/docs/introduction" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699960463/emotion_page_logo_f5wm8h.png" height="50" /></a>  
+<a href="https://mui.com/material-ui/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962165/logo_MUI_dc7j6j.webp" height="50" /></a>
+<a href=" https://nextui.org/docs/components/modal" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962222/logo_NEXTUI_rm9oma.png" height="50" /></a>
+<a href="https://www.npmjs.com/package/@types/react-dom" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699961154/NPM_JS_rxtyqb.png" height="50" /></a>
+<a href="https://vitejs.dev/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962787/LOGO_VITEJS_ka5lsg.png" height="50" /></a>
+<a href="https://fontawesome.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962949/FONTAWESOME_LOGO_y6yfni.png" height="50" /></a>
+<a href="https://www.framer.com/motion/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699963249/LOGO_FRAMER_MOTION_brmajm.png" height="50" /></a>
+<a href="https://leafletjs.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699963449/LOGO_LEAFLETJS_obu6nu.png" height="30" /></a>
+
+
 </div>
 
 ## Methodology 📚
