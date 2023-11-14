@@ -4,147 +4,150 @@
       "Name_product": "Camiseta Tecnica Azul",
       "Id_Category": "Clothing",
       "Price": "20",
-      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/cxusyoffsp7hnk8zn3nq.png",
       "Description": "Camiseta Técnica Azul Cielo",
       "stock": "10",
       "Size": [
         "XL"
       ],
-      "showSize": true,
-      "Id_Product": 1
+      "id": 1,
+      "Id_Administrador": 1
     },
     {
       "Name_product": "Camiseta Tecnica Azul Espalda",
       "Id_Category": "Clothing",
       "Price": "25",
-      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188505/IMG_7049_wyi4hn_3_-removebg-preview_a52h8m.png",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/wigvp0hjcb9qfbphpabm.png",
       "Description": "Camiseta de espalda",
       "stock": "15",
       "Size": [
         "XL"
       ],
-      "showSize": true,
-      "Id_Product": 3
+      "id": 3,
+      "Id_Administrador": 1
     },
     {
       "Name_product": "Gorra Azul ",
       "Id_Category": "Clothing",
       "Price": "20",
-      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188504/IMG_7034_apr3kd_1_-removebg-preview_bdl1fm.png",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/jttocii21x4kfmzi5pux.png",
       "Description": "Gorra Color Azul Rey",
       "stock": "14",
       "Size": [
         "S"
       ],
-      "showSize": true,
-      "Id_Product": 4
+      "id": 4,
+      "Id_Administrador": 1
     },
     {
       "Name_product": "Bolsa de la Compra",
       "Id_Category": "Accessories",
       "Price": "10",
-      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188503/IMG_7072._eyjdta_1_-removebg-preview_zt0ues.png",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/x1tqfltwdbv7t7nw1bdx.png",
       "Description": "Bolsa Color azul",
       "stock": "8",
-      "Id_Product": 6
+      "id": 6,
+      "Id_Administrador": 1
     },
     {
       "Name_product": "Llavero Azul TEA",
       "Id_Category": "Accessories",
       "Price": "5",
-      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188503/IMG_7058._nb0z2u_1_-removebg-preview_werd0w.png",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/zvoctudmav2cbugv7ehl.png",
       "Description": "Llavero color Azul rey ",
       "stock": "10",
-      "Id_Product": 7
+      "id": 7,
+      "Id_Administrador": 1
     },
     {
       "Name_product": "Jabón Artesanal Azul Claro",
       "Id_Category": "Accessories",
       "Price": "7",
-      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188503/IMG_7016_xcyakf_1_-removebg-preview_jomse0.png",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699378656/Images/Animal/l7ohazrrpx0d96u4j3xi.png",
       "Description": "Jabón Artesanal Azul Claro tamaño promedio",
       "stock": "14",
-      "Size": [],
-      "showSize": false,
-      "Id_Product": 8
+      "id": 8,
+      "Id_Administrador": 1
     },
     {
       "Name_product": "Pulsera Familia TEA",
       "Id_Category": "Accessories",
       "Price": "6",
-      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1698773938/IMG-20231029-WA0098_pfxyej.jpg",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699378656/Images/Animal/jgjisthxwmqssvveo6uc.png",
       "Description": "Pulsera color azul ",
       "stock": "4",
-      "Id_Product": 9
+      "id": 9,
+      "Id_Administrador": 1
     },
     {
       "Name_product": "Imán por detrás",
       "Id_Category": "Accessories",
       "Price": "3000",
-      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188503/IMG_7022_ahj80b_1_-removebg-preview_virgkz.png",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699378656/Images/Animal/nfe0viwxoc6nkvpu5kkf.png",
       "Description": "Imán por la parte",
       "stock": "4",
-      "Id_Product": 10
-    },
-    {
-      "Name_product": "Prenda 5",
-      "Id_Category": "Clothing",
-      "Price": "8",
-      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
-      "Description": "Prenda 5",
-      "stock": "9",
-      "Size": [
-        "M"
-      ],
-      "showSize": true,
-      "Id_Product": 11
+      "id": 10,
+      "Id_Administrador": 1
     },
     {
       "Name_product": "MARIA",
       "Id_Category": "Clothing",
       "Price": "25.6",
-      "Image": "https://res.cloudinary.com/ddgpmxprs/Image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699378656/Images/Animal/ztt0plr18fz3fubawzmo.png",
       "Description": "color Negro",
       "stock": "25",
       "Size": [
         "L"
       ],
-      "showSize": true,
-      "Id_Product": 12
+      "id": 12,
+      "Id_Administrador": 1
     },
     {
       "Name_product": "PRUEBA 11",
       "Id_Category": "Accessories",
       "Price": "25.7",
-      "Image": "https://res.cloudinary.com/ddgpmxprs/Image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699378656/Images/Animal/ztt0plr18fz3fubawzmo.png",
       "Description": "AAAA",
       "stock": "25",
-      "Size": [],
-      "showSize": false,
-      "Id_Product": 13
+      "id": 13,
+      "Id_Administrador": 1
     },
     {
       "Name_product": "Gorra",
       "Id_Category": "Clothing",
       "Price": "5.9",
-      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188503/IMG_7031_pehh8w_1_-removebg-preview_giqcxw.png",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1693985426/cld-sample-5.jpg",
       "Description": "Gorra termica",
       "stock": "10",
       "Size": [
         "S"
       ],
-      "showSize": true,
-      "Id_Product": 14
+      "id": 14,
+      "Id_Administrador": 1
     },
     {
       "Name_product": "POLO PRUEBA 10",
       "Id_Category": "Clothing",
       "Price": "10.9",
-      "Image": "https://res.cloudinary.com/ddgpmxprs/Image/upload/v1693212296/samples/shoe.jpg",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1693985423/cld-sample.jpg",
       "Description": "COLOR NEGRO",
       "stock": "10",
-      "Sizes": "M",
-      "Id_Product": 15
+      "Size": [
+        "M"
+      ],
+      "id": 15,
+      "Id_Administrador": 1
+    },
+    {
+      "id": 1699981881875,
+      "Name_product": "Anthony",
+      "Id_Category": "Accessories",
+      "Price": "800",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1693985424/cld-sample-2.jpg",
+      "Description": "Roca",
+      "stock": "90",
+      "Size": [],
+      "Id_Administrador": 1699981881875
     }
   ]
 }
