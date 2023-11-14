@@ -7,7 +7,11 @@ const SignInSide = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> Rebeca
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     
@@ -41,7 +45,6 @@ const SignInSide = () => {
     }
   };
    
-
   // // Función para establecer la cookie
   function setCookie(cname, cvalue, minutes) {
     const d = new Date();

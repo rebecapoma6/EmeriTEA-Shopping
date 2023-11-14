@@ -4,17 +4,17 @@ import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import './Accesories.css'; // Asegúrate de ajustar esta importación si tus estilos están en otro archivo
+import './Accesories.css'; 
 
 const Accessories = ({ addToCart }) => {
   const [accessories, setAccessories] = useState([]);
-  const [cartItems, setCartItems] = useState([]); // Estado para los elementos del carrito
-  //const { cartItems, addToCart } = useCart();
 
-
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
 
   useEffect(() => {
-    fetch('http://localhost:3000/products?category=Accessories')
+    fetch('http://localhost:3000/products?Id_Category=Accessories')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch accessories');
@@ -26,7 +26,6 @@ const Accessories = ({ addToCart }) => {
       })
       .catch((error) => console.error('Error:', error));
   }, []);
-
 
   return (
     <div className="container-swiper">
@@ -41,13 +40,14 @@ const Accessories = ({ addToCart }) => {
           {accessories.map((product) => (
             <SwiperSlide key={product.Id_Product}>
               <div className="swiper-slide">
-                <img src={product.image} alt={product.name} />
+                <img src={product.Image} alt={product.Name_product} />
                 <div className="description">
                   <div className="nombre">{product.Name_product}</div>
-                  <div className="precio">{product.price} €</div>
-                  <div className="description">{product.descripton} </div>
+                  <div className="precio">{product.Price} €</div>
+                  <div className="description">{product.Descripton} </div>
                   <div className="carrito">
-                    {/* <button>🛒</button> */} <button onClick={() => addToCart(product)}> 🛒</button>
+                    {/* <button onClick={() => addToCart(product)}> 🛒</button> */}
+                    <button onClick={() => handleAddToCart(product)}>🛒</button>
                   </div>
                 </div>
               </div>
@@ -60,3 +60,4 @@ const Accessories = ({ addToCart }) => {
 };
 
 export default Accessories;
+

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import * as React from 'react';
 // import Card from '@mui/material/Card';
 // import CardContent from '@mui/material/CardContent';
@@ -128,6 +129,8 @@
 
 // export default ProductCard;
 
+=======
+>>>>>>> Rebeca
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -142,7 +145,10 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
       <CardMedia
         className="cardMedia"
         image={product.Image}
+<<<<<<< HEAD
         alt={product.Name_product}
+=======
+>>>>>>> Rebeca
       />
 
       <CardContent className="CardContent">
@@ -179,13 +185,24 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           <Typography variant="body2" color="text.secondary">
             <strong>Stock:</strong> {product.stock}
           </Typography>
+<<<<<<< HEAD
 
+=======
+>>>>>>> Rebeca
         </div>
 
-        {/* Añade el campo para los detalles de tamaño */}
-
         <Typography variant="body2" color="text.secondary">
+<<<<<<< HEAD
           <strong>SizeEEE:</strong> {product.Size}
+=======
+          <strong>Size:</strong>{" "}
+          {Array.isArray(product.Size) && product.Size.length > 0 ? (
+            <span>{product.Size.join(", ")}</span>
+          ) : (
+            <span>{product.Size}</span>
+          )}
+
+>>>>>>> Rebeca
         </Typography>
 
         <div className="actionButtons">
@@ -196,7 +213,14 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
             Delete
           </Button>
 
+<<<<<<< HEAD
           <Button className="actionButtonE" onClick={() => openEditModal(product.Id_Productd)}>
+=======
+          <Button
+            className="actionButtonE"
+            onClick={() => openEditModal(product)}
+          >
+>>>>>>> Rebeca
             Edit
           </Button>
         </div>
@@ -206,4 +230,3 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
 };
 
 export default ProductCard;
-

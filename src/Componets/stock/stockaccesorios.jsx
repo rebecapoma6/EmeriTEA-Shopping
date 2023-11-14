@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./stockaccesorios.css";
 
-const Stockaccesorios = () => {
+const Stockaccesorios = ({ addToCart }) => {
   const [accessories, setAccessories] = useState([]);
 
   useEffect(() => {
@@ -18,12 +18,14 @@ const Stockaccesorios = () => {
       .catch((error) => console.error("Error:", error));
   }, []);
 
+  const handleAddToCart = (product) => {
+    addToCart(product);
+  };
+
   return (
     <>
-          <div className="Accesorios">Accesorios</div>
-
+      <div className="Accesorios">Accesorios</div>
       <div className="product-list">
-        
         {accessories.map((product) => (
           <div key={product.id}>
             <img
@@ -34,7 +36,7 @@ const Stockaccesorios = () => {
             <p>Name: {product.Name_product}</p>
             <p>Price: {product.price} €</p>
             <p>Descripcion: {product.description} </p>
-            <button>🛒</button>
+            <button onClick={() => handleAddToCart(product)}>🛒</button>
           </div>
         ))}
       </div>

@@ -1,11 +1,10 @@
-// import React from "react";
-import Clothing from "../../Componets/Clothing/Clothing";
-import Header from "../../Componets/Header/header";
+import React from "react";
 import Footer from "../../Componets/Footer/Footer";
+import Header from "../../Componets/Header/Header";
 import CustomNavbar from "../../Componets/Navbar/Navbar";
 import Stockprendas from "../../Componets/stock/stockprendas";
 
-const RopaView = () => {
+const RopaView = ({ addToCart }) => {
   return (
     <div className="homeinitial">
       {/* <div> */}
@@ -13,7 +12,7 @@ const RopaView = () => {
       <CustomNavbar />
       <div className="container-gris">
         {/* <Clothing /> */}
-        <Stockprendas/>
+        <Stockprendas addToCart={addToCart}/>
       </div>
       <Footer />
       {/* </div> */}

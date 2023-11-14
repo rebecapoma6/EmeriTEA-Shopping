@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import {Modal,ModalContent,ModalHeader,ModalBody,ModalFooter,Button,useDisclosure,} from "@nextui-org/react";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 import Swal from "sweetalert2";
 import "./Admin.css";
 import ProductCard from "../../Componets/Card/Card";
@@ -18,16 +26,8 @@ const Admin = () => {
     Image: "",
     Description: "",
     stock: "",
-    showSize: false,
-    size: "",
+    Size: [],
   });
-
-  const handleInputChange = (field, value) => {
-    setNewProduct((prevProduct) => {
-      const updatedProduct = { ...prevProduct, [field]: value };
-      return updatedProduct;
-    });
-  };
 
   const resetNewProductForm = () => {
     setNewProduct({
@@ -37,10 +37,21 @@ const Admin = () => {
       Image: "",
       Description: "",
       stock: "",
-      showSize: false,
-      size: "",
+      Size: [],
     });
   };
+
+  useEffect(() => {
+    fetch("http://localhost:3000/products")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch products");
+        }
+        return response.json();
+      })
+      .then((data) => setProducts(data))
+      .catch((error) => console.error("Error:", error));
+  }, []);
 
   const openAddModal = () => {
     onOpen();
@@ -51,18 +62,57 @@ const Admin = () => {
     onOpenChange();
   };
 
-  const openEditModal = (product) => {
-    setIsEditModalOpen(true);
-    setSelectedProductDetails(product);
-    setShowEditSize(product.category === "Clothing");
-  };
-
   const closeEditModal = () => {
     setIsEditModalOpen(false);
   };
 
+  // const handleInputChange = (field, value) => {
+  //   setNewProduct((prevProduct) => {
+  //     const updatedProduct = { ...prevProduct, [field]: value };
+  //     return updatedProduct;
+  //   });
+  // };
+
+  const handleInputChange = (name, value) => {
+    setNewProduct((prevProduct) => {
+      let updatedProduct;
+      if (name === "Id_Category") {
+        updatedProduct = {
+          ...prevProduct,
+          Id_Category: value,
+          showSize: value === "Clothing",
+        };
+      } else if (name === "Size") {
+        updatedProduct = {
+          ...prevProduct,
+          Size: [...prevProduct.Size, value],
+        };
+      } else {
+        updatedProduct = {
+          ...prevProduct,
+          [name]: value,
+        };
+      }
+      return updatedProduct;
+    });
+  };
+  
+
+  const openEditModal = (product) => {
+    if (product && product.Id_Product) {
+      setIsEditModalOpen(true);
+      setSelectedProductDetails({ ...product });
+      setShowEditSize(product.Id_Category === "Clothing");
+    } else {
+      console.error(
+        "Error: No se puede abrir el modal de edición, falta el ID del producto."
+      );
+    }
+  };
+
   const addProduct = () => {
     const productData = {
+      id: Date.now(),
       Name_product: newProduct.Name_product,
       Id_Category: newProduct.Id_Category,
       Price: newProduct.Price,
@@ -70,6 +120,7 @@ const Admin = () => {
       Description: newProduct.Description,
       stock: newProduct.stock,
       Size: newProduct.Size,
+      Id_Administrador: Date.now(),
     };
 
     fetch(`http://localhost:3000/products`, {
@@ -81,8 +132,9 @@ const Admin = () => {
     })
       .then((response) => {
         if (!response.ok) {
-          return response.json().then((err) => {
-            throw new Error(err.message);
+          // throw new Error("Failed to add product");
+          return response.text().then((text) => {
+            throw new Error(text);
           });
         }
         return response.json();
@@ -99,35 +151,37 @@ const Admin = () => {
       });
   };
 
-  const deleteProduct = (id) => {
-    Swal.fire({
-      title: "¿Estás seguro?",
-      text: "Esta acción eliminará el producto. ¿Deseas continuar?",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Sí, eliminar",
-      cancelButtonText: "Cancelar",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        fetch(`http://localhost:3000/products/${id}`, {
-          method: "DELETE",
-        })
-          .then(() => {
-            const updatedProducts = products.filter(
-              (product) => product.id !== id
-            );
-            setProducts(updatedProducts);
-            Swal.fire("Éxito", "Producto eliminado con éxito", "success");
+    const deleteProduct = (id) => {
+      Swal.fire({
+        title: "¿Estás seguro?",
+        text: "Esta acción eliminará el producto. ¿Deseas continuar?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",  
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sí, eliminar",
+        cancelButtonText: "Cancelar",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          fetch(`http://localhost:3000/products/${id}`, {
+            method: "DELETE",
           })
-          .catch((error) => {
-            console.error("Error:", error);
-            Swal.fire("Error", "No se ha podido eliminar el producto", "error");
-          });
-      }
-    });
-  };
+            .then(() => {
+              const updatedProducts = products.filter(
+                (product) => product.id !== id
+              );
+              setProducts(updatedProducts);
+              Swal.fire("Éxito", "Producto eliminado con éxito", "success");
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              console.error("Status:", error.status);
+              console.error("Text:", error.statusText);
+              Swal.fire("Error", "No se ha podido eliminar el producto", "error");
+            });
+        }
+      });
+    };
 
   const editProduct = () => {
     Swal.fire({
@@ -143,31 +197,34 @@ const Admin = () => {
       if (result.isConfirmed) {
         const editedProductData = {
           Name_product: selectedProductDetails.Name_product,
-          category: selectedProductDetails.category,
-          price: selectedProductDetails.price,
-          image: selectedProductDetails.image,
+          Id_Category: selectedProductDetails.Id_Category,
+          Price: selectedProductDetails.Price,
+          Image: selectedProductDetails.Image,
           description: selectedProductDetails.description,
           stock: selectedProductDetails.stock,
-          size: showEditSize ? selectedProductDetails.size : "",
+          size: showEditSize ? selectedProductDetails.size : [],
           showSize: showEditSize,
         };
 
-        fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(editedProductData),
-        })
+        fetch(
+          `http://localhost:3000/products/${selectedProductDetails.Id_Product}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(editedProductData),
+          }
+        )
           .then((response) => {
             if (!response.ok) {
               throw new Error("Failed to edit the product");
             }
             closeEditModal();
-            setProducts(
-              products.map((product) =>
-                product.id === selectedProductDetails.id
-                  ? editedProductData
+            setProducts((prevProducts) =>
+              prevProducts.map((product) =>
+                product.Id_Product === selectedProductDetails.Id_Product
+                  ? { ...product, ...editedProductData }
                   : product
               )
             );
@@ -181,21 +238,8 @@ const Admin = () => {
     });
   };
 
-  useEffect(() => {
-    fetch("http://localhost:3000/products")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to fetch products");
-        }
-        return response.json();
-      })
-      .then((data) => setProducts(data))
-      .catch((error) => console.error("Error:", error));
-  },[]);
-
   return (
     <>
-
       <div className="add-header">
         <h1>AÑADIR PRODUCTOS</h1>
       </div>
@@ -216,12 +260,13 @@ const Admin = () => {
             <ModalHeader className="flex flex-col gap-1">
               Add Product
             </ModalHeader>
+
             <ModalBody>
               <form className="add-2">
                 <label htmlFor="productName">Name:</label>
                 <input
                   type="text"
-                  id="productName"
+                  // id="productName"
                   value={newProduct.Name_product}
                   onChange={(e) =>
                     handleInputChange("Name_product", e.target.value)
@@ -230,14 +275,14 @@ const Admin = () => {
 
                 <label htmlFor="productId_Category">Id_Category:</label>
                 <select
-                  id="productCategory"
-                  value={newProduct.category}
+                  // id="productCategory"
+                  value={newProduct.Id_Category}
                   onChange={(e) => {
-                    handleInputChange("category", e.target.value);
+                    handleInputChange("Id_Category", e.target.value);
                     if (e.target.value === "Clothing") {
-                      handleInputChange("showSize", true);
+                      handleInputChange("Id_Category", e.target.value);
                     } else {
-                      handleInputChange("showSize", false);
+                      handleInputChange("Id_Category", e.target.value);
                     }
                   }}
                 >
@@ -249,20 +294,28 @@ const Admin = () => {
 
                 {newProduct.showSize && (
                   <>
-                    <label htmlFor="productSizeDetails">Size:</label>
-                    <input
-                      type="text"
-                      id="productSizeDetails"
-                      value={newProduct.size}
-                      onChange={(e) => handleInputChange("size", e.target.value)}
-                    />
+                    <label htmlFor="productSize">Size:</label>
+                    <select
+                      // id="productSize"
+                      value={newProduct.Size}
+                      onChange={(e) =>
+                        handleInputChange("Size", e.target.value)
+                      }
+                    >
+                      <option value="">Select a size</option>
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                    </select>
                   </>
                 )}
 
                 <label htmlFor="productPrice">Price:</label>
                 <input
                   type="text"
-                  id="productPrice"
+                  // id="productPrice"
                   value={newProduct.Price}
                   onChange={(e) => handleInputChange("Price", e.target.value)}
                 />
@@ -273,10 +326,11 @@ const Admin = () => {
                 </label>
                 <input
                   type="text"
-                  id="productImage"
+                  // id="productImage"
                   value={newProduct.Image}
                   onChange={(e) => handleInputChange("Image", e.target.value)}
                 />
+
                 {newProduct.Image && (
                   <img
                     src={newProduct.Image}
@@ -288,7 +342,7 @@ const Admin = () => {
 
                 <label htmlFor="productDescription">Description:</label>
                 <textarea
-                  id="productDescription"
+                  // id="productDescription"
                   value={newProduct.Description}
                   onChange={(e) =>
                     handleInputChange("Description", e.target.value)
@@ -300,22 +354,13 @@ const Admin = () => {
                 <label htmlFor="productStock">Stock:</label>
                 <input
                   type="text"
-                  id="productStock"
+                  // id="productStock"
                   value={newProduct.stock}
                   onChange={(e) => handleInputChange("stock", e.target.value)}
                 />
-                <br></br>
-                <label htmlFor="productSizeDetails">Size:</label>
-                <input
-                  type="text"
-                  id="productSizeDetails"
-                  value={newProduct.Size}
-                  onChange={(e) => handleInputChange("Size", e.target.value)}
-                />
               </form>
-
-
             </ModalBody>
+
             <ModalFooter>
               <Button color="danger" variant="light" onClick={closeAddModal}>
                 Close
@@ -349,9 +394,11 @@ const Admin = () => {
           <ModalContent className="formSection">
             <>
               <ModalHeader>Edit Product</ModalHeader>
+              
               <ModalBody>
                 <form>
                   <label htmlFor="productName">Name:</label>
+
                   <input
                     type="text"
                     value={selectedProductDetails.Name_product}
@@ -363,7 +410,8 @@ const Admin = () => {
                     }
                   />
 
-                  <label htmlFor="productId_Category">Id_Category:</label>
+                  <label htmlFor="productCategory">Category:</label>
+
                   <select
                     value={selectedProductDetails.Id_Category}
                     onChange={(e) =>
@@ -377,9 +425,11 @@ const Admin = () => {
                     <option value="1">Accessories</option>
                     <option value="2">Clothing</option>
                   </select>
+
                   <br></br>
 
                   <label htmlFor="productPrice">Price:</label>
+
                   <input
                     type="text"
                     value={selectedProductDetails.Price}
@@ -392,6 +442,7 @@ const Admin = () => {
                   />
 
                   <label htmlFor="productImage">Image URL:</label>
+
                   <input
                     type="text"
                     value={selectedProductDetails.Image}
@@ -426,21 +477,34 @@ const Admin = () => {
                     }
                   />
 
-                  <label htmlFor="productSizeDetails">Size:</label>
-                  <input
-                    type="text"
-                    id="productSizeDetails"
-                    value={selectedProductDetails.size}
-                    onChange={(e) =>
-                      setSelectedProductDetails({
-                        ...selectedProductDetails,
-                        Size: e.target.value,
-                      })
-                    }
-                    style={{ display: showEditSize ? "block" : "none" }}
-                  />
+                  <label htmlFor="productSizeDetails">Talla:</label>
+                  {selectedProductDetails && (
+                    <select
+                      // id="productSizeDetails"
+                      value={
+                        selectedProductDetails.size &&
+                        selectedProductDetails.size.length > 0
+                          ? selectedProductDetails.size[0]
+                          : ""
+                      }
+                      onChange={(e) =>
+                        setSelectedProductDetails({
+                          ...selectedProductDetails,
+                          size: [e.target.value],
+                        })
+                      }
+                    >
+                      <option value="">Selecciona una talla</option>
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                    </select>
+                  )}
                 </form>
               </ModalBody>
+
               <ModalFooter>
                 <Button
                   className="btn-close"
