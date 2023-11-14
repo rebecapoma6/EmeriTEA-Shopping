@@ -50,8 +50,6 @@
 //                   <div className="precio">Precio: {product.price} €</div>
 //                   <div className="descripcion">Descripción: {product.description}</div>
 
-               
-
 //                   <div className="tallas">
 //                     <select value={selectedSize} onChange={(e) => handleSizeChange(e.target.value)}>
 //                       <option value="">Seleccione Talla</option>
@@ -60,8 +58,6 @@
 //                       ))}
 //                     </select>
 //                   </div>
-
-
 
 //                   <div className="carrito">
 //                     <button onClick={() => handleAddToCart(product)}>🛒</button>
@@ -78,7 +74,6 @@
 
 // export default Clothing;
 
-
 import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
@@ -88,6 +83,29 @@ import "swiper/css/navigation";
 import "./Clothing.css";
 
 const Clothing = ({ addToCart }) => {
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    const elements = document.querySelectorAll(".scroll-op");
+    elements.forEach((element) => {
+      const elementTop = element.getBoundingClientRect().top;
+      const elementBottom = element.getBoundingClientRect().bottom;
+
+      const isVisible = elementTop < window.innerHeight && elementBottom >= 0;
+
+      if (isVisible) {
+        element.classList.add("appear");
+      } else {
+        element.classList.remove("appear");
+      }
+    });
+  };
+
   const [products, setProducts] = useState([]);
   const [selectedSizes, setSelectedSizes] = useState({});
 
@@ -113,42 +131,51 @@ const Clothing = ({ addToCart }) => {
   };
 
   return (
-    <div className="container-swiper">
-      <div className="Prendas">Prendas</div>
+    <>
+      <div className="scroll-op">
+        <div className="container-swiper">
+          <div className="Prendas">Prendas</div>
 
-      <div className="mySwiper">
-        <Swiper
-          slidesPerView={4}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-        >
-          {products.map((product) => (
-            <SwiperSlide key={product.id}>
-              <div className="swiper-slide">
-                <img src={product.image} alt={product.name} />
-                <div className="description">
-                  <div className="nombre">Nombre: {product.Name_product}</div>
-                  <div className="precio">Precio: {product.price} €</div>
-                  <div className="descripcion">DescripciónAA: {product.description}</div>
-                  {Array.isArray(product.size) && product.size.length > 0 && (
-                    <div className="talla">Talla: {product.size.join(', ')}</div>
-                  )}
-                  
-                  <div className="carrito">
-                    <button onClick={() => handleAddToCart(product)}>🛒</button>
+          <div className="mySwiper">
+            <Swiper
+              slidesPerView={4}
+              navigation={true}
+              modules={[Pagination, Navigation]}
+            >
+              {products.map((product) => (
+                <SwiperSlide key={product.id}>
+                  <div className="swiper-slide">
+                    <img src={product.image} alt={product.name} />
+                    <div className="description">
+                      <div className="nombre">
+                        Nombre: {product.Name_product}
+                      </div>
+                      <div className="precio">Precio: {product.price} €</div>
+                      <div className="descripcion">
+                        DescripciónAA: {product.description}
+                      </div>
+                      {Array.isArray(product.size) &&
+                        product.size.length > 0 && (
+                          <div className="talla">
+                            Talla: {product.size.join(", ")}
+                          </div>
+                        )}
+
+                      <div className="carrito">
+                        <button onClick={() => handleAddToCart(product)}>
+                          🛒
+                        </button>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
 export default Clothing;
-
-
-
-

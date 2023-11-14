@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const CustomNavbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Limpiar el evento al desmontar el componente
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
+
   return (
     <div className="mainnavbar">
-      <div className="navbar">
+      {/* <div className="navbar"> */}
+      <div className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div>
           <a
             href="https://emeritea.com/quienes-somos/"

@@ -1,88 +1,3 @@
-/* .shopping-cart{
-    background: white;
-}
-
-.product-imagecart{
-    width: 50px;
-    height: auto;
-} */
-
-/* BUEN EJEMPLO
-
-.shopping-cart {
-    font-family: 'Arial', sans-serif;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .mi-tabla-cabecera {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    color: #ddd;
-  }
-  
-  .mi-tabla-cabecera th {
-    padding: 10px;
-  }
-  
-  h2 {
-    color: #333;
-    text-align: center;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  th {
-    background-color: #007da0;
-  }
-  
-  .product-imagecart {
-    width: 60px;
-    height: 60px;
-    object-fit: cover;
-    border-radius: 50%;
-  }
-  
-  button {
-    background-color: #dc3545;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #c82333;
-  }
-  
-  p {
-    margin-top: 20px;
-    text-align: right;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-  } 
-
-
-  /* EJEMPLO PARA ROMPER */
-
-
   .shopping-cart {
     font-family: 'Arial', sans-serif;
     margin: 20px;
@@ -130,8 +45,21 @@
     object-fit: cover;
     border-radius: 50%;
   }
+  .remove-button
+   {
+    background-color: #c82333;      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  }
   
-  button {
+  .remove-button:hover {
+      background-color: #c82333;
+      box-shadow: 2px 2px 8px #333;
+  }  
+  /* button {
     background-color: #dc3545;
     color: #fff;
     border: none;
@@ -143,7 +71,7 @@
   
   button:hover {
     background-color: #c82333;
-  }
+  } */
   
   p {
     margin-top: 20px;

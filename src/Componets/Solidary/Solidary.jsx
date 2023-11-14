@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 const Solidary = () => {
   return (
+    <div className="scroll-op">
     <div className="solidary">
       <div className="solidary-title">
         <h1>Haz tu Regalo Solidario!</h1>
@@ -30,8 +31,9 @@ const Solidary = () => {
             cumpleaños, etc...!
           </h2>
           <Link to="/Solidary">
-            <button>Más información aquí!</button>
+            {/* <button>Más información aquí!</button> */}
           </Link>
+          <button className="shadow__btn">Más información aquí!</button>
         </div>
 
         <div className="imageContainer">
@@ -47,7 +49,7 @@ const Solidary = () => {
           />
         </div>
       </div>
-    </div>
+    </div></div>
   );
 };
 
