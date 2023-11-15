@@ -42,7 +42,6 @@ React: A JavaScript library for creating interactive user interfaces.
 
 Bootstrap: A front-end design framework that provides ready-to-use styling and components.
 
-
 Testing Library: A library used to write tests and perform user testing on web applications.
 
 Swiper (JavaScript library): A JavaScript library that facilitates the creation of image carousels and other content elements on the website, improving the user experience.
