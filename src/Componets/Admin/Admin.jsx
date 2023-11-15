@@ -66,13 +66,6 @@ const Admin = () => {
     setIsEditModalOpen(false);
   };
 
-  // const handleInputChange = (field, value) => {
-  //   setNewProduct((prevProduct) => {
-  //     const updatedProduct = { ...prevProduct, [field]: value };
-  //     return updatedProduct;
-  //   });
-  // };
-
   const handleInputChange = (name, value) => {
     setNewProduct((prevProduct) => {
       let updatedProduct;
@@ -202,7 +195,7 @@ const Admin = () => {
           Image: selectedProductDetails.Image,
           description: selectedProductDetails.description,
           stock: selectedProductDetails.stock,
-          size: showEditSize ? selectedProductDetails.size : [],
+          Size: showEditSize ? selectedProductDetails.Size : [],
           showSize: showEditSize,
         };
 
@@ -482,15 +475,15 @@ const Admin = () => {
                     <select
                       // id="productSizeDetails"
                       value={
-                        selectedProductDetails.size &&
-                        selectedProductDetails.size.length > 0
-                          ? selectedProductDetails.size[0]
+                        selectedProductDetails.Size &&
+                        selectedProductDetails.Size.length > 0
+                          ? selectedProductDetails.Size[0]
                           : ""
                       }
                       onChange={(e) =>
                         setSelectedProductDetails({
                           ...selectedProductDetails,
-                          size: [e.target.value],
+                          Size: [e.target.value],
                         })
                       }
                     >
@@ -502,6 +495,7 @@ const Admin = () => {
                       <option value="XL">XL</option>
                     </select>
                   )}
+
                 </form>
               </ModalBody>
 
