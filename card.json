@@ -1,0 +1,179 @@
+{
+  "products": [
+    {
+      "Name_product": "Camiseta Tecnica Azul",
+      "Id_Category": "Clothing",
+      "Price": "20",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/cxusyoffsp7hnk8zn3nq.png",
+      "Description": "Camiseta Técnica Azul Cielo",
+      "stock": "10",
+      "Size": [
+        "XL"
+      ],
+      "id": 1,
+      "Id_Administrador": 1
+    },
+    {
+      "Name_product": "Camiseta Tecnica Azul Espalda",
+      "Id_Category": "Clothing",
+      "Price": "25",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/wigvp0hjcb9qfbphpabm.png",
+      "Description": "Camiseta de espalda",
+      "stock": "15",
+      "Size": [
+        "XL"
+      ],
+      "id": 3,
+      "Id_Administrador": 1
+    },
+    {
+      "Name_product": "Gorra Azul ",
+      "Id_Category": "Clothing",
+      "Price": "20",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/jttocii21x4kfmzi5pux.png",
+      "Description": "Gorra Color Azul Rey",
+      "stock": "14",
+      "Size": [
+        "S"
+      ],
+      "id": 4,
+      "Id_Administrador": 1
+    },
+    {
+      "Name_product": "Bolsa de la Compra",
+      "Id_Category": "Accessories",
+      "Price": "10",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/x1tqfltwdbv7t7nw1bdx.png",
+      "Description": "Bolsa Color azul",
+      "stock": "8",
+      "id": 6,
+      "Id_Administrador": 1
+    },
+    {
+      "Name_product": "Llavero Azul TEA",
+      "Id_Category": "Accessories",
+      "Price": "5",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/zvoctudmav2cbugv7ehl.png",
+      "Description": "Llavero color Azul rey ",
+      "stock": "10",
+      "id": 7,
+      "Id_Administrador": 1
+    },
+    {
+      "Name_product": "Jabón Artesanal Azul Claro",
+      "Id_Category": "Accessories",
+      "Price": "7",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699378656/Images/Animal/l7ohazrrpx0d96u4j3xi.png",
+      "Description": "Jabón Artesanal Azul Claro tamaño promedio",
+      "stock": "14",
+      "id": 8,
+      "Id_Administrador": 1
+    },
+    {
+      "Name_product": "Pulsera Familia TEA",
+      "Id_Category": "Accessories",
+      "Price": "6",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699378656/Images/Animal/jgjisthxwmqssvveo6uc.png",
+      "Description": "Pulsera color azul ",
+      "stock": "4",
+      "id": 9,
+      "Id_Administrador": 1
+    },
+    {
+      "Name_product": "Imán por detrás",
+      "Id_Category": "Accessories",
+      "Price": "3000",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699378656/Images/Animal/nfe0viwxoc6nkvpu5kkf.png",
+      "Description": "Imán por la parte",
+      "stock": "4",
+      "id": 10,
+      "Id_Administrador": 1
+    },
+    {
+      "Name_product": "MARIA",
+      "Id_Category": "Clothing",
+      "Price": "25.6",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699378656/Images/Animal/ztt0plr18fz3fubawzmo.png",
+      "Description": "color Negro",
+      "stock": "25",
+      "Size": [
+        "L"
+      ],
+      "id": 12,
+      "Id_Administrador": 1
+    },
+    {
+      "Name_product": "PRUEBA 11",
+      "Id_Category": "Accessories",
+      "Price": "25.7",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699378656/Images/Animal/ztt0plr18fz3fubawzmo.png",
+      "Description": "AAAA",
+      "stock": "25",
+      "id": 13,
+      "Id_Administrador": 1
+    },
+    {
+      "Name_product": "Gorra",
+      "Id_Category": "Clothing",
+      "Price": "5.9",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1693985426/cld-sample-5.jpg",
+      "Description": "Gorra termica",
+      "stock": "10",
+      "Size": [
+        "S"
+      ],
+      "id": 14,
+      "Id_Administrador": 1
+    },
+    {
+      "Name_product": "POLO PRUEBA 10",
+      "Id_Category": "Clothing",
+      "Price": "10.9",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1693985423/cld-sample.jpg",
+      "Description": "COLOR NEGRO",
+      "stock": "10",
+      "Size": [
+        "M"
+      ],
+      "id": 15,
+      "Id_Administrador": 1
+    },
+    {
+      "id": 1699982585604,
+      "Name_product": "Anthony",
+      "Id_Category": "1",
+      "Price": "789",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1693985424/cld-sample-2.jpg",
+      "Description": "ñañañ",
+      "stock": "100",
+      "Size": [],
+      "Id_Administrador": 1699981881875
+    },
+    {
+      "id": 1700039229436,
+      "Name_product": "prueba 11",
+      "Id_Category": "Clothing",
+      "Price": "15",
+      "Image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698922934/IMG_7039_dy89dw.jpg",
+      "Description": "aaaaa",
+      "stock": "15",
+      "Size": [
+        "XS"
+      ],
+      "Id_Administrador": 1700039229436
+    },
+    {
+      "id": 1700040041124,
+      "Name_product": "prueba 12",
+      "Id_Category": "Clothing",
+      "Price": "15",
+      "Image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698922934/IMG_7039_dy89dw.jpg",
+      "Description": "aaaaa",
+      "stock": "10",
+      "Size": [
+        "M"
+      ],
+      "Id_Administrador": 1700040041124
+    }
+  ]
+}
