@@ -42,7 +42,6 @@ React: A JavaScript library for creating interactive user interfaces.
 
 Bootstrap: A front-end design framework that provides ready-to-use styling and components.
 
-Jest: A JavaScript testing framework to make sure your code works correctly.
 
 Testing Library: A library used to write tests and perform user testing on web applications.
 
@@ -53,39 +52,43 @@ Nex UI: It is a React UI library that allows you to build sites and applications
 Each of them fulfills a specific purpose in the development of your web application. If you have additional questions about how to use these libraries or need more details about any of them, don't hesitate to ask.
 
 
-## Technologies and Tools 🔨
-<div>  
+## Languages and frameworks ✍🏻 
+<div> 
 <a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
-<a href="https://getbootstrap.com/docs/3.4/javascript/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="50" /></a>  
+<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>
 <a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
-<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
-<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
-<a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
-<a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>  
-<a href="https://www.figma.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" /></a>  
-<a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>
+<a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>
+<a href="https://git-scm.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>
 <a href="https://learn.microsoft.com/es-es/dotnet/csharp/tour-of-csharp/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699350399/C_zdol40.png" alt="C#" height="50" /></a>
 <a href="https://www.microsoft.com/es-es/sql-server/sql-server-downloads" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SQL_SERVER_vhzlzo.png" alt="SQL SERVER" height="50" /></a>
+<a href="https://github.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354303/GITHUB_fkv5hy.png" alt="GITHUB" height="50" /></a>
+<a href="https://vitejs.dev/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962787/LOGO_VITEJS_ka5lsg.png" height="50" /></a>
+<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a> 
+</div>  
+
+## Tools and libraries  🔨
+<div>
 <a href="https://code.visualstudio.com/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353985/VISUAL_AZULITO_jgfldr.png" alt="VISUAL STUDIO CODE" height="50" /></a>
 <a href="https://visualstudio.microsoft.com/es/downloads/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/VISUAL_MORADITO_egwm8n.png" alt="VISUAL STUDIO CODE 2020" height="50" /></a>
-<a href="https://sweetalert2.github.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SWEETALERT_jmo7vw.png" alt="VISUAL STUDIO CODE 2020" height="50" /></a>
+<a href="https://trello.com/home" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/TRELLO_1_zyoau4.png" alt="TRELLO" height="50" /></a> 
+<a href="https://sweetalert2.github.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SWEETALERT_jmo7vw.png" alt="VISUAL STUDIO CODE 2020" height="50" /></a> 
+<a href="https://getbootstrap.com/docs/3.4/javascript/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="50" /></a>  
+<a href="https://www.figma.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" /></a>  
+<a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>
 <a href="https://swagger.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SWAGGER_t3tmhl.png" alt="SWAGGER" height="50" /></a>
-<a href="https://trello.com/home" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/TRELLO_1_zyoau4.png" alt="TRELLO" height="50" /></a>
-<a href="https://github.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354303/GITHUB_fkv5hy.png" alt="GITHUB" height="50" /></a>
 <a href="https://jwt.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353959/JWT_fu0k4s.png" alt="JWT" height="50" /></a>
+</div>
+<div>
 <a href="https://www.juannicolas.eu/cors-que-es-y-como-funciona/#:~:text=Cuando%20hablamos%20de%20CORS%20(Cross,est%C3%A1%20alojado%20en%20otro%20origen." target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353930/CORS_go1ava.png" alt="CORS" height="50" /></a>
 <a href="https://getbootstrap.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353734/BOOTSTRAP_sxlttx.png" alt="BOOTSTRAP" height="50" /></a>
-<a href="https://cloud.google.com/icons?hl=es" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354282/GOOGLE_CLOUD_gxzcqu.jpg" alt="GOOGLE CLOUD" height="50" /></a>
+<a href="https://cloud.google.com/icons?hl=es" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354282/GOOGLE_CLOUD_gxzcqu.jpg" alt="GOOGLE CLOUD" height="50" /></a> 
 <a href="https://emotion.sh/docs/introduction" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699960463/emotion_page_logo_f5wm8h.png" height="50" /></a>  
 <a href="https://mui.com/material-ui/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962165/logo_MUI_dc7j6j.webp" height="50" /></a>
 <a href=" https://nextui.org/docs/components/modal" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962222/logo_NEXTUI_rm9oma.png" height="50" /></a>
 <a href="https://www.npmjs.com/package/@types/react-dom" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699961154/NPM_JS_rxtyqb.png" height="50" /></a>
-<a href="https://vitejs.dev/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962787/LOGO_VITEJS_ka5lsg.png" height="50" /></a>
 <a href="https://fontawesome.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962949/FONTAWESOME_LOGO_y6yfni.png" height="50" /></a>
 <a href="https://www.framer.com/motion/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699963249/LOGO_FRAMER_MOTION_brmajm.png" height="50" /></a>
 <a href="https://leafletjs.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699963449/LOGO_LEAFLETJS_obu6nu.png" height="30" /></a>
-
-
 </div>
 
 ## Methodology 📚
