@@ -52,28 +52,27 @@ Each of them fulfills a specific purpose in the development of your web applicat
 
 
 ## Languages and frameworks ✍🏻 
-<div> 
-<a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
+<div>  
 <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>
 <a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
 <a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>
-<a href="https://git-scm.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>
 <a href="https://learn.microsoft.com/es-es/dotnet/csharp/tour-of-csharp/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699350399/C_zdol40.png" alt="C#" height="50" /></a>
-<a href="https://www.microsoft.com/es-es/sql-server/sql-server-downloads" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SQL_SERVER_vhzlzo.png" alt="SQL SERVER" height="50" /></a>
+<a href="https://git-scm.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>
 <a href="https://github.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354303/GITHUB_fkv5hy.png" alt="GITHUB" height="50" /></a>
 <a href="https://vitejs.dev/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962787/LOGO_VITEJS_ka5lsg.png" height="50" /></a>
-<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a> 
+<a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a> 
+<a href="https://www.microsoft.com/es-es/sql-server/sql-server-downloads" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SQL_SERVER_vhzlzo.png" alt="SQL SERVER" height="50" /></a>
 </div>  
 
 ## Tools and libraries  🔨
 <div>
 <a href="https://code.visualstudio.com/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353985/VISUAL_AZULITO_jgfldr.png" alt="VISUAL STUDIO CODE" height="50" /></a>
 <a href="https://visualstudio.microsoft.com/es/downloads/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/VISUAL_MORADITO_egwm8n.png" alt="VISUAL STUDIO CODE 2020" height="50" /></a>
-<a href="https://trello.com/home" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/TRELLO_1_zyoau4.png" alt="TRELLO" height="50" /></a> 
+<a href="https://www.figma.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" /></a> 
+<a href="https://trello.com/home" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/TRELLO_1_zyoau4.png" alt="TRELLO" height="50" /></a>
+<a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>
 <a href="https://sweetalert2.github.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SWEETALERT_jmo7vw.png" alt="VISUAL STUDIO CODE 2020" height="50" /></a> 
 <a href="https://getbootstrap.com/docs/3.4/javascript/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="50" /></a>  
-<a href="https://www.figma.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" /></a>  
-<a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>
 <a href="https://swagger.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SWAGGER_t3tmhl.png" alt="SWAGGER" height="50" /></a>
 <a href="https://jwt.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353959/JWT_fu0k4s.png" alt="JWT" height="50" /></a>
 </div>
