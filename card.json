@@ -139,16 +139,15 @@
       "Id_Administrador": 1
     },
     {
-      "id": 1699981881875,
+      "id": 1699982585604,
       "Name_product": "Anthony",
-      "Id_Category": "Accessories",
-      "Price": "800",
+      "Id_Category": "1",
+      "Price": "789",
       "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1693985424/cld-sample-2.jpg",
-      "Description": "Roca",
-      "stock": "90",
+      "Description": "ñañañ",
+      "stock": "100",
       "Size": [],
-      "Id_Administrador": 1699981881875
+      "Id_Administrador": 1699982585604
     }
   ]
-  
 }

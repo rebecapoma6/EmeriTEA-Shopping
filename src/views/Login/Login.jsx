@@ -7,11 +7,7 @@ const SignInSide = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-<<<<<<< HEAD
-
-=======
  
->>>>>>> Rebeca
   const handleLoginSubmit = async (e) => {
     e.preventDefault();
     

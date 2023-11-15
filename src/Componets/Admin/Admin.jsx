@@ -376,7 +376,7 @@ const Admin = () => {
       <div className="product-list">
         {products.map((product) => (
           <ProductCard
-            key={product.Id_Product}
+            key={product.id}
             product={product}
             deleteProduct={deleteProduct}
             openEditModal={openEditModal}
