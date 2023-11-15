@@ -54,9 +54,10 @@ Each of them fulfills a specific purpose in the development of your web applicat
 ## Languages and frameworks ✍🏻 
 <div>  
 <a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>
-<a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
-<a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>
+<a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a> 
+<a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700048829/logo_js_picns8.png" alt="js" height="50" /></a> 
 <a href="https://learn.microsoft.com/es-es/dotnet/csharp/tour-of-csharp/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699350399/C_zdol40.png" alt="C#" height="50" /></a>
+<a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>
 <a href="https://git-scm.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>
 <a href="https://github.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354303/GITHUB_fkv5hy.png" alt="GITHUB" height="50" /></a>
 <a href="https://vitejs.dev/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962787/LOGO_VITEJS_ka5lsg.png" height="50" /></a>
