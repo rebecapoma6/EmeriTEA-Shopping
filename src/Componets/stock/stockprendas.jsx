@@ -71,7 +71,8 @@ const Stockprendas = ({ addToCart }) => {
   const [selectedSizes, setSelectedSizes] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:3000/products?category=Clothing")
+    //fetch("http://localhost:3000/products?category=Clothing")
+    fetch("http://localhost:3000/products?Id_Category=Clothing")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch products");

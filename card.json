@@ -148,6 +148,19 @@
       "stock": "90",
       "Size": [],
       "Id_Administrador": 1699981881875
+    },
+    {
+      "id": 1700036224835,
+      "Name_product": "aaaaa",
+      "Id_Category": "Clothing",
+      "Price": "15",
+      "Image": "",
+      "Description": "aaaa",
+      "stock": "5",
+      "Size": [
+        "XS"
+      ],
+      "Id_Administrador": 1700036224835
     }
   ]
 }
