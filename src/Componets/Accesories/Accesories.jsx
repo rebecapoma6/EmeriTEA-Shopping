@@ -46,7 +46,6 @@ const Accessories = ({ addToCart }) => {
                   <div className="precio">{product.Price} €</div>
                   <div className="description">{product.Descripton} </div>
                   <div className="carrito">
-                    {/* <button onClick={() => addToCart(product)}> 🛒</button> */}
                     <button onClick={() => handleAddToCart(product)}>🛒</button>
                   </div>
                 </div>

@@ -150,17 +150,30 @@
       "Id_Administrador": 1699981881875
     },
     {
-      "id": 1700036224835,
-      "Name_product": "aaaaa",
+      "id": 1700039229436,
+      "Name_product": "prueba 11",
       "Id_Category": "Clothing",
       "Price": "15",
-      "Image": "",
-      "Description": "aaaa",
-      "stock": "5",
+      "Image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698922934/IMG_7039_dy89dw.jpg",
+      "Description": "aaaaa",
+      "stock": "15",
       "Size": [
         "XS"
       ],
-      "Id_Administrador": 1700036224835
+      "Id_Administrador": 1700039229436
+    },
+    {
+      "id": 1700040041124,
+      "Name_product": "prueba 12",
+      "Id_Category": "Clothing",
+      "Price": "15",
+      "Image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698922934/IMG_7039_dy89dw.jpg",
+      "Description": "aaaaa",
+      "stock": "10",
+      "Size": [
+        "M"
+      ],
+      "Id_Administrador": 1700040041124
     }
   ]
 }

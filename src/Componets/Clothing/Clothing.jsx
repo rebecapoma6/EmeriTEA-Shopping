@@ -28,7 +28,7 @@ const Clothing = ({ addToCart }) => {
 
   const handleAddToCart = (product) => {
     // Agregar el producto al carrito con la talla seleccionada
-    addToCart({ ...product, size: selectedSize[product.id] || "" });
+    addToCart({ ...product, size: selectedSize[product.Id_Product] || "" });
   };
 
   return (

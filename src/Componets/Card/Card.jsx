@@ -9,11 +9,13 @@ import "./Card.css"; // Importa el archivo CSS con los estilos
 const ProductCard = ({ product, deleteProduct, openEditModal }) => {
   return (
     <Card className="card">
-      <CardMedia
-        alt={product.Name_product}
-        className="cardMedia"
-        image={product.Image}
-      />
+      {product.Image && (
+        <CardMedia
+          alt={product.Name_product}
+          className="cardMedia"
+          image={product.Image}
+        />
+      )}
 
       <CardContent className="CardContent">
         <Typography component="div" className="productTitle">
@@ -82,3 +84,4 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
 };
 
 export default ProductCard;
+
