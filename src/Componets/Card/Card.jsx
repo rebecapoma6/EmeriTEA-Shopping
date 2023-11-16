@@ -53,7 +53,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           </Typography>
         </div>
 
-        <Typography variant="body2" color="text.secondary">
+        {/* <Typography variant="body2" color="text.secondary">
           <strong>Size:</strong>{" "}
           {Array.isArray(product.Size) && product.Size.length > 0 ? (
             <span>{product.Size.join(", ")}</span>
@@ -61,6 +61,18 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
             <span>{product.Size}</span>
           )}
 
+        </Typography> */}
+        <Typography variant="body2" color="text.secondary">
+          {product.Id_Category === "2" && (
+            <>
+              <strong>Size:</strong>{" "}
+              {Array.isArray(product.Size) && product.Size.length > 0 ? (
+                <span>{product.Size.join(", ")}</span>
+              ) : (
+                <span>{product.Size}</span>
+              )}
+            </>
+          )}
         </Typography>
 
         <div className="actionButtons">
@@ -84,4 +96,3 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
 };
 
 export default ProductCard;
-

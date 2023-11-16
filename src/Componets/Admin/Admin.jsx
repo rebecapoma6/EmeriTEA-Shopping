@@ -61,7 +61,6 @@ const Admin = () => {
 
   const closeAddModal = () => {
     onOpenChange();
-    // onclose();
   };
 
   const closeEditModal = () => {
@@ -80,12 +79,11 @@ const Admin = () => {
      if (value === "1") {
        updatedProduct.Size = [];
      }
-
+     
      updatedProduct = {
       ...prevProduct,
       [name]: value,
     };
-   
      return updatedProduct;
     });
    };
@@ -269,7 +267,6 @@ const Admin = () => {
                 <label htmlFor="productName">Name:</label>
                 <input
                   type="text"
-                  // id="productName"
                   value={newProduct.Name_product}
                   onChange={(e) =>
                     handleInputChange("Name_product", e.target.value)
@@ -278,7 +275,6 @@ const Admin = () => {
 
                 <label htmlFor="productId_Category">Category:</label>
                 <select
-                  // id="productCategory"
                   value={newProduct.Id_Category}
                   onChange={(e) => {
                     handleInputChange("Id_Category", e.target.value);
@@ -299,7 +295,6 @@ const Admin = () => {
                   <>
                     <label htmlFor="productSize">Size:</label>
                     <select
-                      // id="productSize"
                       value={newProduct.Size}
                       onChange={(e) =>
                         handleInputChange("Size", e.target.value)
@@ -318,7 +313,6 @@ const Admin = () => {
                 <label htmlFor="productPrice">Price:</label>
                 <input
                   type="text"
-                  // id="productPrice"
                   value={newProduct.Price}
                   onChange={(e) => handleInputChange("Price", e.target.value)}
                 />
@@ -329,7 +323,6 @@ const Admin = () => {
                 </label>
                 <input
                   type="text"
-                  // id="productImage"
                   value={newProduct.Image}
                   onChange={(e) => handleInputChange("Image", e.target.value)}
                 />
@@ -345,7 +338,6 @@ const Admin = () => {
 
                 <label htmlFor="productDescription">Description:</label>
                 <textarea
-                  // id="productDescription"
                   value={newProduct.Description}
                   onChange={(e) =>
                     handleInputChange("Description", e.target.value)
@@ -357,7 +349,6 @@ const Admin = () => {
                 <label htmlFor="productStock">Stock:</label>
                 <input
                   type="text"
-                  // id="productStock"
                   value={newProduct.stock}
                   onChange={(e) => handleInputChange("stock", e.target.value)}
                 />
@@ -483,7 +474,6 @@ const Admin = () => {
                   <label htmlFor="productSizeDetails">Talla:</label>
                   {selectedProductDetails.Id_Category === "2" && (
                     <select
-                      // id="productSizeDetails"
                       value={
                         selectedProductDetails.Size &&
                         selectedProductDetails.Size.length > 0
