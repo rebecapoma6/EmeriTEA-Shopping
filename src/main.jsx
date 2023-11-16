@@ -18,6 +18,16 @@ const Main = () => {
     setCart((prevCart) => [...prevCart, product]);
   };
 
+
+  const updateQuantity = (productId, newQuantity) => {
+    // Actualiza la cantidad del producto con el nuevo valor
+    setCart((prevCart) =>
+      prevCart.map((product) =>
+        product.id === productId ? { ...product, quantity: newQuantity } : product
+      )
+    );
+  };
+
   return (
     <React.StrictMode>
       <BrowserRouter>
@@ -50,7 +60,8 @@ const Main = () => {
           />
           <Route
             path="/shopping"
-            element={<ViewShopping cart={cart} setCart={setCart} />}
+            // element={<ViewShopping cart={cart} setCart={setCart} />}
+            element={<ViewShopping cart={cart} setCart={setCart} updateQuantity={updateQuantity} />}
           />
         </Routes>
       </BrowserRouter>

@@ -91,29 +91,10 @@
   outline: none; /* Eliminar el borde al hacer clic */
 }
 
-
-
-.scroll-op {
+.js{
   width: 100%;
-  /* margin-top: 90px; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
-  /* height: auto; */
-  opacity: 0;
-  /* Empieza con opacidad en 0 para ocultar el elemento inicialmente */
-  transform: translateY(20px);
-  /* Empieza con una ligera traslación hacia abajo */
-  transition: opacity 1.5s ease, transform 1.5s ease;
-  /* Establece una transición suave */
-  /* border:2px solid black; */
-
 }
 
-.scroll-op.appear {
-  opacity: 1; /* Al añadir la clase "appear", el elemento aparecerá con una transición */
-  transform: translateY(0); /* Se mueve de vuelta a su posición original */
-}
 
 
 @media (max-width: 420px) {

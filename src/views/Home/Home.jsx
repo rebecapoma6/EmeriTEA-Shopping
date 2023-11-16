@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import "./Home.css";
 import CustomNavbar from "../../Componets/Navbar/Navbar";
 import Accessories from "../../Componets/Accesories/Accesories";
@@ -12,28 +12,28 @@ import Header from "../../Componets/Header/Header";
 
 const Home = ({ addToCart }) => {
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
-  const handleScroll = () => {
-    const elements = document.querySelectorAll('.scroll-op');
-    elements.forEach((element) => {
-      const elementTop = element.getBoundingClientRect().top;
-      const elementBottom = element.getBoundingClientRect().bottom;
+  // const handleScroll = () => {
+  //   const elements = document.querySelectorAll('.scroll-op');
+  //   elements.forEach((element) => {
+  //     const elementTop = element.getBoundingClientRect().top;
+  //     const elementBottom = element.getBoundingClientRect().bottom;
 
-      const isVisible = elementTop < window.innerHeight && elementBottom >= 0;
+  //     const isVisible = elementTop < window.innerHeight && elementBottom >= 0;
       
-      if (isVisible) {
-        element.classList.add('appear');
-      } else {
-        element.classList.remove('appear');
-      }
-    });
-  };
+  //     if (isVisible) {
+  //       element.classList.add('appear');
+  //     } else {
+  //       element.classList.remove('appear');
+  //     }
+  //   });
+  // };
 
   
   return (

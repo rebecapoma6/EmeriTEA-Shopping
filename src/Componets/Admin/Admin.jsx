@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure, } from "@nextui-org/react";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 import Swal from "sweetalert2";
 import "./Admin.css";
 import ProductCard from "../../Componets/Card/Card";
@@ -13,190 +21,23 @@ const Admin = () => {
 
   const [newProduct, setNewProduct] = useState({
     Name_product: "",
-    category: "",
-    price: "",
-    image: "",
-    description: "",
+    Id_Category: "",
+    Price: "",
+    Image: "",
+    Description: "",
     stock: "",
-    showSize: false,
-    size: ["", "", "", "", ""], // Inicializa el array con las tallas vacías
+    Size: [],
   });
-
-
-  const handleInputChange = (field, value) => {
-    setNewProduct((prevProduct) => {
-      const updatedProduct = { ...prevProduct, [field]: value };
-      return updatedProduct;
-    });
-  };
-
-  const handleSizeChange = (index, value) => {
-    setNewProduct((prevProduct) => {
-      const updatedSizes = [...prevProduct.size];
-      updatedSizes[index] = value;
-
-      return {
-        ...prevProduct,
-        size: updatedSizes,
-      };
-    });
-  };
-
 
   const resetNewProductForm = () => {
     setNewProduct({
       Name_product: "",
-      category: "",
-      price: "",
-      image: "",
-      description: "",
+      Id_Category: "",
+      Price: "",
+      Image: "",
+      Description: "",
       stock: "",
-      showSize: false,
-      size: ["", "", "", "", ""],
-    });
-  };
-
-  const openAddModal = () => {
-    onOpen();
-    resetNewProductForm();
-  };
-
-  const closeAddModal = () => {
-    onOpenChange();
-  };
-
-  const openEditModal = (product) => {
-    if (product && product.id) {
-      setIsEditModalOpen(true);
-      setSelectedProductDetails(product);
-      setShowEditSize(product.category === "Clothing");
-    } else {
-      console.error("Error: No se puede abrir el modal de edición, falta el ID del producto.");
-    }
-  };
-
-  const closeEditModal = () => {
-    setIsEditModalOpen(false);
-  };
-
-  const addProduct = () => {
-    const productData = {
-      Name_product: newProduct.Name_product,
-      category: newProduct.category,
-      price: newProduct.price,
-      image: newProduct.image,
-      description: newProduct.description,
-      stock: newProduct.stock,
-      sizes: newProduct.size,
-    };
-
-    fetch(`http://localhost:3000/products`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(productData),
-    })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Failed to add product");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setProducts([...products, data]);
-        closeAddModal();
-        resetNewProductForm();
-        Swal.fire("Success", "Product added successfully", "success");
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-        Swal.fire("Error", "Failed to add product", "error");
-      });
-  };
-
-  const deleteProduct = (id) => {
-    Swal.fire({
-      title: "¿Estás seguro?",
-      text: "Esta acción eliminará el producto. ¿Deseas continuar?",
-      icon: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Sí, eliminar",
-      cancelButtonText: "Cancelar",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        fetch(`http://localhost:3000/products/${id}`, {
-          method: "DELETE",
-        })
-          .then(() => {
-            const updatedProducts = products.filter(
-              (product) => product.id !== id
-            );
-            setProducts(updatedProducts);
-            Swal.fire("Éxito", "Producto eliminado con éxito", "success");
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            Swal.fire("Error", "No se ha podido eliminar el producto", "error");
-          });
-      }
-    });
-  };
-
-  const editProduct = () => {
-
-    Swal.fire({
-      title: "¿Estás seguro?",
-      text: "Esta acción editará el producto. ¿Deseas continuar?",
-      icon: "info",
-      showCancelButton: true,
-      confirmButtonColor: "#3085d6",
-      cancelButtonColor: "#d33",
-      confirmButtonText: "Sí, editar",
-      cancelButtonText: "Cancelar",
-
-    }).then((result) => {
-      if (result.isConfirmed) {
-        const editedProductData = {
-
-          Name_product: selectedProductDetails.Name_product,
-          category: selectedProductDetails.category,
-          price: selectedProductDetails.price,
-          image: selectedProductDetails.image,
-          description: selectedProductDetails.description,
-          stock: selectedProductDetails.stock,
-          size: showEditSize ? selectedProductDetails.size : [], // Incluye el array de tallas si showEditSize es true
-          showSize: showEditSize,
-        };
-
-        fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(editedProductData),
-        })
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error("Failed to edit the product");
-            }
-            closeEditModal();
-            setProducts((prevProducts) =>
-              prevProducts.map((product) =>
-                product.id === selectedProductDetails.id
-                  ? { ...product, ...editedProductData }
-                  : product
-              )
-            );
-            Swal.fire("Éxito", "Producto editado con éxito", "success");
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            Swal.fire("Error", "No se ha podido editar el producto", "error");
-          });
-      }
+      Size: [],
     });
   };
 
@@ -212,10 +53,186 @@ const Admin = () => {
       .catch((error) => console.error("Error:", error));
   }, []);
 
+  const openAddModal = () => {
+    onOpen();
+    resetNewProductForm();
+  };
+
+  const closeAddModal = () => {
+    onOpenChange();
+  };
+
+  const closeEditModal = () => {
+    setIsEditModalOpen(false);
+  };
+
+  const handleInputChange = (name, value) => {
+    setNewProduct((prevProduct) => {
+      let updatedProduct;
+      if (name === "Id_Category") {
+        updatedProduct = {
+          ...prevProduct,
+          Id_Category: value,
+          showSize: value === "Clothing",
+        };
+      } else if (name === "Size") {
+        updatedProduct = {
+          ...prevProduct,
+          Size: [...prevProduct.Size, value],
+        };
+      } else {
+        updatedProduct = {
+          ...prevProduct,
+          [name]: value,
+        };
+      }
+      return updatedProduct;
+    });
+  };
+  
+
+  const openEditModal = (product) => {
+    if (product && product.Id_Product) {
+      setIsEditModalOpen(true);
+      setSelectedProductDetails({ ...product });
+      setShowEditSize(product.Id_Category === "Clothing");
+    } else {
+      console.error(
+        "Error: No se puede abrir el modal de edición, falta el ID del producto."
+      );
+    }
+  };
+
+  const addProduct = () => {
+    const productData = {
+      id: Date.now(),
+      Name_product: newProduct.Name_product,
+      Id_Category: newProduct.Id_Category,
+      Price: newProduct.Price,
+      Image: newProduct.Image,
+      Description: newProduct.Description,
+      stock: newProduct.stock,
+      Size: newProduct.Size,
+      Id_Administrador: Date.now(),
+    };
+
+    fetch(`http://localhost:3000/products`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(productData),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          // throw new Error("Failed to add product");
+          return response.text().then((text) => {
+            throw new Error(text);
+          });
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setProducts([...products, data]);
+        closeAddModal();
+        resetNewProductForm();
+        Swal.fire("Success", "Product added successfully", "success");
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+        Swal.fire("Error", "Failed to add product", "error");
+      });
+  };
+
+    const deleteProduct = (id) => {
+      Swal.fire({
+        title: "¿Estás seguro?",
+        text: "Esta acción eliminará el producto. ¿Deseas continuar?",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",  
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Sí, eliminar",
+        cancelButtonText: "Cancelar",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          fetch(`http://localhost:3000/products/${id}`, {
+            method: "DELETE",
+          })
+            .then(() => {
+              const updatedProducts = products.filter(
+                (product) => product.id !== id
+              );
+              setProducts(updatedProducts);
+              Swal.fire("Éxito", "Producto eliminado con éxito", "success");
+            })
+            .catch((error) => {
+              console.error("Error:", error);
+              console.error("Status:", error.status);
+              console.error("Text:", error.statusText);
+              Swal.fire("Error", "No se ha podido eliminar el producto", "error");
+            });
+        }
+      });
+    };
+
+  const editProduct = () => {
+    Swal.fire({
+      title: "¿Estás seguro?",
+      text: "Esta acción editará el producto. ¿Deseas continuar?",
+      icon: "info",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sí, editar",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const editedProductData = {
+          Name_product: selectedProductDetails.Name_product,
+          Id_Category: selectedProductDetails.Id_Category,
+          Price: selectedProductDetails.Price,
+          Image: selectedProductDetails.Image,
+          description: selectedProductDetails.description,
+          stock: selectedProductDetails.stock,
+          Size: showEditSize ? selectedProductDetails.Size : [],
+          showSize: showEditSize,
+        };
+
+        fetch(
+          `http://localhost:3000/products/${selectedProductDetails.Id_Product}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(editedProductData),
+          }
+        )
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error("Failed to edit the product");
+            }
+            closeEditModal();
+            setProducts((prevProducts) =>
+              prevProducts.map((product) =>
+                product.Id_Product === selectedProductDetails.Id_Product
+                  ? { ...product, ...editedProductData }
+                  : product
+              )
+            );
+            Swal.fire("Éxito", "Producto editado con éxito", "success");
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            Swal.fire("Error", "No se ha podido editar el producto", "error");
+          });
+      }
+    });
+  };
 
   return (
     <>
-
       <div className="add-header">
         <h1>AÑADIR PRODUCTOS</h1>
       </div>
@@ -236,34 +253,35 @@ const Admin = () => {
             <ModalHeader className="flex flex-col gap-1">
               Add Product
             </ModalHeader>
+
             <ModalBody>
               <form className="add-2">
                 <label htmlFor="productName">Name:</label>
                 <input
                   type="text"
-                  id="productName"
+                  // id="productName"
                   value={newProduct.Name_product}
                   onChange={(e) =>
                     handleInputChange("Name_product", e.target.value)
                   }
                 />
 
-                <label htmlFor="productCategory">Category:</label>
+                <label htmlFor="productId_Category">Id_Category:</label>
                 <select
-                  id="productCategory"
-                  value={newProduct.category}
+                  // id="productCategory"
+                  value={newProduct.Id_Category}
                   onChange={(e) => {
-                    handleInputChange("category", e.target.value);
+                    handleInputChange("Id_Category", e.target.value);
                     if (e.target.value === "Clothing") {
-                      handleInputChange("showSize", true);
+                      handleInputChange("Id_Category", e.target.value);
                     } else {
-                      handleInputChange("showSize", false);
+                      handleInputChange("Id_Category", e.target.value);
                     }
                   }}
                 >
-                  <option value="">Select a category</option>
-                  <option value="Accessories">Accessories</option>
-                  <option value="Clothing">Clothing</option>
+                  <option value="">Select a Id_Category</option>
+                  <option value="1">Accessories</option>
+                  <option value="2">Clothing</option>
                 </select>
                 <br />
 
@@ -271,9 +289,11 @@ const Admin = () => {
                   <>
                     <label htmlFor="productSize">Size:</label>
                     <select
-                      id="productSize"
-                      value={newProduct.size}
-                      onChange={(e) => handleInputChange("size", e.target.value)}
+                      // id="productSize"
+                      value={newProduct.Size}
+                      onChange={(e) =>
+                        handleInputChange("Size", e.target.value)
+                      }
                     >
                       <option value="">Select a size</option>
                       <option value="XS">XS</option>
@@ -285,40 +305,40 @@ const Admin = () => {
                   </>
                 )}
 
-
                 <label htmlFor="productPrice">Price:</label>
                 <input
                   type="text"
-                  id="productPrice"
-                  value={newProduct.price}
-                  onChange={(e) => handleInputChange("price", e.target.value)}
+                  // id="productPrice"
+                  value={newProduct.Price}
+                  onChange={(e) => handleInputChange("Price", e.target.value)}
                 />
                 <br></br>
 
-                <label className="product-image" htmlFor="productImage">
+                <label className="product-Image" htmlFor="productImage">
                   Image URL:
                 </label>
                 <input
                   type="text"
-                  id="productImage"
-                  value={newProduct.image}
-                  onChange={(e) => handleInputChange("image", e.target.value)}
+                  // id="productImage"
+                  value={newProduct.Image}
+                  onChange={(e) => handleInputChange("Image", e.target.value)}
                 />
-                {newProduct.image && (
+
+                {newProduct.Image && (
                   <img
-                    src={newProduct.image}
+                    src={newProduct.Image}
                     alt="Product Image"
-                    className="product-image"
+                    className="product-Image"
                   />
                 )}
                 <br></br>
 
                 <label htmlFor="productDescription">Description:</label>
                 <textarea
-                  id="productDescription"
-                  value={newProduct.description}
+                  // id="productDescription"
+                  value={newProduct.Description}
                   onChange={(e) =>
-                    handleInputChange("description", e.target.value)
+                    handleInputChange("Description", e.target.value)
                   }
                 ></textarea>
 
@@ -327,15 +347,13 @@ const Admin = () => {
                 <label htmlFor="productStock">Stock:</label>
                 <input
                   type="text"
-                  id="productStock"
+                  // id="productStock"
                   value={newProduct.stock}
                   onChange={(e) => handleInputChange("stock", e.target.value)}
                 />
-
               </form>
-
-
             </ModalBody>
+
             <ModalFooter>
               <Button color="danger" variant="light" onClick={closeAddModal}>
                 Close
@@ -369,9 +387,11 @@ const Admin = () => {
           <ModalContent className="formSection">
             <>
               <ModalHeader>Edit Product</ModalHeader>
+              
               <ModalBody>
                 <form>
                   <label htmlFor="productName">Name:</label>
+
                   <input
                     type="text"
                     value={selectedProductDetails.Name_product}
@@ -384,52 +404,56 @@ const Admin = () => {
                   />
 
                   <label htmlFor="productCategory">Category:</label>
+
                   <select
-                    value={selectedProductDetails.category}
+                    value={selectedProductDetails.Id_Category}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        category: e.target.value,
+                        Id_Category: e.target.value,
                       })
                     }
                   >
                     <option value="">Select a </option>
-                    <option value="Accessories">Accessories</option>
-                    <option value="Clothing">Clothing</option>
+                    <option value="1">Accessories</option>
+                    <option value="2">Clothing</option>
                   </select>
+
                   <br></br>
 
                   <label htmlFor="productPrice">Price:</label>
+
                   <input
                     type="text"
-                    value={selectedProductDetails.price}
+                    value={selectedProductDetails.Price}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        price: e.target.value,
+                        Price: e.target.value,
                       })
                     }
                   />
 
                   <label htmlFor="productImage">Image URL:</label>
+
                   <input
                     type="text"
-                    value={selectedProductDetails.image}
+                    value={selectedProductDetails.Image}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        image: e.target.value,
+                        Image: e.target.value,
                       })
                     }
                   />
 
                   <label htmlFor="productDescription">Description:</label>
                   <textarea
-                    value={selectedProductDetails.description}
+                    value={selectedProductDetails.Description}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        description: e.target.value,
+                        Description: e.target.value,
                       })
                     }
                   ></textarea>
@@ -449,12 +473,17 @@ const Admin = () => {
                   <label htmlFor="productSizeDetails">Talla:</label>
                   {selectedProductDetails && (
                     <select
-                      id="productSizeDetails"
-                      value={selectedProductDetails.size && selectedProductDetails.size.length > 0 ? selectedProductDetails.size[0] : ""}
+                      // id="productSizeDetails"
+                      value={
+                        selectedProductDetails.Size &&
+                        selectedProductDetails.Size.length > 0
+                          ? selectedProductDetails.Size[0]
+                          : ""
+                      }
                       onChange={(e) =>
                         setSelectedProductDetails({
                           ...selectedProductDetails,
-                          size: [e.target.value],
+                          Size: [e.target.value],
                         })
                       }
                     >
@@ -469,6 +498,7 @@ const Admin = () => {
 
                 </form>
               </ModalBody>
+
               <ModalFooter>
                 <Button
                   className="btn-close"
