@@ -80,10 +80,10 @@ const ShoppingCart = ({ cart, removeFromCart, updateQuantity }) => {
        <tbody>
          {cart.map((product, index) => (
            <tr key={`${product.id}-${index}`}>
-             <td><img className="product-imagecart" src={product.image} alt={product.Name_product} /></td>
+             <td><img className="product-imagecart" src={product.Image} alt={product.Name_product} /></td>
              <td>{product.Name_product}</td>
-             <td>{product.price} €</td>
-             <td>{product.size}</td>
+             <td>{product.Price} €</td>
+             <td>{product.Size}</td>
              <td>
                <button onClick={() => updateQuantity(product.id, product.quantity - 1)}>-</button>
                {product.quantity}

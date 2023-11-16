@@ -8,7 +8,6 @@ import "./Clothing.css";
 
 const Clothing = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
-  const [selectedSize, setSelectedSize] = useState({});
 
   useEffect(() => {
     fetch("http://localhost:3000/products?Id_Category=Clothing")
@@ -18,17 +17,22 @@ const Clothing = ({ addToCart }) => {
         }
         return response.json();
       })
-      .then((data) => setProducts(data))
+      .then((data) => {
+        setProducts(data.map((product) => ({ ...product, selectedSize: "" })));
+      })
       .catch((error) => console.error("Error al cargar productos:", error));
   }, []);
 
-  const handleSizeChange = (productId, size) => {
-    setSelectedSize((prevSizes) => ({ ...prevSizes, [productId]: size }));
+  const handleSizeChange = (index, size) => {
+    setProducts((prevProducts) => {
+      const newProducts = [...prevProducts];
+      newProducts[index].selectedSize = size;
+      return newProducts;
+    });
   };
 
   const handleAddToCart = (product) => {
-    // Agregar el producto al carrito con la talla seleccionada
-    addToCart({ ...product, size: selectedSize[product.Id_Product] || "" });
+    addToCart({ ...product, size: product.selectedSize });
   };
 
   return (
@@ -41,7 +45,7 @@ const Clothing = ({ addToCart }) => {
           navigation={true}
           modules={[Pagination, Navigation]}
         >
-          {products.map((product) => (
+          {products.map((product, index) => (
             <SwiperSlide key={product.Id_Product}>
               <div className="swiper-slide">
                 <img src={product.Image} alt={product.Name_product} />
@@ -50,8 +54,8 @@ const Clothing = ({ addToCart }) => {
                   <div className="precio">{product.Price} €</div>
                   <select
                     className="tallaje"
-                    value={selectedSize[product.Id_Product] || ""}
-                    onChange={(e) => handleSizeChange(product.Id_Product, e.target.value)}
+                    value={product.selectedSize}
+                    onChange={(e) => handleSizeChange(index, e.target.value)}
                   >
                     <option value="">Seleccione Talla</option>
                     <option value="XS">XS</option>
@@ -75,6 +79,7 @@ const Clothing = ({ addToCart }) => {
 };
 
 export default Clothing;
+
 
 
 
