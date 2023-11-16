@@ -286,7 +286,7 @@ const Admin = () => {
                   }}
                 >
                   <option value="">Select a Category</option>
-                  <option value="1">Accessories</option>
+                  <option value="1">Accessory</option>
                   <option value="2">Clothing</option>
                 </select>
                 <br />
@@ -416,7 +416,7 @@ const Admin = () => {
                     }
                   >
                     <option value="">Select a </option>
-                    <option value="1">Accessories</option>
+                    <option value="1">Accessory</option>
                     <option value="2">Clothing</option>
                   </select>
 

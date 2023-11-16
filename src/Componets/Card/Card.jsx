@@ -27,7 +27,8 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           color="text.secondary"
           className="productCategory"
         >
-          <strong>Category:</strong> {product.Id_Category}
+          <strong>Category:</strong>{" "}
+          {product.Id_Category === "2" ? "Clothing" : "Accessory"}
         </Typography>
 
         <Typography
@@ -53,15 +54,6 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           </Typography>
         </div>
 
-        {/* <Typography variant="body2" color="text.secondary">
-          <strong>Size:</strong>{" "}
-          {Array.isArray(product.Size) && product.Size.length > 0 ? (
-            <span>{product.Size.join(", ")}</span>
-          ) : (
-            <span>{product.Size}</span>
-          )}
-
-        </Typography> */}
         <Typography variant="body2" color="text.secondary">
           {product.Id_Category === "2" && (
             <>
