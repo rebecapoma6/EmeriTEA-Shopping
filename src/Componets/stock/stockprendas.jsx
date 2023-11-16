@@ -192,10 +192,10 @@ const Stockprendas = ({ addToCart }) => {
   return (
     <>
       <div className="Prendas">Prendas</div>
-
+  
       <div className="product-list">
-        {products.map((product, index) => (
-          <div key={product.Id_Product}>
+      {products.map((product, index) => (
+           <div key={index}>
             <img
               src={product.Image}
               alt={product.name}
@@ -224,7 +224,7 @@ const Stockprendas = ({ addToCart }) => {
       </div>
     </>
   );
-};
-
-export default Stockprendas;
+  };
+  
+  export default Stockprendas;
 
