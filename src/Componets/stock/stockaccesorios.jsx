@@ -6,7 +6,7 @@ const Stockaccesorios = ({ addToCart }) => {
 
   useEffect(() => {
     //fetch("http://localhost:3000/products?category=Accessories")
-    fetch("http://localhost:3000/products?Id_Category=Accessories")
+    fetch("http://localhost:3000/products?Id_Category=1")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch accessories");
@@ -25,10 +25,10 @@ const Stockaccesorios = ({ addToCart }) => {
 
   return (
     <>
-      <div className="Accesorios">Accesorios</div>
+      <div className="Accesorios">Accesory</div>
       <div className="product-list">
         {accessories.map((product) => (
-          <div key={product.Id_Product}>
+          <div key={product.id}>
             <img
               src={product.Image}
               alt={product.Name_product}

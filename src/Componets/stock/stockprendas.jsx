@@ -7,7 +7,7 @@ const Stockprendas = ({ addToCart }) => {
 
   useEffect(() => {
     //fetch("http://localhost:3000/products?category=Clothing")
-    fetch("http://localhost:3000/products?Id_Category=Clothing")
+    fetch("http://localhost:3000/products?Id_Category=2")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch products");
@@ -32,11 +32,11 @@ const Stockprendas = ({ addToCart }) => {
 
   return (
     <>
-      <div className="Prendas">Prendas</div>
+      <div className="Prendas">Clothing</div>
 
       <div className="product-list">
         {products.map((product) => (
-          <div key={product.Id_Product}>
+          <div key={product.id}>
             <img
               src={product.Image}
               alt={product.name}
@@ -47,8 +47,8 @@ const Stockprendas = ({ addToCart }) => {
             <p>Descripcion: {product.Description} </p>
             <select
               className="tallaje"
-              value={selectedSizes[product.Id_Product] || ""}
-              onChange={(e) => handleSizeChange(product.Id_Product, e.target.value)}
+              value={selectedSizes[product.id] || ""}
+              onChange={(e) => handleSizeChange(product.id, e.target.value)}
             >
               <option value="">Seleccione Talla</option>
               <option value="XS">XS</option>
@@ -57,7 +57,7 @@ const Stockprendas = ({ addToCart }) => {
               <option value="L">L</option>
               <option value="XL">XL</option>
             </select>
-            <button onClick={() => addToCart({ ...product, Size: selectedSizes[product.Id_Product] })}>
+            <button onClick={() => addToCart({ ...product, Size: selectedSizes[product.id] })}>
               🛒
             </button>
           </div>
