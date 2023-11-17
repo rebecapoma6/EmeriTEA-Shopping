@@ -72,14 +72,14 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
             className="actionButtonD"
             onClick={() => deleteProduct(product.id)}
           >
-            Delete
+            Eliminar
           </Button>
 
           <Button
             className="actionButtonE"
             onClick={() => openEditModal(product)}
           >
-            Edit
+            Editar
           </Button>
         </div>
       </CardContent>

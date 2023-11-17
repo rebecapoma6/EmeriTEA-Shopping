@@ -33,7 +33,7 @@ const Clothing = ({ addToCart }) => {
 
   return (
     <div className="container-swiper">
-      <div className="Prendas">Clothing</div>
+      <div className="Prendas">Prendas</div>
 
       <div className="mySwiper">
         <Swiper
