@@ -104,6 +104,12 @@ const Admin = () => {
    }, [newProduct.Id_Category]);
 
   const addProduct = () => {
+    const token = getCookie("jwtToken");
+    if (!token) {
+      // Manejar caso en el que el token no está presente
+      console.error("Token no válido o no presente");
+      return;
+    }
     const productData = {
       id: Date.now(),
       Name_product: newProduct.Name_product,
@@ -116,9 +122,11 @@ const Admin = () => {
       Id_Administrador: Date.now(),
     };
 
-    fetch(`http://localhost:3000/products`, {
+    // fetch(`https://localhost:7032/Product/Post`, {
+      fetch(`http://localhost:3000/products`, {
       method: "POST",
       headers: {
+        // Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(productData),
@@ -239,6 +247,22 @@ const Admin = () => {
     });
   };
 
+  function getCookie(cname) {
+    const name = cname + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(';');
+    for (let i = 0; i < cookieArray.length; i++) {
+        let c = cookieArray[i];
+        while (c.charAt(0) === ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) === 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
   return (
     <>
       <div className="add-header">
@@ -247,7 +271,7 @@ const Admin = () => {
 
       <br />
       <Button className="modal-header" onClick={openAddModal}>
-        Add Product
+        Agregar Producto
       </Button>
 
       <Modal
@@ -259,12 +283,12 @@ const Admin = () => {
         <ModalContent className="add-form">
           <>
             <ModalHeader className="flex flex-col gap-1">
-              Add Product
+              Agregar Producto
             </ModalHeader>
 
             <ModalBody>
               <form className="add-2">
-                <label htmlFor="productName">Name:</label>
+                <label htmlFor="productName">Nombre:</label>
                 <input
                   type="text"
                   value={newProduct.Name_product}
@@ -273,7 +297,7 @@ const Admin = () => {
                   }
                 />
 
-                <label htmlFor="productId_Category">Category:</label>
+                <label htmlFor="productId_Category">Categoría:</label>
                 <select
                   value={newProduct.Id_Category}
                   onChange={(e) => {
@@ -285,22 +309,22 @@ const Admin = () => {
                     }
                   }}
                 >
-                  <option value="">Select a Category</option>
-                  <option value="1">Accessory</option>
-                  <option value="2">Clothing</option>
+                  <option value="">Seleccionar una categoría</option>
+                  <option value="1">Accesorio</option>
+                  <option value="2">Prenda</option>
                 </select>
                 <br />
 
                 {newProduct.showSize && (
                   <>
-                    <label htmlFor="productSize">Size:</label>
+                    <label htmlFor="productSize">Talla:</label>
                     <select
                       value={newProduct.Size}
                       onChange={(e) =>
                         handleInputChange("Size", e.target.value)
                       }
                     >
-                      <option value="">Select a size</option>
+                      <option value="">Seleccionar talla</option>
                       <option value="XS">XS</option>
                       <option value="S">S</option>
                       <option value="M">M</option>
@@ -310,7 +334,7 @@ const Admin = () => {
                   </>
                 )}
 
-                <label htmlFor="productPrice">Price:</label>
+                <label htmlFor="productPrice">Precio:</label>
                 <input
                   type="text"
                   value={newProduct.Price}
@@ -336,7 +360,7 @@ const Admin = () => {
                 )}
                 <br></br>
 
-                <label htmlFor="productDescription">Description:</label>
+                <label htmlFor="productDescription">Descripción:</label>
                 <textarea
                   value={newProduct.Description}
                   onChange={(e) =>
@@ -387,11 +411,11 @@ const Admin = () => {
         >
           <ModalContent className="formSection">
             <>
-              <ModalHeader>Edit Product</ModalHeader>
+              <ModalHeader>Editar Producto</ModalHeader>
 
               <ModalBody>
                 <form>
-                  <label htmlFor="productName">Name:</label>
+                  <label htmlFor="productName">Nombre:</label>
 
                   <input
                     type="text"
@@ -404,7 +428,7 @@ const Admin = () => {
                     }
                   />
 
-                  <label htmlFor="productCategory">Category:</label>
+                  <label htmlFor="productCategory">Categoría:</label>
 
                   <select
                     value={selectedProductDetails.Id_Category}
@@ -415,14 +439,14 @@ const Admin = () => {
                       })
                     }
                   >
-                    <option value="">Select a </option>
-                    <option value="1">Accessory</option>
-                    <option value="2">Clothing</option>
+                    <option value="">Seleccionar una categoría</option>
+                    <option value="1">Accesorio</option>
+                    <option value="2">Prenda</option>
                   </select>
 
                   <br></br>
 
-                  <label htmlFor="productPrice">Price:</label>
+                  <label htmlFor="productPrice">Precio:</label>
 
                   <input
                     type="text"
@@ -448,7 +472,7 @@ const Admin = () => {
                     }
                   />
 
-                  <label htmlFor="productDescription">Description:</label>
+                  <label htmlFor="productDescription">Descripción:</label>
                   <textarea
                     value={selectedProductDetails.Description}
                     onChange={(e) =>

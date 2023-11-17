@@ -29,7 +29,7 @@ const Accessories = ({ addToCart }) => {
 
   return (
     <div className="container-swiper">
-      <div className="Accesorios">Accesory</div>
+      <div className="Accesorios">Accesorio</div>
       <div className="mySwiperd">
         <Swiper
           slidesPerView={4}
