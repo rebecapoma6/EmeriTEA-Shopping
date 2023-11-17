@@ -132,6 +132,17 @@
       "stock": "25",
       "Size": [],
       "Id_Administrador": 1700210420104
+    },
+    {
+      "id": 1700253289217,
+      "Name_product": "PRUEBA 19",
+      "Id_Category": "2",
+      "Price": "10",
+      "Image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1700209341/IMG_7041_vrr6w9.jpg",
+      "Description": "PRUEBA",
+      "stock": "23",
+      "Size": "M",
+      "Id_Administrador": 1700253289217
     }
   ]
 }

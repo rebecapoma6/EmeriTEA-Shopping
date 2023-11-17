@@ -240,17 +240,17 @@ const Admin = () => {
   };
 
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
+  // const handleImageChange = (e) => {
+  //   const file = e.target.files[0];
   
-    if (file) {
-      const reader = new FileReader();
-      reader.onloadend = () => {
-        handleInputChange("Image", reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.onloadend = () => {
+  //       handleInputChange("Image", reader.result);
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // };
 
   return (
     <>
@@ -331,11 +331,28 @@ const Admin = () => {
                 />
                 <br></br>
 
-                <label htmlFor="productImage">Image:</label>
+                {/* <label htmlFor="productImage">Image:</label>
                 <input
                   type="file"
                   accept="image/*"
                   onChange={(e) => handleImageChange(e)}
+                />
+
+                {newProduct.Image && (
+                  <img
+                    src={newProduct.Image}
+                    alt="Product Image"
+                    className="product-Image"
+                  />
+                )} */}
+
+                <label className="product-Image" htmlFor="productImage">
+                  Image URL:
+                </label>
+                <input
+                  type="text"
+                  value={newProduct.Image}
+                  onChange={(e) => handleInputChange("Image", e.target.value)}
                 />
 
                 {newProduct.Image && (
