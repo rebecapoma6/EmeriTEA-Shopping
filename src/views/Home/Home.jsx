@@ -1,7 +1,8 @@
 import React from 'react';
 import "./Home.css";
 import CustomNavbar from "../../Componets/Navbar/Navbar";
-import Accessories from "../../Componets/Accesories/Accesories";
+// import Accessories from "../../Componets/Accesories/Accesory";
+import Accessories from "../../Componets/Accesories/Accesory.jsx";
 import Clothing from "../../Componets/Clothing/Clothing";
 import Footer from "../../Componets/Footer/Footer";
 import Solidary from "../../Componets/Solidary/Solidary";

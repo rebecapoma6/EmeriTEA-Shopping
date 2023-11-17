@@ -212,7 +212,7 @@ const Clothing = ({ addToCart }) => {
   const [selectedSize, setSelectedSize] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:3000/products?Id_Category=Clothing")
+    fetch("http://localhost:3000/products?Id_Category=2")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch products");
@@ -247,6 +247,7 @@ const Clothing = ({ addToCart }) => {
      }}
    >
     <div className="container-swiper">
+<<<<<<< HEAD
            <div className="Prendas">Prendas</div>
 
        <div className="mySwiper">
@@ -274,6 +275,35 @@ const Clothing = ({ addToCart }) => {
                      <option value="L">L</option>
                      <option value="XL">XL</option>
                    </select>
+=======
+      <div className="Prendas">Clothing</div>
+
+      <div className="mySwiper">
+        <Swiper
+          slidesPerView={4}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+        >
+          {products.map((product) => (
+            <SwiperSlide key={product.id}>
+              <div className="swiper-slide">
+                <img src={product.Image} alt={product.Name_product} />
+                <div className="description">
+                  <div className="nombre">{product.Name_product}</div>
+                  <div className="precio">{product.Price} €</div>
+                  <select
+                    className="tallaje"
+                    value={selectedSize[product.Id_Product] || ""}
+                    onChange={(e) => handleSizeChange(product.Id_Product, e.target.value)}
+                  >
+                    <option value="">Seleccione Talla</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                  </select>
+>>>>>>> origin/Dev
 
                    <div className="carrito">
                      <button onClick={() => handleAddToCart(product)}>🛒</button>

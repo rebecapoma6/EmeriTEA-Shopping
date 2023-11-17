@@ -37,7 +37,7 @@ const Accessories = ({ addToCart }) => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3000/products?Id_Category=Accessories')
+    fetch('http://localhost:3000/products?Id_Category=1')
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch accessories");
@@ -51,6 +51,7 @@ const Accessories = ({ addToCart }) => {
   }, []);
 
   return (
+<<<<<<< HEAD:src/Componets/Accesories/Accesories.jsx
     <>
       <div className="scroll-op">
         <div className="container-swiper">
@@ -77,6 +78,27 @@ const Accessories = ({ addToCart }) => {
                         </button>
                       </div>
                     </div>
+=======
+    <div className="container-swiper">
+      <div className="Accesorios">Accesory</div>
+      <div className="mySwiperd">
+        <Swiper
+          slidesPerView={4}
+          navigation={true}
+          modules={[Pagination, Navigation]}
+          className="mySwiper"
+        >
+          {accessories.map((product) => (
+            <SwiperSlide key={product.id}>
+              <div className="swiper-slide">
+                <img src={product.Image} alt={product.Name_product} />
+                <div className="description">
+                  <div className="nombre">{product.Name_product}</div>
+                  <div className="precio">{product.Price} €</div>
+                  <div className="description">{product.Descripton} </div>
+                  <div className="carrito">
+                    <button onClick={() => handleAddToCart(product)}>🛒</button>
+>>>>>>> origin/Dev:src/Componets/Accesories/Accesory.jsx
                   </div>
                 </SwiperSlide>
               ))}
