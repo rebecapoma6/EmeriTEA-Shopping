@@ -8,31 +8,27 @@ import "./Clothing.css";
 
 const Clothing = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
+  const [selectedSize, setSelectedSize] = useState({});
 
   useEffect(() => {
-    fetch("http://localhost:3000/products?Id_Category=Clothing")
+    fetch("http://localhost:3000/products?Id_Category=2")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch products");
         }
         return response.json();
       })
-      .then((data) => {
-        setProducts(data.map((product) => ({ ...product, selectedSize: "" })));
-      })
+      .then((data) => setProducts(data))
       .catch((error) => console.error("Error al cargar productos:", error));
   }, []);
 
-  const handleSizeChange = (index, size) => {
-    setProducts((prevProducts) => {
-      const newProducts = [...prevProducts];
-      newProducts[index].selectedSize = size;
-      return newProducts;
-    });
+  const handleSizeChange = (productId, size) => {
+    setSelectedSize((prevSizes) => ({ ...prevSizes, [productId]: size }));
   };
 
   const handleAddToCart = (product) => {
-    addToCart({ ...product, size: product.selectedSize });
+    // Agregar el producto al carrito con la talla seleccionada
+    addToCart({ ...product, size: selectedSize[product.Id_Product] || "" });
   };
 
   return (
@@ -45,8 +41,8 @@ const Clothing = ({ addToCart }) => {
           navigation={true}
           modules={[Pagination, Navigation]}
         >
-          {products.map((product, index) => (
-            <SwiperSlide key={product.Id_Product}>
+          {products.map((product) => (
+            <SwiperSlide key={product.id}>
               <div className="swiper-slide">
                 <img src={product.Image} alt={product.Name_product} />
                 <div className="description">
@@ -54,8 +50,8 @@ const Clothing = ({ addToCart }) => {
                   <div className="precio">{product.Price} €</div>
                   <select
                     className="tallaje"
-                    value={product.selectedSize}
-                    onChange={(e) => handleSizeChange(index, e.target.value)}
+                    value={selectedSize[product.Id_Product] || ""}
+                    onChange={(e) => handleSizeChange(product.Id_Product, e.target.value)}
                   >
                     <option value="">Seleccione Talla</option>
                     <option value="XS">XS</option>

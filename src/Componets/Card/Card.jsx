@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import "./Card.css"; // Importa el archivo CSS con los estilos
+import "./Card.css"; 
 
 const ProductCard = ({ product, deleteProduct, openEditModal }) => {
   return (
@@ -27,7 +27,8 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           color="text.secondary"
           className="productCategory"
         >
-          <strong>Category:</strong> {product.Id_Category}
+          <strong>Category:</strong>{" "}
+          {product.Id_Category === "2" ? "Clothing" : "Accessory"}
         </Typography>
 
         <Typography
@@ -35,7 +36,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           color="text.secondary"
           className="productDescription"
         >
-          <strong>Description:</strong> {product.Description}
+          <strong>DescriptionA:</strong> {product.Description}
         </Typography>
 
         <div className="unids">
@@ -54,13 +55,16 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
         </div>
 
         <Typography variant="body2" color="text.secondary">
-          <strong>Size:</strong>{" "}
-          {Array.isArray(product.Size) && product.Size.length > 0 ? (
-            <span>{product.Size.join(", ")}</span>
-          ) : (
-            <span>{product.Size}</span>
+          {product.Id_Category === "2" && (
+            <>
+              <strong>Size:</strong>{" "}
+              {Array.isArray(product.Size) && product.Size.length > 0 ? (
+                <span>{product.Size.join(", ")}</span>
+              ) : (
+                <span>{product.Size}</span>
+              )}
+            </>
           )}
-
         </Typography>
 
         <div className="actionButtons">
@@ -73,10 +77,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
 
           <Button
             className="actionButtonE"
-            onClick={() => {
-              
-              openEditModal(product);
-            }}
+            onClick={() => openEditModal(product)}
           >
             Edit
           </Button>
@@ -87,4 +88,3 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
 };
 
 export default ProductCard;
-

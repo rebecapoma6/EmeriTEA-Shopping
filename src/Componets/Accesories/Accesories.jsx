@@ -14,7 +14,7 @@ const Accessories = ({ addToCart }) => {
   };
 
   useEffect(() => {
-    fetch('http://localhost:3000/products?Id_Category=Accessories')
+    fetch('http://localhost:3000/products?Id_Category=1')
       .then((response) => {
         if (!response.ok) {
           throw new Error('Failed to fetch accessories');
@@ -38,7 +38,7 @@ const Accessories = ({ addToCart }) => {
           className="mySwiper"
         >
           {accessories.map((product) => (
-            <SwiperSlide key={product.Id_Product}>
+            <SwiperSlide key={product.id}>
               <div className="swiper-slide">
                 <img src={product.Image} alt={product.Name_product} />
                 <div className="description">
