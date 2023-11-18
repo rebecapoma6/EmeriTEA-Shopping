@@ -43,7 +43,7 @@ const Admin = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetch("https://localhost:7032/Product/GetProducts")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch products");

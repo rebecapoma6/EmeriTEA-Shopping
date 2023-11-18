@@ -53,6 +53,17 @@
       "stock": "80",
       "Size": [],
       "id": 1700216844840
+    },
+    {
+      "id": 1700331176250,
+      "Name_product": "eeee",
+      "Id_Category": "2",
+      "Price": "456",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/jttocii21x4kfmzi5pux.png",
+      "Description": "sasas",
+      "stock": "741",
+      "Size": "XS",
+      "Id_Administrador": 1700331176250
     }
   ]
 }
