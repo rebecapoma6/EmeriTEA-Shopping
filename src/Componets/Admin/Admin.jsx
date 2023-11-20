@@ -23,7 +23,7 @@ const Admin = () => {
     Name_product: "",
     Id_Category: "",
     Price: "",
-    Image: "",
+    image: "",
     Description: "",
     stock: "",
     Size: [],
@@ -36,7 +36,7 @@ const Admin = () => {
       Name_product: "",
       Id_Category: "",
       Price: "",
-      Image: "",
+      image: "",
       Description: "",
       stock: "",
       Size: [],
@@ -45,6 +45,10 @@ const Admin = () => {
   };
 
   useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = () => {
     fetch("https://localhost:7032/Product/GetProducts")
       .then((response) => {
         if (!response.ok) {
@@ -53,11 +57,10 @@ const Admin = () => {
         return response.json();
       })
       .then((data) => {
-        console.log(data[0]); // Imprime el primer elemento del array
         setProducts(data);
       })
-      .catch((error) => console.error("Error:", error));
-  }, []);
+      .catch((error) => console.error("Error fetching products:", error));
+  };
 
   const openAddModal = () => {
     onOpen();
@@ -72,29 +75,32 @@ const Admin = () => {
     setIsEditModalOpen(false);
   };
 
+
   const handleInputChange = (name, value) => {
     setNewProduct((prevProduct) => {
       if (name === "Size") {
         return {
           ...prevProduct,
-          [name]: value, // Actualiza las tallas seleccionadas
+          [name]: value,
         };
       }
   
       let updatedProduct = {
         ...prevProduct,
-        id_Category: value,
-        showSize: value === "2",
+        [name]: value,
       };
-  
-      if (value === "1") {
-        updatedProduct.Size = []; // Reinicia las tallas si la categoría es "Accesorio"
+ 
+      if (name === "Id_Category") {
+        updatedProduct.showSize = value === "2";
+        if (value === "1") {
+          updatedProduct.Size = [];
+        }
       }
   
       return updatedProduct;
     });
   };
-  
+
 
   useEffect(() => {
     setNewProduct((prevProduct) => {
@@ -114,24 +120,23 @@ const Admin = () => {
   const addProduct = () => {
     const token = getCookie("jwtToken");
     if (!token) {
-      // Manejar caso en el que el token no está presente
       console.error("Token no válido o no presente");
       return;
     }
     const productData = {
-      // id: Date.now(),
+
       Name_product: newProduct.Name_product,
       Id_Category: newProduct.Id_Category,
       Price: newProduct.Price,
-      Image: newProduct.Image,
+      Image: newProduct.image,
       Description: newProduct.Description,
       stock: newProduct.stock,
       Size: newProduct.Size,
-      // Id_Administrador: Date.now(),
+
     };
 
     fetch(`https://localhost:7032/Product/AddProductWithSizes`, {
-      // fetch(`http://localhost:3000/products`, {
+
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -152,6 +157,7 @@ const Admin = () => {
         closeAddModal();
         resetNewProductForm();
         Swal.fire("Success", "Product added successfully", "success");
+        fetchProducts();
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -368,10 +374,10 @@ const Admin = () => {
                 <input
                   type="text"
                   value={newProduct.image}
-                  onChange={(e) => handleInputChange("Image", e.target.value)}
+                  onChange={(e) => handleInputChange("image", e.target.value)}
                 />
 
-                {newProduct.Image && (
+                {newProduct.image && (
                   <img
                     src={newProduct.image}
                     alt="Product Image"
