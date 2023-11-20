@@ -177,12 +177,12 @@ const Admin = () => {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3000/products/${id}`, {
+        fetch(`https://localhost:7032/Product/Delete/${id}`, {
           method: "DELETE",
         })
           .then(() => {
             const updatedProducts = products.filter(
-              (product) => product.id_product !== id
+              (product) => product.id_Product !== id
             );
             setProducts(updatedProducts);
             Swal.fire("Éxito", "Producto eliminado con éxito", "success");
