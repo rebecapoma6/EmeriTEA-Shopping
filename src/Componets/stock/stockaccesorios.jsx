@@ -25,7 +25,7 @@ const Stockaccesorios = ({ addToCart }) => {
 
   return (
     <>
-      <div className="Accesorios">Accesorios</div>
+      <div className="Accesorios">Accesory</div>
       <div className="product-list">
         {accessories.map((product) => (
           <div key={product.id}>

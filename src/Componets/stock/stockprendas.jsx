@@ -32,7 +32,7 @@ const Stockprendas = ({ addToCart }) => {
 
   return (
     <>
-      <div className="Prendas">Prendas</div>
+      <div className="Prendas">Clothing</div>
 
       <div className="product-list">
         {products.map((product) => (

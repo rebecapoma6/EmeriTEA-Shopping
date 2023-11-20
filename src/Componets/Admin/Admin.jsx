@@ -19,10 +19,11 @@ const Admin = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const [newProduct, setNewProduct] = useState({
+    // Id_Product:0,
     Name_product: "",
     Id_Category: "",
     Price: "",
-    Image: "",
+    image: "",
     Description: "",
     stock: "",
     Size: [],
@@ -31,10 +32,11 @@ const Admin = () => {
 
   const resetNewProductForm = () => {
     setNewProduct({
+      // Id_product:0,
       Name_product: "",
       Id_Category: "",
       Price: "",
-      Image: "",
+      image: "",
       Description: "",
       stock: "",
       Size: [],
@@ -43,16 +45,22 @@ const Admin = () => {
   };
 
   useEffect(() => {
-    fetch("http://localhost:3000/products")
+    fetchProducts();
+  }, []);
+
+  const fetchProducts = () => {
+    fetch("https://localhost:7032/Product/GetProducts")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch products");
         }
         return response.json();
       })
-      .then((data) => setProducts(data))
-      .catch((error) => console.error("Error:", error));
-  }, []);
+      .then((data) => {
+        setProducts(data);
+      })
+      .catch((error) => console.error("Error fetching products:", error));
+  };
 
   const openAddModal = () => {
     onOpen();
@@ -67,58 +75,71 @@ const Admin = () => {
     setIsEditModalOpen(false);
   };
 
+
   const handleInputChange = (name, value) => {
     setNewProduct((prevProduct) => {
+      if (name === "Size") {
+        return {
+          ...prevProduct,
+          [name]: value,
+        };
+      }
+  
+      let updatedProduct = {
+        ...prevProduct,
+        [name]: value,
+      };
+ 
+      if (name === "Id_Category") {
+        updatedProduct.showSize = value === "2";
+        if (value === "1") {
+          updatedProduct.Size = [];
+        }
+      }
+  
+      return updatedProduct;
+    });
+  };
 
-     let updatedProduct = {
-       ...prevProduct,
-       Id_Category: value,
-       showSize: value === "2",
-     };
-   
-     if (value === "1") {
-       updatedProduct.Size = [];
-     }
-     
-     updatedProduct = {
-      ...prevProduct,
-      [name]: value,
-    };
-     return updatedProduct;
-    });
-   };
-   
-   useEffect(() => {
+
+  useEffect(() => {
     setNewProduct((prevProduct) => {
-     let updatedProduct = {
-       ...prevProduct,
-       showSize: prevProduct.Id_Category === "2",
-     };
-   
-     if (!updatedProduct.showSize) {
-       updatedProduct.Size = [];
-     }
-   
-     return updatedProduct;
+      let updatedProduct = {
+        ...prevProduct,
+        showSize: prevProduct.id_Category === "2",
+      };
+
+      if (!updatedProduct.showSize) {
+        updatedProduct.size = [];
+      }
+
+      return updatedProduct;
     });
-   }, [newProduct.Id_Category]);
+  }, [newProduct.id_Category]);
 
   const addProduct = () => {
+    const token = getCookie("jwtToken");
+    if (!token) {
+      console.error("Token no válido o no presente");
+      return;
+    }
     const productData = {
-      id: Date.now(),
+
       Name_product: newProduct.Name_product,
       Id_Category: newProduct.Id_Category,
       Price: newProduct.Price,
-      Image: newProduct.Image,
+      Image: newProduct.image,
       Description: newProduct.Description,
       stock: newProduct.stock,
       Size: newProduct.Size,
-      Id_Administrador: Date.now(),
+
     };
 
-    fetch(`http://localhost:3000/products`, {
+    fetch(`https://localhost:7032/Product/AddProductWithSizes`, {
+
       method: "POST",
       headers: {
+        Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(productData),
@@ -136,6 +157,7 @@ const Admin = () => {
         closeAddModal();
         resetNewProductForm();
         Swal.fire("Success", "Product added successfully", "success");
+        fetchProducts();
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -160,7 +182,7 @@ const Admin = () => {
         })
           .then(() => {
             const updatedProducts = products.filter(
-              (product) => product.id !== id
+              (product) => product.id_product !== id
             );
             setProducts(updatedProducts);
             Swal.fire("Éxito", "Producto eliminado con éxito", "success");
@@ -177,7 +199,7 @@ const Admin = () => {
 
   // Actualiza showSize y Size cuando Id_Category cambia en el modal de edición
   const openEditModal = (product) => {
-    if (product && product.id) {
+    if (product && product.id_product) {
       setIsEditModalOpen(true);
       let productDetails = { ...product };
       setSelectedProductDetails(productDetails);
@@ -207,7 +229,10 @@ const Admin = () => {
           Image: selectedProductDetails.Image,
           Description: selectedProductDetails.Description,
           stock: selectedProductDetails.stock,
-          Size: selectedProductDetails.Id_Category === "1" ? [] : selectedProductDetails.Size,
+          Size:
+            selectedProductDetails.Id_Category === "1"
+              ? []
+              : selectedProductDetails.Size,
         };
 
         fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
@@ -224,7 +249,7 @@ const Admin = () => {
             closeEditModal();
             setProducts((prevProducts) =>
               prevProducts.map((product) =>
-                product.id === selectedProductDetails.id
+                product.id_product === selectedProductDetails.id_product
                   ? { ...product, ...editedProductData }
                   : product
               )
@@ -239,18 +264,21 @@ const Admin = () => {
     });
   };
 
-
-  // const handleImageChange = (e) => {
-  //   const file = e.target.files[0];
-  
-  //   if (file) {
-  //     const reader = new FileReader();
-  //     reader.onloadend = () => {
-  //       handleInputChange("Image", reader.result);
-  //     };
-  //     reader.readAsDataURL(file);
-  //   }
-  // };
+  function getCookie(cname) {
+    const name = cname + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(";");
+    for (let i = 0; i < cookieArray.length; i++) {
+      let c = cookieArray[i];
+      while (c.charAt(0) === " ") {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) === 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
 
   return (
     <>
@@ -260,7 +288,7 @@ const Admin = () => {
 
       <br />
       <Button className="modal-header" onClick={openAddModal}>
-        Add Product
+        Agregar Producto
       </Button>
 
       <Modal
@@ -272,23 +300,23 @@ const Admin = () => {
         <ModalContent className="add-form">
           <>
             <ModalHeader className="flex flex-col gap-1">
-              Add Product
+              Agregar Producto
             </ModalHeader>
 
             <ModalBody>
               <form className="add-2">
-                <label htmlFor="productName">Name:</label>
+                <label htmlFor="productName">Nombre:</label>
                 <input
                   type="text"
-                  value={newProduct.Name_product}
+                  value={newProduct.name_product}
                   onChange={(e) =>
                     handleInputChange("Name_product", e.target.value)
                   }
                 />
 
-                <label htmlFor="productId_Category">Category:</label>
+                <label htmlFor="productId_Category">Categoría:</label>
                 <select
-                  value={newProduct.Id_Category}
+                  value={newProduct.id_Category}
                   onChange={(e) => {
                     handleInputChange("Id_Category", e.target.value);
                     if (e.target.value === "1") {
@@ -298,66 +326,60 @@ const Admin = () => {
                     }
                   }}
                 >
-                  <option value="">Select a Category</option>
-                  <option value="1">Accessory</option>
-                  <option value="2">Clothing</option>
+                  <option value="">Seleccionar una categoría</option>
+                  <option value="1">Accesorio</option>
+                  <option value="2">Prenda</option>
                 </select>
                 <br />
 
                 {newProduct.showSize && (
                   <>
-                    <label htmlFor="productSize">Size:</label>
+                    <label htmlFor="productSize">Talla:</label>
                     <select
-                      value={newProduct.Size}
-                      onChange={(e) =>
-                        handleInputChange("Size", e.target.value)
-                      }
+                      value={newProduct.size}
+                      onChange={(e) => {
+                        const selectedOptions = Array.from(
+                          e.target.selectedOptions,
+                          (option) => option.value
+                        );
+                        handleInputChange("Size", selectedOptions);
+                      }}
+                      multiple
                     >
-                      <option value="">Select a size</option>
                       <option value="XS">XS</option>
                       <option value="S">S</option>
                       <option value="M">M</option>
                       <option value="L">L</option>
                       <option value="XL">XL</option>
                     </select>
+                    {/* <div>
+                      {newProduct.Size.map((size) => (
+                        <span key={size}>{size}</span>
+                      ))}
+                    </div> */}
                   </>
                 )}
 
-                <label htmlFor="productPrice">Price:</label>
+                <label htmlFor="productPrice">Precio:</label>
                 <input
                   type="text"
-                  value={newProduct.Price}
+                  value={newProduct.price}
                   onChange={(e) => handleInputChange("Price", e.target.value)}
                 />
                 <br></br>
-
-                {/* <label htmlFor="productImage">Image:</label>
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => handleImageChange(e)}
-                />
-
-                {newProduct.Image && (
-                  <img
-                    src={newProduct.Image}
-                    alt="Product Image"
-                    className="product-Image"
-                  />
-                )} */}
 
                 <label className="product-Image" htmlFor="productImage">
                   Image URL:
                 </label>
                 <input
                   type="text"
-                  value={newProduct.Image}
-                  onChange={(e) => handleInputChange("Image", e.target.value)}
+                  value={newProduct.image}
+                  onChange={(e) => handleInputChange("image", e.target.value)}
                 />
 
-                {newProduct.Image && (
+                {newProduct.image && (
                   <img
-                    src={newProduct.Image}
+                    src={newProduct.image}
                     alt="Product Image"
                     className="product-Image"
                   />
@@ -366,9 +388,9 @@ const Admin = () => {
 
                 <br></br>
 
-                <label htmlFor="productDescription">Description:</label>
+                <label htmlFor="productDescription">Descripción:</label>
                 <textarea
-                  value={newProduct.Description}
+                  value={newProduct.description}
                   onChange={(e) =>
                     handleInputChange("Description", e.target.value)
                   }
@@ -400,7 +422,7 @@ const Admin = () => {
       <div className="product-list">
         {products.map((product) => (
           <ProductCard
-            key={product.id}
+            key={product.id_Product}
             product={product}
             deleteProduct={deleteProduct}
             openEditModal={openEditModal}
@@ -417,11 +439,11 @@ const Admin = () => {
         >
           <ModalContent className="formSection">
             <>
-              <ModalHeader>Edit Product</ModalHeader>
+              <ModalHeader>Editar Producto</ModalHeader>
 
               <ModalBody>
                 <form>
-                  <label htmlFor="productName">Name:</label>
+                  <label htmlFor="productName">Nombre:</label>
 
                   <input
                     type="text"
@@ -434,25 +456,25 @@ const Admin = () => {
                     }
                   />
 
-                  <label htmlFor="productCategory">Category:</label>
+                  <label htmlFor="productCategory">Categoría:</label>
 
                   <select
-                    value={selectedProductDetails.Id_Category}
+                    value={selectedProductDetails.id_Category}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        Id_Category: e.target.value,
+                        id_Category: e.target.value,
                       })
                     }
                   >
-                    <option value="">Select a </option>
-                    <option value="1">Accessory</option>
-                    <option value="2">Clothing</option>
+                    <option value="">Seleccionar una categoría</option>
+                    <option value="1">Accesorio</option>
+                    <option value="2">Prenda</option>
                   </select>
 
                   <br></br>
 
-                  <label htmlFor="productPrice">Price:</label>
+                  <label htmlFor="productPrice">Precio:</label>
 
                   <input
                     type="text"
@@ -478,7 +500,7 @@ const Admin = () => {
                     }
                   />
 
-                  <label htmlFor="productDescription">DescriptionAA:</label>
+                  <label htmlFor="productDescription">Descripción:</label>
                   <textarea
                     value={selectedProductDetails.Description}
                     onChange={(e) =>
@@ -502,12 +524,12 @@ const Admin = () => {
                   />
 
                   <label htmlFor="productSizeDetails">Talla:</label>
-                  {selectedProductDetails.Id_Category === "2" && (
+                  {selectedProductDetails.id_Category === 2 && (
                     <select
                       value={
-                        selectedProductDetails.Size &&
-                        selectedProductDetails.Size.length > 0
-                          ? selectedProductDetails.Size[0]
+                        selectedProductDetails.size &&
+                        selectedProductDetails.size.length > 0
+                          ? selectedProductDetails.size[0]
                           : ""
                       }
                       onChange={(e) =>
