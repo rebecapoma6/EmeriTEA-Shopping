@@ -106,7 +106,7 @@ Each of them fulfills a specific purpose in the development of your web applicat
 <a href="https://vitest.dev/" target="_blank">
 <img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700478996/logo_vitest_ehhtv0.png" width="200" heigth="50">
 
-## Test Screenshot ✔️
+## Tests Screenshot ✔️
 <img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700473154/test_front_bljfyv.png" width="200" heigth="50">
 <img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700478369/image_3_d0pb9k.png" width="200" heigth="50">
 
