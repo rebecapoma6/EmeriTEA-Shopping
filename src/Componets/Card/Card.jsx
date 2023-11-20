@@ -70,7 +70,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
         <div className="actionButtons">
           <Button
             className="actionButtonD"
-            onClick={() => deleteProduct(product.id_product)}
+            onClick={() => deleteProduct(product.id_Product)}
           >
             Eliminar
           </Button>
