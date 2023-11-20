@@ -103,8 +103,7 @@ Each of them fulfills a specific purpose in the development of your web applicat
 + The branch methodology allows us to work collaboratively and maintain an organized and efficient workflow. Furthermore, working in branches allows us to work freely without conflicting with the work of other team members. Additionally, it provides us with greater control and a record or history of the various changes being made. On the other hand, for added security when merging codes from different branches, we have implemented security rules on GitHub where it is necessary to create a pull request prior to the merge.
 
 ## Tests ☑️
-<a href="https://vitest.dev/" target="_blank">
-<img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700478996/logo_vitest_ehhtv0.png" width="200" heigth="50">
+<a href="https://vitest.dev/" target="_blank"><img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700478996/logo_vitest_ehhtv0.png" width="200" heigth="50">
 
 ## Tests Screenshot ✔️
 <img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700473154/test_front_bljfyv.png" width="200" heigth="50">
