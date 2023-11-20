@@ -19,7 +19,6 @@ const Admin = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const [newProduct, setNewProduct] = useState({
-    // Id_Product:0,
     Name_product: "",
     Id_Category: "",
     Price: "",
@@ -32,7 +31,6 @@ const Admin = () => {
 
   const resetNewProductForm = () => {
     setNewProduct({
-      // Id_product:0,
       Name_product: "",
       Id_Category: "",
       Price: "",
