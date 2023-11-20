@@ -69,39 +69,42 @@ const Admin = () => {
 
   const handleInputChange = (name, value) => {
     setNewProduct((prevProduct) => {
+      if (name === "Size") {
+        return {
+          ...prevProduct,
+          [name]: value, // Actualiza las tallas seleccionadas
+        };
+      }
+  
+      let updatedProduct = {
+        ...prevProduct,
+        Id_Category: value,
+        showSize: value === "2",
+      };
+  
+      if (value === "1") {
+        updatedProduct.Size = []; // Reinicia las tallas si la categoría es "Accesorio"
+      }
+  
+      return updatedProduct;
+    });
+  };
+  
 
-     let updatedProduct = {
-       ...prevProduct,
-       Id_Category: value,
-       showSize: value === "2",
-     };
-   
-     if (value === "1") {
-       updatedProduct.Size = [];
-     }
-     
-     updatedProduct = {
-      ...prevProduct,
-      [name]: value,
-    };
-     return updatedProduct;
-    });
-   };
-   
-   useEffect(() => {
+  useEffect(() => {
     setNewProduct((prevProduct) => {
-     let updatedProduct = {
-       ...prevProduct,
-       showSize: prevProduct.Id_Category === "2",
-     };
-   
-     if (!updatedProduct.showSize) {
-       updatedProduct.Size = [];
-     }
-   
-     return updatedProduct;
+      let updatedProduct = {
+        ...prevProduct,
+        showSize: prevProduct.Id_Category === "2",
+      };
+
+      if (!updatedProduct.showSize) {
+        updatedProduct.Size = [];
+      }
+
+      return updatedProduct;
     });
-   }, [newProduct.Id_Category]);
+  }, [newProduct.Id_Category]);
 
   const addProduct = () => {
     const token = getCookie("jwtToken");
@@ -111,7 +114,7 @@ const Admin = () => {
       return;
     }
     const productData = {
-      id: Date.now(),
+      // id: Date.now(),
       Name_product: newProduct.Name_product,
       Id_Category: newProduct.Id_Category,
       Price: newProduct.Price,
@@ -119,14 +122,14 @@ const Admin = () => {
       Description: newProduct.Description,
       stock: newProduct.stock,
       Size: newProduct.Size,
-      Id_Administrador: Date.now(),
+      // Id_Administrador: Date.now(),
     };
 
-    // fetch(`https://localhost:7032/Product/Post`, {
-      fetch(`http://localhost:3000/products`, {
+    fetch(`https://localhost:7032/Product/AddProductWithSizes`, {
+      // fetch(`http://localhost:3000/products`, {
       method: "POST",
       headers: {
-        // Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${token}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify(productData),
@@ -215,7 +218,10 @@ const Admin = () => {
           Image: selectedProductDetails.Image,
           Description: selectedProductDetails.Description,
           stock: selectedProductDetails.stock,
-          Size: selectedProductDetails.Id_Category === "1" ? [] : selectedProductDetails.Size,
+          Size:
+            selectedProductDetails.Id_Category === "1"
+              ? []
+              : selectedProductDetails.Size,
         };
 
         fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
@@ -250,18 +256,18 @@ const Admin = () => {
   function getCookie(cname) {
     const name = cname + "=";
     const decodedCookie = decodeURIComponent(document.cookie);
-    const cookieArray = decodedCookie.split(';');
+    const cookieArray = decodedCookie.split(";");
     for (let i = 0; i < cookieArray.length; i++) {
-        let c = cookieArray[i];
-        while (c.charAt(0) === ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) === 0) {
-            return c.substring(name.length, c.length);
-        }
+      let c = cookieArray[i];
+      while (c.charAt(0) === " ") {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) === 0) {
+        return c.substring(name.length, c.length);
+      }
     }
     return "";
-}
+  }
 
   return (
     <>
@@ -320,17 +326,26 @@ const Admin = () => {
                     <label htmlFor="productSize">Talla:</label>
                     <select
                       value={newProduct.Size}
-                      onChange={(e) =>
-                        handleInputChange("Size", e.target.value)
-                      }
+                      onChange={(e) => {
+                        const selectedOptions = Array.from(
+                          e.target.selectedOptions,
+                          (option) => option.value
+                        );
+                        handleInputChange("Size", selectedOptions);
+                      }}
+                      multiple
                     >
-                      <option value="">Seleccionar talla</option>
                       <option value="XS">XS</option>
                       <option value="S">S</option>
                       <option value="M">M</option>
                       <option value="L">L</option>
                       <option value="XL">XL</option>
                     </select>
+                    <div>
+                      {newProduct.Size.map((size) => (
+                        <span key={size}>{size}</span>
+                      ))}
+                    </div>
                   </>
                 )}
 

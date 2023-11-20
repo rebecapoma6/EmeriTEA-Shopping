@@ -11,7 +11,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
     <Card className="card">
       {product.image && (
         <CardMedia
-          alt={product.name_product}
+          alt={product.Name_product}
           className="cardMedia"
           image={product.image}
         />
@@ -28,7 +28,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           className="productCategory"
         >
           <strong>Categoría:</strong>{" "}
-          {product.id_Category === 2 ? "Prenda" : "Accesorio"}
+          {product.id_Category === "2" ? "Prenda" : "Accesorio"}
         </Typography>
 
         <Typography
@@ -36,7 +36,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           color="text.secondary"
           className="productDescription"
         >
-          <strong>Description:</strong> {product.description}
+          <strong>Descripción:</strong> {product.description}
         </Typography>
 
         <div className="unids">
@@ -45,7 +45,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
             color="text.secondary"
             className="productPrice"
           >
-            <strong>Price:</strong> {product.price}
+            <strong>Precio:</strong> {product.price}
             <strong>€</strong>
           </Typography>
 
@@ -54,10 +54,10 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           </Typography>
         </div>
 
-        {/* <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="text.secondary">
           {product.id_Category === "2" && (
             <>
-              <strong>Size:</strong>{" "}
+              <strong>Talla:</strong>{" "}
               {Array.isArray(product.size) && product.size.length > 0 ? (
                 <span>{product.size.join(", ")}</span>
               ) : (
@@ -65,23 +65,12 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
               )}
             </>
           )}
-        </Typography> */}
-
-<Typography variant="body2" color="text.secondary">
-          {product.size && product.size.length > 0 && (
-            <>
-              <strong>Sizes:</strong>{" "}
-              {product.size.map((size) => (
-                <span key={size}>{size}</span>
-              ))}
-            </>
-          )}
         </Typography>
 
         <div className="actionButtons">
           <Button
             className="actionButtonD"
-            onClick={() => deleteProduct(product.id_Product)}
+            onClick={() => deleteProduct(product.id_product)}
           >
             Eliminar
           </Button>
