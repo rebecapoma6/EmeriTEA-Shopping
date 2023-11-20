@@ -103,19 +103,22 @@ Each of them fulfills a specific purpose in the development of your web applicat
 
 ## Tests ☑️
 
+
 ## Test Screenshot ✔️
+<img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700473154/test_front_bljfyv.png" width="200" heigth="50">
+
 
 
 ## Installation Instructions💡
 
 1. Clone the repository from GitHub:
    ````bash
-   git clone https://github.com/tu-usuario/eCommerce-TEA-Merida.git
+   git clone https://github.com/tu-usuario/EmeriTEA-Shopping.git
    ```
 2. Access the frontend directory:
 
    ````bash
-   cd eCommerce-TEA-Merida/frontend
+   cd EmeriTEA-Shopping/frontend
    ```
 3. Install the dependencies:
 
@@ -139,5 +142,5 @@ Each of them fulfills a specific purpose in the development of your web applicat
 
 ## Authors 👨🏻‍💻👩🏻‍💻
 
-| [<img src="https://avatars.githubusercontent.com/u/132766257?v=4" width=100><br><sub>Javier Serrano</sub>](https://github.com/JaviSeC) | [<img src="https://avatars.githubusercontent.com/u/132651136?v=4" width=100><br><sub>Rebeca Poma</sub>](https://github.com/rebecapoma6) | [<img src="https://avatars.githubusercontent.com/u/119860615?s=400&u=26aa08049bc181d41a8eca0c67183531140bee8a&v=4" width=100><br><sub>Anthony Brayan</sub>](https://github.com/AnthonyBrayan)| [<img src="https://avatars.githubusercontent.com/u/132609974?v=4" width=100><br><sub>Celia Gil</sub>](https://github.com/CeliaGilPrieto) | [<img src="https://avatars.githubusercontent.com/u/132656487?v=4" width=100><br><sub>Juan Lumbi</sub>](https://github.com/juanlumbi) | [<img src="https://avatars.githubusercontent.com/u/132567624?v=4" width=100><br><sub>Francisco Manuel</sub>](https://github.com/franciscomanuelnietogarcia) | [<img src="https://avatars.githubusercontent.com/u/132655532?v=4" width=100><br><sub>Raúl Muñoz</sub>](https://github.com/raulmunozrayo) 
+| [<img src="https://avatars.githubusercontent.com/u/132766257?v=4" width=100><br><sub>Javier Serrano</sub>](https://github.com/JaviSeC) | [<img src="https://avatars.githubusercontent.com/u/132651136?v=4" width=100><br><sub>Rebeca Poma</sub>](https://github.com/rebecapoma6) | [<img src="https://avatars.githubusercontent.com/u/119860615?s=400&u=26aa08049bc181d41a8eca0c67183531140bee8a&v=4" width=100><br><sub>Anthony Brayan</sub>](https://github.com/AnthonyBrayan)| [<img src="https://avatars.githubusercontent.com/u/132609974?v=4" width=100><br><sub>Celia Gil</sub>](https://github.com/CeliaGilPrieto) | [<img src="https://avatars.githubusercontent.com/u/132656487?v=4" width=100><br><sub>Juan Lumbi</sub>](https://github.com/juanlumbi) | [<img src="https://avatars.githubusercontent.com/u/132567624?v=4" width=100><br><sub>Francisco Manuel</sub>](https://github.com/franciscomanuelnietogarcia) | [<img src="https://avatars.githubusercontent.com/u/132655532?v=4" width=100><br><sub>Raúl Muñoz</sub>](https://github.com/raulmunozrayo) | 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
