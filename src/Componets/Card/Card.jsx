@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import "./Card.css"; // Importa el archivo CSS con los estilos
+import "./Card.css"; 
 
 const ProductCard = ({ product, deleteProduct, openEditModal }) => {
   return (

@@ -36,11 +36,7 @@ const Clothing = ({ addToCart }) => {
       <div className="Prendas">Prendas</div>
 
       <div className="mySwiper">
-        <Swiper
-          slidesPerView={4}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-        >
+        <Swiper slidesPerView={4} navigation={true} modules={[Pagination, Navigation]}>
           {products.map((product) => (
             <SwiperSlide key={product.id}>
               <div className="swiper-slide">
@@ -60,7 +56,6 @@ const Clothing = ({ addToCart }) => {
                     <option value="L">L</option>
                     <option value="XL">XL</option>
                   </select>
-
                   <div className="carrito">
                     <button onClick={() => handleAddToCart(product)}>🛒</button>
                   </div>
@@ -75,6 +70,7 @@ const Clothing = ({ addToCart }) => {
 };
 
 export default Clothing;
+
 
 
 

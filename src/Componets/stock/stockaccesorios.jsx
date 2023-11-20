@@ -46,3 +46,4 @@ const Stockaccesorios = ({ addToCart }) => {
 };
 
 export default Stockaccesorios;
+

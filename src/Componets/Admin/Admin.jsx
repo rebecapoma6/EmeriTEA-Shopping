@@ -384,6 +384,8 @@ const Admin = () => {
                     className="product-Image"
                   />
                 )}
+
+
                 <br></br>
 
                 <label htmlFor="productDescription">Descripción:</label>

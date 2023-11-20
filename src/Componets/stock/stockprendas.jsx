@@ -69,4 +69,3 @@ const Stockprendas = ({ addToCart }) => {
 
 export default Stockprendas;
 
-
