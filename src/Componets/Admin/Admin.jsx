@@ -19,6 +19,7 @@ const Admin = () => {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   const [newProduct, setNewProduct] = useState({
+    // Id_Product:0,
     Name_product: "",
     Id_Category: "",
     Price: "",
@@ -31,6 +32,7 @@ const Admin = () => {
 
   const resetNewProductForm = () => {
     setNewProduct({
+      // Id_product:0,
       Name_product: "",
       Id_Category: "",
       Price: "",
@@ -50,7 +52,10 @@ const Admin = () => {
         }
         return response.json();
       })
-      .then((data) => setProducts(data))
+      .then((data) => {
+        console.log(data[0]); // Imprime el primer elemento del array
+        setProducts(data);
+      })
       .catch((error) => console.error("Error:", error));
   }, []);
 
@@ -78,7 +83,7 @@ const Admin = () => {
   
       let updatedProduct = {
         ...prevProduct,
-        Id_Category: value,
+        id_Category: value,
         showSize: value === "2",
       };
   
@@ -95,16 +100,16 @@ const Admin = () => {
     setNewProduct((prevProduct) => {
       let updatedProduct = {
         ...prevProduct,
-        showSize: prevProduct.Id_Category === "2",
+        showSize: prevProduct.id_Category === "2",
       };
 
       if (!updatedProduct.showSize) {
-        updatedProduct.Size = [];
+        updatedProduct.size = [];
       }
 
       return updatedProduct;
     });
-  }, [newProduct.Id_Category]);
+  }, [newProduct.id_Category]);
 
   const addProduct = () => {
     const token = getCookie("jwtToken");
@@ -171,7 +176,7 @@ const Admin = () => {
         })
           .then(() => {
             const updatedProducts = products.filter(
-              (product) => product.id !== id
+              (product) => product.id_product !== id
             );
             setProducts(updatedProducts);
             Swal.fire("Éxito", "Producto eliminado con éxito", "success");
@@ -188,7 +193,7 @@ const Admin = () => {
 
   // Actualiza showSize y Size cuando Id_Category cambia en el modal de edición
   const openEditModal = (product) => {
-    if (product && product.id) {
+    if (product && product.id_product) {
       setIsEditModalOpen(true);
       let productDetails = { ...product };
       setSelectedProductDetails(productDetails);
@@ -238,7 +243,7 @@ const Admin = () => {
             closeEditModal();
             setProducts((prevProducts) =>
               prevProducts.map((product) =>
-                product.id === selectedProductDetails.id
+                product.id_product === selectedProductDetails.id_product
                   ? { ...product, ...editedProductData }
                   : product
               )
@@ -297,7 +302,7 @@ const Admin = () => {
                 <label htmlFor="productName">Nombre:</label>
                 <input
                   type="text"
-                  value={newProduct.Name_product}
+                  value={newProduct.name_product}
                   onChange={(e) =>
                     handleInputChange("Name_product", e.target.value)
                   }
@@ -305,7 +310,7 @@ const Admin = () => {
 
                 <label htmlFor="productId_Category">Categoría:</label>
                 <select
-                  value={newProduct.Id_Category}
+                  value={newProduct.id_Category}
                   onChange={(e) => {
                     handleInputChange("Id_Category", e.target.value);
                     if (e.target.value === "1") {
@@ -325,7 +330,7 @@ const Admin = () => {
                   <>
                     <label htmlFor="productSize">Talla:</label>
                     <select
-                      value={newProduct.Size}
+                      value={newProduct.size}
                       onChange={(e) => {
                         const selectedOptions = Array.from(
                           e.target.selectedOptions,
@@ -341,18 +346,18 @@ const Admin = () => {
                       <option value="L">L</option>
                       <option value="XL">XL</option>
                     </select>
-                    <div>
+                    {/* <div>
                       {newProduct.Size.map((size) => (
                         <span key={size}>{size}</span>
                       ))}
-                    </div>
+                    </div> */}
                   </>
                 )}
 
                 <label htmlFor="productPrice">Precio:</label>
                 <input
                   type="text"
-                  value={newProduct.Price}
+                  value={newProduct.price}
                   onChange={(e) => handleInputChange("Price", e.target.value)}
                 />
                 <br></br>
@@ -362,13 +367,13 @@ const Admin = () => {
                 </label>
                 <input
                   type="text"
-                  value={newProduct.Image}
+                  value={newProduct.image}
                   onChange={(e) => handleInputChange("Image", e.target.value)}
                 />
 
                 {newProduct.Image && (
                   <img
-                    src={newProduct.Image}
+                    src={newProduct.image}
                     alt="Product Image"
                     className="product-Image"
                   />
@@ -377,7 +382,7 @@ const Admin = () => {
 
                 <label htmlFor="productDescription">Descripción:</label>
                 <textarea
-                  value={newProduct.Description}
+                  value={newProduct.description}
                   onChange={(e) =>
                     handleInputChange("Description", e.target.value)
                   }
@@ -409,7 +414,7 @@ const Admin = () => {
       <div className="product-list">
         {products.map((product) => (
           <ProductCard
-            key={product.id}
+            key={product.id_Product}
             product={product}
             deleteProduct={deleteProduct}
             openEditModal={openEditModal}
@@ -446,11 +451,11 @@ const Admin = () => {
                   <label htmlFor="productCategory">Categoría:</label>
 
                   <select
-                    value={selectedProductDetails.Id_Category}
+                    value={selectedProductDetails.id_Category}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        Id_Category: e.target.value,
+                        id_Category: e.target.value,
                       })
                     }
                   >
@@ -511,12 +516,12 @@ const Admin = () => {
                   />
 
                   <label htmlFor="productSizeDetails">Talla:</label>
-                  {selectedProductDetails.Id_Category === "2" && (
+                  {selectedProductDetails.id_Category === 2 && (
                     <select
                       value={
-                        selectedProductDetails.Size &&
-                        selectedProductDetails.Size.length > 0
-                          ? selectedProductDetails.Size[0]
+                        selectedProductDetails.size &&
+                        selectedProductDetails.size.length > 0
+                          ? selectedProductDetails.size[0]
                           : ""
                       }
                       onChange={(e) =>

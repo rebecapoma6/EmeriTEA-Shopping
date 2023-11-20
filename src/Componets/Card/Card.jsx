@@ -11,7 +11,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
     <Card className="card">
       {product.image && (
         <CardMedia
-          alt={product.Name_product}
+          alt={product.name_product}
           className="cardMedia"
           image={product.image}
         />
@@ -28,7 +28,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           className="productCategory"
         >
           <strong>Categoría:</strong>{" "}
-          {product.id_Category === "2" ? "Prenda" : "Accesorio"}
+          {product.id_Category === 2 ? "Prenda" : "Accesorio"}
         </Typography>
 
         <Typography
@@ -55,7 +55,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
         </div>
 
         <Typography variant="body2" color="text.secondary">
-          {product.id_Category === "2" && (
+          {product.id_Category === 2 && (
             <>
               <strong>Talla:</strong>{" "}
               {Array.isArray(product.size) && product.size.length > 0 ? (
