@@ -164,6 +164,11 @@ const Admin = () => {
   };
 
   const deleteProduct = (id) => {
+    const token = getCookie("jwtToken");
+    if (!token) {
+      console.error("Token no válido o no presente");
+      return;
+    }
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción eliminará el producto. ¿Deseas continuar?",
@@ -177,6 +182,9 @@ const Admin = () => {
       if (result.isConfirmed) {
         fetch(`https://localhost:7032/Product/Delete/${id}`, {
           method: "DELETE",
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
         })
           .then(() => {
             const updatedProducts = products.filter(
@@ -197,7 +205,7 @@ const Admin = () => {
 
   // Actualiza showSize y Size cuando Id_Category cambia en el modal de edición
   const openEditModal = (product) => {
-    if (product && product.id_product) {
+    if (product && product.id_Product) {
       setIsEditModalOpen(true);
       let productDetails = { ...product };
       setSelectedProductDetails(productDetails);
@@ -208,7 +216,7 @@ const Admin = () => {
     }
   };
 
-  const editProduct = () => {
+  const editProduct = (id) => {
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción editará el producto. ¿Deseas continuar?",
@@ -221,7 +229,7 @@ const Admin = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         const editedProductData = {
-          Name_product: selectedProductDetails.Name_product,
+          Name_product: selectedProductDetails.name_product,
           Id_Category: selectedProductDetails.Id_Category,
           Price: selectedProductDetails.Price,
           Image: selectedProductDetails.Image,
@@ -233,7 +241,7 @@ const Admin = () => {
               : selectedProductDetails.Size,
         };
 
-        fetch(`http://localhost:3000/products/${selectedProductDetails.id}`, {
+        fetch(`https://localhost:7032/Product/Put/${id}`, {
           method: "PUT",
           headers: {
             "Content-Type": "application/json",
@@ -247,7 +255,7 @@ const Admin = () => {
             closeEditModal();
             setProducts((prevProducts) =>
               prevProducts.map((product) =>
-                product.id_product === selectedProductDetails.id_product
+                product.id_Product === selectedProductDetails.id_Product
                   ? { ...product, ...editedProductData }
                   : product
               )
@@ -445,11 +453,11 @@ const Admin = () => {
 
                   <input
                     type="text"
-                    value={selectedProductDetails.Name_product}
+                    value={selectedProductDetails.name_product}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        Name_product: e.target.value,
+                        name_product: e.target.value,
                       })
                     }
                   />
@@ -476,11 +484,11 @@ const Admin = () => {
 
                   <input
                     type="text"
-                    value={selectedProductDetails.Price}
+                    value={selectedProductDetails.price}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        Price: e.target.value,
+                        price: e.target.value,
                       })
                     }
                   />
@@ -489,22 +497,22 @@ const Admin = () => {
 
                   <input
                     type="text"
-                    value={selectedProductDetails.Image}
+                    value={selectedProductDetails.image}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        Image: e.target.value,
+                        image: e.target.value,
                       })
                     }
                   />
 
                   <label htmlFor="productDescription">Descripción:</label>
                   <textarea
-                    value={selectedProductDetails.Description}
+                    value={selectedProductDetails.description}
                     onChange={(e) =>
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        Description: e.target.value,
+                        description: e.target.value,
                       })
                     }
                   ></textarea>
@@ -533,7 +541,7 @@ const Admin = () => {
                       onChange={(e) =>
                         setSelectedProductDetails({
                           ...selectedProductDetails,
-                          Size: [e.target.value],
+                          size: [e.target.value],
                         })
                       }
                     >
