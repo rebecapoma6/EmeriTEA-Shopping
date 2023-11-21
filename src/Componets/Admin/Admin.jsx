@@ -216,7 +216,12 @@ const Admin = () => {
     }
   };
 
-  const editProduct = (id) => {
+  const editProduct = () => {
+    const token = getCookie("jwtToken");
+    if (!token) {
+      console.error("Token no válido o no presente");
+      return;
+    }
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción editará el producto. ¿Deseas continuar?",
@@ -230,20 +235,21 @@ const Admin = () => {
       if (result.isConfirmed) {
         const editedProductData = {
           Name_product: selectedProductDetails.name_product,
-          Id_Category: selectedProductDetails.Id_Category,
-          Price: selectedProductDetails.Price,
-          Image: selectedProductDetails.Image,
-          Description: selectedProductDetails.Description,
+          Id_Category: selectedProductDetails.id_Category,
+          Price: selectedProductDetails.price,
+          Image: selectedProductDetails.image,
+          Description: selectedProductDetails.description,
           stock: selectedProductDetails.stock,
           Size:
-            selectedProductDetails.Id_Category === "1"
+            selectedProductDetails.id_Category === "1"
               ? []
-              : selectedProductDetails.Size,
+              : selectedProductDetails.size,
         };
 
-        fetch(`https://localhost:7032/Product/Put/${id}`, {
+        fetch(`https://localhost:7032/Product/Put/${selectedProductDetails.id_Product}`, {
           method: "PUT",
           headers: {
+            Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
           },
           body: JSON.stringify(editedProductData),
@@ -261,6 +267,7 @@ const Admin = () => {
               )
             );
             Swal.fire("Éxito", "Producto editado con éxito", "success");
+            fetchProducts();
           })
           .catch((error) => {
             console.error("Error:", error);
