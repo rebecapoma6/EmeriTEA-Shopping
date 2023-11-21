@@ -7,7 +7,7 @@ const Stockprendas = ({ addToCart }) => {
 
   useEffect(() => {
     //fetch("http://localhost:3000/products?category=Clothing")
-    fetch("http://localhost:3000/products?Id_Category=2")
+    fetch("https://localhost:7032/Product/GetProductsByCategory?categotyId=2")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch products");
@@ -32,23 +32,23 @@ const Stockprendas = ({ addToCart }) => {
 
   return (
     <>
-      <div className="Prendas">Clothing</div>
+      <div className="Prendas">Prendas</div>
 
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id}>
             <img
-              src={product.Image}
+              src={product.image}
               alt={product.name}
               className="product-image"
             />
-            <p>Name: {product.Name_product}</p>
-            <p>Price: {product.Price} €</p>
-            <p>Descripcion: {product.Description} </p>
+            <p>Name: {product.name_product}</p>
+            <p>Price: {product.price} €</p>
+            <p>Descripcion: {product.description} </p>
             <select
               className="tallaje"
-              value={selectedSizes[product.id] || ""}
-              onChange={(e) => handleSizeChange(product.id, e.target.value)}
+              value={selectedSizes[product.id_Product] || ""}
+              onChange={(e) => handleSizeChange(product.id_Product, e.target.value)}
             >
               <option value="">Seleccione Talla</option>
               <option value="XS">XS</option>
