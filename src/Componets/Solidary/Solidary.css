@@ -79,9 +79,14 @@
   text-align: center;
   margin-left: 15px;
   margin-right: 15px;
+ 
 }
 
-.textContainer button {
+.textContainer h2{
+   color: #081526;
+}
+
+/* .textContainer button:nth-child(1) {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
   font-size: 1.8em;
@@ -93,15 +98,56 @@
   height: 70px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
   transition: background 0.3s ease;
-}
+  cursor: pointer;
+} */
 
-.textContainer button:hover {
-  background-color: #ffffff; /* Cambia el color al pasar el ratón */
+/* .textContainer button:hover:nth-child(1) {
+  background-color: #ffffff;
   color: #081526;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 1); /* Cambia la sombra al pasar el ratón */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 1); 
+} */
+
+.shadow__btn {
+  padding: 10px 20px;
+  border: none;
+  font-size: 17px;
+  font-family: 'roboto';
+  color: #fff;
+  cursor: pointer;
+  border-radius: 7px;
+  letter-spacing: 4px;
+  font-weight: 500;
+  text-transform: uppercase;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
 }
 
-@media (max-width: 420px) and (min-height: 932px) {
+.shadow__btn {
+
+  background-color: #081526;
+
+  -webkit-box-shadow: 0 0 25px rgb(0,140,255);
+          box-shadow: 0 4px 25px rgb(0,140,255);
+}
+
+.shadow__btn:hover {
+  -webkit-box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
+          box-shadow: 0 0 5px rgb(0,140,255),
+              0 0 25px rgb(0,140,255),
+              0 0 50px rgb(0,140,255),
+              0 0 100px rgb(0,140,255);
+              background-color: #ffffff;
+              color: #081526;
+}
+
+@media (max-width: 430px) and (min-height: 932px) {
   .solidary {
     width: 100%;
   }
