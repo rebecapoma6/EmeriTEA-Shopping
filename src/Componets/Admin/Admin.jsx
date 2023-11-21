@@ -483,8 +483,36 @@ const Admin = () => {
                     <option value="2">Prenda</option>
                   </select>
 
-                  <br></br>
+                  <br/>
+                  <br />
 
+                  <label htmlFor="productSizeDetails">Talla:</label>
+                  {selectedProductDetails.id_Category === "2" && (
+                    <select
+                      value={
+                        selectedProductDetails.size &&
+                        selectedProductDetails.size.length > 0
+                          ? selectedProductDetails.size[0]
+                          : ""
+                      }
+                      onChange={(e) =>
+                        setSelectedProductDetails({
+                          ...selectedProductDetails,
+                          size: [e.target.value],
+                        })
+                      }
+                    >
+                      <option value="">Selecciona una talla</option>
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                    </select>
+                  )}
+
+                  <br />
+                  <br />
                   <label htmlFor="productPrice">Precio:</label>
 
                   <input
@@ -533,55 +561,6 @@ const Admin = () => {
                       })
                     }
                   />
-
-                  {/* <label htmlFor="productSizeDetails">Talla:</label>
-                  {selectedProductDetails.id_Category === "2" && (
-                    <select
-                      value={
-                        selectedProductDetails.size &&
-                          selectedProductDetails.size.length > 0
-                          ? selectedProductDetails.size[0]
-                          : ""
-                      }
-                      onChange={(e) =>
-                        setSelectedProductDetails({
-                          ...selectedProductDetails,
-                          size: [e.target.value],
-                        })
-                      }
-                    >
-                      <option value="">Selecciona una talla</option>
-                      <option value="XS">XS</option>
-                      <option value="S">S</option>
-                      <option value="M">M</option>
-                      <option value="L">L</option>
-                      <option value="XL">XL</option>
-                    </select>
-                  )} */}
-                  <label htmlFor="productSizeDetails">Talla:</label>
-                  {selectedProductDetails.id_Category === "2" && (
-                    <select
-                      value={
-                        selectedProductDetails.size &&
-                        selectedProductDetails.size.length > 0
-                          ? selectedProductDetails.size[0]
-                          : ""
-                      }
-                      onChange={(e) =>
-                        setSelectedProductDetails({
-                          ...selectedProductDetails,
-                          size: [e.target.value],
-                        })
-                      }
-                    >
-                      <option value="">Selecciona una talla</option>
-                      <option value="XS">XS</option>
-                      <option value="S">S</option>
-                      <option value="M">M</option>
-                      <option value="L">L</option>
-                      <option value="XL">XL</option>
-                    </select>
-                  )}
                 </form>
               </ModalBody>
 
@@ -598,7 +577,6 @@ const Admin = () => {
                   className="btn-save"
                   color="primary"
                   onClick={editProduct}
-                  // onClick={handleEdit}
                 >
                   Guardar
                 </Button>
