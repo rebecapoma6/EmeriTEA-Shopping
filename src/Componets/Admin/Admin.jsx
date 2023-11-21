@@ -82,19 +82,19 @@ const Admin = () => {
           [name]: value,
         };
       }
-  
+
       let updatedProduct = {
         ...prevProduct,
         [name]: value,
       };
- 
+
       if (name === "Id_Category") {
         updatedProduct.showSize = value === "2";
         if (value === "1") {
           updatedProduct.Size = [];
         }
       }
-  
+
       return updatedProduct;
     });
   };
@@ -534,7 +534,7 @@ const Admin = () => {
                     <select
                       value={
                         selectedProductDetails.size &&
-                        selectedProductDetails.size.length > 0
+                          selectedProductDetails.size.length > 0
                           ? selectedProductDetails.size[0]
                           : ""
                       }
