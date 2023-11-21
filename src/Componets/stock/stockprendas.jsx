@@ -19,7 +19,7 @@ const Stockprendas = ({ addToCart }) => {
         // Inicializa las tallas seleccionadas para cada producto
         const initialSelectedSizes = {};
         data.forEach((product) => {
-          initialSelectedSizes[product.id] = "";
+          initialSelectedSizes[product.id_Product] = ""; // Asegúrate de que el identificador sea correcto
         });
         setSelectedSizes(initialSelectedSizes);
       })
@@ -30,18 +30,19 @@ const Stockprendas = ({ addToCart }) => {
     setSelectedSizes((prevSizes) => ({ ...prevSizes, [productId]: size }));
   };
 
+  const handleAddToCart = (product) => {
+    // Agregar el producto al carrito con la talla seleccionada
+    addToCart({ ...product, size: selectedSizes[product.id_Product] }); // Asegúrate de que el nombre de la talla sea correcto
+  };
+
   return (
     <>
       <div className="Prendas">Prendas</div>
 
       <div className="product-list">
         {products.map((product) => (
-          <div key={product.id}>
-            <img
-              src={product.image}
-              alt={product.name}
-              className="product-image"
-            />
+          <div key={product.id_Product}>
+            <img src={product.image} alt={product.name} className="product-image" />
             <p>Name: {product.name_product}</p>
             <p>Price: {product.price} €</p>
             <p>Descripcion: {product.description} </p>
@@ -57,9 +58,7 @@ const Stockprendas = ({ addToCart }) => {
               <option value="L">L</option>
               <option value="XL">XL</option>
             </select>
-            <button onClick={() => addToCart({ ...product, Size: selectedSizes[product.id] })}>
-              🛒
-            </button>
+            <button onClick={() => handleAddToCart(product)}>🛒</button>
           </div>
         ))}
       </div>
@@ -68,4 +67,5 @@ const Stockprendas = ({ addToCart }) => {
 };
 
 export default Stockprendas;
+
 
