@@ -252,7 +252,7 @@ const ShoppingCart = ({ cart, removeFromCart, updateQuantity }) => {
   };
 
   const calculateSubtotal = (product) => {
-    return product.Price * product.quantity;
+    return product.price * product.quantity;
   };
 
   const calculateTotal = () => {
