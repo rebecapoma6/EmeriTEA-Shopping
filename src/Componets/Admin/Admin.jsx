@@ -17,6 +17,7 @@ const Admin = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [selectedProductDetails, setSelectedProductDetails] = useState(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [showEditSize, setShowEditSize] = useState(false);
 
   const [newProduct, setNewProduct] = useState({
     Name_product: "",
@@ -203,7 +204,7 @@ const Admin = () => {
     if (product && product.id_Product) {
       setIsEditModalOpen(true);
       let productDetails = { ...product };
-
+      setShowEditSize(productDetails.id_Category === 2);
       setSelectedProductDetails(productDetails);
     } else {
       console.error(
@@ -331,10 +332,10 @@ const Admin = () => {
                   value={newProduct.id_Category}
                   onChange={(e) => {
                     handleInputChange("Id_Category", e.target.value);
-                    if (e.target.value === "1") {
-                      handleInputChange("1", e.target.value);
+                    if (e.target.value === 1) {
+                      handleInputChange(1, e.target.value);
                     } else {
-                      handleInputChange("2", e.target.value);
+                      handleInputChange(2, e.target.value);
                     }
                   }}
                 >
@@ -448,7 +449,7 @@ const Admin = () => {
           isDismissable={false}
           className="nextui-modal"
         >
-          <ModalContent className="formSection">
+          <ModalContent className="add-form formSection">
             <>
               <ModalHeader>Editar Producto</ModalHeader>
 
@@ -468,41 +469,40 @@ const Admin = () => {
                   />
 
                   <label htmlFor="productCategory">Categoría:</label>
-
                   <select
                     value={selectedProductDetails.id_Category}
-                    onChange={(e) =>
+                    onChange={(e) => {
+                      const newCategoryId = e.target.value;
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        id_Category: e.target.value,
-                      })
-                    }
+                        id_Category: newCategoryId,
+                      });
+                      setShowEditSize(newCategoryId === "2");
+                    }}
                   >
                     <option value="">Seleccionar una categoría</option>
                     <option value="1">Accesorio</option>
                     <option value="2">Prenda</option>
                   </select>
 
-                  <br/>
+                  <br />
                   <br />
 
                   <label htmlFor="productSizeDetails">Talla:</label>
-                  {selectedProductDetails.id_Category === "2" && (
+                  {showEditSize && (
                     <select
-                      value={
-                        selectedProductDetails.size &&
-                        selectedProductDetails.size.length > 0
-                          ? selectedProductDetails.size[0]
-                          : ""
-                      }
+                      multiple
+                      value={selectedProductDetails.size || []}
                       onChange={(e) =>
                         setSelectedProductDetails({
                           ...selectedProductDetails,
-                          size: [e.target.value],
+                          size: Array.from(
+                            e.target.selectedOptions,
+                            (option) => option.value
+                          ),
                         })
                       }
                     >
-                      <option value="">Selecciona una talla</option>
                       <option value="XS">XS</option>
                       <option value="S">S</option>
                       <option value="M">M</option>
