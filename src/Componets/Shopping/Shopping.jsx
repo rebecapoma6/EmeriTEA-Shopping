@@ -288,7 +288,7 @@ const ShoppingCart = ({ cart, removeFromCart, updateQuantity }) => {
               <td><img className="product-imagecart" src={product.image} alt={product.name_product} /></td>
               <td>{product.name_product}</td>
               <td>{product.price} €</td>
-              <td>{product.Size}</td>
+              <td>{product.size}</td>
               <td>
                 <button onClick={() => updateQuantity(product.id_Product, product.quantity - 1)}>-</button>
                 {product.quantity}
