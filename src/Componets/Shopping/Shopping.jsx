@@ -284,10 +284,10 @@ const ShoppingCart = ({ cart, removeFromCart, updateQuantity }) => {
         </thead>
         <tbody>
           {cart.map((product, index) => (
-            <tr key={`${product.Id_Product}-${index}`}>
+            <tr key={`${product.id_Product}-${index}`}>
               <td><img className="product-imagecart" src={product.Image} alt={product.Name_product} /></td>
-              <td>{product.Name_product}</td>
-              <td>{product.Price} €</td>
+              <td>{product.name_product}</td>
+              <td>{product.price} €</td>
               <td>{product.Size}</td>
               <td>
                 <button onClick={() => updateQuantity(product.Id_Product, product.quantity - 1)}>-</button>
