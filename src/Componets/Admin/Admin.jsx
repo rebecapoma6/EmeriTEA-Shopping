@@ -73,7 +73,6 @@ const Admin = () => {
     setIsEditModalOpen(false);
   };
 
-
   const handleInputChange = (name, value) => {
     setNewProduct((prevProduct) => {
       if (name === "Size") {
@@ -99,7 +98,6 @@ const Admin = () => {
     });
   };
 
-
   useEffect(() => {
     setNewProduct((prevProduct) => {
       let updatedProduct = {
@@ -122,7 +120,6 @@ const Admin = () => {
       return;
     }
     const productData = {
-
       Name_product: newProduct.Name_product,
       Id_Category: newProduct.Id_Category,
       Price: newProduct.Price,
@@ -130,11 +127,9 @@ const Admin = () => {
       Description: newProduct.Description,
       stock: newProduct.stock,
       Size: newProduct.Size,
-
     };
 
     fetch(`https://localhost:7032/Product/AddProductWithSizes`, {
-
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -208,6 +203,7 @@ const Admin = () => {
     if (product && product.id_Product) {
       setIsEditModalOpen(true);
       let productDetails = { ...product };
+
       setSelectedProductDetails(productDetails);
     } else {
       console.error(
@@ -246,14 +242,17 @@ const Admin = () => {
               : selectedProductDetails.size,
         };
 
-        fetch(`https://localhost:7032/Product/Put/${selectedProductDetails.id_Product}`, {
-          method: "PUT",
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(editedProductData),
-        })
+        fetch(
+          `https://localhost:7032/Product/Put/${selectedProductDetails.id_Product}`,
+          {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(editedProductData),
+          }
+        )
           .then((response) => {
             if (!response.ok) {
               throw new Error("Failed to edit the product");
@@ -398,7 +397,6 @@ const Admin = () => {
                   />
                 )}
 
-
                 <br></br>
 
                 <label htmlFor="productDescription">Descripción:</label>
@@ -536,12 +534,36 @@ const Admin = () => {
                     }
                   />
 
-                  <label htmlFor="productSizeDetails">Talla:</label>
+                  {/* <label htmlFor="productSizeDetails">Talla:</label>
                   {selectedProductDetails.id_Category === "2" && (
                     <select
                       value={
                         selectedProductDetails.size &&
                           selectedProductDetails.size.length > 0
+                          ? selectedProductDetails.size[0]
+                          : ""
+                      }
+                      onChange={(e) =>
+                        setSelectedProductDetails({
+                          ...selectedProductDetails,
+                          size: [e.target.value],
+                        })
+                      }
+                    >
+                      <option value="">Selecciona una talla</option>
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                    </select>
+                  )} */}
+                  <label htmlFor="productSizeDetails">Talla:</label>
+                  {selectedProductDetails.id_Category === "2" && (
+                    <select
+                      value={
+                        selectedProductDetails.size &&
+                        selectedProductDetails.size.length > 0
                           ? selectedProductDetails.size[0]
                           : ""
                       }
@@ -576,6 +598,7 @@ const Admin = () => {
                   className="btn-save"
                   color="primary"
                   onClick={editProduct}
+                  // onClick={handleEdit}
                 >
                   Guardar
                 </Button>
