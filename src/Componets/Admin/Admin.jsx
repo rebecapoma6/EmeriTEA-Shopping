@@ -537,7 +537,7 @@ const Admin = () => {
                   />
 
                   <label htmlFor="productSizeDetails">Talla:</label>
-                  {selectedProductDetails.id_Category === 2 && (
+                  {selectedProductDetails.id_Category === "2" && (
                     <select
                       value={
                         selectedProductDetails.size &&
