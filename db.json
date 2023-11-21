@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "description": "Producto 1",
+      "price": 19.99
+    },
+    {
+      "id": 2,
+      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698096158/117578482_1_nia0m7.jpg",
+      "description": "Producto 2",
+      "price": 29.99
+    }
+  ]
+}
