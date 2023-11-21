@@ -285,18 +285,18 @@ const ShoppingCart = ({ cart, removeFromCart, updateQuantity }) => {
         <tbody>
           {cart.map((product, index) => (
             <tr key={`${product.id_Product}-${index}`}>
-              <td><img className="product-imagecart" src={product.Image} alt={product.Name_product} /></td>
+              <td><img className="product-imagecart" src={product.image} alt={product.name_product} /></td>
               <td>{product.name_product}</td>
               <td>{product.price} €</td>
               <td>{product.Size}</td>
               <td>
-                <button onClick={() => updateQuantity(product.Id_Product, product.quantity - 1)}>-</button>
+                <button onClick={() => updateQuantity(product.id_Product, product.quantity - 1)}>-</button>
                 {product.quantity}
-                <button onClick={() => updateQuantity(product.Id_Product, product.quantity + 1)}>+</button>
+                <button onClick={() => updateQuantity(product.id_Product, product.quantity + 1)}>+</button>
               </td>
               <td>{calculateSubtotal(product)} €</td>
               <td>
-                <button className="remove-button" onClick={() => removeFromCart(product.Id_Product)}>
+                <button className="remove-button" onClick={() => removeFromCart(product.id_Product)}>
                   <FontAwesomeIcon icon={faTrashAlt} />
                 </button>
               </td>
