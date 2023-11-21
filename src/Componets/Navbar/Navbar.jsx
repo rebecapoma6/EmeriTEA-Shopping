@@ -1,11 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const CustomNavbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsScrolled(scrollY > 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Limpiar el evento al desmontar el componente
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+
+
+
   return (
     <div className="mainnavbar">
-      <div className="navbar">
+      {/* <div className="navbar"> */}
+      <div className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div>
           <a
             href="https://emeritea.com/quienes-somos/"
@@ -25,7 +45,7 @@ const CustomNavbar = () => {
 
           <div className="dropdown-content2">
             <Link to="/donaciones">Haz Tu Donación!</Link>
-            <Link to="">Haz tu regalo Solidario!</Link>
+            <Link to="/Solidary">Haz tu regalo Solidario!</Link>
           </div>
         </div>
 
