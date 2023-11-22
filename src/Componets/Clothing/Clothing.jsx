@@ -50,7 +50,7 @@
 //                   <div className="precio">Precio: {product.price} €</div>
 //                   <div className="descripcion">Descripción: {product.description}</div>
 
-               
+
 
 //                   <div className="tallas">
 //                     <select value={selectedSize} onChange={(e) => handleSizeChange(e.target.value)}>
@@ -89,7 +89,7 @@ import "./Clothing.css";
 
 const Clothing = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
-  const [selectedSizes, setSelectedSizes] = useState({});
+  const [selectedSize, setSelectedSize] = useState({});
 
   useEffect(() => {
     fetch("http://localhost:3000/products?category=Clothing")
@@ -104,12 +104,12 @@ const Clothing = ({ addToCart }) => {
   }, []);
 
   const handleSizeChange = (productId, size) => {
-    setSelectedSizes((prevSizes) => ({ ...prevSizes, [productId]: size }));
+    setSelectedSize((prevSizes) => ({ ...prevSizes, [productId]: size }));
   };
 
   const handleAddToCart = (product) => {
     // Agregar el producto al carrito con la talla seleccionada
-    addToCart({ ...product, size: selectedSizes[product.id] || "" });
+    addToCart({ ...product, size: selectedSize[product.id] || "" });
   };
 
   return (
@@ -123,17 +123,25 @@ const Clothing = ({ addToCart }) => {
           modules={[Pagination, Navigation]}
         >
           {products.map((product) => (
-            <SwiperSlide key={product.id}>
+            <SwiperSlide key={product.Id_Product}>
               <div className="swiper-slide">
-                <img src={product.image} alt={product.name} />
+                <img src={product.Image} alt={product.Name_product} />
                 <div className="description">
-                  <div className="nombre">Nombre: {product.Name_product}</div>
-                  <div className="precio">Precio: {product.price} €</div>
-                  <div className="descripcion">DescripciónAA: {product.description}</div>
-                  {Array.isArray(product.size) && product.size.length > 0 && (
-                    <div className="talla">Talla: {product.size.join(', ')}</div>
-                  )}
-                  
+                  <div className="nombre">{product.Name_product}</div>
+                  <div className="precio">{product.price} €</div>
+                  <select
+                    className="tallaje"
+                    value={selectedSize[product.Id_Product] || ""}
+                    onChange={(e) => handleSizeChange(product.Id_Product, e.target.value)}
+                  >
+                    <option value="">Seleccione Talla</option>
+                    <option value="XS">XS</option>
+                    <option value="S">S</option>
+                    <option value="M">M</option>
+                    <option value="L">L</option>
+                    <option value="XL">XL</option>
+                  </select>
+
                   <div className="carrito">
                     <button onClick={() => handleAddToCart(product)}>🛒</button>
                   </div>

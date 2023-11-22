@@ -38,13 +38,13 @@ const Accessories = ({ addToCart }) => {
           className="mySwiper"
         >
           {accessories.map((product) => (
-            <SwiperSlide key={product.id}>
+            <SwiperSlide key={product.Id_Product}>
               <div className="swiper-slide">
-                <img src={product.image} alt={product.name} />
+                <img src={product.Image} alt={product.Name_product} />
                 <div className="description">
                   <div className="nombre">{product.Name_product}</div>
-                  <div className="precio">{product.price} €</div>
-                  <div className="description">{product.descripton} </div>
+                  <div className="precio">{product.Price} €</div>
+                  <div className="description">{product.Descripton} </div>
                   <div className="carrito">
                     {/* <button onClick={() => addToCart(product)}> 🛒</button> */}
                     <button onClick={() => handleAddToCart(product)}>🛒</button>

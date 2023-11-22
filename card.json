@@ -2,137 +2,149 @@
   "products": [
     {
       "Name_product": "Camiseta Tecnica Azul",
-      "category": "Clothing",
-      "price": "20",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
-      "description": "Camiseta Técnica Azul Cielo",
+      "Id_Category": "Clothing",
+      "Price": "20",
+      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
+      "Description": "Camiseta Técnica Azul Cielo",
       "stock": "10",
-      "size": [
-        "S"
+      "Size": [
+        "XL"
       ],
       "showSize": true,
-      "id": 1
+      "Id_Product": 1
     },
     {
       "Name_product": "Camiseta Tecnica Azul Espalda",
-      "category": "Clothing",
-      "price": "25",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188505/IMG_7049_wyi4hn_3_-removebg-preview_a52h8m.png",
-      "description": "Camiseta de espalda",
+      "Id_Category": "Clothing",
+      "Price": "25",
+      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188505/IMG_7049_wyi4hn_3_-removebg-preview_a52h8m.png",
+      "Description": "Camiseta de espalda",
       "stock": "15",
-      "size": [
-        "M"
+      "Size": [
+        "XL"
       ],
       "showSize": true,
-      "id": 3
+      "Id_Product": 3
     },
     {
       "Name_product": "Gorra Azul ",
-      "category": "Clothing",
-      "price": "20",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188504/IMG_7034_apr3kd_1_-removebg-preview_bdl1fm.png",
-      "description": "Gorra Color Azul Rey",
+      "Id_Category": "Clothing",
+      "Price": "20",
+      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188504/IMG_7034_apr3kd_1_-removebg-preview_bdl1fm.png",
+      "Description": "Gorra Color Azul Rey",
       "stock": "14",
-      "size": [
-        "M"
+      "Size": [
+        "S"
       ],
       "showSize": true,
-      "id": 4
-    },
-    {
-      "Name_product": "Gorra Parte de atras",
-      "category": "Clothing",
-      "price": "22",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7031_pehh8w_1_-removebg-preview_giqcxw.png",
-      "description": "Gorra Azul Rey",
-      "stock": "5",
-      "size": "XS",
-      "showSize": true,
-      "id": 5
+      "Id_Product": 4
     },
     {
       "Name_product": "Bolsa de la Compra",
-      "category": "Accessories",
-      "price": "10",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7072._eyjdta_1_-removebg-preview_zt0ues.png",
-      "description": "Bolsa Color azul",
+      "Id_Category": "Accessories",
+      "Price": "10",
+      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188503/IMG_7072._eyjdta_1_-removebg-preview_zt0ues.png",
+      "Description": "Bolsa Color azul",
       "stock": "8",
-      "id": 6
+      "Id_Product": 6
     },
     {
       "Name_product": "Llavero Azul TEA",
-      "category": "Accessories",
-      "price": "5",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7058._nb0z2u_1_-removebg-preview_werd0w.png",
-      "description": "Llavero color Azul rey ",
+      "Id_Category": "Accessories",
+      "Price": "5",
+      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188503/IMG_7058._nb0z2u_1_-removebg-preview_werd0w.png",
+      "Description": "Llavero color Azul rey ",
       "stock": "10",
-      "id": 7
+      "Id_Product": 7
     },
     {
       "Name_product": "Jabón Artesanal Azul Claro",
-      "category": "Accessories",
-      "price": "7",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7016_xcyakf_1_-removebg-preview_jomse0.png",
-      "description": "Jabón Artesanal Azul Claro tamaño promedio",
+      "Id_Category": "Accessories",
+      "Price": "7",
+      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188503/IMG_7016_xcyakf_1_-removebg-preview_jomse0.png",
+      "Description": "Jabón Artesanal Azul Claro tamaño promedio",
       "stock": "14",
-      "size": [],
+      "Size": [],
       "showSize": false,
-      "id": 8
+      "Id_Product": 8
     },
     {
       "Name_product": "Pulsera Familia TEA",
-      "category": "Accessories",
-      "price": "6",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1698773938/IMG-20231029-WA0098_pfxyej.jpg",
-      "description": "Pulsera color azul ",
+      "Id_Category": "Accessories",
+      "Price": "6",
+      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1698773938/IMG-20231029-WA0098_pfxyej.jpg",
+      "Description": "Pulsera color azul ",
       "stock": "4",
-      "id": 9
+      "Id_Product": 9
     },
     {
       "Name_product": "Imán por detrás",
-      "category": "Accessories",
-      "price": "3000",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188503/IMG_7022_ahj80b_1_-removebg-preview_virgkz.png",
-      "description": "Imán por la parte",
+      "Id_Category": "Accessories",
+      "Price": "3000",
+      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188503/IMG_7022_ahj80b_1_-removebg-preview_virgkz.png",
+      "Description": "Imán por la parte",
       "stock": "4",
-      "id": 10
+      "Id_Product": 10
     },
     {
       "Name_product": "Prenda 5",
-      "category": "Clothing",
-      "price": "8",
-      "image": "https://res.cloudinary.com/dq2tfglqq/image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
-      "description": "Prenda 5",
+      "Id_Category": "Clothing",
+      "Price": "8",
+      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188506/IMG_7045_kberem_1_-removebg-preview_eisfl3.png",
+      "Description": "Prenda 5",
       "stock": "9",
-      "size": [
+      "Size": [
         "M"
       ],
       "showSize": true,
-      "id": 11
+      "Id_Product": 11
     },
     {
       "Name_product": "MARIA",
-      "category": "Clothing",
-      "price": "25.6",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "color Negro",
+      "Id_Category": "Clothing",
+      "Price": "25.6",
+      "Image": "https://res.cloudinary.com/ddgpmxprs/Image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "Description": "color Negro",
       "stock": "25",
-      "size": [
+      "Size": [
         "L"
       ],
       "showSize": true,
-      "id": 12
+      "Id_Product": 12
     },
     {
       "Name_product": "PRUEBA 11",
-      "category": "Accessories",
-      "price": "25.7",
-      "image": "https://res.cloudinary.com/ddgpmxprs/image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
-      "description": "AAAA",
+      "Id_Category": "Accessories",
+      "Price": "25.7",
+      "Image": "https://res.cloudinary.com/ddgpmxprs/Image/upload/v1698095895/camiseta-kappa-fc-metz-training-2023-2024-blue-lt-blue-0_fk9tpc.jpg",
+      "Description": "AAAA",
       "stock": "25",
-      "size": [],
+      "Size": [],
       "showSize": false,
-      "id": 13
+      "Id_Product": 13
+    },
+    {
+      "Name_product": "Gorra",
+      "Id_Category": "Clothing",
+      "Price": "5.9",
+      "Image": "https://res.cloudinary.com/dq2tfglqq/Image/upload/v1699188503/IMG_7031_pehh8w_1_-removebg-preview_giqcxw.png",
+      "Description": "Gorra termica",
+      "stock": "10",
+      "Size": [
+        "S"
+      ],
+      "showSize": true,
+      "Id_Product": 14
+    },
+    {
+      "Name_product": "POLO PRUEBA 10",
+      "Id_Category": "Clothing",
+      "Price": "10.9",
+      "Image": "https://res.cloudinary.com/ddgpmxprs/Image/upload/v1693212296/samples/shoe.jpg",
+      "Description": "COLOR NEGRO",
+      "stock": "10",
+      "Sizes": "M",
+      "Id_Product": 15
     }
   ]
 }
