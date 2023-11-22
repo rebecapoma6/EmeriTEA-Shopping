@@ -1,26 +1,35 @@
-  .shopping-cart {
-    font-family: 'Arial', sans-serif;
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #ddd;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
+/* .shopping-cart{
+    background: white;
+}
 
-  .mi-tabla-cabecera {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    color: #ddd;
+.product-imagecart{
+    width: 50px;
+    height: auto;
+} */
+
+.shopping-cart {
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
   }
   
-  .mi-tabla-cabecera th {
-    padding: 10px;
-  }
-  
-  h2 {
-    color: #333;
+  .shopping-cart h2 {
+    margin: 0 auto;
     text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #7AC7FF;
+  }
+  
+  .shopping-cart p {
+    margin: 0 auto;
+    text-align: right;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
   }
   
   table {
@@ -29,14 +38,22 @@
     margin-top: 20px;
   }
   
-  th, td {
-    padding: 12px;
+  .shopping-cart thead {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  th,
+  td {
+    padding: 15px;
     text-align: left;
     border-bottom: 1px solid #ddd;
   }
   
   th {
     background-color: #007da0;
+    color: #fff;
   }
   
   .product-imagecart {
@@ -45,21 +62,8 @@
     object-fit: cover;
     border-radius: 50%;
   }
-  .remove-button
-   {
-    background-color: #c82333;      color: #fff;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-  }
   
-  .remove-button:hover {
-      background-color: #c82333;
-      box-shadow: 2px 2px 8px #333;
-  }  
-  /* button {
+  .remove-button {
     background-color: #dc3545;
     color: #fff;
     border: none;
@@ -69,14 +73,7 @@
     transition: background-color 0.3s ease;
   }
   
-  button:hover {
+  .remove-button:hover {
     background-color: #c82333;
-  } */
+  }
   
-  p {
-    margin-top: 20px;
-    text-align: right;
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-  } 

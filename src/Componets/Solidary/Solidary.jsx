@@ -30,10 +30,12 @@ const Solidary = () => {
             Haz tu regalo personalizado para eventos, fiestas, bodas,
             cumpleaños, etc...!
           </h2>
+
           <Link to="/Solidary">
             {/* <button>Más información aquí!</button> */}
+                <button className="shadow__btn">Más información aquí!</button>
           </Link>
-          <button className="shadow__btn">Más información aquí!</button>
+      
         </div>
 
         <div className="imageContainer">

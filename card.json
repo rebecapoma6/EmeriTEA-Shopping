@@ -37,22 +37,33 @@
     {
       "Name_product": "Jian",
       "Id_Category": "1",
-      "Price": "70",
+      "Price": "30",
       "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1693985424/cld-sample-2.jpg",
-      "Description": "Jian Pierre",
+      "Description": "Tenemos en más colores",
       "stock": "80",
       "Size": [],
       "id": 1700132788091
     },
     {
-      "Name_product": "Anthony",
+      "Name_product": "Roca",
       "Id_Category": "1",
       "Price": "100",
       "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1693985424/cld-sample-2.jpg",
-      "Description": "Brayan",
-      "stock": "800",
+      "Description": "Llavero de roca...",
+      "stock": "80",
       "Size": [],
-      "id": 1700133880836
+      "id": 1700216844840
+    },
+    {
+      "id": 1700331176250,
+      "Name_product": "eeee",
+      "Id_Category": "2",
+      "Price": "456",
+      "Image": "https://res.cloudinary.com/dipahj9kx/image/upload/v1699212059/Images/Sports/jttocii21x4kfmzi5pux.png",
+      "Description": "sasas",
+      "stock": "741",
+      "Size": "XS",
+      "Id_Administrador": 1700331176250
     }
   ]
 }

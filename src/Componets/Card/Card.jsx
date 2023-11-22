@@ -4,22 +4,22 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import { Button } from "@mui/material";
 import Typography from "@mui/material/Typography";
-import "./Card.css"; // Importa el archivo CSS con los estilos
+import "./Card.css"; 
 
 const ProductCard = ({ product, deleteProduct, openEditModal }) => {
   return (
     <Card className="card">
-      {product.Image && (
+      {product.image && (
         <CardMedia
-          alt={product.Name_product}
+          alt={product.name_product}
           className="cardMedia"
-          image={product.Image}
+          image={product.image}
         />
       )}
 
       <CardContent className="CardContent">
         <Typography component="div" className="productTitle">
-          <strong>{product.Name_product}</strong>
+          <strong>{product.name_product}</strong>
         </Typography>
 
         <Typography
@@ -27,8 +27,8 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           color="text.secondary"
           className="productCategory"
         >
-          <strong>Category:</strong>{" "}
-          {product.Id_Category === "2" ? "Clothing" : "Accessory"}
+          <strong>Categoría:</strong>{" "}
+          {product.id_Category === 2 ? "Prenda" : "Accesorio"}
         </Typography>
 
         <Typography
@@ -36,7 +36,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
           color="text.secondary"
           className="productDescription"
         >
-          <strong>Description:</strong> {product.Description}
+          <strong>Descripción:</strong> {product.description}
         </Typography>
 
         <div className="unids">
@@ -45,7 +45,7 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
             color="text.secondary"
             className="productPrice"
           >
-            <strong>Price:</strong> {product.Price}
+            <strong>Precio:</strong> {product.price}
             <strong>€</strong>
           </Typography>
 
@@ -55,13 +55,13 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
         </div>
 
         <Typography variant="body2" color="text.secondary">
-          {product.Id_Category === "2" && (
+          {product.id_Category === 2 && (
             <>
-              <strong>Size:</strong>{" "}
-              {Array.isArray(product.Size) && product.Size.length > 0 ? (
-                <span>{product.Size.join(", ")}</span>
+              <strong>Talla:</strong>{" "}
+              {Array.isArray(product.size) && product.size.length > 0 ? (
+                <span>{product.size.join(", ")}</span>
               ) : (
-                <span>{product.Size}</span>
+                <span>{product.size}</span>
               )}
             </>
           )}
@@ -70,16 +70,16 @@ const ProductCard = ({ product, deleteProduct, openEditModal }) => {
         <div className="actionButtons">
           <Button
             className="actionButtonD"
-            onClick={() => deleteProduct(product.id)}
+            onClick={() => deleteProduct(product.id_Product)}
           >
-            Delete
+            Eliminar
           </Button>
 
           <Button
             className="actionButtonE"
             onClick={() => openEditModal(product)}
           >
-            Edit
+            Editar
           </Button>
         </div>
       </CardContent>
