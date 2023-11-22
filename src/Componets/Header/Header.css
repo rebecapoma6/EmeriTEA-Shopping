@@ -46,6 +46,7 @@
     /* justify-content: space-between; */
     /* align-items: center; */
     margin-right: -80px;
+    display: flex;
   }
   .buttons button{
     background-color: #0074B8;

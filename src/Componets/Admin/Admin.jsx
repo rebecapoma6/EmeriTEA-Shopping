@@ -17,6 +17,8 @@ const Admin = () => {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [selectedProductDetails, setSelectedProductDetails] = useState(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [showEditSize, setShowEditSize] = useState(false);
+  // const navigate = useNavigate();
 
   const [newProduct, setNewProduct] = useState({
     Name_product: "",
@@ -41,7 +43,12 @@ const Admin = () => {
       showSize: false,
     });
   };
-
+  // const logout = () => {
+  //   document.cookie = 'jwtToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  //   // Redirigir al usuario a la vista de inicio
+  //   navigate('/');
+  //   // Otras acciones de limpieza de sesión si las hay
+  // };
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -73,7 +80,6 @@ const Admin = () => {
     setIsEditModalOpen(false);
   };
 
-
   const handleInputChange = (name, value) => {
     setNewProduct((prevProduct) => {
       if (name === "Size") {
@@ -99,7 +105,6 @@ const Admin = () => {
     });
   };
 
-
   useEffect(() => {
     setNewProduct((prevProduct) => {
       let updatedProduct = {
@@ -122,7 +127,6 @@ const Admin = () => {
       return;
     }
     const productData = {
-
       Name_product: newProduct.Name_product,
       Id_Category: newProduct.Id_Category,
       Price: newProduct.Price,
@@ -130,11 +134,9 @@ const Admin = () => {
       Description: newProduct.Description,
       stock: newProduct.stock,
       Size: newProduct.Size,
-
     };
 
     fetch(`https://localhost:7032/Product/AddProductWithSizes`, {
-
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,
@@ -208,6 +210,7 @@ const Admin = () => {
     if (product && product.id_Product) {
       setIsEditModalOpen(true);
       let productDetails = { ...product };
+      setShowEditSize(productDetails.id_Category === 2);
       setSelectedProductDetails(productDetails);
     } else {
       console.error(
@@ -246,14 +249,17 @@ const Admin = () => {
               : selectedProductDetails.size,
         };
 
-        fetch(`https://localhost:7032/Product/Put/${selectedProductDetails.id_Product}`, {
-          method: "PUT",
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(editedProductData),
-        })
+        fetch(
+          `https://localhost:7032/Product/Put/${selectedProductDetails.id_Product}`,
+          {
+            method: "PUT",
+            headers: {
+              Authorization: `Bearer ${token}`,
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(editedProductData),
+          }
+        )
           .then((response) => {
             if (!response.ok) {
               throw new Error("Failed to edit the product");
@@ -299,6 +305,12 @@ const Admin = () => {
         <h1>AÑADIR PRODUCTOS</h1>
       </div>
 
+      {/* <Link to="/"> */}
+      {/* <button onClick={logout}>
+            Cerrar Sesión
+      </button> */}
+      {/* </Link> */}
+
       <br />
       <Button className="modal-header" onClick={openAddModal}>
         Agregar Producto
@@ -332,10 +344,10 @@ const Admin = () => {
                   value={newProduct.id_Category}
                   onChange={(e) => {
                     handleInputChange("Id_Category", e.target.value);
-                    if (e.target.value === "1") {
-                      handleInputChange("1", e.target.value);
+                    if (e.target.value === 1) {
+                      handleInputChange(1, e.target.value);
                     } else {
-                      handleInputChange("2", e.target.value);
+                      handleInputChange(2, e.target.value);
                     }
                   }}
                 >
@@ -398,7 +410,6 @@ const Admin = () => {
                   />
                 )}
 
-
                 <br></br>
 
                 <label htmlFor="productDescription">Descripción:</label>
@@ -450,7 +461,7 @@ const Admin = () => {
           isDismissable={false}
           className="nextui-modal"
         >
-          <ModalContent className="formSection">
+          <ModalContent className="add-form formSection">
             <>
               <ModalHeader>Editar Producto</ModalHeader>
 
@@ -470,23 +481,50 @@ const Admin = () => {
                   />
 
                   <label htmlFor="productCategory">Categoría:</label>
-
                   <select
                     value={selectedProductDetails.id_Category}
-                    onChange={(e) =>
+                    onChange={(e) => {
+                      const newCategoryId = e.target.value;
                       setSelectedProductDetails({
                         ...selectedProductDetails,
-                        id_Category: e.target.value,
-                      })
-                    }
+                        id_Category: newCategoryId,
+                      });
+                      setShowEditSize(newCategoryId === "2");
+                    }}
                   >
                     <option value="">Seleccionar una categoría</option>
                     <option value="1">Accesorio</option>
                     <option value="2">Prenda</option>
                   </select>
 
-                  <br></br>
+                  <br />
+                  <br />
 
+                  <label htmlFor="productSizeDetails">Talla:</label>
+                  {showEditSize && (
+                    <select
+                      multiple
+                      value={selectedProductDetails.size || []}
+                      onChange={(e) =>
+                        setSelectedProductDetails({
+                          ...selectedProductDetails,
+                          size: Array.from(
+                            e.target.selectedOptions,
+                            (option) => option.value
+                          ),
+                        })
+                      }
+                    >
+                      <option value="XS">XS</option>
+                      <option value="S">S</option>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                    </select>
+                  )}
+
+                  <br />
+                  <br />
                   <label htmlFor="productPrice">Precio:</label>
 
                   <input
@@ -535,31 +573,6 @@ const Admin = () => {
                       })
                     }
                   />
-
-                  <label htmlFor="productSizeDetails">Talla:</label>
-                  {selectedProductDetails.id_Category === 2 && (
-                    <select
-                      value={
-                        selectedProductDetails.size &&
-                          selectedProductDetails.size.length > 0
-                          ? selectedProductDetails.size[0]
-                          : ""
-                      }
-                      onChange={(e) =>
-                        setSelectedProductDetails({
-                          ...selectedProductDetails,
-                          size: [e.target.value],
-                        })
-                      }
-                    >
-                      <option value="">Selecciona una talla</option>
-                      <option value="XS">XS</option>
-                      <option value="S">S</option>
-                      <option value="M">M</option>
-                      <option value="L">L</option>
-                      <option value="XL">XL</option>
-                    </select>
-                  )}
                 </form>
               </ModalBody>
 
