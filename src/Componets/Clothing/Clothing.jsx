@@ -199,15 +199,15 @@ const Clothing = ({ addToCart }) => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger just once
   });
- 
+
   const animation = useAnimation();
- 
+
   useEffect(() => {
     if (inView) {
       animation.start("visible");
     }
   }, [inView, animation]);
- 
+
   const [products, setProducts] = useState([]);
   const [selectedSize, setSelectedSize] = useState({});
 
@@ -232,58 +232,66 @@ const Clothing = ({ addToCart }) => {
     addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
   };
 
+  // export default function Componente() {
 
-// export default function Componente() {
+  return (
+    <motion.div
+      className="js"
+      ref={ref}
+      animate={animation}
+      initial="hidden"
+      variants={{
+        visible: { opacity: 1, y: 0 },
+        hidden: { opacity: 0, y: 20 },
+      }}
+    >
+      <div className="container-swiper">
+        <div className="Prendas">Prendas</div>
 
+        <div className="mySwiper">
+          <Swiper
+            slidesPerView={4}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+          >
+            {products.map((product) => (
+              <SwiperSlide key={product.id_Product}>
+                <div className="swiper-slide">
+                  <img src={product.image} alt={product.name_product} />
+                  <div className="description">
+                    <div className="nombre">{product.name_product}</div>
+                    <div className="precio">{product.price} €</div>
 
- return (
-   <motion.div className="js"
-     ref={ref}
-     animate={animation}
-     initial="hidden"
-     variants={{
-       visible: { opacity: 1, y: 0 },
-       hidden: { opacity: 0, y: 20 },
-     }}
-   >
-    <div className="container-swiper">
-      <div className="Prendas">Prendas</div>
+                    <select
+                      className="tallaje"
+                      value={selectedSize[product.id_Product] || ""}
+                      onChange={(e) =>
+                        handleSizeChange(product.id_Product, e.target.value)
+                      }
+                    >
+                      <option value="">Seleccione Talla</option>
+                      {product.size &&
+                        product.size.map((size) => (
+                          <option key={size} value={size}>
+                            {size}
+                          </option>
+                        ))}
+                    </select>
 
-      <div className="mySwiper">
-        <Swiper slidesPerView={4} navigation={true} modules={[Pagination, Navigation]}>
-          {products.map((product) => (
-            <SwiperSlide key={product.id_Product}>
-              <div className="swiper-slide">
-                <img src={product.image} alt={product.name_product} />
-                <div className="description">
-                  <div className="nombre">{product.name_product}</div>
-                  <div className="precio">{product.price} €</div>
-                  <select
-                    className="tallaje"
-                    value={selectedSize[product.id_Product] || ""}
-                    onChange={(e) => handleSizeChange(product.id_Product, e.target.value)}
-                  >
-                    <option value="">Seleccione Talla</option>
-                    <option value="XS">XS</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                  </select>
-
-                   <div className="carrito">
-                     <button onClick={() => handleAddToCart(product)}>🛒</button>
-                   </div>
-                   </div>
-                   </div>
-                 </SwiperSlide>
-               ))}
-             </Swiper>
-           </div>
-         </div>
-   </motion.div>
- );
+                    <div className="carrito">
+                      <button onClick={() => handleAddToCart(product)}>
+                        🛒
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </motion.div>
+  );
 };
-
 
 export default Clothing;
