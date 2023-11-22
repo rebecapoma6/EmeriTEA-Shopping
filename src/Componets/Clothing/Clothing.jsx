@@ -49,19 +49,25 @@ const Clothing = ({ addToCart }) => {
   // };
   const handleAddToCart = (product) => {
     Swal.fire({
-      title: "¿Estás seguro?",
-      text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
-      icon: "question",
+      iconHtml: '<img src="https://cdn-icons-png.flaticon.com/128/4990/4990913.png" style="width: 85px; height: 85px;">',
+      title: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
+      // text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
+      // icon: "question",
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Sí, agregar al carrito",
       cancelButtonText: "Cancelar",
+      
     }).then((result) => {
       if (result.isConfirmed) {
         // Agregar el producto al carrito con la talla seleccionada
         addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
-        Swal.fire("¡Agregado al carrito!", "El producto ha sido agregado al carrito.", "success");
+        Swal.fire({
+        icon: "success",
+        title: "Tu artículo se añadió al carrito",
+        showConfirmButton: false,
+        timer: 1500});
       }
     });
    };
