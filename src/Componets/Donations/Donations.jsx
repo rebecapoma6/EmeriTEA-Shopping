@@ -12,11 +12,10 @@ const Donations = () => {
         </p>
         <ol>
           <li>Abre la aplicación de Bizum en tu teléfono.</li>
-          <li>Selecciona la opción de enviar dinero.</li>
-          <li>Introduce el número de teléfono al que deseas hacer la donación.</li>
-          <li>Ingresa la cantidad que deseas donar.</li>
-          <li>Añade un mensaje o motivo de la donación si lo deseas.</li>
-          <li>Confirma la transacción.</li>
+          <li>Dentro de la aplicación seleccionar ONG o envío de donación</li>
+          <li>Introducir el código de Emeritea 03218</li>
+          <li>Ingresa la cantidad que deseas donar</li>
+          <li>Confirma la transacción</li>
         </ol>
         <p>¡Gracias por tu generosidad!</p>
       </div>
