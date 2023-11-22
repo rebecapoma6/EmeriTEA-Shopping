@@ -32,7 +32,7 @@ const CustomNavbar = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Quiénes Somos
+            ¿Quiénes Somos?
           </a>
         </div>
 
@@ -44,8 +44,8 @@ const CustomNavbar = () => {
           </Link>
 
           <div className="dropdown-content2">
-            <Link to="/donaciones">Haz Tu Donación!</Link>
-            <Link to="/Solidary">Haz tu regalo Solidario!</Link>
+            <Link to="/donaciones">¡Haz Tú Donación!</Link>
+            <Link to="/Solidary">¡Haz Tú Regalo Solidario!</Link>
           </div>
         </div>
 

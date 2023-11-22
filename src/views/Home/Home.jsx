@@ -46,7 +46,7 @@ const Home = ({ addToCart }) => {
             <h2>
               Emeritea Asociación.
               <br />
-              Colabora con la compra de cualquier articulo de esta pagina y
+              Colabora con la compra de cualquier artículo de esta página y
               ayudanos a hacer visible lo invisible.
             </h2>
           </div>
