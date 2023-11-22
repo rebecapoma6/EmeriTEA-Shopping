@@ -199,6 +199,7 @@ import Swal from 'sweetalert2';
 const Clothing = ({ addToCart }) => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger just once
+    
   });
 
   const animation = useAnimation();
@@ -233,6 +234,17 @@ const Clothing = ({ addToCart }) => {
   //   addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
   // };
   const handleAddToCart = (product) => {
+    
+    if (!selectedSize[product.id_Product]) {
+      Swal.fire({
+        title: "¡Error!",
+        text: "Por favor, selecciona una talla antes de agregar al carrito.",
+        icon: "error",
+        confirmButtonText: "De acuerdo",
+        confirmButtonColor: "#3085d6",
+      });
+      return; // Detiene la adición del producto al carrito si no hay talla seleccionada
+    }
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",

@@ -6,6 +6,14 @@
     width: 50px;
     height: auto;
 } */
+.quantity-button {
+  padding: 5px 10px; /* Ajusta el espaciado interior según sea necesario */
+  font-size: 14px; /* Tamaño de la fuente */
+  color: #333; /* Color del texto */
+  background-color: #fff; /* Color de fondo */
+  border: 1px solid #ccc; /* Borde del botón */
+  border-radius: 4px; /* Bordes redondeados */
+}
 
 .shopping-cart {
     width: 100%;
