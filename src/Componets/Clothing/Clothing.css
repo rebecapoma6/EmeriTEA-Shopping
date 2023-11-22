@@ -91,6 +91,12 @@
   outline: none; /* Eliminar el borde al hacer clic */
 }
 
+.js{
+  width: 100%;
+}
+
+
+
 @media (max-width: 420px) {
   .container-swiper {
     width: 100%;

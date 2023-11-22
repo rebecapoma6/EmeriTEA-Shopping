@@ -3,19 +3,19 @@ import CustomNavbar from "../../Componets/Navbar/Navbar";
 import Footer from "../../Componets/Footer/Footer";
 // import Solidary from "../../Componets/Solidary/Solidary"
 import Solidarycomp from "../../Componets/solidarycomp/solidarycomp";
-
+import Header from "../../Componets/Header/Header";
 
 const SolidaryView = () => {
   return (
     <div className="homeinitial">
-    
       <Header />
-      <CustomNavbar/>
+      <CustomNavbar />
       <div className="container-gris">
-      <Solidarycomp/>
+        
+          <Solidarycomp />
+        
       </div>
       <Footer />
-    
     </div>
   );
 };
