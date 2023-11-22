@@ -39,7 +39,7 @@ const Footer = () => {
             Copyright © 2019 EmeriTEA
           </a>
 
-          <div className="Correo">Emerite@emeritea.com</div>
+          <div className="Correo">Emeritea@emeritea.com</div>
         </div>
       </div>
     </footer>
