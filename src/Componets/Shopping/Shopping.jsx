@@ -42,14 +42,10 @@ const ShoppingCart = ({ cart, removeFromCart, updateQuantity }) => {
     }
   };
 
-  // const calculateSubtotal = (product) => {
-  //   return product.price * product.quantity;
-  // };
   const calculateSubtotal = (product) => {
-    const price = Number(product.price) || 0;
-    const quantity = Number(product.quantity) || 0;
-    return price * quantity;
+    return product.price * product.quantity;
   };
+ 
   
 
   const calculateTotal = () => {
