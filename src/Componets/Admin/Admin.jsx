@@ -18,6 +18,7 @@ const Admin = () => {
   const [selectedProductDetails, setSelectedProductDetails] = useState(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [showEditSize, setShowEditSize] = useState(false);
+  // const navigate = useNavigate();
 
   const [newProduct, setNewProduct] = useState({
     Name_product: "",
@@ -42,7 +43,12 @@ const Admin = () => {
       showSize: false,
     });
   };
-
+  // const logout = () => {
+  //   document.cookie = 'jwtToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+  //   // Redirigir al usuario a la vista de inicio
+  //   navigate('/');
+  //   // Otras acciones de limpieza de sesión si las hay
+  // };
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -298,6 +304,12 @@ const Admin = () => {
       <div className="add-header">
         <h1>AÑADIR PRODUCTOS</h1>
       </div>
+
+      {/* <Link to="/"> */}
+      {/* <button onClick={logout}>
+            Cerrar Sesión
+      </button> */}
+      {/* </Link> */}
 
       <br />
       <Button className="modal-header" onClick={openAddModal}>
