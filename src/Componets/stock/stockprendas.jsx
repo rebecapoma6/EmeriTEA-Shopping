@@ -3,10 +3,9 @@ import "./stockprendas.css";
 
 const Stockprendas = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
-  const [selectedSizes, setSelectedSizes] = useState({});
+  const [selectedSize, setSelectedSizes] = useState({});
 
   useEffect(() => {
-    //fetch("http://localhost:3000/products?category=Clothing")
     fetch("https://localhost:7032/Product/GetProductsByCategory?categotyId=2")
       .then((response) => {
         if (!response.ok) {
@@ -16,10 +15,9 @@ const Stockprendas = ({ addToCart }) => {
       })
       .then((data) => {
         setProducts(data);
-        // Inicializa las tallas seleccionadas para cada producto
         const initialSelectedSizes = {};
         data.forEach((product) => {
-          initialSelectedSizes[product.id_Product] = ""; // Asegúrate de que el identificador sea correcto
+          initialSelectedSizes[product.id_Product] = "";
         });
         setSelectedSizes(initialSelectedSizes);
       })
@@ -31,8 +29,7 @@ const Stockprendas = ({ addToCart }) => {
   };
 
   const handleAddToCart = (product) => {
-    // Agregar el producto al carrito con la talla seleccionada
-    addToCart({ ...product, size: selectedSizes[product.id_Product] }); // Asegúrate de que el nombre de la talla sea correcto
+    addToCart({ ...product, size: selectedSize[product.id_Product] });
   };
 
   return (
@@ -48,15 +45,15 @@ const Stockprendas = ({ addToCart }) => {
             <p>Descripcion: {product.description} </p>
             <select
               className="tallaje"
-              value={selectedSizes[product.id_Product] || ""}
+              value={selectedSize[product.id_Product] || ""}
               onChange={(e) => handleSizeChange(product.id_Product, e.target.value)}
             >
               <option value="">Seleccione Talla</option>
-              <option value="XS">XS</option>
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
+              {product.size && product.size.map((size) => (
+                <option key={size} value={size}>
+                  {size}
+                </option>
+              ))}
             </select>
             <button onClick={() => handleAddToCart(product)}>🛒</button>
           </div>
@@ -67,5 +64,6 @@ const Stockprendas = ({ addToCart }) => {
 };
 
 export default Stockprendas;
+
 
 
