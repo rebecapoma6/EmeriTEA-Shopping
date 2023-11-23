@@ -25,6 +25,7 @@ const Clothing = ({ addToCart }) => {
 
   const [guestCart, setGuestCart] = useState([]);
   const [selectedSize, setSelectedSize] = useState({});
+
   const [newGuestCart, setNewGuestCart] = useState({
     price_product: "",
     quantity_product: "",

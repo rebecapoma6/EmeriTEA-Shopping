@@ -18,13 +18,13 @@ const Solidarycomp = () => {
       <div className="formularios-solidary">
        
         <form>
-          <label>Tu nombre:</label>
+          <label>Tú nombre</label>
           <input type="text" placeholder="Ingrese su nombre" />
         </form>
 
         
         <form>
-          <label>Qué producto quieres?:</label>
+          <label>¿Qué producto quieres?</label>
           <select>
             <option value="personalizado">Personalizado</option>
             <option value="mayor">Al por mayor</option>
@@ -33,11 +33,11 @@ const Solidarycomp = () => {
 
     
         <form>
-          <label>Detalles del pedido:</label>
+          <label>Detalles del pedidos</label>
           <textarea placeholder="Ingrese los detalles del pedido"></textarea>
         </form>
 
-        <strong>Ponte en contacto con nosotros!</strong>
+        <strong>Ponte en contacto con nosotros</strong>
         <button>Enviar!</button>
       </div>
 

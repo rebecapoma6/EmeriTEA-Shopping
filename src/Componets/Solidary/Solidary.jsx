@@ -6,7 +6,7 @@ const Solidary = () => {
     <div className="scroll-op">
     <div className="solidary">
       <div className="solidary-title">
-        <h1>Haz tu Regalo Solidario!</h1>
+        <h1>Haz Tú Regalo Solidario!</h1>
       </div>
 
       <div className="blueContainer">
@@ -25,12 +25,14 @@ const Solidary = () => {
 
         <div className="textContainer">
           <h2>
-            Haz tu regalo personalizado para eventos, fiestas, bodas,
+           ¡Haz tú regalo personalizado para eventos, fiestas, bodas,
             cumpleaños, etc...!
           </h2>
 
           <Link to="/Solidary">
-                <button className="shadow__btn">Más información aquí!</button>
+
+                <button className="shadow__btn">¡Más información aquí!</button>
+
           </Link>
       
         </div>
