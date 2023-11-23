@@ -6,7 +6,7 @@ const Donations = () => {
     <div className="donation-container">
       <img src="https://res.cloudinary.com/dhme3c8ll/image/upload/v1699433973/bizzum_xwkmye.jpg" className='donation-image' alt="Imagen de la donación" />
       <div className="instructions">
-        <h2>¿Cómo hacer una donación por Bizum?</h2>
+        <h1>¿Cómo hacer una donación por Bizum?</h1>
         <p>
           Para realizar una donación por Bizum, sigue estos pasos:
         </p>
