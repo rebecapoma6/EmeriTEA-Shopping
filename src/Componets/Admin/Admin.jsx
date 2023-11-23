@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
-} from "@nextui-org/react";
+import {Modal,ModalContent,ModalHeader,ModalBody,ModalFooter,Button,useDisclosure,} from "@nextui-org/react";
 import Swal from "sweetalert2";
 import "./Admin.css";
 import ProductCard from "../../Componets/Card/Card";
@@ -18,7 +10,7 @@ const Admin = () => {
   const [selectedProductDetails, setSelectedProductDetails] = useState(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [showEditSize, setShowEditSize] = useState(false);
-  // const navigate = useNavigate();
+
 
   const [newProduct, setNewProduct] = useState({
     Name_product: "",
@@ -42,13 +34,7 @@ const Admin = () => {
       Size: [],
       showSize: false,
     });
-  };
-  // const logout = () => {
-  //   document.cookie = 'jwtToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
-  //   // Redirigir al usuario a la vista de inicio
-  //   navigate('/');
-  //   // Otras acciones de limpieza de sesión si las hay
-  // };
+  };  
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -161,7 +147,7 @@ const Admin = () => {
       })
       .catch((error) => {
         console.error("Error:", error);
-        Swal.fire("Error", "Failed to add product", "error");
+        Swal.fire("Error", "No se ha podido añadir el producto", "error");
       });
   };
 
@@ -303,14 +289,7 @@ const Admin = () => {
     <>
       <div className="add-header">
         <h1>AÑADIR PRODUCTOS</h1>
-      </div>
-
-      {/* <Link to="/"> */}
-      {/* <button onClick={logout}>
-            Cerrar Sesión
-      </button> */}
-      {/* </Link> */}
-
+      </div>    
       <br />
       <Button className="modal-header" onClick={openAddModal}>
         Agregar Producto

@@ -9,7 +9,7 @@ function Mapa() {
       position: [38.9086113, -6.3561497],
       info: "Travesía Luis Álvarez Lencero, 6 Mérida. Badajoz",
     },
-    // Agrega más ubicaciones aquí
+
   ];
   return (
     <>
@@ -27,9 +27,7 @@ function Mapa() {
               style={{
                 height: "60vh",
                 width: "100%",
-                marginTop: "10%",
-                //   marginLeft: "25%",
-                //   marginRight: "25%",
+                marginTop: "10%",             
                 marginBottom: "10%",
               }}
             >
