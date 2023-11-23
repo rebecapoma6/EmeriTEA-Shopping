@@ -72,7 +72,7 @@ const Clothing = ({ addToCart }) => {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
+        addToCart({ ...guestCart, size: selectedSize[guestCart.id_Product] || "" });
         Swal.fire({
           title: "¡Agregado al carrito!",
           text: "El producto ha sido agregado al carrito.",

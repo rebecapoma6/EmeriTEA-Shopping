@@ -41,7 +41,7 @@ const Stockprendas = ({ addToCart }) => {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        addToCart({ ...product, size: selectedSizes[product.id_Product] || "" });
+        addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
         Swal.fire({
           title: "¡Agregado al carrito!",
           text: "El producto ha sido agregado al carrito.",
