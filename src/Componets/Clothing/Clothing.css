@@ -95,6 +95,10 @@
   width: 100%;
 }
 
+.swal2-icon {
+  border: none !important;
+ }
+
 
 
 @media (max-width: 420px) {

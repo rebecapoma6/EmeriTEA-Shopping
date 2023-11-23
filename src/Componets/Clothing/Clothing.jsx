@@ -236,7 +236,7 @@ const Clothing = ({ addToCart }) => {
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
-      icon: "info",
+      iconHtml: '<img src="https://cdn-icons-png.flaticon.com/128/7344/7344044.png" style="width: 85px; height: 85px; border: none;">',
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
@@ -244,12 +244,18 @@ const Clothing = ({ addToCart }) => {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        // Agregar el producto al carrito con la talla seleccionada
         addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
-        Swal.fire("¡Agregado al carrito!", "El producto ha sido agregado al carrito.", "success");
+        Swal.fire({
+          title: "¡Agregado al carrito!",
+          text: "El producto ha sido agregado al carrito.",
+          timer: 1200,
+          showConfirmButton: false, // Añade esta línea
+        });
       }
     });
    };
+   
+  
    
 
   // export default function Componente() {
