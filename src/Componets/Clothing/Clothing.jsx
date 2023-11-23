@@ -14,6 +14,7 @@ const Clothing = ({ addToCart }) => {
     triggerOnce: true, // Trigger just once
   });
 
+
   const animation = useAnimation();
 
   useEffect(() => {
@@ -31,6 +32,23 @@ const Clothing = ({ addToCart }) => {
     id_Product: "",
   });
 
+  function getCookie(cname) {
+    const name = cname + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(";");
+    for (let i = 0; i < cookieArray.length; i++) {
+      let c = cookieArray[i];
+      while (c.charAt(0) === " ") {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) === 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+
   useEffect(() => {
     fetch("https://localhost:7032/Product/GetProductsByCategory?categotyId=2")
       .then((response) => {
@@ -46,6 +64,26 @@ const Clothing = ({ addToCart }) => {
   const handleSizeChange = (productId, size) => {
     setSelectedSize((prevSizes) => ({ ...prevSizes, [productId]: size }));
   };
+
+  // useEffect(() => {
+  //   // Lógica que depende del estado actualizado de newGuestCart
+  //   console.log("Valores de newGuestCart después de setNewGuestCart:", newGuestCart);
+
+  //   // Aquí puedes realizar operaciones que dependan del estado actualizado
+  //   // Por ejemplo, el envío de datos u otra lógica.
+  //   const guestCartData = {
+  //     price_product: newGuestCart.price_product,
+  //     quantity_product: newGuestCart.quantity_product,
+  //     total_price: newGuestCart.total_price,
+  //     id_Product: newGuestCart.id_Product,
+  //   };
+
+  //   console.log("Valores de guestCartData:", guestCartData);
+
+  //   // Realizar aquí la lógica que depende del estado actualizado de newGuestCart
+  //   // Por ejemplo, enviar los datos a través de una solicitud fetch
+
+  // }, [newGuestCart]);
 
   const handleAddToCart = (guestCart) => {
     const token = getCookie("jwtToken");
@@ -124,22 +162,6 @@ const Clothing = ({ addToCart }) => {
       }
     });
   };
-
-  function getCookie(cname) {
-    const name = cname + "=";
-    const decodedCookie = decodeURIComponent(document.cookie);
-    const cookieArray = decodedCookie.split(";");
-    for (let i = 0; i < cookieArray.length; i++) {
-      let c = cookieArray[i];
-      while (c.charAt(0) === " ") {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) === 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
 
   return (
     <motion.div
