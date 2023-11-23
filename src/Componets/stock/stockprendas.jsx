@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./stockprendas.css";
+import Swal from 'sweetalert2';
 
 const Stockprendas = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
@@ -31,9 +32,30 @@ const Stockprendas = ({ addToCart }) => {
   };
 
   const handleAddToCart = (product) => {
-    // Agregar el producto al carrito con la talla seleccionada
-    addToCart({ ...product, size: selectedSizes[product.id_Product] }); // Asegúrate de que el nombre de la talla sea correcto
-  };
+    Swal.fire({
+      iconHtml: '<img src="https://cdn-icons-png.flaticon.com/128/4990/4990913.png" style="width: 85px; height: 85px;">',
+      title: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
+      // text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
+      // icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sí, agregar al carrito",
+      cancelButtonText: "Cancelar",
+      
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Agregar el producto al carrito con la talla seleccionada
+        addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
+        Swal.fire({
+        icon: "success",
+        title: "Tu artículo se añadió al carrito",
+        showConfirmButton: false,
+        timer: 1500});
+      }
+    });
+   };
+   
 
   return (
     <>

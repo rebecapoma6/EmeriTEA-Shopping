@@ -108,6 +108,12 @@
   opacity: 1; /* Al añadir la clase "appear", el elemento aparecerá con una transición */
   transform: translateY(0); /* Se mueve de vuelta a su posición original */
 }
+.swal2-icon {
+  border: none;
+ }
+ .swal2-title {
+  font-size: 20px;
+ }
 
 @media (max-width: 420px) {
   .Accesorios {

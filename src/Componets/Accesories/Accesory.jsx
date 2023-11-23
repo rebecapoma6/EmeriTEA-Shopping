@@ -5,6 +5,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Accesories.css";
+import Swal from 'sweetalert2';
 
 const Accessories = ({ addToCart }) => {
   useEffect(() => {
@@ -33,8 +34,29 @@ const Accessories = ({ addToCart }) => {
   const [accessories, setAccessories] = useState([]);
 
   const handleAddToCart = (product) => {
-    addToCart(product);
-  };
+    Swal.fire({
+      iconHtml: '<img src="https://cdn-icons-png.flaticon.com/128/4990/4990913.png" style="width: 85px; height: 85px;">',
+      title: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
+      // text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
+      // icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sí, agregar al carrito",
+      cancelButtonText: "Cancelar",
+      
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Agregar el producto al carrito con la talla seleccionada
+        addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
+        Swal.fire({
+        icon: "success",
+        title: "Tu artículo se añadió al carrito",
+        showConfirmButton: false,
+        timer: 1500});
+      }
+    });
+   };
 
   useEffect(() => {
     fetch("https://localhost:7032/Product/GetProductsByCategory?categotyId=1")
