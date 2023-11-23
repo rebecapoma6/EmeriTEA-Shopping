@@ -52,9 +52,9 @@ const Stockaccesorios = ({ addToCart }) => {
               alt={product.name_product}
               className="product-image"
             />
-            <p>Name: {product.name_product}</p>
-            <p>Price: {product.price} €</p>
-            <p>Descripcion: {product.description} </p>
+            <p>{product.name_product}</p>
+            <p>Precio: {product.price} €</p>
+            <p>Descripción: {product.description} </p>
             <button onClick={() => handleAddToCart(product)}>🛒</button>
           </div>
         ))}
