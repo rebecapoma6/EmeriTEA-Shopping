@@ -40,9 +40,9 @@ const Stockprendas = ({ addToCart }) => {
         {products.map((product) => (
           <div key={product.id_Product}>
             <img src={product.image} alt={product.name} className="product-image" />
-            <p>Name: {product.name_product}</p>
-            <p>Price: {product.price} €</p>
-            <p>Descripcion: {product.description} </p>
+            <p>Nombre: {product.name_product}</p>
+            <p>Precio: {product.price} €</p>
+            <p>Descripción: {product.description} </p>
             <select
               className="tallaje"
               value={selectedSize[product.id_Product] || ""}

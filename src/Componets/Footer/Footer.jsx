@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="Politicas">
           {/* <h3>Politica de Privacidad</h3> */}
           <a href="http://" target="_blank" rel="noopener noreferrer">
-            Politica de Privacidad
+            Política de Privacidad
           </a>
           {/* <h3>Aviso Legal</h3> */}
           <a href="http://" target="_blank" rel="noopener noreferrer">

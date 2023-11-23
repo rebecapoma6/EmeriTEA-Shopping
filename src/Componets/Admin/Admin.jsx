@@ -371,11 +371,13 @@ const Admin = () => {
                       }}
                       multiple
                     >
-                      <option value="XS">XS</option>
+                      
                       <option value="S">S</option>
                       <option value="M">M</option>
                       <option value="L">L</option>
                       <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                      <option value="XXXL">XXXL</option>
                     </select>
                     {/* <div>
                       {newProduct.Size.map((size) => (
@@ -515,11 +517,12 @@ const Admin = () => {
                         })
                       }
                     >
-                      <option value="XS">XS</option>
                       <option value="S">S</option>
                       <option value="M">M</option>
                       <option value="L">L</option>
                       <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                      <option value="XXXL">XXXL</option>
                     </select>
                   )}
 
