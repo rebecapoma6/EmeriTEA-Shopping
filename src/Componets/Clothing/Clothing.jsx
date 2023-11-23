@@ -1,205 +1,19 @@
-// import React, { useState, useEffect } from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Pagination, Navigation } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
-// import "./Clothing.css";
-
-// const Clothing = ({ addToCart }) => {
-//   const [products, setProducts] = useState([]);
-//   const [selectedSize, setSelectedSize] = useState("");
-
-//   useEffect(() => {
-//     fetch("http://localhost:3000/products?category=Clothing")
-//       .then((response) => {
-//         if (!response.ok) {
-//           throw new Error("Failed to fetch products");
-//         }
-//         return response.json();
-//       })
-//       .then((data) => setProducts(data))
-//       .catch((error) => console.error("Error:", error));
-//   }, []);
-
-//   const handleSizeChange = (size) => {
-//     setSelectedSize(size);
-//   };
-
-//   const handleAddToCart = (product) => {
-//     // Agregar el producto al carrito con la talla seleccionada
-//     addToCart({ ...product, size: selectedSize });
-//   };
-
-//   return (
-//     <div className="container-swiper">
-//       <div className="Prendas">Prendas</div>
-
-//       <div className="mySwiper">
-//         <Swiper
-//           slidesPerView={4}
-//           navigation={true}
-//           modules={[Pagination, Navigation]}
-//         >
-//           {products.map((product) => (
-//             <SwiperSlide key={product.id}>
-//               <div className="swiper-slide">
-//                 <img src={product.image} alt={product.name} />
-//                 <div className="description">
-//                   <div className="nombre">Nombre: {product.Name_product}</div>
-//                   <div className="precio">Precio: {product.price} €</div>
-//                   <div className="descripcion">Descripción: {product.description}</div>
-
-//                   <div className="tallas">
-//                     <select value={selectedSize} onChange={(e) => handleSizeChange(e.target.value)}>
-//                       <option value="">Seleccione Talla</option>
-//                       {product.sizes && product.sizes.map((size) => (
-//                         <option key={size} value={size}>{size}</option>
-//                       ))}
-//                     </select>
-//                   </div>
-
-//                   <div className="carrito">
-//                     <button onClick={() => handleAddToCart(product)}>🛒</button>
-//                   </div>
-//                 </div>
-//               </div>
-//             </SwiperSlide>
-//           ))}
-//         </Swiper>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Clothing;
-
-//_____________________________________________________________________________________________________________________________________
-
-// import React, { useState, useEffect } from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import { Pagination, Navigation } from "swiper/modules";
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
-// import "./Clothing.css";
-
-// const Clothing = ({ addToCart }) => {
-//   useEffect(() => {
-//     window.addEventListener("scroll", handleScroll);
-//     return () => {
-//       window.removeEventListener("scroll", handleScroll);
-//     };
-//   }, []);
-
-//   const handleScroll = () => {
-//     const elements = document.querySelectorAll(".scroll-op");
-//     elements.forEach((element) => {
-//       const elementTop = element.getBoundingClientRect().top;
-//       const elementBottom = element.getBoundingClientRect().bottom;
-
-//       const isVisible = elementTop < window.innerHeight && elementBottom >= 0;
-
-//       if (isVisible) {
-//         element.classList.add("appear");
-//       } else {
-//         element.classList.remove("appear");
-//       }
-//     });
-//   };
-
-//   const [products, setProducts] = useState([]);
-//   const [selectedSize, setSelectedSize] = useState({});
-
-//   useEffect(() => {
-//     fetch("http://localhost:3000/products?Id_Category=Clothing")
-//       .then((response) => {
-//         if (!response.ok) {
-//           throw new Error("Failed to fetch products");
-//         }
-//         return response.json();
-//       })
-//       .then((data) => setProducts(data))
-//       .catch((error) => console.error("Error al cargar productos:", error));
-//   }, []);
-
-//   const handleSizeChange = (productId, size) => {
-//     setSelectedSize((prevSizes) => ({ ...prevSizes, [productId]: size }));
-//   };
-
-//   const handleAddToCart = (product) => {
-//     // Agregar el producto al carrito con la talla seleccionada
-//     addToCart({ ...product, size: selectedSize[product.Id_Product] || "" });
-//   };
-
-//   return (
-//     <>
-//       <div className="scroll-op">
-//         <div className="container-swiper">
-//           <div className="Prendas">Prendas</div>
-
-//       <div className="mySwiper">
-//         <Swiper
-//           slidesPerView={4}
-//           navigation={true}
-//           modules={[Pagination, Navigation]}
-//         >
-//           {products.map((product) => (
-//             <SwiperSlide key={product.Id_Product}>
-//               <div className="swiper-slide">
-//                 <img src={product.Image} alt={product.Name_product} />
-//                 <div className="description">
-//                   <div className="nombre">{product.Name_product}</div>
-//                   <div className="precio">{product.Price} €</div>
-//                   <select
-//                     className="tallaje"
-//                     value={selectedSize[product.Id_Product] || ""}
-//                     onChange={(e) => handleSizeChange(product.Id_Product, e.target.value)}
-//                   >
-//                     <option value="">Seleccione Talla</option>
-//                     <option value="XS">XS</option>
-//                     <option value="S">S</option>
-//                     <option value="M">M</option>
-//                     <option value="L">L</option>
-//                     <option value="XL">XL</option>
-//                   </select>
-
-//                   <div className="carrito">
-//                     <button onClick={() => handleAddToCart(product)}>🛒</button>
-//                   </div>
-//                   </div>
-//                   </div>
-//                 </SwiperSlide>
-//               ))}
-//             </Swiper>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Clothing;
-
-//____________________________________________________________________________________________________________________________________
-
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-// import { useEffect } from "react";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./Clothing.css";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 const Clothing = ({ addToCart }) => {
   const { ref, inView } = useInView({
     triggerOnce: true, // Trigger just once
   });
+
 
   const animation = useAnimation();
 
@@ -209,8 +23,32 @@ const Clothing = ({ addToCart }) => {
     }
   }, [inView, animation]);
 
-  const [products, setProducts] = useState([]);
+  const [guestCart, setGuestCart] = useState([]);
   const [selectedSize, setSelectedSize] = useState({});
+
+  const [newGuestCart, setNewGuestCart] = useState({
+    price_product: "",
+    quantity_product: "",
+    total_price: "",
+    id_Product: "",
+  });
+
+  function getCookie(cname) {
+    const name = cname + "=";
+    const decodedCookie = decodeURIComponent(document.cookie);
+    const cookieArray = decodedCookie.split(";");
+    for (let i = 0; i < cookieArray.length; i++) {
+      let c = cookieArray[i];
+      while (c.charAt(0) === " ") {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) === 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
 
   useEffect(() => {
     fetch("https://localhost:7032/Product/GetProductsByCategory?categotyId=2")
@@ -220,7 +58,7 @@ const Clothing = ({ addToCart }) => {
         }
         return response.json();
       })
-      .then((data) => setProducts(data))
+      .then((data) => setGuestCart(data))
       .catch((error) => console.error("Error al cargar productos:", error));
   }, []);
 
@@ -228,15 +66,26 @@ const Clothing = ({ addToCart }) => {
     setSelectedSize((prevSizes) => ({ ...prevSizes, [productId]: size }));
   };
 
-  // const handleAddToCart = (product) => {
-  //   // Agregar el producto al carrito con la talla seleccionada
-  //   addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
-  // };
-  const handleAddToCart = (product) => {
+  const handleAddToCart = (guestCart) => {
+    const token = getCookie("jwtToken");
+    const defaultQuantity = 0; 
+    const defaultTotalPrice = 0;
+
+    if (!selectedSize[guestCart.id_Product]) {
+      Swal.fire({
+        title: "¡Error!",
+        text: "Por favor, selecciona una talla antes de agregar al carrito.",
+        icon: "error",
+        confirmButtonText: "De acuerdo",
+        confirmButtonColor: "#3085d6",
+      });
+      return;
+    }
+
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
-      icon: "info",
+      iconHtml: '<img src="https://cdn-icons-png.flaticon.com/128/7344/7344044.png" style="width: 85px; height: 85px; border: none;">',
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
@@ -244,15 +93,65 @@ const Clothing = ({ addToCart }) => {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        // Agregar el producto al carrito con la talla seleccionada
-        addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
-        Swal.fire("¡Agregado al carrito!", "El producto ha sido agregado al carrito.", "success");
+        addToCart({ ...guestCart, size: selectedSize[guestCart.id_Product] || "" });
+        Swal.fire({
+          title: "¡Agregado al carrito!",
+          text: "El producto ha sido agregado al carrito.",
+          timer: 1200,
+          showConfirmButton: false, // Añade esta línea
+        });
+        setNewGuestCart((prevGuestCart) => ({
+          ...prevGuestCart,
+          price_product: guestCart.price,
+          id_Product: guestCart.id_Product,
+          quantity_product: defaultQuantity,
+          total_price: defaultTotalPrice,
+        }));
+
+        console.log(
+          "Valores de newGuestCart después de setNewGuestCart:",
+          newGuestCart
+        );
+
+        const guestCartData = {
+          price_product: newGuestCart.price_product,
+          quantity_product: newGuestCart.quantity_product,
+          total_price: newGuestCart.total_price,
+          id_Product: newGuestCart.id_Product,
+        };
+
+        console.log("Valores de guestCartData:", guestCartData);
+
+        fetch(`https://localhost:7032/GuestCardControlle/Post`, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(guestCartData),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              return response.text().then((text) => {
+                throw new Error(text);
+              });
+            }
+            return response.json();
+          })
+          .then((data) => {
+            setGuestCart((prevGuestCart) => [...prevGuestCart, data]);
+
+            // Swal.fire("Success", " Producto agregado al carrito", "success");
+            // fetchProducts();
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            Swal.fire("Error", "Failed to add product", "error");
+          });
       }
     });
-   };
-   
 
-  // export default function Componente() {
+  };   
 
   return (
     <motion.div
@@ -274,7 +173,7 @@ const Clothing = ({ addToCart }) => {
             navigation={true}
             modules={[Pagination, Navigation]}
           >
-            {products.map((product) => (
+            {guestCart.map((product) => (
               <SwiperSlide key={product.id_Product}>
                 <div className="swiper-slide">
                   <img src={product.image} alt={product.name_product} />

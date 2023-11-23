@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./stockprendas.css";
+import Swal from 'sweetalert2'; 
 
 const Stockprendas = ({ addToCart }) => {
   const [products, setProducts] = useState([]);
@@ -29,8 +30,28 @@ const Stockprendas = ({ addToCart }) => {
   };
 
   const handleAddToCart = (product) => {
-    addToCart({ ...product, size: selectedSize[product.id_Product] });
-  };
+    Swal.fire({
+      title: "¿Estás seguro?",
+      text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
+      iconHtml: '<img src="https://cdn-icons-png.flaticon.com/128/7344/7344044.png" style="width: 85px; height: 85px; border: none;">',
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Sí, agregar al carrito",
+      cancelButtonText: "Cancelar",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
+        Swal.fire({
+          title: "¡Agregado al carrito!",
+          text: "El producto ha sido agregado al carrito.",
+          timer: 1200,
+          showConfirmButton: false, // Añade esta línea
+        });
+      }
+    });
+   };
+   
 
   return (
     <>
@@ -40,7 +61,7 @@ const Stockprendas = ({ addToCart }) => {
         {products.map((product) => (
           <div key={product.id_Product}>
             <img src={product.image} alt={product.name} className="product-image" />
-            <p>Nombre: {product.name_product}</p>
+            <p>{product.name_product}</p>
             <p>Precio: {product.price} €</p>
             <p>Descripción: {product.description} </p>
             <select

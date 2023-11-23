@@ -33,8 +33,7 @@ const Home = ({ addToCart }) => {
   //       element.classList.remove('appear');
   //     }
   //   });
-  // };
-
+  // }; 
   
   return (
     <>
