@@ -65,30 +65,11 @@ const Clothing = ({ addToCart }) => {
     setSelectedSize((prevSizes) => ({ ...prevSizes, [productId]: size }));
   };
 
-  // useEffect(() => {
-  //   // Lógica que depende del estado actualizado de newGuestCart
-  //   console.log("Valores de newGuestCart después de setNewGuestCart:", newGuestCart);
-
-  //   // Aquí puedes realizar operaciones que dependan del estado actualizado
-  //   // Por ejemplo, el envío de datos u otra lógica.
-  //   const guestCartData = {
-  //     price_product: newGuestCart.price_product,
-  //     quantity_product: newGuestCart.quantity_product,
-  //     total_price: newGuestCart.total_price,
-  //     id_Product: newGuestCart.id_Product,
-  //   };
-
-  //   console.log("Valores de guestCartData:", guestCartData);
-
-  //   // Realizar aquí la lógica que depende del estado actualizado de newGuestCart
-  //   // Por ejemplo, enviar los datos a través de una solicitud fetch
-
-  // }, [newGuestCart]);
-
   const handleAddToCart = (guestCart) => {
     const token = getCookie("jwtToken");
     const defaultQuantity = 0; 
     const defaultTotalPrice = 0;
+
     if (!selectedSize[guestCart.id_Product]) {
       Swal.fire({
         title: "¡Error!",
@@ -99,6 +80,7 @@ const Clothing = ({ addToCart }) => {
       });
       return;
     }
+
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
@@ -117,12 +99,58 @@ const Clothing = ({ addToCart }) => {
           timer: 1200,
           showConfirmButton: false, // Añade esta línea
         });
+        setNewGuestCart((prevGuestCart) => ({
+          ...prevGuestCart,
+          price_product: guestCart.price,
+          id_Product: guestCart.id_Product,
+          quantity_product: defaultQuantity,
+          total_price: defaultTotalPrice,
+        }));
+
+        console.log(
+          "Valores de newGuestCart después de setNewGuestCart:",
+          newGuestCart
+        );
+
+        const guestCartData = {
+          price_product: newGuestCart.price_product,
+          quantity_product: newGuestCart.quantity_product,
+          total_price: newGuestCart.total_price,
+          id_Product: newGuestCart.id_Product,
+        };
+
+        console.log("Valores de guestCartData:", guestCartData);
+
+        fetch(`https://localhost:7032/GuestCardControlle/Post`, {
+          method: "POST",
+          headers: {
+            Authorization: `Bearer ${token}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(guestCartData),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              return response.text().then((text) => {
+                throw new Error(text);
+              });
+            }
+            return response.json();
+          })
+          .then((data) => {
+            setGuestCart((prevGuestCart) => [...prevGuestCart, data]);
+
+            Swal.fire("Success", " Producto agregado al carrito", "success");
+            // fetchProducts();
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            Swal.fire("Error", "Failed to add product", "error");
+          });
       }
     });
-   };
-   
-  
-   
+
+  };   
 
   return (
     <motion.div
