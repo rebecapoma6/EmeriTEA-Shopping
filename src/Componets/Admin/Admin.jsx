@@ -156,7 +156,7 @@ const Admin = () => {
         setProducts([...products, data]);
         closeAddModal();
         resetNewProductForm();
-        Swal.fire("Success", "Product added successfully", "success");
+        Swal.fire("Éxito", "Producto añadido con éxito", "success");
         fetchProducts();
       })
       .catch((error) => {
