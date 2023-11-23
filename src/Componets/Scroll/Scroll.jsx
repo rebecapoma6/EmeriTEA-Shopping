@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import './Scroll.css'; // Asegúrate de tener el nombre de tu archivo CSS correcto
+import './Scroll.css'; 
 
 const ScrollButton = () => {
   const [isFixed, setIsFixed] = useState(false);

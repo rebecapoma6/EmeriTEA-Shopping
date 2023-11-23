@@ -1,11 +1,3 @@
-/* .shopping-cart{
-    background: white;
-}
-
-.product-imagecart{
-    width: 50px;
-    height: auto;
-} */
 .quantity-button {
   padding: 5px 10px; /* Ajusta el espaciado interior según sea necesario */
   font-size: 14px; /* Tamaño de la fuente */
@@ -21,7 +13,7 @@
   text-align: center; 
   padding: 20px; 
   border-radius: 8px; 
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); Sombra */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .buy-button {
@@ -40,7 +32,7 @@
 }
 
 .shopping-cart {
-    width: 100%;
+    width: 81%;
     margin-top: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

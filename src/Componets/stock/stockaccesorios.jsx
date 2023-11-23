@@ -5,7 +5,6 @@ const Stockaccesorios = ({ addToCart }) => {
   const [accessories, setAccessories] = useState([]);
 
   useEffect(() => {
-    //fetch("http://localhost:3000/products?category=Accessories")
     fetch("https://localhost:7032/Product/GetProductsByCategory?categotyId=1")
       .then((response) => {
         if (!response.ok) {

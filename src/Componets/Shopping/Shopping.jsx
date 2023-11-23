@@ -4,20 +4,18 @@ import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import './Shopping.css';
 const ShoppingCart = ({ cart, removeFromCart }) => {
   const [productQuantities, setProductQuantities] = useState(
-    cart.map(() => 1) // Inicializa todas las cantidades en 1 por defecto
+    cart.map(() => 1) 
   );
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
-    // Calcula la suma total de los precios teniendo en cuenta la cantidad de cada producto
     const total = cart.reduce((sum, product, index) => {
       return sum + product.price * productQuantities[index];
     }, 0);
     setTotalPrice(total);
   }, [cart, productQuantities]);
+
   const removeItemFromCart = (productId) => {
-    // Usa removeFromCart para eliminar un producto del carrito
     removeFromCart(productId);
-    // Actualiza las cantidades y el total después de eliminar un producto
     setProductQuantities((prevQuantities) => {
       const index = cart.findIndex(product => product.id_Product === productId);
       if (index !== -1) {
@@ -28,7 +26,7 @@ const ShoppingCart = ({ cart, removeFromCart }) => {
         return prevQuantities;
       }
     });
-    // Actualiza también el total restando el precio del producto eliminado
+
     setTotalPrice((prevTotal) => {
       const productToRemove = cart.find(product => product.id_Product === productId);
       if (productToRemove) {
@@ -52,7 +50,7 @@ const ShoppingCart = ({ cart, removeFromCart }) => {
         newQuantities[index]--;
         return newQuantities;
       } else {
-        // No permitas que la cantidad sea menor que 1
+        
         return prevQuantities;
       }
     });
