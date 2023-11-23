@@ -140,7 +140,7 @@ const Clothing = ({ addToCart }) => {
           .then((data) => {
             setGuestCart((prevGuestCart) => [...prevGuestCart, data]);
 
-            Swal.fire("Success", " Producto agregado al carrito", "success");
+            //Swal.fire("Success", " Producto agregado al carrito", "success");
             // fetchProducts();
           })
           .catch((error) => {
