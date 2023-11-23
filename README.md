@@ -110,9 +110,6 @@ Each of them fulfills a specific purpose in the development of your web applicat
 <img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700478369/image_3_d0pb9k.png" width="200" heigth="50">
 <img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700480571/test_jjifns.png" width="200" heigth="50">
 
-
-
-
 ## Installation Instructions💡
 
 1. Clone the repository from GitHub:
@@ -143,6 +140,10 @@ Each of them fulfills a specific purpose in the development of your web applicat
 
 ## Next Steps 🔜
 
+
+## Contributions
+We welcome contributions from the community. If you wish to contribute, please follow the code standards and open a detailed pull request.
+Remember to customise these READMEs to the specific needs of your project. Also, be sure to properly document the code and provide detailed instructions to make it easy for other developers to collaborate.
 
 ## Authors 👨🏻‍💻👩🏻‍💻
 
