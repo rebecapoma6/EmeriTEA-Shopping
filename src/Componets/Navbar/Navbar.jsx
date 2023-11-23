@@ -13,7 +13,6 @@ const CustomNavbar = () => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Limpiar el evento al desmontar el componente
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -24,7 +23,6 @@ const CustomNavbar = () => {
 
   return (
     <div className="mainnavbar">
-      {/* <div className="navbar"> */}
       <div className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
         <div>
           <a
@@ -34,9 +32,7 @@ const CustomNavbar = () => {
           >
             Quiénes Somos
           </a>
-        </div>
-
-        {/* <Link to="/donaciones">Donaciones</Link> */}
+        </div> 
 
         <div className="dropdown">
           <Link to="" className="dropbtn">

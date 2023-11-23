@@ -9,8 +9,6 @@ const Solidary = () => {
         <h1>Haz tu Regalo Solidario!</h1>
       </div>
 
-      {/* <div className="container-blue"></div> */}
-
       <div className="blueContainer">
         <div className="imageContainer">
           <img
@@ -32,7 +30,6 @@ const Solidary = () => {
           </h2>
 
           <Link to="/Solidary">
-            {/* <button>Más información aquí!</button> */}
                 <button className="shadow__btn">Más información aquí!</button>
           </Link>
       
