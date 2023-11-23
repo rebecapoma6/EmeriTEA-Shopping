@@ -102,7 +102,7 @@ const Clothing = ({ addToCart }) => {
     Swal.fire({
       title: "¿Estás seguro?",
       text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
-      icon: "info",
+      iconHtml: '<img src="https://cdn-icons-png.flaticon.com/128/7344/7344044.png" style="width: 85px; height: 85px; border: none;">',
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
@@ -110,58 +110,19 @@ const Clothing = ({ addToCart }) => {
       cancelButtonText: "Cancelar",
     }).then((result) => {
       if (result.isConfirmed) {
-        addToCart({ ...guestCart, size: selectedSize[guestCart.id_Product]||""});
-        setNewGuestCart((prevGuestCart) => ({
-          ...prevGuestCart,
-          price_product: guestCart.price,
-          id_Product: guestCart.id_Product,
-          quantity_product: defaultQuantity,
-          total_price: defaultTotalPrice,
-        }));
-
-        console.log(
-          "Valores de newGuestCart después de setNewGuestCart:",
-          newGuestCart
-        );
-
-        const guestCartData = {
-          price_product: newGuestCart.price_product,
-          quantity_product: newGuestCart.quantity_product,
-          total_price: newGuestCart.total_price,
-          id_Product: newGuestCart.id_Product,
-        };
-
-        console.log("Valores de guestCartData:", guestCartData);
-
-        fetch(`https://localhost:7032/GuestCardControlle/Post`, {
-          method: "POST",
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(guestCartData),
-        })
-          .then((response) => {
-            if (!response.ok) {
-              return response.text().then((text) => {
-                throw new Error(text);
-              });
-            }
-            return response.json();
-          })
-          .then((data) => {
-            setGuestCart((prevGuestCart) => [...prevGuestCart, data]);
-
-            Swal.fire("Success", " Producto agregado al carrito", "success");
-            // fetchProducts();
-          })
-          .catch((error) => {
-            console.error("Error:", error);
-            Swal.fire("Error", "Failed to add product", "error");
-          });
+        addToCart({ ...guestCart, size: selectedSize[guestCart.id_Product] || "" });
+        Swal.fire({
+          title: "¡Agregado al carrito!",
+          text: "El producto ha sido agregado al carrito.",
+          timer: 1200,
+          showConfirmButton: false, // Añade esta línea
+        });
       }
     });
-  };
+   };
+   
+  
+   
 
   return (
     <motion.div

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 import './Shopping.css';
+
+
 const ShoppingCart = ({ cart, removeFromCart }) => {
   const [productQuantities, setProductQuantities] = useState(
     cart.map(() => 1) 
@@ -20,7 +22,7 @@ const ShoppingCart = ({ cart, removeFromCart }) => {
       const index = cart.findIndex(product => product.id_Product === productId);
       if (index !== -1) {
         const newQuantities = [...prevQuantities];
-        newQuantities.splice(index, 1); // Elimina la cantidad correspondiente al producto eliminado
+        newQuantities.splice(index, 1); 
         return newQuantities;
       } else {
         return prevQuantities;
