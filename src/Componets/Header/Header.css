@@ -1,0 +1,136 @@
+@font-face {
+  font-family: 'Permanent Marker';
+  src: url('/fonts/PermanentMarker-Regular.ttf') format('woff');
+  /* Asegúrate de reemplazar 'font.woff' con el nombre y la extensión correctos de tu archivo de fuente */
+}
+
+
+.mainheader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.Header {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    width: 80%;
+    /* height: auto; */
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px ;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+    margin-left: -80px;
+  }
+  
+  .logo-section img {
+    width: 100px;
+      }
+  
+  .title {
+    font-family: 'Permanent Marker';
+    color: #7AC7FF;
+    /* font-family:; */
+    margin: 0;
+  }
+  
+  .buttons {
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    margin-right: -80px;
+    display: flex;
+  }
+  .buttons button{
+    background-color: #0074B8;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .buttons a i{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #0074B8;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  
+  .buttons button:hover {
+    background-color: #005C99;
+  }
+  .buttons button:first-child {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .buttons button:last-child {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  }
+  .buttons button i {
+    vertical-align: middle;
+  }
+  .buttons button i.fa-user::before {
+    content: "\f007"; /* Código del icono de usuario de FontAwesome */
+  }
+  .buttons button i.fa-cart-shopping::before {
+    content: "\f07a"; /* Código del icono de carrito de compras de FontAwesome */
+  }
+  
+  
+
+
+   
+@media (max-width: 420px) {
+  .Header {
+    width: 80%; /* Reducir aún más el ancho para pantallas más pequeñas */
+  }
+
+  .logo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -35px;
+  }
+
+  .logo-section img {
+    width: 70px; 
+  }
+
+  .title {
+   display: none;
+  }
+
+.buttons{
+  margin: 0;
+  margin-right: -60px;
+}
+
+  .buttons button {
+    width: 40px;
+    height: 40px; /* Reducir el tamaño del icono para dispositivos más pequeños */
+  }
+
+
+}
