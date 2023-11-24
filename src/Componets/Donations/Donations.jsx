@@ -11,11 +11,9 @@ const Donations = () => {
           Para realizar una donación por Bizum, sigue estos pasos:
         </p>
         <ol>
-          <li>Abre la aplicación de Bizum en tu teléfono.</li>
-          <li>Dentro de la aplicación seleccionar ONG o envío de donación</li>
-          <li>Introducir el código de Emeritea 03218</li>
-          <li>Ingresa la cantidad que deseas donar</li>
-          <li>Confirma la transacción</li>
+          <li>Dentro de la aplicación bizum seleccionar ONG o envío de donación</li>
+          <li>Introducir el código de Emeritea 03218.</li>
+          <li>Introducir importe y enviar.</li>
         </ol>
         <p>¡Gracias por tu generosidad!</p>
       </div>

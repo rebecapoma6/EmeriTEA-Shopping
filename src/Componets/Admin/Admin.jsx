@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
-  Button,
-  useDisclosure,
-} from "@nextui-org/react";
+import {Modal,ModalContent,ModalHeader,ModalBody,ModalFooter,Button,useDisclosure,} from "@nextui-org/react";
 import Swal from "sweetalert2";
 import "./Admin.css";
 import ProductCard from "../../Componets/Card/Card";
@@ -18,6 +10,7 @@ const Admin = () => {
   const [selectedProductDetails, setSelectedProductDetails] = useState(null);
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [showEditSize, setShowEditSize] = useState(false);
+
 
   const [newProduct, setNewProduct] = useState({
     Name_product: "",
@@ -41,8 +34,7 @@ const Admin = () => {
       Size: [],
       showSize: false,
     });
-  };
-
+  };  
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -150,12 +142,12 @@ const Admin = () => {
         setProducts([...products, data]);
         closeAddModal();
         resetNewProductForm();
-        Swal.fire("Success", "Product added successfully", "success");
+        Swal.fire("Éxito", "Producto añadido con éxito", "success");
         fetchProducts();
       })
       .catch((error) => {
         console.error("Error:", error);
-        Swal.fire("Error", "Failed to add product", "error");
+        Swal.fire("Error", "No se ha podido añadir el producto", "error");
       });
   };
 
@@ -297,8 +289,7 @@ const Admin = () => {
     <>
       <div className="add-header">
         <h1>AÑADIR PRODUCTOS</h1>
-      </div>
-
+      </div>    
       <br />
       <Button className="modal-header" onClick={openAddModal}>
         Agregar Producto
@@ -359,11 +350,13 @@ const Admin = () => {
                       }}
                       multiple
                     >
-                      <option value="XS">XS</option>
+                      
                       <option value="S">S</option>
                       <option value="M">M</option>
                       <option value="L">L</option>
                       <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                      <option value="XXXL">XXXL</option>
                     </select>
                     {/* <div>
                       {newProduct.Size.map((size) => (
@@ -503,11 +496,12 @@ const Admin = () => {
                         })
                       }
                     >
-                      <option value="XS">XS</option>
                       <option value="S">S</option>
                       <option value="M">M</option>
                       <option value="L">L</option>
                       <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                      <option value="XXXL">XXXL</option>
                     </select>
                   )}
 

@@ -34,29 +34,27 @@ const Accessories = ({ addToCart }) => {
   const [accessories, setAccessories] = useState([]);
 
   const handleAddToCart = (product) => {
+    addToCart(product);
     Swal.fire({
-      iconHtml: '<img src="https://cdn-icons-png.flaticon.com/128/4990/4990913.png" style="width: 85px; height: 85px;">',
-      title: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
-      // text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
-      // icon: "question",
+      title: "¿Estás seguro?",
+      text: "Esta acción agregará el producto al carrito. ¿Deseas continuar?",
+      iconHtml: '<img src="https://cdn-icons-png.flaticon.com/128/7344/7344044.png" style="width: 85px; height: 85px; border: none;">',
       showCancelButton: true,
       confirmButtonColor: "#3085d6",
       cancelButtonColor: "#d33",
       confirmButtonText: "Sí, agregar al carrito",
       cancelButtonText: "Cancelar",
-      
-    }).then((result) => {
-      if (result.isConfirmed) {
-        // Agregar el producto al carrito con la talla seleccionada
-        addToCart({ ...product, size: selectedSize[product.id_Product] || "" });
-        Swal.fire({
-        icon: "success",
-        title: "Tu artículo se añadió al carrito",
-        showConfirmButton: false,
-        timer: 1500});
-      }
-    });
-   };
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire({
+        title: "¡Agregado al carrito!",
+        text: "El producto ha sido agregado al carrito.",
+        timer: 1200,
+        showConfirmButton: false, // Añade esta línea
+      });
+    }
+  });
+}
 
   useEffect(() => {
     fetch("https://localhost:7032/Product/GetProductsByCategory?categotyId=1")
@@ -75,7 +73,7 @@ const Accessories = ({ addToCart }) => {
   return (
     <div className="scroll-op">
       <div className="container-swiper">
-        <div className="Accesorios">Accesorio</div>
+        <div className="Accesorios">Accesorios</div>
         <div className="mySwiperd">
           <Swiper
             slidesPerView={4}

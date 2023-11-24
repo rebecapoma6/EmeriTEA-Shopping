@@ -4,7 +4,7 @@ const Location = () => {
   return (
     <div className="addInitial">
       <h1>LOCACIÓN</h1>
-      ¿Dónde Estamos?:
+      ¿Dónde Estamos?
 Travesía Luis Álvarez Lencero, 6
 06800 Mérida, Badajoz
     </div>

@@ -1,14 +1,24 @@
-import { describe, expect, test } from "vitest";
-import { render, screen } from "@testing-library/react";
-import Footer from "./Footer";
 
-describe("Footer", () => {
-  test("renders", () => {
-    render(<Footer />);
-    expect(screen.getByText("Politica de Privacidad")).toBeDefined();
-    expect(screen.getByText("Aviso Legal")).toBeDefined();
-    expect(screen.getByText("Política de Cookies")).toBeDefined();
-    expect(screen.getByText("Copyright © 2019 EmeriTEA")).toBeDefined();
-    expect(screen.getByText("Emerite@emeritea.com")).toBeDefined();
-  });
+import { render, screen } from '@testing-library/react';
+import Footer from './Footer';
+import '@testing-library/jest-dom';
+
+
+test('renders Footer component', () => {
+ render(<Footer />);
+
+ const politicaPrivacidadElement = screen.getByText('Política de Privacidad');
+ expect(politicaPrivacidadElement).toBeInTheDocument();
+
+ const avisoLegalElement = screen.getByText('Aviso Legal');
+ expect(avisoLegalElement).toBeInTheDocument();
+
+ const politicaCookiesElement = screen.getByText('Política de Cookies');
+ expect(politicaCookiesElement).toBeInTheDocument();
+
+ const copyrightElement = screen.getByText('Copyright © 2019 EmeriTEA');
+ expect(copyrightElement).toBeInTheDocument();
+
+ const correoElement = screen.getByText('Emeritea@emeritea.com');
+ expect(correoElement).toBeInTheDocument();
 });
