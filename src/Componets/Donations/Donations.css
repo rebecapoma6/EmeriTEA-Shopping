@@ -44,8 +44,8 @@
     }
   
     .donation-container img {
-      max-height: auto; /* Permite que la imagen se ajuste automáticamente en altura */
-      max-width: 100%; /* La imagen se ajustará al ancho del contenedor */
+      max-height: auto; 
+      max-width: 100%; 
       margin-right: 0;
     }
   }
