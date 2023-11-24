@@ -120,7 +120,7 @@ Each of them fulfills a specific purpose in the development of your web applicat
 2. Access the frontend directory:
 
    ````bash
-   cd EmeriTEA-Shopping/frontend
+   cd EmeriTEA-Shopping
    ```
 3. Install the dependencies:
 
