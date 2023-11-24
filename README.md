@@ -141,6 +141,12 @@ Each of them fulfills a specific purpose in the development of your web applicat
 2. Open your browser and go to `http://localhost:3000` to use the application.
 
 ## Next Steps 🔜
+- Checkout
+- Payment method association
+- Increase quantity of products 
+- Remove product from the front-end cart
+- Create visitor payment method function 
+- Remove product from Back-end cart
 
 
 ## Contributions
