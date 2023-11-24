@@ -1,0 +1,151 @@
+.container-swiper {
+  width: 100%;
+  /* background-color: rgb(196, 189, 189); */
+  /* padding-left: 10px;
+    padding-right: 10px; */
+}
+.Prendas {
+  /* width: 1235.35px; */
+  width: 100%;
+  height: 100px;
+  background-color: #007da0 !important;
+  /* margin: 0 9.3%; */
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  margin-bottom: 20px !important;
+  margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+}
+/* .swiper {
+    width: 1235.35px;
+    height: 350px;
+  } */
+
+/* .swiper-slide {
+  font-size: 20px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 8px #EDEDED solid;
+  
+} */
+
+/* .swiper-slide img {
+    display: block;
+    width: 70%;
+    height: 70%;
+    object-fit: cover;
+  } */
+
+.description {
+  align-items: center;
+  font-size: 15px;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* margin-bottom: 5px; */
+}
+
+.nombre {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.precio {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #0084ce;
+  margin-bottom: 10px;
+}
+
+.botones-card {
+  padding: 5px;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: center;
+}
+
+.carrito {
+  width: auto;
+  display: flex;
+  margin-top: 5px;
+}
+
+.tallaje {
+  width: auto;
+  height: 25px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  padding: 0 1px; /* Ajustar el padding según tu diseño */
+  border: 2px #0084ce solid;
+  border-radius: 20px;
+  color: rgb(163, 162, 162);
+  background: white;
+  font-size: 14px; /* Tamaño de fuente según tu diseño */
+  cursor: pointer;
+  outline: none; /* Eliminar el borde al hacer clic */
+}
+
+.js{
+  width: 100%;
+}
+
+.swal2-icon {
+  border: none !important;
+ }
+
+
+
+@media (max-width: 420px) {
+  .container-swiper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .Prendas {
+    width: 100%;
+    height: 60px;
+  }
+
+  .mySwiper {
+    width: 100%;
+   
+  }
+
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    font-size: 16px;
+    padding: 0 40px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .carrito {
+    /* Ajustes adicionales para el carrito en dispositivos móviles */
+  }
+
+  .nombre {
+    /* Ajustes adicionales para el nombre en dispositivos móviles */
+  }
+
+  .precio {
+    /* Ajustes adicionales para el precio en dispositivos móviles */
+  }
+  
+}

@@ -1,42 +1,151 @@
-/* Estilo para el formulario y la barra de navegación */
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/RobotoCondensed-VariableFont_wght.ttf') format('woff');
+    /* Asegúrate de reemplazar 'font.woff' con el nombre y la extensión correctos de tu archivo de fuente */
+  }
+
+.mainnavbar {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  /* top:0; */
+  /* z-index: 1000; */
+  /* position: fixed; */
+}
+
+.navbar.scrolled {
+  /* Estilos adicionales para el navbar después de hacer scroll */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra, ajusta según sea necesario */
+}
+
 .navbar {
-  background-color: #f3f4f6; /* Color de fondo */
-  padding: 15px; /* Espaciado interno */
-  border-radius: 8px; /* Borde redondeado */
+  background-color: #007da0;
+  width: 80%;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-size: 20px;
+  font-family: 'Roboto'; 
+  /* letter-spacing: 0.5px; */
 }
 
-/* Estilo para el campo de búsqueda */
-.form-control {
-  border: none; /* Sin borde */
-  border-radius: 30px; /* Borde redondeado */
-  padding: 10px; /* Espaciado interno */
-  background-color: #e5e7eb; /* Color de fondo del campo */
-  color: #000; /* Color del texto */
-  font-size: 16px; /* Tamaño del texto */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: underline;
 }
 
-/* Estilo para el botón */
-.btn {
-  border: none; /* Sin borde */
-  border-radius: 30px; /* Borde redondeado */
-  padding: 10px 20px; /* Espaciado interno */
-  background-color: #3b82f6; /* Color de fondo del botón */
-  color: #fff; /* Color del texto */
-  font-size: 16px; /* Tamaño del texto */
+.navbar a:hover {
+  background-color: #ffffff;
+  color: black;
+/* width: auto; */
+/* height: 15px; */
+text-decoration: none;
 }
 
-/* Estilo para el botón al pasar el ratón por encima */
-.btn:hover {
-  background-color: #2563eb; /* Color de fondo al pasar el ratón por encima */
-  color: #fff; /* Color del texto al pasar el ratón por encima */
+.navbar .dropdown {
+  position: relative;
+  display: inline-block;
+  /* z-index: 5; */
 }
 
-/* Estilo para el contenedor de la fila y las columnas */
-.row {
-  margin: 0; /* Sin márgenes */
+.navbar .dropdown-content {
+  display:none;
+  margin-top: 40px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9);
+  z-index: 1;
 }
 
-/* Estilo para las columnas */
-.col {
-  padding: 0; /* Sin espaciado interno */
+.navbar .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.navbar .dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-top: 1px #7AC7FF solid;
+}
+
+.navbar .dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+
+
+.navbar .dropdown-content2 {
+  display:none;
+  margin-top: 40px;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 250px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9);
+  z-index: 1;
+}
+
+.navbar .dropdown:hover .dropdown-content2 {
+  display: block;
+}
+
+.navbar .dropdown-content2 a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  border-top: 1px #7AC7FF solid;
+}
+
+.navbar .dropdown-content2 a:hover {
+  background-color: #ddd;
+}
+
+
+
+@media (max-width: 420px) {
+.mainnavbar{
+  width: 100%;
+}
+
+  .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    /* flex-direction: column; */
+    /* margin-bottom: 190px; */
+  }
+
+  .navbar div {
+    width: auto;
+    font-size:9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+  }
+
+  .navbar .dropdown {
+    display: block;
+  }
+
+  .navbar .dropdown-content,
+  .navbar .dropdown-content2 {
+    width: 100%; 
+font-size: 20px;
+  }
 }

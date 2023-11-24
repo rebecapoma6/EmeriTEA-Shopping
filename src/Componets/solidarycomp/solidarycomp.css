@@ -1,0 +1,128 @@
+/* Estilos para el componente PedidoView */
+.pedido-view {
+  width: 100%;
+  display: flex;
+  /* justify-content: space-around; */
+}
+
+/* Estilos para los formularios a la izquierda */
+.formularios-solidary {
+  width: 50%; 
+  /* background-image: url(https://res.cloudinary.com/dq2tfglqq/image/upload/v1698349480/2_2_yhlbh3.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: opacity(10); */
+
+  background-color: #ffffff;
+    /* background-clip: border-box; */
+  /* height: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #081526;
+  font-size: 25px;
+}
+
+.formularios-solidary form {
+  width: 90%;
+  margin-bottom: 20px;
+  font-family: "roboto";
+}
+
+.formularios-solidary label {
+  font-family: "roboto";
+  font-size: 30px;
+  display: block;
+  text-align: center;
+  margin-bottom: 5px;
+  background-color: #7ac7ff;
+  color: #081526;
+  filter: blur(90%);
+}
+
+.formularios-solidary input,
+.formularios-solidary select,
+.formularios-solidary textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.formularios-solidary button {
+  /* background-color: blue; */
+  background-color: #007da0;
+  /* background-color:  #7AC7FF; */
+  /* width: 20%; */
+  width: auto;
+  height: 30px;
+  text-decoration: none;
+  border: 3px white solid;
+  border-radius: 15px;
+  color: white;
+  font-size: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formularios-solidary button:hover{
+    background-color: white;
+    border:3px #081526 solid;
+    color: #081526;
+}
+
+/* Estilos para las imágenes desplazables a la derecha */
+.imagenes-desplazables {
+  width: 50%; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* overflow-y: hidden;  */
+}
+/*   
+  .imagenes-desplazables img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  } */
+
+.slick-slider {
+  width: 100%;
+
+  /* margin: 2px; */
+  padding: 20px;
+}
+
+.slick-slide img {
+  width: 80%;
+  height: auto;
+}
+
+@media (width: 420px) {
+  .pedido-view {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .formularios-solidary {
+    width: 100%; /* Ajusta según sea necesario */
+    padding: 20px;
+    /* box-sizing: border-box; */
+    text-align: center;
+  }
+  .imagenes-desplazables {
+    width: 100%;
+  }
+  .slick-slider {
+    width: 100%;
+  }
+}
