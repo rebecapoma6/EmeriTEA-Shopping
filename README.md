@@ -1,12 +1,17 @@
-# EmeriTEA-Shopping                                              
-![](https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699348285/toseozbbon8ni9jq03ys.png)
+# EmeriTEA-front-end   
+
+<p align="center"><img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699348285/toseozbbon8ni9jq03ys.png" width="150" heigth="50" justify-content="center"></p>
 
 ## Project Description 🚀
-Welcome to our EmeriTEA online shop, where our aim is to reach as many people as possible who are willing to do their bit for the association. 
-In EmeriTEA Shopping we give you the opportunity to collaborate with the association thanks to the sale of a wide variety of products made in the association, where all the benefits of their sale will go entirely to the association. 
+Welcome to our EmeriTEA online shop, is a user interface designed for the eCommerce platform, which makes it easier for families of people with Autism Spectrum Disorder (ASD) to sell products.
+
+The platform is divided into two main categories: apparel, which includes: t-shirts and hats, and accessories, which includes: magnets, fabric backpacks, loop key chains (autism), fabric bracelets and soaps. This interface offers a personalised and accessible shopping experience, specifically designed to meet the needs of this user group.
+
+In addition, the API of this frontend is designed to be accessible to the general public. This allows any browser user to visualise the products offered by the organisation. The main objective of this platform is to foster collaboration and financial support through the purchases made by users on the platform.
 
 ## Screenshots 📷
 <img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699356664/image_1_d7zxbv.png" width="200" heigth="50">
+
 
 ## Stacks 🖥️
 ● Visual Studio Code <br>
@@ -23,40 +28,68 @@ In EmeriTEA Shopping we give you the opportunity to collaborate with the associa
 ● Slack <br>
 ● Zoom
 
+## Technologies used 💻
+● React.js: Is a powerful JavaScript library for building interactive and efficient user interfaces.  
+● Bootstrap (or your choice of CSS framework): Used to ensure responsive design and adaptability to different screen sizes.  
+● Swiper (JavaScript library): A JavaScript library that facilitates the creation of image carousels and other content elements on the website, enhancing the user experience.  
+● Nex UI: A React UI library that allows you to build sites and applications quickly and easily.  
+
+## Pre-requisites 🔜
+Make sure you have Node.js installed on your system before proceeding.
+
 ## Libraries 📚
-Libraries are sets of prewritten code that are used to perform specific tasks or add functionality to an application or website. These libraries save developers time and effort as they can use existing code instead of writing it from scratch. In your project "Sound of Silence", you mentioned that you are using various technologies and tools, including libraries. Here are some of the libraries you mentioned in your project:
+Libraries are sets of prewritten code that are used to perform specific tasks or add functionality to an application or website. These libraries save developers time and effort as they can use existing code instead of writing it from scratch. In your project "EmeriTEA Shopping", you mentioned that you are using various technologies and tools, including libraries. Here are some of the libraries you mentioned in your project:
 
 React: A JavaScript library for creating interactive user interfaces.
+
 Bootstrap: A front-end design framework that provides ready-to-use styling and components.
-Jest: A JavaScript testing framework to make sure your code works correctly.
+
 Testing Library: A library used to write tests and perform user testing on web applications.
+
+Swiper (JavaScript library): A JavaScript library that facilitates the creation of image carousels and other content elements on the website, improving the user experience.
+
+Nex UI: It is a React UI library that allows you to build sites and applications quickly and easily.
 
 Each of them fulfills a specific purpose in the development of your web application. If you have additional questions about how to use these libraries or need more details about any of them, don't hesitate to ask.
 
 
-## Technologies and Tools 🔨
+## Languages and frameworks ✍🏻 
 <div>  
-<a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a>  
-<a href="https://getbootstrap.com/docs/3.4/javascript/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="50" /></a>  
-<a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a>  
-<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>  
-<a href="https://www.javascript.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/javascript-original.svg" alt="JavaScript" height="50" /></a>  
-<a href="https://github.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>  
-<a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>  
-<a href="https://www.figma.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" /></a>  
-<a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>
+<a href="https://en.wikipedia.org/wiki/HTML5" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/html5-original-wordmark.svg" alt="HTML5" height="50" /></a>
+<a href="https://www.w3schools.com/css/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/css3-original-wordmark.svg" alt="CSS3" height="50" /></a> 
+<a href="https://developer.mozilla.org/es/docs/Web/JavaScript" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700048829/logo_js_picns8.png" alt="js" height="50" /></a> 
 <a href="https://learn.microsoft.com/es-es/dotnet/csharp/tour-of-csharp/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699350399/C_zdol40.png" alt="C#" height="50" /></a>
+<a href="https://nodejs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/nodejs-original-wordmark.svg" alt="Node.js" height="50" /></a>
+<a href="https://git-scm.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/git-scm-icon.svg" alt="Git" height="50" /></a>
+<a href="https://github.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354303/GITHUB_fkv5hy.png" alt="GITHUB" height="50" /></a>
+<a href="https://vitejs.dev/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962787/LOGO_VITEJS_ka5lsg.png" height="50" /></a>
+<a href="https://reactjs.org/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/react-original-wordmark.svg" alt="React" height="50" /></a> 
 <a href="https://www.microsoft.com/es-es/sql-server/sql-server-downloads" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SQL_SERVER_vhzlzo.png" alt="SQL SERVER" height="50" /></a>
+</div>  
+
+## Tools and libraries  🔨
+<div>
 <a href="https://code.visualstudio.com/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353985/VISUAL_AZULITO_jgfldr.png" alt="VISUAL STUDIO CODE" height="50" /></a>
 <a href="https://visualstudio.microsoft.com/es/downloads/" target="_blank"><img style="margin: 10px" src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/VISUAL_MORADITO_egwm8n.png" alt="VISUAL STUDIO CODE 2020" height="50" /></a>
-<a href="https://sweetalert2.github.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SWEETALERT_jmo7vw.png" alt="VISUAL STUDIO CODE 2020" height="50" /></a>
-<a href="https://swagger.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SWAGGER_t3tmhl.png" alt="SWAGGER" height="50" /></a>
+<a href="https://www.figma.com/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/figma-icon.svg" alt="Figma" height="50" /></a> 
 <a href="https://trello.com/home" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/TRELLO_1_zyoau4.png" alt="TRELLO" height="50" /></a>
-<a href="https://github.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354303/GITHUB_fkv5hy.png" alt="GITHUB" height="50" /></a>
+<a href="https://www.jestjs.io/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/jest.svg" alt="Jest" height="50" /></a>
+<a href="https://sweetalert2.github.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SWEETALERT_jmo7vw.png" alt="VISUAL STUDIO CODE 2020" height="50" /></a> 
+<a href="https://getbootstrap.com/docs/3.4/javascript/" target="_blank"><img style="margin: 10px" src="https://profilinator.rishav.dev/skills-assets/bootstrap-plain.svg" alt="Bootstrap" height="50" /></a>  
+<a href="https://swagger.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353984/SWAGGER_t3tmhl.png" alt="SWAGGER" height="50" /></a>
 <a href="https://jwt.io/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353959/JWT_fu0k4s.png" alt="JWT" height="50" /></a>
+</div>
+<div>
 <a href="https://www.juannicolas.eu/cors-que-es-y-como-funciona/#:~:text=Cuando%20hablamos%20de%20CORS%20(Cross,est%C3%A1%20alojado%20en%20otro%20origen." target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353930/CORS_go1ava.png" alt="CORS" height="50" /></a>
 <a href="https://getbootstrap.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699353734/BOOTSTRAP_sxlttx.png" alt="BOOTSTRAP" height="50" /></a>
-<a href="https://cloud.google.com/icons?hl=es" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354282/GOOGLE_CLOUD_gxzcqu.jpg" alt="GOOGLE CLOUD" height="50" /></a>
+<a href="https://cloud.google.com/icons?hl=es" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699354282/GOOGLE_CLOUD_gxzcqu.jpg" alt="GOOGLE CLOUD" height="50" /></a> 
+<a href="https://emotion.sh/docs/introduction" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699960463/emotion_page_logo_f5wm8h.png" height="50" /></a>  
+<a href="https://mui.com/material-ui/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962165/logo_MUI_dc7j6j.webp" height="50" /></a>
+<a href=" https://nextui.org/docs/components/modal" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962222/logo_NEXTUI_rm9oma.png" height="50" /></a>
+<a href="https://www.npmjs.com/package/@types/react-dom" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699961154/NPM_JS_rxtyqb.png" height="50" /></a>
+<a href="https://fontawesome.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699962949/FONTAWESOME_LOGO_y6yfni.png" height="50" /></a>
+<a href="https://www.framer.com/motion/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699963249/LOGO_FRAMER_MOTION_brmajm.png" height="50" /></a>
+<a href="https://leafletjs.com/" target="_blank"><img style="margin: 10px" src= "https://res.cloudinary.com/dgsqxkvfz/image/upload/v1699963449/LOGO_LEAFLETJS_obu6nu.png" height="30" /></a>
 </div>
 
 ## Methodology 📚
@@ -71,26 +104,55 @@ Each of them fulfills a specific purpose in the development of your web applicat
 + The branch methodology allows us to work collaboratively and maintain an organized and efficient workflow. Furthermore, working in branches allows us to work freely without conflicting with the work of other team members. Additionally, it provides us with greater control and a record or history of the various changes being made. On the other hand, for added security when merging codes from different branches, we have implemented security rules on GitHub where it is necessary to create a pull request prior to the merge.
 
 ## Tests ☑️
+<a href="https://vitest.dev/" target="_blank"><img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700478996/logo_vitest_ehhtv0.png" width="200" heigth="50">
+
+## Tests Screenshot ✔️
+<img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700473154/test_front_bljfyv.png" width="200" heigth="50">
+<img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700478369/image_3_d0pb9k.png" width="200" heigth="50">
+<img src="https://res.cloudinary.com/dgsqxkvfz/image/upload/v1700480571/test_jjifns.png" width="200" heigth="50">
+
+## Installation Instructions💡
+
+1. Clone the repository from GitHub:
+   ````bash
+   git clone https://github.com/tu-usuario/EmeriTEA-Shopping.git
+   ```
+2. Access the frontend directory:
+
+   ````bash
+   cd EmeriTEA-Shopping/frontend
+   ```
+3. Install the dependencies:
+
+   ````bash
+   npm install
+   ```
+4. Set the environment variables:
+   - Create an `.env` file in the frontend directory if necessary and set environment variables, such as backend server URLs, if needed.
 
 
+## Instructions for Use ✍🏻
 
-## Test Screenshot ✔️
-
-## Installation Process ⬆️
-
-1. Clone the GitHub repository: https://github.com/rebecapoma6/EmeriTEA-Shopping.git
-2. Open the file using Visual Studio Code.
-3. Open the terminal in Visual Studio Code.
-4. Install the following command: **npm i.**
-5. Once the component installations are complete, in a new terminal, run **npm run dev**. Open the **localhost**: that appears.
-6. In a new terminal, run the command **json-server --watch cards.json**. Open the **localhost**: that appears.
-7. Now you can view not only the static Front-end web page but also add, modify, and delete the content of the cards through the Fake API.
-
+1. Initialise the application:
+   ````bash
+   npm start
+   ```
+2. Open your browser and go to `http://localhost:3000` to use the application.
 
 ## Next Steps 🔜
+- Checkout
+- Payment method association
+- Increase quantity of products 
+- Remove product from the front-end cart
+- Create visitor payment method function 
+- Remove product from Back-end cart
 
 
-## Authors 👨‍💻👩‍💻
+## Contributions
+We welcome contributions from the community. If you wish to contribute, please follow the code standards and open a detailed pull request.
+Remember to customise these READMEs to the specific needs of your project. Also, be sure to properly document the code and provide detailed instructions to make it easy for other developers to collaborate.
 
-| [<img src="https://avatars.githubusercontent.com/u/132766257?v=4" width=100><br><sub>Javier Serrano</sub>](https://github.com/JaviSeC) | [<img src="https://avatars.githubusercontent.com/u/132651136?v=4" width=100><br><sub>Rebeca Poma</sub>](https://github.com/rebecapoma6) | [<img src="https://avatars.githubusercontent.com/u/119860615?s=400&u=26aa08049bc181d41a8eca0c67183531140bee8a&v=4" width=100><br><sub>Anthony Brayan</sub>](https://github.com/AnthonyBrayan)| [<img src="https://avatars.githubusercontent.com/u/132609974?v=4" width=100><br><sub>Celia Gil</sub>](https://github.com/CeliaGilPrieto) | [<img src="https://avatars.githubusercontent.com/u/132656487?v=4" width=100><br><sub>Juan Lumbi</sub>](https://github.com/juanlumbi) | [<img src="https://avatars.githubusercontent.com/u/132567624?v=4" width=100><br><sub>Francisco Manuel</sub>](https://github.com/franciscomanuelnietogarcia) | [<img src="https://avatars.githubusercontent.com/u/132655532?v=4" width=100><br><sub>Raúl Muñoz</sub>](https://github.com/raulmunozrayo) 
+## Authors 👨🏻‍💻👩🏻‍💻
+
+| [<img src="https://avatars.githubusercontent.com/u/132766257?v=4" width=100><br><sub>Javier Serrano</sub>](https://github.com/JaviSeC) | [<img src="https://avatars.githubusercontent.com/u/132651136?v=4" width=100><br><sub>Rebeca Poma</sub>](https://github.com/rebecapoma6) | [<img src="https://avatars.githubusercontent.com/u/119860615?s=400&u=26aa08049bc181d41a8eca0c67183531140bee8a&v=4" width=100><br><sub>Anthony Brayan</sub>](https://github.com/AnthonyBrayan)| [<img src="https://avatars.githubusercontent.com/u/132609974?v=4" width=100><br><sub>Celia Gil</sub>](https://github.com/CeliaGilPrieto) | [<img src="https://avatars.githubusercontent.com/u/132656487?v=4" width=100><br><sub>Juan Lumbi</sub>](https://github.com/juanlumbi) | [<img src="https://avatars.githubusercontent.com/u/132567624?v=4" width=100><br><sub>Francisco Manuel</sub>](https://github.com/franciscomanuelnietogarcia) | [<img src="https://avatars.githubusercontent.com/u/132655532?v=4" width=100><br><sub>Raúl Muñoz</sub>](https://github.com/raulmunozrayo) | 
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
